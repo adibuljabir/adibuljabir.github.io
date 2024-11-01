@@ -1,783 +1,1748 @@
 <!DOCTYPE html>
 
-<!-- Courtesy: Adibul Jabir -->
+<!-- Adibul Jabir -->
 
 <html>
-  <head>
-    <meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
-@import url("/style.css");
-
-@import url("https://fonts.googleapis.com/css?family=Inter:400");
-
-/* The following line is used to measure usage of this code. You can remove it if you want. */
-@import url("https://px.animaapp.com/6723cce39623faf721765651.6723cce39623faf721765654.jVpLQkL.hch.png");
-
-
-.screen textarea:focus,
-.screen input:focus {
-  outline: none;
-}
-
-.screen * {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-.screen div {
-  -webkit-text-size-adjust: none;
-}
-
-.component-wrapper a {
-  display: contents;
-  pointer-events: auto;
-  text-decoration: none;
-}
-
-.component-wrapper * {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  pointer-events: none;
-}
-
-.component-wrapper a *,
-.component-wrapper input,
-.component-wrapper video,
-.component-wrapper iframe {
-  pointer-events: auto;
-}
-
-.component-wrapper.not-ready,
-.component-wrapper.not-ready * {
-  visibility: hidden !important;
-}
-
-.screen a {
-  display: contents;
-  text-decoration: none;
-}
-
-.full-width-a {
-  width: 100%;
-}
-
-.full-height-a {
-  height: 100%;
-}
-
-.container-center-vertical {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  pointer-events: none;
-}
-
-.container-center-vertical > * {
-  flex-shrink: 0;
-  pointer-events: auto;
-}
-
-.container-center-horizontal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  pointer-events: none;
-  width: 100%;
-}
-
-.container-center-horizontal > * {
-  flex-shrink: 0;
-  pointer-events: auto;
-}
-
-.auto-animated div {
-  --z-index: -1;
-  opacity: 0;
-  position: absolute;
-}
-
-.auto-animated input {
-  --z-index: -1;
-  opacity: 0;
-  position: absolute;
-}
-
-.auto-animated .container-center-vertical,
-.auto-animated .container-center-horizontal {
-  opacity: 1;
-}
-
-.overlay-base {
-  display: none;
-  height: 100%;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.overlay-base.animate-appear {
-  align-items: center;
-  animation: reveal 0.3s ease-in-out 1 normal forwards;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0;
-}
-
-.overlay-base.animate-disappear {
-  animation: reveal 0.3s ease-in-out 1 reverse forwards;
-  display: block;
-  opacity: 1;
-  pointer-events: none;
-}
-
-.overlay-base.animate-disappear * {
-  pointer-events: none;
-}
-
-@keyframes reveal {
-  from { opacity: 0 }
- to { opacity: 1 }
-}
-
-.animate-nodelay {
-  animation-delay: 0s;
-}
-
-.align-self-flex-start {
-  align-self: flex-start;
-}
-
-.align-self-flex-end {
-  align-self: flex-end;
-}
-
-.align-self-flex-center {
-  align-self: flex-center;
-}
-
-.valign-text-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.valign-text-bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-input:focus {
-  outline: none;
-}
-
-.listeners-active,
-.listeners-active * {
-  pointer-events: auto;
-}
-
-.hidden,
-.hidden * {
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.smart-layers-pointers,
-.smart-layers-pointers * {
-  pointer-events: auto;
-  visibility: visible;
-}
-
-.listeners-active-click,
-.listeners-active-click * {
-  cursor: pointer;
-}
-
-* {
-  box-sizing: border-box;
-}
-:root { 
-  --black: #000000;
-  --black-2: #000000cc;
-  --t-blk: #00000099;
-  --white: #ffffff;
- 
-  --font-size-l: 20px;
-  --font-size-m: 16px;
-  --font-size-xl: 24px;
-  --font-size-xxl: 32px;
-  --font-size-xxxl: 40px;
- 
-  --font-family-inter: "Inter", Helvetica;
-}
-.inter-normal-white-16px {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-m);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.inter-normal-white-24px {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.inter-normal-white-32px {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-xxl);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.inter-normal-white-20px {
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-l);
-  font-style: normal;
-  font-weight: 400;
-}
-
-:root {
-}
-
-
-/* screen - desktop-1 */
-
-.desktop-1 {
-  background-color: transparent;
-  background-image: url(https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6723ccf966524714d31029a9/img/desktop---1.png);
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 1640px;
-  overflow: hidden;
-  overflow-x: hidden;
-  position: relative;
-  width: 1440px;
-}
-
-.desktop-1 .footer-Ys8k0x {
-  background-color: var(--t-blk);
-  border-radius: 20px;
-  height: 69px;
-  left: 438px;
-  position: absolute;
-  top: 1533px;
-  width: 959px;
-}
-
-.desktop-1 .r4-Ys8k0x {
-  background-color: var(--black-2);
-  border-radius: 20px;
-  height: 330px;
-  left: 430px;
-  position: absolute;
-  top: 1170px;
-  width: 954px;
-}
-
-.desktop-1 .r3-Ys8k0x {
-  background-color: var(--t-blk);
-  border-radius: 20px;
-  height: 330px;
-  left: 425px;
-  position: absolute;
-  top: 807px;
-  width: 954px;
-}
-
-.desktop-1 .r2-Ys8k0x {
-  background-color: var(--t-blk);
-  border-radius: 20px;
-  height: 330px;
-  left: 430px;
-  position: absolute;
-  top: 444px;
-  width: 954px;
-}
-
-.desktop-1 .txt-Ys8k0x {
-  height: 249px;
-  left: 410px;
-  top: 422px;
-  width: 975px;
-}
-
-.desktop-1 .clients-feedback-2VgiNH {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 63px;
-  width: 404px;
-}
-
-.desktop-1 .adibul-was-great-we-2VgiNH {
-  background-color: transparent;
-  height: 87px;
-  left: 515px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: justify;
-  top: 162px;
-  width: 420px;
-}
-
-.desktop-1 .skills50-quality50-a-2VgiNH {
-  background-color: transparent;
-  height: 179px;
-  left: 403px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: justify;
-  top: 0px;
-  width: 566px;
-}
-
-.desktop-1 .rr1-Ys8k0x {
-  background-color: transparent;
-  height: 351px;
-  left: 430px;
-  position: absolute;
-  top: 60px;
-  width: 463px;
-}
-
-.desktop-1 .rectangle-8-WafJNF {
-  background-color: var(--black-2);
-  border-radius: 15px;
-  height: 171px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 231px;
-}
-
-.desktop-1 .rectangle-9-WafJNF {
-  background-color: var(--black-2);
-  border-radius: 15px;
-  height: 171px;
-  left: 244px;
-  position: absolute;
-  top: 0px;
-  width: 219px;
-}
-
-.desktop-1 .rectangle-10-WafJNF {
-  background-color: var(--black-2);
-  border-radius: 15px;
-  height: 168px;
-  left: 0px;
-  position: absolute;
-  top: 183px;
-  width: 231px;
-}
-
-.desktop-1 .rectangle-11-WafJNF {
-  background-color: var(--black-2);
-  border-radius: 15px;
-  height: 168px;
-  left: 244px;
-  position: absolute;
-  top: 183px;
-  width: 219px;
-}
-
-.desktop-1 .lr1-Ys8k0x {
-  background-color: transparent;
-  height: 351px;
-  left: 918px;
-  position: absolute;
-  top: 60px;
-  width: 466px;
-}
-
-.desktop-1 .rectangle-4-OqWAWx {
-  background-color: var(--black-2);
-  border-radius: 15px;
-  height: 351px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 466px;
-}
-
-.desktop-1 .txt-OqWAWx {
-  height: 246px;
-  left: 27px;
-  top: 61px;
-  width: 416px;
-}
-
-.desktop-1 .welcome-to-the-portfolio-WlZWd7 {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0px;
-  white-space: nowrap;
-  width: 412px;
-}
-
-.desktop-1 .welcome-to-the-portf-WlZWd7 {
-  background-color: transparent;
-  height: 208px;
-  left: 20px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: justify;
-  top: 38px;
-  width: 372px;
-}
-
-.desktop-1 .txt-V3rtYt {
-  height: 118px;
-  left: 474px;
-  top: 94px;
-  width: 155px;
-}
-
-.desktop-1 .title-8jZFet {
-  background-color: transparent;
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-xxxl);
-  font-style: normal;
-  font-weight: 400;
-  height: 86px;
-  left: 20px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0px;
-  width: 104px;
-}
-
-.desktop-1 .completed-projects-8jZFet {
-  background-color: transparent;
-  height: 40px;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 78px;
-  width: 151px;
-}
-
-.desktop-1 .txt-InqUpZ {
-  height: 118px;
-  left: 710px;
-  top: 87px;
-  width: 155px;
-}
-
-.desktop-1 .x48-HiHLNl {
-  background-color: transparent;
-  color: var(--white);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-xxxl);
-  font-style: normal;
-  font-weight: 400;
-  height: 86px;
-  left: 20px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 0px;
-  width: 104px;
-}
-
-.desktop-1 .rated-projects-HiHLNl {
-  background-color: transparent;
-  height: 40px;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 78px;
-  width: 151px;
-}
-
-.desktop-1 .left-bar-Ys8k0x {
-  background-color: var(--black-2);
-  height: 1640px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 380px;
-}
-
-.desktop-1 .about-Ys8k0x {
-  left: 32px;
-  top: 755px;
-  width: 320px;
-}
-
-.desktop-1 .about-9YZhBH {
-  left: 79px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  text-align: left;
-  top: 0px;
-  width: 239px;
-}
-
-.desktop-1 .info-squared-9YZhBH {
-  background-color: transparent;
-  height: 31px;
-  left: 0px;
-  position: absolute;
-  top: 13px;
-  width: 58px;
-}
-
-.desktop-1 .videos-Ys8k0x {
-  left: 32px;
-  top: 698px;
-  width: 320px;
-}
-
-.desktop-1 .videos-ZoNymE {
-  left: 79px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  text-align: left;
-  top: 0px;
-  width: 239px;
-}
-
-.desktop-1 .video-ZoNymE {
-  background-color: transparent;
-  height: 31px;
-  left: 0px;
-  position: absolute;
-  top: 13px;
-  width: 58px;
-}
-
-.desktop-1 .project-Ys8k0x {
-  background-color: transparent;
-  height: 57px;
-  left: 32px;
-  position: absolute;
-  top: 641px;
-  width: 320px;
-}
-
-.desktop-1 .projects-7ro0tq {
-  background-color: transparent;
-  height: 57px;
-  left: 79px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 0px;
-  width: 239px;
-}
-
-.desktop-1 .requirements-7ro0tq {
-  background-color: transparent;
-  height: 31px;
-  left: 0px;
-  position: absolute;
-  top: 13px;
-  width: 58px;
-}
-
-.desktop-1 .home-Ys8k0x {
-  height: 57px;
-  left: 32px;
-  top: 584px;
-  width: 320px;
-}
-
-.desktop-1 .home-WLO0do {
-  height: 57px;
-  left: 79px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  text-align: left;
-  top: 0px;
-  width: 239px;
-}
-
-.desktop-1 .home-mIx0mr {
-  height: 31px;
-  left: 0px;
-  top: 13px;
-  width: 58px;
-}
-
-.desktop-1 .wp-email-Ys8k0x {
-  background-color: transparent;
-  height: 45px;
-  left: 66px;
-  position: absolute;
-  top: 389px;
-  width: 258px;
-}
-
-.desktop-1 .whatsapp-2wP2dh {
-  width: 133px;
-}
-
-.desktop-1 .group-5-aEY9we {
-  left: 33px;
-  position: absolute;
-  width: 102px;
-}
-
-.desktop-1 .whatsapp-t30K9k {
-  letter-spacing: 0.00px;
-  line-height: normal;
-  text-align: left;
-  width: 100px;
-}
-
-.desktop-1 .whats-app-aEY9we {
-  background-color: transparent;
-  height: 25px;
-  left: 0px;
-  position: absolute;
-  top: 13px;
-  width: 25px;
-}
-
-.desktop-1 .email-2wP2dh {
-  height: 45px;
-  left: 166px;
-  top: 0px;
-  width: 92px;
-}
-
-.desktop-1 .group-7-O1U6ag {
-  background-color: transparent;
-  height: 45px;
-  left: 37px;
-  position: absolute;
-  top: 0px;
-  width: 55px;
-}
-
-.desktop-1 .group-5-KwFCwf {
-  left: 0px;
-  position: relative;
-  width: 57px;
-}
-
-.desktop-1 .email-4IpTIX {
-  height: 45px;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  text-align: left;
-  top: 0px;
-  width: 55px;
-}
-
-.desktop-1 .email-O1U6ag {
-  height: 25px;
-  left: 0px;
-  top: 12px;
-  width: 25px;
-}
-
-.desktop-1 .dp-name-Ys8k0x {
-  background-color: transparent;
-  height: 228px;
-  left: 61px;
-  position: absolute;
-  top: 137px;
-  width: 271px;
-}
-
-.desktop-1 .pic-i3gaTS {
-  background-color: transparent;
-  height: 170px;
-  left: 44px;
-  object-fit: cover;
-  position: absolute;
-  top: 0px;
-  width: 170px;
-}
-
-.desktop-1 .adibul-jabir-i3gaTS {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 190px;
-  white-space: nowrap;
-  width: 269px;
-}
-
-.desktop-1 .about {
-  background-color: transparent;
-  height: 57px;
-  position: absolute;
-}
-
-.desktop-1 .email {
-  background-color: transparent;
-  position: absolute;
-}
-
-.desktop-1 .group-5 {
-  background-color: transparent;
-  height: 45px;
-  top: 0px;
-}
-
-.desktop-1 .home {
-  background-color: transparent;
-  position: absolute;
-}
-
-.desktop-1 .txt {
-  background-color: transparent;
-  position: absolute;
-}
-
-.desktop-1 .videos {
-  background-color: transparent;
-  height: 57px;
-  position: absolute;
-}
-
-.desktop-1 .whatsapp {
-  background-color: transparent;
-  height: 45px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-}
-</style>
-  </head>
-  <body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="desktop-1"><div class="container-center-horizontal"><div class="desktop-1 screen " data-id="1:2"><div class="footer-Ys8k0x" data-id="9:2"></div><div class="r4-Ys8k0x" data-id="9:4"></div><div class="r3-Ys8k0x" data-id="1:6"></div><div class="r2-Ys8k0x" data-id="9:24"></div><div class="txt-Ys8k0x txt" data-id="14:46"><div class="clients-feedback-2VgiNH inter-normal-white-32px" data-id="14:47">Client&#39;s feedback</div><p class="adibul-was-great-we-2VgiNH valign-text-middle inter-normal-white-16px" data-id="14:48">Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!</p><p class="skills50-quality50-a-2VgiNH valign-text-middle inter-normal-white-20px" data-id="14:49">Skills5.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quality5.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Availability5.0<br>Deadlines5.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Communication5.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cooperation5.0</p></div><div class="rr1-Ys8k0x" data-id="13:39"><div class="rectangle-8-WafJNF" data-id="9:16"></div><div class="rectangle-9-WafJNF" data-id="9:18"></div><div class="rectangle-10-WafJNF" data-id="9:20"></div><div class="rectangle-11-WafJNF" data-id="9:22"></div></div><div class="lr1-Ys8k0x" data-id="13:35"><div class="rectangle-4-OqWAWx" data-id="1:14"></div><div class="txt-OqWAWx txt" data-id="13:34"><div class="welcome-to-the-portfolio-WlZWd7 inter-normal-white-32px" data-id="13:2">Welcome to the portfolio</div><p class="welcome-to-the-portf-WlZWd7 valign-text-middle inter-normal-white-16px" data-id="13:4">Welcome to the portfolio of Adibul Jabir – where creativity meets innovation! Explore a showcase of design, development, and ideas that bring visions to life. From captivating visuals to seamless functionality, each project reflects a passion for excellence.&nbsp;&nbsp;Thank you for visiting – dive in and let the journey inspire you!</p></div></div><div class="txt-V3rtYt txt" data-id="14:57"><h1 class="title-8jZFet valign-text-middle" data-id="14:58">13+</h1><div class="completed-projects-8jZFet valign-text-middle inter-normal-white-16px" data-id="14:61">Completed projects</div></div><div class="txt-InqUpZ txt" data-id="14:65"><div class="x48-HiHLNl valign-text-middle" data-id="14:66">4.8</div><div class="rated-projects-HiHLNl valign-text-middle inter-normal-white-16px" data-id="14:67">Rated projects</div></div><div class="left-bar-Ys8k0x" data-id="1:3"></div><div class="about-Ys8k0x about" data-id="9:56"><div class="about-9YZhBH valign-text-middle about inter-normal-white-24px" data-id="9:47">About</div><img class="info-squared-9YZhBH" data-id="9:55" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6723ccf966524714d31029a9/img/info-squared@2x.png" alt="Info Squared"></div><div class="videos-Ys8k0x videos" data-id="9:57"><div class="videos-ZoNymE valign-text-middle videos inter-normal-white-24px" data-id="9:44">Videos</div><img class="video-ZoNymE" data-id="9:52" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6723ccf966524714d31029a9/img/video@2x.png" alt="Video"></div><div class="project-Ys8k0x" data-id="9:58"><div class="projects-7ro0tq valign-text-middle inter-normal-white-24px" data-id="9:41">Projects</div><img class="requirements-7ro0tq" data-id="9:51" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6723ccf966524714d31029a9/img/requirements@2x.png" alt="Requirements"></div><div class="home-Ys8k0x home" data-id="9:59"><div class="home-WLO0do valign-text-middle home inter-normal-white-24px" data-id="9:38">Home</div><img class="home-mIx0mr home" data-id="9:50" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6723ccf966524714d31029a9/img/home@2x.png" alt="Home"></div><div class="wp-email-Ys8k0x" data-id="13:37"><div class="whatsapp-2wP2dh whatsapp" data-id="9:79"><div class="group-5-aEY9we group-5" data-id="9:74"><div class="whatsapp-t30K9k valign-text-middle whatsapp inter-normal-white-20px" data-id="9:75">Whatsapp</div></div><img class="whats-app-aEY9we" data-id="9:78" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6723ccf966524714d31029a9/img/whatsapp@2x.png" alt="WhatsApp"></div><div class="email-2wP2dh email" data-id="13:36"><div class="group-7-O1U6ag" data-id="9:80"><div class="group-5-KwFCwf group-5" data-id="9:81"><div class="email-4IpTIX valign-text-middle email inter-normal-white-20px" data-id="9:82">Email</div></div></div><img class="email-O1U6ag email" data-id="9:85" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6723ccf966524714d31029a9/img/email@2x.png" alt="Email"></div></div><div class="dp-name-Ys8k0x" data-id="13:38"><img class="pic-i3gaTS" data-id="9:25" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6723ccf966524714d31029a9/img/pic@2x.png" alt="Pic"><div class="adibul-jabir-i3gaTS inter-normal-white-32px" data-id="9:29">ADIBUL JABIR</div></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js">
-    
-  </script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1440, maximum-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="photo">
+  <script id="anima-load-script" src="load.js"></script>
+  <script id="anima-hotspots-script" src="hotspots.js"></script>
+  <script id="anima-overrides-script" src="overrides.js"></script>
+  <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+    @import url("https://fonts.googleapis.com/css?family=Raleway:400|Inter:400|Poppins:600|Manrope:500");
+
+    /* The following line is used to measure usage of this code. You can remove it if you want. */
+    @import url("https://px.animaapp.com/6723cce39623faf721765651.6723cce39623faf721765654.jVpLQkL.hch.png");
+
+
+    .screen textarea:focus,
+    .screen input:focus {
+      outline: none;
+    }
+
+    .screen * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+    }
+
+    .screen div {
+      -webkit-text-size-adjust: none;
+    }
+
+    .component-wrapper a {
+      display: contents;
+      pointer-events: auto;
+      text-decoration: none;
+    }
+
+    .component-wrapper * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .component-wrapper a *,
+    .component-wrapper input,
+    .component-wrapper video,
+    .component-wrapper iframe {
+      pointer-events: auto;
+    }
+
+    .component-wrapper.not-ready,
+    .component-wrapper.not-ready * {
+      visibility: hidden !important;
+    }
+
+    .screen a {
+      display: contents;
+      text-decoration: none;
+    }
+
+    .full-width-a {
+      width: 100%;
+    }
+
+    .full-height-a {
+      height: 100%;
+    }
+
+    .container-center-vertical {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .container-center-vertical>* {
+      flex-shrink: 0;
+      pointer-events: auto;
+    }
+
+    .container-center-horizontal {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      pointer-events: none;
+      width: 100%;
+    }
+
+    .container-center-horizontal>* {
+      flex-shrink: 0;
+      pointer-events: auto;
+    }
+
+    .auto-animated div {
+      --z-index: -1;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .auto-animated input {
+      --z-index: -1;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .auto-animated .container-center-vertical,
+    .auto-animated .container-center-horizontal {
+      opacity: 1;
+    }
+
+    .overlay-base {
+      display: none;
+      height: 100%;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .overlay-base.animate-appear {
+      align-items: center;
+      animation: reveal 0.3s ease-in-out 1 normal forwards;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+    }
+
+    .overlay-base.animate-disappear {
+      animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      display: block;
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .overlay-base.animate-disappear * {
+      pointer-events: none;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .animate-nodelay {
+      animation-delay: 0s;
+    }
+
+    .align-self-flex-start {
+      align-self: flex-start;
+    }
+
+    .align-self-flex-end {
+      align-self: flex-end;
+    }
+
+    .align-self-flex-center {
+      align-self: flex-center;
+    }
+
+    .valign-text-middle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .valign-text-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .listeners-active,
+    .listeners-active * {
+      pointer-events: auto;
+    }
+
+    .hidden,
+    .hidden * {
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .smart-layers-pointers,
+    .smart-layers-pointers * {
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .listeners-active-click,
+    .listeners-active-click * {
+      cursor: pointer;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #000000;
+      --celeste: #cccccc;
+      --eerie-black: #1f1f1f;
+      --eerie-black-2: #191919;
+      --mountain-mist: #999999;
+      --shark: #282828;
+      --t-blk: #00000099;
+      --white: #ffffff;
+      --woodsmoke: #0f0f0f;
+
+      --font-size-l: 24px;
+      --font-size-m: 15px;
+      --font-size-s: 14px;
+      --font-size-xl: 32px;
+      --font-size-xs: 12px;
+      --font-size-xxs: 11px;
+
+      --font-family-inter: "Inter", Helvetica;
+      --font-family-manrope: "Manrope", Helvetica;
+      --font-family-poppins: "Poppins", Helvetica;
+      --font-family-raleway: "Raleway", Helvetica;
+    }
+
+    .raleway-normal-white-12px {
+      color: var(--white);
+      font-family: var(--font-family-raleway);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .manrope-medium-celeste-14px {
+      color: var(--celeste);
+      font-family: var(--font-family-manrope);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .manrope-medium-mountain-mist-14px {
+      color: var(--mountain-mist);
+      font-family: var(--font-family-manrope);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    :root {}
+
+
+    /* screen - desktop-1 */
+
+    .desktop-1 {
+      background-color: transparent;
+      background-image: url(https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/desktop---1-2@4x.png);
+      background-position: 50% 50%;
+      background-size: cover;
+      height: 899px;
+      overflow: hidden;
+      overflow-x: hidden;
+      position: relative;
+      width: 1440px;
+    }
+
+    .desktop-1 .left-bar-Ys8k0x {
+      background-color: #3a3f3e;
+      border: 2px solid;
+      border-color: var(--black);
+      height: 899px;
+      left: 0px;
+      opacity: 0.1;
+      position: absolute;
+      top: 0px;
+      width: 380px;
+    }
+
+    .desktop-1 .back-Ys8k0x {
+      background-color: transparent;
+      height: 74px;
+      left: 279px;
+      position: absolute;
+      top: 752px;
+      transform: rotate(180deg);
+      width: 65px;
+    }
+
+    .desktop-1 .polygon-2-uD9fXX {
+      background-color: transparent;
+      height: 39px;
+      left: 19px;
+      position: absolute;
+      top: 24px;
+      transform: rotate(-180deg);
+      width: 34px;
+    }
+
+    .desktop-1 .polygon-3-uD9fXX {
+      background-color: transparent;
+      height: 39px;
+      left: 22px;
+      position: absolute;
+      top: 11px;
+      transform: rotate(-180deg);
+      width: 34px;
+    }
+
+    .desktop-1 .group-194-Ys8k0x {
+      background-color: transparent;
+      height: 207px;
+      left: 89px;
+      position: absolute;
+      top: 534px;
+      width: 209px;
+    }
+
+    .desktop-1 .work-expertise-t5wK9T {
+      background-color: transparent;
+      border: 1px solid;
+      border-color: var(--t-blk);
+      height: 43px;
+      left: -1px;
+      top: -1px;
+      width: 211px;
+    }
+
+    .desktop-1 .home-3mRl6o {
+      height: 30px;
+      width: 30px;
+    }
+
+    .desktop-1 .home-jRTaeg {
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-XG9xGs {
+      background-color: transparent;
+      border: 1px solid;
+      border-color: var(--t-blk);
+      height: 43px;
+      left: -1px;
+      top: 53px;
+      width: 211px;
+    }
+
+    .desktop-1 .test-passed-WdXGbW {
+      background-color: transparent;
+      height: 30px;
+      position: relative;
+      width: 30px;
+    }
+
+    .desktop-1 .projects-WdXGbW {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-vxaWvp {
+      background-color: transparent;
+      border: 1px solid;
+      border-color: var(--t-blk);
+      height: 43px;
+      left: -1px;
+      top: 107px;
+      width: 211px;
+    }
+
+    .desktop-1 .video-6I542l {
+      background-color: transparent;
+      height: 30px;
+      position: relative;
+      width: 30px;
+    }
+
+    .desktop-1 .videos-6I542l {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-PVqnN9 {
+      background-color: transparent;
+      border: 1px solid;
+      border-color: var(--t-blk);
+      height: 43px;
+      left: -1px;
+      top: 165px;
+      width: 211px;
+    }
+
+    .desktop-1 .info-squared-HlvjEU {
+      background-color: transparent;
+      height: 30px;
+      position: relative;
+      width: 30px;
+    }
+
+    .desktop-1 .about-HlvjEU {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-Ys8k0x {
+      background-color: var(--eerie-black);
+      height: 41px;
+      justify-content: center;
+      left: 210px;
+      top: 415px;
+      width: 120px;
+    }
+
+    .desktop-1 .mail-rGUuz1 {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-V3rtYt {
+      background-color: var(--eerie-black);
+      height: 41px;
+      justify-content: center;
+      left: 63px;
+      top: 415px;
+      width: 120px;
+    }
+
+    .desktop-1 .whatsapp-cD8xvP {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .dp-name-Ys8k0x {
+      background-color: transparent;
+      height: 254px;
+      left: 61px;
+      position: absolute;
+      top: 132px;
+      width: 275px;
+    }
+
+    .desktop-1 .pic-i3gaTS {
+      background-color: transparent;
+      height: 156px;
+      left: 51px;
+      object-fit: cover;
+      position: absolute;
+      top: -3px;
+      width: 156px;
+    }
+
+    .desktop-1 .title-i3gaTS {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-inter);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+      top: 172px;
+      white-space: nowrap;
+      width: 269px;
+    }
+
+    .desktop-1 .x3-d-animator-3-d-mod-i3gaTS {
+      background-color: transparent;
+      color: transparent;
+      font-family: var(--font-family-inter);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 400;
+      height: 38px;
+      left: 2px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+      top: 216px;
+      width: 269px;
+    }
+
+    .desktop-1 .span0-G1G0vv {
+      color: var(--white);
+      font-style: normal;
+    }
+
+    .desktop-1 .span1-G1G0vv {
+      color: var(--white);
+      font-size: var(--font-size-xxs);
+      font-style: normal;
+    }
+
+    .desktop-1 .span2-G1G0vv {
+      color: #916be7;
+      font-size: var(--font-size-xxs);
+      font-style: normal;
+    }
+
+    .desktop-1 .null-Ys8k0x {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 196px;
+      left: 424px;
+      position: absolute;
+      top: 646px;
+      width: 458px;
+    }
+
+    .desktop-1 .app-development-card-I5f7WJ {
+      height: 200px;
+      margin-bottom: -4.00px;
+    }
+
+    .desktop-1 .app-details-I5f7WJ {
+      height: 196px;
+      left: 26px;
+      padding: 16px 10px 23px;
+      top: 0px;
+      width: 406px;
+    }
+
+    .desktop-1 .app-development-heading-IEn4Z4 {
+      align-items: flex-start;
+      display: inline-flex;
+      flex: 0 0 auto;
+    }
+
+    .desktop-1 .app-KoZDOG {
+      background-color: transparent;
+      height: 24px;
+      position: relative;
+      width: 24px;
+    }
+
+    .desktop-1 .app-development-KoZDOG {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-poppins);
+      font-size: var(--font-size-l);
+      font-style: normal;
+      font-weight: 600;
+      height: 24px;
+      letter-spacing: 0.00px;
+      line-height: 20px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: 221px;
+    }
+
+    .desktop-1 .with-a-focus-on-user-IEn4Z4 {
+      align-self: stretch;
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-raleway);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 400;
+      height: 122px;
+      letter-spacing: 0.35px;
+      line-height: 20px;
+      margin-bottom: -3.00px;
+      position: relative;
+      text-align: left;
+    }
+
+    .desktop-1 .message-Ys8k0x {
+      height: 422px;
+      top: 420px;
+    }
+
+    .desktop-1 .app-development-card-5wkI0x {
+      height: 422px;
+    }
+
+    .desktop-1 .app-details-5wkI0x {
+      height: 268px;
+      left: 11px;
+      padding: 10px;
+      top: 36px;
+      width: 446px;
+    }
+
+    .desktop-1 .app-development-heading-diRUzO {
+      align-items: center;
+      align-self: stretch;
+      display: flex;
+      height: 59px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .desktop-1 .frame-245-pfeDHa {
+      align-self: stretch;
+      width: 180px;
+    }
+
+    .desktop-1 .frame-245-FPUb2b {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .desktop-1 .frame-244-zMHLCL {
+      margin-left: -3.50px;
+      margin-right: -3.50px;
+    }
+
+    .desktop-1 .group-Sny6oe {
+      background-color: transparent;
+      height: 14px;
+      position: relative;
+      width: 14px;
+    }
+
+    .desktop-1 .message-V3rtYt {
+      height: 349px;
+      top: 53px;
+    }
+
+    .desktop-1 .app-development-card-tWOcxR {
+      height: 349px;
+    }
+
+    .desktop-1 .app-details-tWOcxR {
+      height: 268px;
+      left: 11px;
+      padding: 10px;
+      top: 0px;
+      width: 446px;
+    }
+
+    .desktop-1 .app-development-heading-k1wOlI {
+      align-items: center;
+      align-self: stretch;
+      display: flex;
+      height: 59px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .desktop-1 .frame-245-pfHe8E {
+      align-self: stretch;
+      width: 180px;
+    }
+
+    .desktop-1 .frame-245-WeBxas {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .desktop-1 .frame-244-0QxQxr {
+      margin-left: -3.50px;
+      margin-right: -3.50px;
+    }
+
+    .desktop-1 .group-4JaMib {
+      background-color: transparent;
+      height: 14px;
+      position: relative;
+      width: 14px;
+    }
+
+    .desktop-1 .services-Ys8k0x {
+      background-color: transparent;
+      background-image: url(https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/services-2@2x.png);
+      background-position: 50% 50%;
+      background-size: cover;
+      border: 3px solid;
+      border-color: var(--woodsmoke);
+      border-radius: 10px;
+      height: 219px;
+      left: 425px;
+      overflow: hidden;
+      position: absolute;
+      top: 415px;
+      width: 463px;
+    }
+
+    .desktop-1 .frame-272-N3cUtY {
+      align-items: center;
+      background-color: #916be7;
+      border: 1.5px solid;
+      border-color: var(--woodsmoke);
+      border-radius: 12px;
+      display: inline-flex;
+      gap: 10px;
+      left: 148px;
+      padding: 13px 30px;
+      position: relative;
+      top: 152px;
+    }
+
+    .desktop-1 .view-all-projects-Y2k8Nm {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-manrope);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.50px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .desktop-1 .social-media-Ys8k0x {
+      align-items: center;
+      background-color: var(--woodsmoke);
+      border: 1px solid;
+      border-color: #ffffff0d;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      height: 349px;
+      left: 668px;
+      overflow: hidden;
+      padding: 20px 20px 30px;
+      position: absolute;
+      top: 53px;
+      width: 220px;
+    }
+
+    .desktop-1 .frame-245-nxl9DL {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .desktop-1 .frame-245-W4YpbE {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .desktop-1 .group-I0USyx {
+      background-color: transparent;
+      height: 14px;
+      position: relative;
+      width: 14px;
+    }
+
+    .desktop-1 .social-media-I0USyx {
+      background-color: transparent;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .desktop-1 .frame-248-nxl9DL {
+      align-items: flex-start;
+      align-self: stretch;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 220px;
+      padding: 0px 10px 0px 0px;
+      position: relative;
+      width: 100%;
+    }
+
+    .desktop-1 .component-21-GebCmc {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex: 0 0 auto;
+      margin-right: -10.00px;
+      position: relative;
+      width: 180px;
+    }
+
+    .desktop-1 .component-17-mHk3Sz {
+      align-items: flex-start;
+      background-color: transparent;
+      display: inline-flex;
+      flex: 0 0 auto;
+      margin-right: -5.06px;
+      position: relative;
+    }
+
+    .desktop-1 .group-j5i0Ad {
+      background-color: transparent;
+      height: 10px;
+      margin-bottom: -63.50px;
+      margin-left: -945.998779296875px;
+      position: relative;
+      width: 12.05877685546875px;
+    }
+
+    .desktop-1 .group-mHk3Sz {
+      background-color: transparent;
+      height: 18px;
+      left: 16px;
+      position: absolute;
+      top: 15px;
+      width: 18px;
+    }
+
+    .desktop-1 .component-23-GebCmc {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex: 0 0 auto;
+      margin-right: -10.00px;
+      position: relative;
+      width: 180px;
+    }
+
+    .desktop-1 .component-19-oajE2T {
+      align-items: flex-start;
+      background-color: transparent;
+      display: inline-flex;
+      flex: 0 0 auto;
+      margin-right: -5.06px;
+      position: relative;
+    }
+
+    .desktop-1 .group-9FZeIs {
+      background-color: transparent;
+      height: 10px;
+      margin-bottom: -6.50px;
+      margin-left: -945.998779296875px;
+      position: relative;
+      width: 12.05877685546875px;
+    }
+
+    .desktop-1 .group-oajE2T {
+      background-color: transparent;
+      height: 14px;
+      left: 17px;
+      position: absolute;
+      top: 17px;
+      width: 16px;
+    }
+
+    .desktop-1 .component-20-GebCmc {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex: 0 0 auto;
+      margin-right: -10.00px;
+      position: relative;
+      width: 180px;
+    }
+
+    .desktop-1 .component-16-zqVRRv {
+      align-items: flex-start;
+      background-color: transparent;
+      display: inline-flex;
+      flex: 0 0 auto;
+      margin-right: -5.06px;
+      position: relative;
+    }
+
+    .desktop-1 .group-h86jgV {
+      background-color: transparent;
+      height: 10px;
+      margin-left: -945.998779296875px;
+      margin-top: -25.50px;
+      position: relative;
+      width: 12.05877685546875px;
+    }
+
+    .desktop-1 .group-WzwWDN {
+      background-color: transparent;
+      height: 18px;
+      left: 16px;
+      position: absolute;
+      top: 15px;
+      width: 18px;
+    }
+
+    .desktop-1 .component-22-GebCmc {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex: 0 0 auto;
+      margin-right: -10.00px;
+      position: relative;
+      width: 180px;
+    }
+
+    .desktop-1 .component-18-TUy9vN {
+      align-items: flex-start;
+      background-color: transparent;
+      display: inline-flex;
+      flex: 0 0 auto;
+      margin-right: -5.06px;
+      position: relative;
+    }
+
+    .desktop-1 .group-TykIb3 {
+      background-color: transparent;
+      height: 10px;
+      margin-left: -945.998779296875px;
+      margin-top: -82.50px;
+      position: relative;
+      width: 12.05877685546875px;
+    }
+
+    .desktop-1 .mingcutedribbble-fill-TUy9vN {
+      background-color: transparent;
+      height: 20px;
+      left: 15px;
+      position: absolute;
+      top: 14px;
+      width: 20px;
+    }
+
+    .desktop-1 .skills-section-Ys8k0x {
+      align-items: flex-start;
+      background-color: transparent;
+      border-radius: 10px;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 349px;
+      left: 425px;
+      position: absolute;
+      top: 53px;
+    }
+
+    .desktop-1 .workskills-card-qHi9fq {
+      background-color: var(--woodsmoke);
+      border-radius: 0px 0px 8px 8px;
+      height: 349px;
+      position: relative;
+      width: 230px;
+    }
+
+    .desktop-1 .worksoft-skills-qHi9fq {
+      left: 10px;
+      top: 9px;
+    }
+
+    .desktop-1 .frame-245-gxWcuP {
+      height: 42px;
+      justify-content: center;
+      width: 207px;
+    }
+
+    .desktop-1 .frame-245-xCnddU {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .desktop-1 .group-xiGycz {
+      background-color: transparent;
+      height: 14px;
+      position: relative;
+      width: 14px;
+    }
+
+    .desktop-1 .working-skills-xiGycz {
+      background-color: transparent;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-wUocjW {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 1px;
+      top: 0px;
+      width: 66px;
+    }
+
+    .desktop-1 .blender-zmCuC1 {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-PbGxE3 {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 0px;
+      top: 41px;
+      width: 113px;
+    }
+
+    .desktop-1 .adobe-illustrator-pIxlzZ {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-zaL4xs {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 139px;
+      top: 41px;
+      width: 70px;
+    }
+
+    .desktop-1 .ms-office-6sHhdR {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-d6WZKf {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 125px;
+      top: 0px;
+      width: 85px;
+    }
+
+    .desktop-1 .after-effects-NQLUVi {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-left: -0.52px;
+      margin-right: -0.52px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-nfTM2e {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 105px;
+      top: 78px;
+      width: 104px;
+    }
+
+    .desktop-1 .da-vinci-resolve-yf8mKG {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-left: -2.00px;
+      margin-right: -2.00px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-Jh8rM5 {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 1px;
+      top: 82px;
+      width: 56px;
+    }
+
+    .desktop-1 .python-tuj4kS {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-left: -0.50px;
+      margin-right: -0.50px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .worksoft-skills-Kcx3xU {
+      left: 11px;
+      top: 173px;
+    }
+
+    .desktop-1 .frame-245-6he48p {
+      height: 42px;
+      justify-content: center;
+      width: 207px;
+    }
+
+    .desktop-1 .frame-245-XHPdVj {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .desktop-1 .group-oxqx0x {
+      background-color: transparent;
+      height: 14px;
+      position: relative;
+      width: 14px;
+    }
+
+    .desktop-1 .soft-skills-oxqx0x {
+      background-color: transparent;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-gmsaWT {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 1px;
+      top: 0px;
+      width: 104px;
+    }
+
+    .desktop-1 .graphics-sense-4rIKAy {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-Km4BCj {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 0px;
+      top: 41px;
+      width: 94px;
+    }
+
+    .desktop-1 .multi-taksing-iGBJJA {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-whLxBx {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 119px;
+      top: 41px;
+      width: 90px;
+    }
+
+    .desktop-1 .cooperation-j6uFV9 {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-Mn23oB {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 125px;
+      top: 0px;
+      width: 85px;
+    }
+
+    .desktop-1 .leadership-WhsxOg {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-91C82T {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 97px;
+      top: 78px;
+      width: 112px;
+    }
+
+    .desktop-1 .communication-xLrwql {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .work-expertise-8PjBLg {
+      background-color: var(--eerie-black);
+      justify-content: center;
+      left: 1px;
+      top: 82px;
+      width: 60px;
+    }
+
+    .desktop-1 .quality-x72KPz {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .a-message-from-me {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-poppins);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.00px;
+      line-height: 20px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .desktop-1 .app-details {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      position: absolute;
+    }
+
+    .desktop-1 .app-development-card {
+      align-self: stretch;
+      background-color: transparent;
+      position: relative;
+      width: 100%;
+    }
+
+    .desktop-1 .app-development-heading {
+      background-color: transparent;
+      gap: 11px;
+      position: relative;
+    }
+
+    .desktop-1 .component-2 {
+      align-items: center;
+      background-color: var(--eerie-black-2);
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 10px 7px 7px;
+      position: relative;
+      width: 185.05999755859375px;
+    }
+
+    .desktop-1 .frame-244 {
+      align-items: center;
+      background-color: transparent;
+      display: inline-flex;
+      flex: 0 0 auto;
+      gap: 8px;
+      justify-content: center;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .desktop-1 .frame-245 {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .desktop-1 .frame-247 {
+      align-items: center;
+      background-color: transparent;
+      display: inline-flex;
+      flex: 0 0 auto;
+      gap: 6px;
+      justify-content: center;
+      position: relative;
+    }
+
+    .desktop-1 .group-193 {
+      background-color: transparent;
+      height: 35px;
+      position: relative;
+      width: 35px;
+    }
+
+    .desktop-1 .home {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .desktop-1 .message {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      left: 901px;
+      position: absolute;
+      width: 467px;
+    }
+
+    .desktop-1 .rectangle-222 {
+      background-color: var(--shark);
+      border-radius: 6px;
+      height: 35px;
+      left: 0px;
+      position: relative;
+      top: 0px;
+      width: 35px;
+    }
+
+    .desktop-1 .skills {
+      background-color: transparent;
+      height: 114px;
+      position: relative;
+      width: 209.84490966796875px;
+    }
+
+    .desktop-1 .webflow {
+      background-color: transparent;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .desktop-1 .welcome-to-the-portf {
+      align-self: stretch;
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-raleway);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.38px;
+      line-height: 20px;
+      position: relative;
+      text-align: justify;
+    }
+
+    .desktop-1 .work-expertise {
+      align-items: center;
+      border-radius: 8px;
+      display: flex;
+      gap: 10px;
+      padding: 4px 8px;
+      position: absolute;
+    }
+
+    .desktop-1 .work-soft-skills {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      gap: 160px;
+      height: 42px;
+      justify-content: center;
+      position: relative;
+      width: 209px;
+    }
+
+    .desktop-1 .worksoft-skills {
+      align-items: flex-start;
+      background-color: transparent;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 8px;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="desktop-1">
+  <div class="container-center-horizontal">
+    <div class="desktop-1 screen " data-id="1:2">
+      <div class="left-bar-Ys8k0x" data-id="1:3"></div>
+      <div class="back-Ys8k0x" data-id="44:283"><img class="polygon-2-uD9fXX" data-id="44:284"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/polygon-2.svg"
+          alt="Polygon 2"><img class="polygon-3-uD9fXX" data-id="44:285"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/polygon-3.svg"
+          alt="Polygon 3"></div>
+      <div class="group-194-Ys8k0x" data-id="46:1783">
+        <div class="work-expertise-t5wK9T work-expertise" data-id="46:1772"><img class="home-3mRl6o home"
+            data-id="46:1785" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/home@2x.png"
+            alt="Home">
+          <div class="home-jRTaeg home raleway-normal-white-12px" data-id="46:1773">Home</div>
+        </div>
+        <div class="work-expertise-XG9xGs work-expertise" data-id="46:1774"><img class="test-passed-WdXGbW"
+            data-id="46:2139" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/test-passed@2x.png"
+            alt="Test Passed">
+          <div class="projects-WdXGbW raleway-normal-white-12px" data-id="46:1775">Projects</div>
+        </div>
+        <div class="work-expertise-vxaWvp work-expertise" data-id="46:1777"><img class="video-6I542l" data-id="46:2142"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/video@2x.png"
+            alt="Video">
+          <div class="videos-6I542l raleway-normal-white-12px" data-id="46:1778">Videos</div>
+        </div>
+        <div class="work-expertise-PVqnN9 work-expertise" data-id="46:1780"><img class="info-squared-HlvjEU"
+            data-id="46:2146" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/info-squared@2x.png"
+            alt="Info Squared">
+          <div class="about-HlvjEU raleway-normal-white-12px" data-id="46:1781">About</div>
+        </div>
+      </div>
+      <div class="work-expertise-Ys8k0x work-expertise" data-id="46:1322">
+        <div class="mail-rGUuz1 raleway-normal-white-12px" data-id="46:1323">Mail</div>
+      </div>
+      <div class="work-expertise-V3rtYt work-expertise" data-id="46:1319">
+        <div class="whatsapp-cD8xvP raleway-normal-white-12px" data-id="46:1320">Whatsapp</div>
+      </div>
+      <div class="dp-name-Ys8k0x" data-id="13:38"><img class="pic-i3gaTS" data-id="9:25"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/pic-2.png"
+          alt="Pic">
+        <h1 class="title-i3gaTS" data-id="9:29">ADIBUL JABIR</h1>
+        <p class="x3-d-animator-3-d-mod-i3gaTS valign-text-middle" data-id="44:247"><span><span class="span0-G1G0vv">3D
+              Animator | 3DModeler | Illustrator<br></span><span class="span1-G1G0vv">BSc in Computer Science
+              Engineering at KKBAUFounded </span><span class="span2-G1G0vv">Ventrixon</span></span></p>
+      </div>
+      <div class="null-Ys8k0x" data-id="40:301"><img class="app-development-card-I5f7WJ app-development-card"
+          data-id="40:302" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/app-development-card.svg"
+          alt="App Development Card">
+        <div class="app-details-I5f7WJ app-details" data-id="40:303">
+          <div class="app-development-heading-IEn4Z4 app-development-heading" data-id="40:304"><img class="app-KoZDOG"
+              data-id="40:305" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/app.svg"
+              alt="App">
+            <div class="app-development-KoZDOG" data-id="40:309">App Development</div>
+          </div>
+          <p class="with-a-focus-on-user-IEn4Z4" data-id="40:310">With a focus on user-centric design
+            and<br>cutting-edge technologies, I thrive on <br>building intuitive and efficient apps <br>that make a
+            positive impact on people&#39;s <br>lives. Let&#39;s turn ideas into reality and <br>shape the future
+            together.</p>
+        </div>
+      </div>
+      <div class="message-Ys8k0x message" data-id="46:184"><img class="app-development-card-5wkI0x app-development-card"
+          data-id="46:185" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/app-development-card-2.svg"
+          alt="App Development Card">
+        <div class="app-details-5wkI0x app-details" data-id="46:186">
+          <div class="app-development-heading-diRUzO app-development-heading" data-id="46:187">
+            <div class="frame-245-pfeDHa frame-245" data-id="46:188">
+              <div class="frame-245-FPUb2b frame-245" data-id="46:189">
+                <div class="frame-244-zMHLCL frame-244" data-id="46:190"><img class="group-Sny6oe" data-id="46:191"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-49@2x.png"
+                    alt="Group">
+                  <div class="a-message-from-me" data-id="46:193">A Message from Me!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="welcome-to-the-portf valign-text-middle" data-id="46:194">Welcome to the portfolio of Adibul Jabir –
+            where creativity meets innovation! Explore a showcase of design, development, and ideas that bring visions
+            to life. From captivating visuals to seamless functionality, each project reflects a passion for
+            excellence.  Thank you for visiting – dive in and let the journey inspire you!</p>
+        </div>
+      </div>
+      <div class="message-V3rtYt message" data-id="40:330"><img class="app-development-card-tWOcxR app-development-card"
+          data-id="40:331" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/app-development-card-1.svg"
+          alt="App Development Card">
+        <div class="app-details-tWOcxR app-details" data-id="40:332">
+          <div class="app-development-heading-k1wOlI app-development-heading" data-id="40:333">
+            <div class="frame-245-pfHe8E frame-245" data-id="40:726">
+              <div class="frame-245-WeBxas frame-245" data-id="40:727">
+                <div class="frame-244-0QxQxr frame-244" data-id="40:728"><img class="group-4JaMib" data-id="40:729"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-49@2x.png"
+                    alt="Group">
+                  <div class="a-message-from-me" data-id="40:731">A Message from Me!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="welcome-to-the-portf valign-text-middle" data-id="40:339">Welcome to the portfolio of Adibul Jabir –
+            where creativity meets innovation! Explore a showcase of design, development, and ideas that bring visions
+            to life. From captivating visuals to seamless functionality, each project reflects a passion for
+            excellence.  Thank you for visiting – dive in and let the journey inspire you!</p>
+        </div>
+      </div>
+      <div class="services-Ys8k0x" data-id="40:582-dcfaf513-6732-4ef4-b3d5-ec96efdcc265">
+        <div class="frame-272-N3cUtY" data-id="40:595">
+          <div class="view-all-projects-Y2k8Nm" data-id="40:596">View All Projects</div>
+        </div>
+      </div>
+      <div class="social-media-Ys8k0x" data-id="37:44">
+        <div class="frame-245-nxl9DL frame-245" data-id="37:45">
+          <div class="frame-245-W4YpbE frame-245" data-id="40:720">
+            <div class="frame-244" data-id="40:721"><img class="group-I0USyx" data-id="40:722"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-49@2x.png"
+                alt="Group">
+              <div class="social-media-I0USyx manrope-medium-mountain-mist-14px" data-id="40:724">Social Media</div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-248-nxl9DL" data-id="37:53">
+          <article class="component-21-GebCmc" data-id="37:55">
+            <div class="component-17-mHk3Sz" data-id="I37:55;4:2669">
+              <div class="component-2" data-id="I37:55;4:2669;4:2642">
+                <div class="frame-247" data-id="I37:55;4:2669;4:2643">
+                  <div class="group-193" data-id="I37:55;4:2669;4:2644">
+                    <div class="rectangle-222" data-id="I37:55;4:2669;4:2645"></div>
+                  </div>
+                  <div class="webflow manrope-medium-celeste-14px" data-id="I37:55;4:2669;4:2648">adibuljabir</div>
+                </div><img class="group-j5i0Ad" data-id="I37:55;4:2669;4:2649"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-52@2x.png"
+                  alt="Group">
+              </div>
+            </div><img class="group-mHk3Sz" data-id="I37:55;4:2670"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-51@2x.png"
+              alt="Group">
+          </article>
+          <article class="component-23-GebCmc" data-id="37:57">
+            <div class="component-19-oajE2T" data-id="I37:57;4:2679">
+              <div class="component-2" data-id="I37:57;4:2679;4:2642">
+                <div class="frame-247" data-id="I37:57;4:2679;4:2643">
+                  <div class="group-193" data-id="I37:57;4:2679;4:2644">
+                    <div class="rectangle-222" data-id="I37:57;4:2679;4:2645"></div>
+                  </div>
+                  <div class="webflow manrope-medium-celeste-14px" data-id="I37:57;4:2679;4:2648">adibuljabir</div>
+                </div><img class="group-9FZeIs" data-id="I37:57;4:2679;4:2649"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/rectangle-231-13@2x.png"
+                  alt="Group">
+              </div>
+            </div><img class="group-oajE2T" data-id="I37:57;4:2680"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-53@2x.png"
+              alt="Group">
+          </article>
+          <article class="component-20-GebCmc" data-id="37:54">
+            <div class="component-16-zqVRRv" data-id="I37:54;4:2667">
+              <div class="component-2" data-id="I37:54;4:2667;4:2642">
+                <div class="frame-247" data-id="I37:54;4:2667;4:2643">
+                  <div class="group-193" data-id="I37:54;4:2667;4:2644">
+                    <div class="rectangle-222" data-id="I37:54;4:2667;4:2645"></div>
+                  </div>
+                  <div class="webflow manrope-medium-celeste-14px" data-id="I37:54;4:2667;4:2648">adibuljabir</div>
+                </div><img class="group-h86jgV" data-id="I37:54;4:2667;4:2649"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/rectangle-231-13@2x.png"
+                  alt="Group">
+              </div><img class="group-WzwWDN" data-id="I37:54;4:2667;4:2651"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-55@2x.png"
+                alt="Group">
+            </div>
+          </article>
+          <article class="component-22-GebCmc" data-id="37:56">
+            <div class="component-18-TUy9vN" data-id="I37:56;4:2673">
+              <div class="component-2" data-id="I37:56;4:2673;4:2642">
+                <div class="frame-247" data-id="I37:56;4:2673;4:2643">
+                  <div class="group-193" data-id="I37:56;4:2673;4:2644">
+                    <div class="rectangle-222" data-id="I37:56;4:2673;4:2645"></div>
+                  </div>
+                  <div class="webflow manrope-medium-celeste-14px" data-id="I37:56;4:2673;4:2648">adibuljabir</div>
+                </div><img class="group-TykIb3" data-id="I37:56;4:2673;4:2649"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/rectangle-231-13@2x.png"
+                  alt="Group">
+              </div>
+            </div><img class="mingcutedribbble-fill-TUy9vN" data-id="I37:56;4:2674"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/mingcute-dribbble-fill-1.svg"
+              alt="mingcute:dribbble-fill">
+          </article>
+        </div>
+      </div>
+      <div class="skills-section-Ys8k0x" data-id="44:1439">
+        <div class="workskills-card-qHi9fq" data-id="44:1440"></div>
+        <div class="worksoft-skills-qHi9fq worksoft-skills" data-id="44:1441">
+          <div class="work-soft-skills" data-id="44:1442">
+            <div class="frame-245-gxWcuP frame-245" data-id="44:1558">
+              <div class="frame-245-xCnddU frame-245" data-id="44:1559">
+                <div class="frame-244" data-id="44:1560"><img class="group-xiGycz" data-id="44:1561"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/group-17@2x.png"
+                    alt="Group">
+                  <div class="working-skills-xiGycz manrope-medium-mountain-mist-14px" data-id="44:1563">Working Skills
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills" data-id="44:1445">
+            <div class="work-expertise-wUocjW work-expertise" data-id="44:1446">
+              <div class="blender-zmCuC1 raleway-normal-white-12px" data-id="44:1447">Blender</div>
+            </div>
+            <div class="work-expertise-PbGxE3 work-expertise" data-id="44:1448">
+              <div class="adobe-illustrator-pIxlzZ raleway-normal-white-12px" data-id="44:1449">Adobe Illustrator</div>
+            </div>
+            <div class="work-expertise-zaL4xs work-expertise" data-id="44:1464">
+              <div class="ms-office-6sHhdR raleway-normal-white-12px" data-id="44:1465">MS Office</div>
+            </div>
+            <div class="work-expertise-d6WZKf work-expertise" data-id="44:1466">
+              <div class="after-effects-NQLUVi raleway-normal-white-12px" data-id="44:1467">After Effects</div>
+            </div>
+            <div class="work-expertise-nfTM2e work-expertise" data-id="44:1474">
+              <div class="da-vinci-resolve-yf8mKG raleway-normal-white-12px" data-id="44:1475">DaVinci Resolve</div>
+            </div>
+            <div class="work-expertise-Jh8rM5 work-expertise" data-id="44:1478">
+              <div class="python-tuj4kS raleway-normal-white-12px" data-id="44:1479">Python</div>
+            </div>
+          </div>
+        </div>
+        <div class="worksoft-skills-Kcx3xU worksoft-skills" data-id="44:1565">
+          <div class="work-soft-skills" data-id="44:1566">
+            <div class="frame-245-6he48p frame-245" data-id="44:1567">
+              <div class="frame-245-XHPdVj frame-245" data-id="44:1568">
+                <div class="frame-244" data-id="44:1569"><img class="group-oxqx0x" data-id="44:1570"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/group-17@2x.png"
+                    alt="Group">
+                  <div class="soft-skills-oxqx0x manrope-medium-mountain-mist-14px" data-id="44:1572">Soft Skills</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills" data-id="44:1573">
+            <div class="work-expertise-gmsaWT work-expertise" data-id="44:1574">
+              <div class="graphics-sense-4rIKAy raleway-normal-white-12px" data-id="44:1575">Graphics sense</div>
+            </div>
+            <div class="work-expertise-Km4BCj work-expertise" data-id="44:1576">
+              <div class="multi-taksing-iGBJJA raleway-normal-white-12px" data-id="44:1577">Multi Taksing</div>
+            </div>
+            <div class="work-expertise-whLxBx work-expertise" data-id="44:1578">
+              <div class="cooperation-j6uFV9 raleway-normal-white-12px" data-id="44:1579">Cooperation</div>
+            </div>
+            <div class="work-expertise-Mn23oB work-expertise" data-id="44:1580">
+              <div class="leadership-WhsxOg raleway-normal-white-12px" data-id="44:1581">Leadership</div>
+            </div>
+            <div class="work-expertise-91C82T work-expertise" data-id="44:1582">
+              <div class="communication-xLrwql raleway-normal-white-12px" data-id="44:1583">Communication</div>
+            </div>
+            <div class="work-expertise-8PjBLg work-expertise" data-id="44:1584">
+              <div class="quality-x72KPz raleway-normal-white-12px" data-id="44:1585">Quality</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="launchpad-js/launchpad-banner.js" async></script>
+  <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+</body>
+
 </html>
