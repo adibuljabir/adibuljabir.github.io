@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+
+<!-- portfolio of Adibul Jabir -->
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1440, maximum-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="photo">
+  <script id="anima-load-script" src="load.js"></script>
+  <script id="anima-hotspots-script" src="hotspots.js"></script>
+  <script id="anima-overrides-script" src="overrides.js"></script>
+  <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+
+  <style>
+    .screen textarea:focus,
+    .screen input:focus {
+      outline: none;
+    }
+
+    .screen * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+    }
+
+    .screen div {
+      -webkit-text-size-adjust: none;
+    }
+
+    .component-wrapper a {
+      display: contents;
+      pointer-events: auto;
+      text-decoration: none;
+    }
+
+    .component-wrapper * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .component-wrapper a *,
+    .component-wrapper input,
+    .component-wrapper video,
+    .component-wrapper iframe {
+      pointer-events: auto;
+    }
+
+    .component-wrapper.not-ready,
+    .component-wrapper.not-ready * {
+      visibility: hidden !important;
+    }
+
+    .screen a {
+      display: contents;
+      text-decoration: none;
+    }
+
+    .full-width-a {
+      width: 100%;
+    }
+
+    .full-height-a {
+      height: 100%;
+    }
+
+    .container-center-vertical {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .container-center-vertical>* {
+      flex-shrink: 0;
+      pointer-events: auto;
+    }
+
+    .container-center-horizontal {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      pointer-events: none;
+      width: 100%;
+    }
+
+    .container-center-horizontal>* {
+      flex-shrink: 0;
+      pointer-events: auto;
+    }
+
+    .auto-animated div {
+      --z-index: -1;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .auto-animated input {
+      --z-index: -1;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .auto-animated .container-center-vertical,
+    .auto-animated .container-center-horizontal {
+      opacity: 1;
+    }
+
+    .overlay-base {
+      display: none;
+      height: 100%;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .overlay-base.animate-appear {
+      align-items: center;
+      animation: reveal 0.3s ease-in-out 1 normal forwards;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+    }
+
+    .overlay-base.animate-disappear {
+      animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      display: block;
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .overlay-base.animate-disappear * {
+      pointer-events: none;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .animate-nodelay {
+      animation-delay: 0s;
+    }
+
+    .align-self-flex-start {
+      align-self: flex-start;
+    }
+
+    .align-self-flex-end {
+      align-self: flex-end;
+    }
+
+    .align-self-flex-center {
+      align-self: flex-center;
+    }
+
+    .valign-text-middle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .valign-text-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .listeners-active,
+    .listeners-active * {
+      pointer-events: auto;
+    }
+
+    .hidden,
+    .hidden * {
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .smart-layers-pointers,
+    .smart-layers-pointers * {
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .listeners-active-click,
+    .listeners-active-click * {
+      cursor: pointer;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #000000;
+      --eerie-black: #1f1f1f;
+      --mountain-mist: #999999;
+      --studio: #7256b3;
+      --t-blk: #00000099;
+      --white: #ffffff;
+      --woodsmoke: #0f0f0f;
+
+      --font-size-l: 32px;
+      --font-size-m: 16px;
+      --font-size-s: 14px;
+      --font-size-xs: 12px;
+      --font-size-xxs: 11px;
+
+      --font-family-inter: "Inter", Helvetica;
+      --font-family-manrope: "Manrope", Helvetica;
+      --font-family-poppins: "Poppins", Helvetica;
+      --font-family-raleway: "Raleway", Helvetica;
+    }
+
+    .raleway-normal-white-12px {
+      color: var(--white);
+      font-family: var(--font-family-raleway);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .manrope-medium-mountain-mist-14px {
+      color: var(--mountain-mist);
+      font-family: var(--font-family-manrope);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+
+    /* screen - home */
+
+    .home {
+      background-color: transparent;
+      background-image: url(https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/desktop---1-2@4x.png);
+      background-position: 50% 50%;
+      background-size: cover;
+      height: 899px;
+      overflow: hidden;
+      overflow-x: hidden;
+      position: relative;
+      width: 1440px;
+    }
+
+    .home .left-bar-xl4bh6 {
+      background-color: #3a3f3e;
+      border: 2px solid;
+      border-color: var(--black);
+      height: 899px;
+      left: 0px;
+      opacity: 0.1;
+      position: absolute;
+      top: 0px;
+      width: 380px;
+    }
+
+    .home .back-xl4bh6 {
+      background-color: transparent;
+      height: 74px;
+      left: 279px;
+      position: absolute;
+      top: 752px;
+      transform: rotate(180deg);
+      width: 65px;
+    }
+
+    .home .polygon-2-Da3noC {
+      background-color: transparent;
+      height: 39px;
+      left: 19px;
+      position: absolute;
+      top: 24px;
+      transform: rotate(-180deg);
+      width: 34px;
+    }
+
+    .home .polygon-3-Da3noC {
+      background-color: transparent;
+      height: 39px;
+      left: 22px;
+      position: absolute;
+      top: 11px;
+      transform: rotate(-180deg);
+      width: 34px;
+    }
+
+    .home .group-194-xl4bh6 {
+      background-color: transparent;
+      height: 207px;
+      left: 89px;
+      position: absolute;
+      top: 534px;
+      width: 209px;
+    }
+
+    .home .work-expertise-1cLXQ7 {
+      background-color: #292033;
+      border: 1px solid;
+      border-color: var(--t-blk);
+      gap: 10px;
+      height: 43px;
+      left: -1px;
+      padding: 4px 8px;
+      top: -1px;
+      width: 211px;
+    }
+
+    .home .home-qYrOgC {
+      height: 30px;
+      width: 30px;
+    }
+
+    .home .home-KTy0Hk {
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-FvbpY0 {
+      background-color: transparent;
+      border: 1px solid;
+      border-color: var(--t-blk);
+      gap: 10px;
+      height: 43px;
+      left: -1px;
+      padding: 4px 8px;
+      top: 53px;
+      width: 211px;
+    }
+
+    .home .test-passed-UMAMz2 {
+      background-color: transparent;
+      height: 30px;
+      position: relative;
+      width: 30px;
+    }
+
+    .home .projects-UMAMz2 {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-4YNrxO {
+      background-color: transparent;
+      border: 1px solid;
+      border-color: var(--t-blk);
+      gap: 10px;
+      height: 43px;
+      left: -1px;
+      padding: 4px 8px;
+      top: 107px;
+      width: 211px;
+    }
+
+    .home .video-t07Y2w {
+      background-color: transparent;
+      height: 30px;
+      position: relative;
+      width: 30px;
+    }
+
+    .home .videos-t07Y2w {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-T2iNmX {
+      background-color: transparent;
+      border: 1px solid;
+      border-color: var(--t-blk);
+      gap: 10px;
+      height: 43px;
+      left: -1px;
+      padding: 4px 8px;
+      top: 165px;
+      width: 211px;
+    }
+
+    .home .info-squared-XNmfyn {
+      background-color: transparent;
+      height: 30px;
+      position: relative;
+      width: 30px;
+    }
+
+    .home .about-me-XNmfyn {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-xl4bh6 {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      height: 41px;
+      justify-content: center;
+      left: 210px;
+      padding: 4px 8px;
+      top: 415px;
+      width: 120px;
+    }
+
+    .home .mail-e4XQQQ {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-efo9xP {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      height: 41px;
+      justify-content: center;
+      left: 63px;
+      padding: 4px 8px;
+      top: 415px;
+      width: 120px;
+    }
+
+    .home .whatsapp-5PmFcR {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .dp-name-xl4bh6 {
+      background-color: transparent;
+      height: 252px;
+      left: 35px;
+      position: absolute;
+      top: 132px;
+      width: 329px;
+    }
+
+    .home .pic-1mtQ89 {
+      background-color: transparent;
+      height: 156px;
+      left: 77px;
+      object-fit: cover;
+      position: absolute;
+      top: -3px;
+      width: 156px;
+    }
+
+    .home .title-1mtQ89 {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-inter);
+      font-size: var(--font-size-l);
+      font-style: normal;
+      font-weight: 400;
+      height: auto;
+      left: 26px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+      top: 172px;
+      white-space: nowrap;
+      width: 269px;
+    }
+
+    .home .x3-d-animator-3-d-modeler-illustrator-1mtQ89 {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-inter);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 400;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+      top: 221px;
+      width: 323px;
+    }
+
+    .home .b-sc-in-computer-sci-1mtQ89 {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-inter);
+      font-size: var(--font-size-xxs);
+      font-style: normal;
+      font-weight: 400;
+      height: 12px;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+      top: 240px;
+      white-space: nowrap;
+      width: 322px;
+    }
+
+    .home .founded-ventrixon-xl4bh6 {
+      background-color: transparent;
+      color: transparent;
+      font-family: var(--font-family-inter);
+      font-size: var(--font-size-xxs);
+      font-style: normal;
+      font-weight: 400;
+      height: 13px;
+      left: 28px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: center;
+      top: 395px;
+      white-space: nowrap;
+      width: 323px;
+    }
+
+    .home .span1-t7n7Df {
+      color: #916be7;
+      font-style: normal;
+    }
+
+    .home .null-xl4bh6 {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 218px;
+      left: 425px;
+      position: absolute;
+      top: 653px;
+      width: 463px;
+    }
+
+    .home .app-development-card-1UawaQ {
+      height: 218px;
+    }
+
+    .home .app-details-1UawaQ {
+      height: 196px;
+      left: 29px;
+      padding: 16px 10px 23px;
+      top: 11px;
+      width: 406px;
+    }
+
+    .home .app-development-heading-6ecGM2 {
+      display: inline-flex;
+      flex: 0 0 auto;
+    }
+
+    .home .what-is-ventrixon-RvxizI {
+      background-color: transparent;
+      color: transparent;
+      font-family: var(--font-family-poppins);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 600;
+      height: 24px;
+      letter-spacing: 0.00px;
+      line-height: 20px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: center;
+      white-space: nowrap;
+      width: 382px;
+    }
+
+    .home .span1-7dLftO {
+      color: var(--studio);
+      font-style: normal;
+    }
+
+    .home .span2-7dLftO {
+      color: var(--white);
+      font-style: normal;
+    }
+
+    .home .a-private-company-sp-6ecGM2 {
+      align-self: stretch;
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-raleway);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 400;
+      height: 122px;
+      letter-spacing: 0.35px;
+      line-height: 20px;
+      margin-bottom: -3.00px;
+      position: relative;
+      text-align: left;
+    }
+
+    .home .message-xl4bh6 {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 349px;
+      left: 901px;
+      position: absolute;
+      top: 53px;
+      width: 467px;
+    }
+
+    .home .app-development-card-zchKfC {
+      height: 349px;
+    }
+
+    .home .app-details-zchKfC {
+      height: 268px;
+      left: 11px;
+      padding: 10px;
+      top: 0px;
+      width: 446px;
+    }
+
+    .home .app-development-heading-58fG5n {
+      align-self: stretch;
+      display: flex;
+      height: 59px;
+      width: 100%;
+    }
+
+    .home .frame-245-LGMzYk {
+      align-self: stretch;
+      width: 180px;
+    }
+
+    .home .frame-245-H0lNan {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .home .frame-244-YrG4rI {
+      margin-left: -3.50px;
+      margin-right: -3.50px;
+    }
+
+    .home .a-message-from-me-pXbuzC {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-poppins);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.00px;
+      line-height: 20px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .welcome-to-adibul-ja-58fG5n {
+      align-self: stretch;
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-raleway);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.40px;
+      line-height: 20px;
+      margin-bottom: -65.00px;
+      position: relative;
+      text-align: justify;
+    }
+
+    .home .services-xl4bh6 {
+      background-color: transparent;
+      background-image: url(https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/services-2@2x.png);
+      background-position: 50% 50%;
+      background-size: cover;
+      border: 3px solid;
+      border-color: var(--woodsmoke);
+      border-radius: 10px;
+      height: 219px;
+      left: 425px;
+      overflow: hidden;
+      position: absolute;
+      top: 415px;
+      width: 463px;
+    }
+
+    .home .frame-272-1caKZb {
+      background-color: var(--studio);
+      left: 148px;
+      position: relative;
+      top: 152px;
+    }
+
+    .home .view-all-projects-597tvW {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-manrope);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.50px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .home .services-efo9xP {
+      align-items: center;
+      background-color: #001800;
+      border: 3px solid;
+      border-color: var(--woodsmoke);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 219px;
+      left: 905px;
+      opacity: 0.78;
+      overflow: hidden;
+      padding: 18px 20px 35px 74px;
+      position: absolute;
+      top: 415px;
+      width: 463px;
+    }
+
+    .home .frame-273-InUdAe {
+      background-color: transparent;
+      background-image: url(https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/672508ea019a5fe7367429e3/img/frame-273@2x.png);
+      background-position: 50% 50%;
+      background-size: cover;
+      height: 185px;
+      margin-bottom: -19.00px;
+      overflow: hidden;
+      position: relative;
+      width: 369px;
+    }
+
+    .home .frame-272-InUdAe {
+      background-color: #105318;
+      left: 153px;
+      position: absolute;
+      top: 154px;
+    }
+
+    .home .view-in-upwork-bHKO4e {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-manrope);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.50px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .home .social-media-xl4bh6 {
+      align-items: center;
+      background-color: var(--woodsmoke);
+      border: 1px solid;
+      border-color: #ffffff0d;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      height: 349px;
+      left: 668px;
+      overflow: hidden;
+      padding: 20px 20px 30px;
+      position: absolute;
+      top: 53px;
+      width: 220px;
+    }
+
+    .home .frame-245-VJhZvr {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .home .frame-245-GiN5cs {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .home .social-media-xxxAcc {
+      background-color: transparent;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .home .skills-VJhZvr {
+      height: 244px;
+      width: 148.75px;
+    }
+
+    .home .work-expertise-dutbL1 {
+      background-color: var(--studio);
+      gap: 10px;
+      height: 33px;
+      left: 1px;
+      padding: 4px 10px;
+      top: 0px;
+      width: 147px;
+    }
+
+    .home .linked-in-t4ZlZ2 {
+      height: 25px;
+      width: 25px;
+    }
+
+    .home .linked-in-1dtmIb {
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -0.50px;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-WHwbsx {
+      background-color: var(--studio);
+      gap: 10px;
+      height: 33px;
+      left: 1px;
+      padding: 4px 10px;
+      top: 42px;
+      width: 148px;
+    }
+
+    .home .git-hub-kcFQDS {
+      height: 25px;
+      width: 25px;
+    }
+
+    .home .git-hub-gbCOaA {
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -0.50px;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-l8EQzx {
+      background-color: var(--studio);
+      gap: 10px;
+      height: 34px;
+      left: 1px;
+      padding: 4px 10px;
+      top: 126px;
+      width: 148px;
+    }
+
+    .home .upwork-ztDqPg {
+      height: 22px;
+      width: 22px;
+    }
+
+    .home .upwork-vPPHQN {
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-yLi1Yp {
+      background-color: var(--studio);
+      gap: 10px;
+      height: 33px;
+      left: 0px;
+      padding: 4px 10px;
+      top: 211px;
+      width: 148px;
+    }
+
+    .home .sketchfab-EJQYwh {
+      height: 22px;
+      width: 22px;
+    }
+
+    .home .sketchfab-wmOAJt {
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -0.50px;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-trtyc6 {
+      background-color: var(--studio);
+      gap: 10px;
+      height: 33px;
+      left: 0px;
+      padding: 4px 10px;
+      top: 169px;
+      width: 148px;
+    }
+
+    .home .x-YcPiKA {
+      background-color: transparent;
+      height: 22px;
+      position: relative;
+      width: 22px;
+    }
+
+    .home .x-twitter-YcPiKA {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -0.50px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-R0PizS {
+      background-color: var(--studio);
+      gap: 10px;
+      height: 33px;
+      left: 1px;
+      padding: 4px 10px;
+      top: 84px;
+      width: 148px;
+    }
+
+    .home .hackerrank-vrtzN2 {
+      background-color: transparent;
+      height: 25px;
+      position: relative;
+      width: 25px;
+    }
+
+    .home .hacker-rank-vrtzN2 {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -0.50px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .skills-section-xl4bh6 {
+      display: inline-flex;
+      height: 349px;
+      left: 425px;
+      top: 53px;
+    }
+
+    .home .workskills-card-7f6yeK {
+      border-radius: 0px 0px 8px 8px;
+      height: 349px;
+      width: 230px;
+    }
+
+    .home .worksoft-skills-7f6yeK {
+      display: inline-flex;
+      left: 10px;
+      top: 9px;
+    }
+
+    .home .work-soft-skills-3sC9a9 {
+      width: 209px;
+    }
+
+    .home .frame-245-ikYthx {
+      height: 42px;
+      justify-content: center;
+      width: 207px;
+    }
+
+    .home .frame-245-LJKGwT {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .home .working-skills-hiyzAj {
+      background-color: transparent;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .home .skills-3sC9a9 {
+      height: 114px;
+      width: 209.84490966796875px;
+    }
+
+    .home .work-expertise-kvd3Hn {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 1px;
+      padding: 4px 8px;
+      top: 0px;
+      width: 66px;
+    }
+
+    .home .blender-m8VqtZ {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-pcWR6F {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 0px;
+      padding: 4px 8px;
+      top: 41px;
+      width: 113px;
+    }
+
+    .home .adobe-illustrator-iAU82x {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-N8S7tZ {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 139px;
+      padding: 4px 8px;
+      top: 41px;
+      width: 70px;
+    }
+
+    .home .ms-office-nBH8Ix {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-pHRw9W {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 125px;
+      padding: 4px 8px;
+      top: 0px;
+      width: 85px;
+    }
+
+    .home .after-effects-djAF63 {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-left: -0.52px;
+      margin-right: -0.52px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-Wuidxi {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 104px;
+      padding: 4px 8px;
+      top: 82px;
+      width: 104px;
+    }
+
+    .home .da-vinci-resolve-EuoJH9 {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-left: -2.00px;
+      margin-right: -2.00px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-IyUZLx {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 1px;
+      padding: 4px 8px;
+      top: 82px;
+      width: 56px;
+    }
+
+    .home .python-7O2iJL {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-left: -0.50px;
+      margin-right: -0.50px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .worksoft-skills-65JMRP {
+      display: inline-flex;
+      left: 11px;
+      top: 173px;
+    }
+
+    .home .work-soft-skills-xLSOcG {
+      width: 209px;
+    }
+
+    .home .frame-245-Bbb8ke {
+      height: 42px;
+      justify-content: center;
+      width: 207px;
+    }
+
+    .home .frame-245-X4V4uo {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .home .soft-skills-GNAKIz {
+      background-color: transparent;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .home .skills-xLSOcG {
+      height: 114px;
+      width: 210px;
+    }
+
+    .home .work-expertise-xBcZcy {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 1px;
+      padding: 4px 8px;
+      top: 0px;
+      width: 104px;
+    }
+
+    .home .graphics-sense-UVVYGf {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-lYS1aC {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 0px;
+      padding: 4px 8px;
+      top: 41px;
+      width: 94px;
+    }
+
+    .home .multi-taksing-3rM95f {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-qIaptg {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 119px;
+      padding: 4px 8px;
+      top: 41px;
+      width: 90px;
+    }
+
+    .home .cooperation-nxb0xr {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-7BuxBD {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 125px;
+      padding: 4px 8px;
+      top: 0px;
+      width: 85px;
+    }
+
+    .home .leadership-l29HJx {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-fchT4i {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 98px;
+      padding: 4px 8px;
+      top: 82px;
+      width: 112px;
+    }
+
+    .home .communication-BchqkJ {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-VuSXKk {
+      background-color: var(--eerie-black);
+      gap: 10px;
+      justify-content: center;
+      left: 1px;
+      padding: 4px 8px;
+      top: 82px;
+      width: 60px;
+    }
+
+    .home .quality-BSrDH9 {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .skills-section-efo9xP {
+      display: flex;
+      height: 217px;
+      left: 905px;
+      top: 654px;
+      width: 463px;
+    }
+
+    .home .workskills-card-91qL9c {
+      align-self: stretch;
+      border-radius: 20px;
+      height: 210px;
+      width: 100%;
+    }
+
+    .home .worksoft-skills-91qL9c {
+      display: flex;
+      left: 40px;
+      top: 0px;
+      width: 349px;
+    }
+
+    .home .work-soft-skills-BmusRG {
+      align-self: stretch;
+      width: 100%;
+    }
+
+    .home .frame-245-A4hQ4U {
+      height: 42px;
+      justify-content: center;
+      width: 207px;
+    }
+
+    .home .frame-245-ylAw5n {
+      align-self: stretch;
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .home .services-rj8thM {
+      background-color: transparent;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      width: fit-content;
+    }
+
+    .home .skills-BmusRG {
+      height: 144px;
+      margin-right: -53.00px;
+      width: 402px;
+    }
+
+    .home .work-expertise-kGLTDE {
+      background-color: var(--eerie-black);
+      gap: 225px;
+      height: 32px;
+      left: 0px;
+      padding: 4px 8px;
+      top: 0px;
+      width: 402px;
+    }
+
+    .home .product-animation-sdnavi {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .x20hr-sdnavi {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-d0Z2N9 {
+      background-color: var(--eerie-black);
+      gap: 230px;
+      height: 32px;
+      left: 0px;
+      padding: 4px 8px;
+      top: 37px;
+      width: 402px;
+    }
+
+    .home .product-modeling-xzelgy {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .x18hr-xzelgy {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-K4ewsW {
+      background-color: var(--eerie-black);
+      gap: 272px;
+      left: 0px;
+      padding: 4px 8px;
+      top: 112px;
+      width: 402px;
+    }
+
+    .home .illustration-8M8y9Z {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .x10hr-8M8y9Z {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .work-expertise-rA2eoQ {
+      background-color: var(--eerie-black);
+      gap: 243px;
+      height: 32px;
+      left: 0px;
+      padding: 4px 8px;
+      top: 74px;
+      width: 402px;
+    }
+
+    .home .webui-design-os1Vjq {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .x11hr-os1Vjq {
+      background-color: transparent;
+      letter-spacing: 0.24px;
+      line-height: 24px;
+      margin-top: -1.00px;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      width: fit-content;
+    }
+
+    .home .app-details {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      position: absolute;
+    }
+
+    .home .app-development-card {
+      align-self: stretch;
+      background-color: transparent;
+      position: relative;
+      width: 100%;
+    }
+
+    .home .app-development-heading {
+      align-items: center;
+      background-color: transparent;
+      gap: 11px;
+      justify-content: center;
+      position: relative;
+    }
+
+    .home .frame-244 {
+      align-items: center;
+      background-color: transparent;
+      display: inline-flex;
+      flex: 0 0 auto;
+      gap: 8px;
+      justify-content: center;
+      padding: 6px 10px;
+      position: relative;
+    }
+
+    .home .frame-245 {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .home .frame-272 {
+      align-items: center;
+      border: 1.5px solid;
+      border-color: var(--woodsmoke);
+      border-radius: 12px;
+      display: inline-flex;
+      gap: 10px;
+      padding: 13px 30px;
+    }
+
+    .home .git-hub {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .home .group {
+      background-color: transparent;
+      height: 14px;
+      position: relative;
+      width: 14px;
+    }
+
+    .home .home-1 {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .home .linked-in {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .home .sketchfab {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .home .skills {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .home .skills-section {
+      align-items: flex-start;
+      background-color: transparent;
+      border-radius: 10px;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+    }
+
+    .home .span0 {
+      color: var(--white);
+      font-style: normal;
+    }
+
+    .home .upwork {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .home .work-expertise {
+      align-items: center;
+      border-radius: 8px;
+      display: flex;
+      position: absolute;
+    }
+
+    .home .work-soft-skills {
+      align-items: flex-start;
+      background-color: transparent;
+      display: flex;
+      gap: 160px;
+      height: 42px;
+      justify-content: center;
+      position: relative;
+    }
+
+    .home .workskills-card {
+      background-color: var(--woodsmoke);
+      position: relative;
+    }
+
+    .home .worksoft-skills {
+      align-items: flex-start;
+      background-color: transparent;
+      flex-direction: column;
+      gap: 8px;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="home">
+  <div class="container-center-horizontal">
+    <div class="home screen " data-id="1:2">
+      <div class="left-bar-xl4bh6" data-id="1:3"></div>
+      <div class="back-xl4bh6" data-id="44:283"><img class="polygon-2-Da3noC" data-id="44:284"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/polygon-2.svg"
+          alt="Polygon 2"><img class="polygon-3-Da3noC" data-id="44:285"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/polygon-3.svg"
+          alt="Polygon 3"></div>
+      <div class="group-194-xl4bh6" data-id="46:1783">
+        <div class="work-expertise-1cLXQ7 work-expertise" data-id="46:1772"><img class="home-qYrOgC home-1"
+            data-id="46:1785" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/home@2x.png"
+            alt="Home">
+          <div class="home-KTy0Hk home-1 raleway-normal-white-12px" data-id="46:1773">Home</div>
+        </div>
+        <div class="work-expertise-FvbpY0 work-expertise" data-id="46:1774"><img class="test-passed-UMAMz2"
+            data-id="46:2139" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/test-passed@2x.png"
+            alt="Test Passed">
+          <a href="project.html">
+            <div class="projects-UMAMz2 raleway-normal-white-12px" data-id="46:1775">Projects</div>
+          </a>
+        </div>
+        <div class="work-expertise-4YNrxO work-expertise" data-id="46:1777"><img class="video-t07Y2w" data-id="46:2142"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/video@2x.png"
+            alt="Video">
+          <a href="videos.html">
+            <div class="videos-t07Y2w raleway-normal-white-12px" data-id="46:1778">Videos</div>
+          </a>
+        </div>
+        <div class="work-expertise-T2iNmX work-expertise" data-id="46:1780"><img class="info-squared-XNmfyn"
+            data-id="46:2146" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/info-squared@2x.png"
+            alt="Info Squared">
+          <a href="about.html">
+            <div class="about-me-XNmfyn raleway-normal-white-12px" data-id="46:1781">About Me</div>
+          </a>
+        </div>
+      </div>
+      <div class="work-expertise-xl4bh6 work-expertise" data-id="46:1322">
+        <a href="mailto:adibuljabir@outlook.com">
+          <div class="mail-e4XQQQ raleway-normal-white-12px" data-id="46:1323">Mail</div>
+        </a>
+      </div>
+      <div class="work-expertise-efo9xP work-expertise" data-id="46:1319">
+        <a href="https://wa.me/qr/OOP5CMY4RLZKP1">
+          <div class="whatsapp-5PmFcR raleway-normal-white-12px" data-id="46:1320">Whatsapp</div>
+        </a>
+      </div>
+      <div class="dp-name-xl4bh6" data-id="13:38"><img class="pic-1mtQ89" data-id="9:25"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/pic-2.png"
+          alt="Pic">
+        <h1 class="title-1mtQ89" data-id="9:29">ADIBUL JABIR</h1>
+        <p class="x3-d-animator-3-d-modeler-illustrator-1mtQ89" data-id="44:247">3D Animator | 3DModeler | Illustrator
+        </p>
+        <p class="b-sc-in-computer-sci-1mtQ89 valign-text-middle" data-id="69:552">BSc in Computer Science Engineering
+          at KKBAU</p>
+      </div>
+      <div class="founded-ventrixon-xl4bh6 valign-text-bottom" data-id="69:554"><span><span class="span0">Founded
+          </span><span class="span1-t7n7Df">Ventrixon</span></span></div>
+      <div class="null-xl4bh6" data-id="40:301"><img class="app-development-card-1UawaQ app-development-card"
+          data-id="40:302" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/672508ea019a5fe7367429e3/img/app-development-card.svg"
+          alt="App Development Card">
+        <div class="app-details-1UawaQ app-details" data-id="40:303">
+          <div class="app-development-heading-6ecGM2 app-development-heading" data-id="40:304">
+            <div class="what-is-ventrixon-RvxizI valign-text-middle" data-id="40:309"><span><span class="span0">What is
+                </span><span class="span1-7dLftO">Ventrixon </span><span class="span2-7dLftO">?</span></span></div>
+          </div>
+          <p class="a-private-company-sp-6ecGM2" data-id="40:310">A private company specializing in 3D animation and
+            design, we use Blender and After Effects to create educational animations, engaging ads, and informative
+            videos on YouTube. Visit Ventrixon.com to explore the creative potential of 3D! #Ventrixon3D
+            #AnimationExcellence</p>
+        </div>
+      </div>
+      <div class="message-xl4bh6" data-id="40:330"><img class="app-development-card-zchKfC app-development-card"
+          data-id="40:331" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/app-development-card-1.svg"
+          alt="App Development Card">
+        <div class="app-details-zchKfC app-details" data-id="40:332">
+          <div class="app-development-heading-58fG5n app-development-heading" data-id="40:333">
+            <div class="frame-245-LGMzYk frame-245" data-id="40:726">
+              <div class="frame-245-H0lNan frame-245" data-id="40:727">
+                <div class="frame-244-YrG4rI frame-244" data-id="40:728"><img class="group" data-id="40:729"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-49@2x.png"
+                    alt="Group">
+                  <div class="a-message-from-me-pXbuzC" data-id="40:731">A Message from Me!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="welcome-to-adibul-ja-58fG5n valign-text-middle" data-id="40:339">Welcome to Adibul Jabir’s portfolio
+            website! I’m a Computer Science and Engineering student with a strong passion for 3D design, offering
+            expertise in creating visually captivating and technically sound projects. Known for fast and efficient
+            delivery, I make flexibility a priority, with availability of up to 17 hours a day to meet the unique needs
+            of each client. My commitment is to deliver high-quality results on time, every time. Here, you’ll find a
+            showcase of my work where creativity and technical skill intersect, from 3D modeling to digital solutions.
+            Let’s collaborate and transform your ideas into reality!</p>
+        </div>
+      </div>
+      <div class="services-xl4bh6" data-id="40:582-256e44de-66f1-40a8-a361-6d2ed83e6734">
+        <div class="frame-272-1caKZb frame-272" data-id="40:595">
+          <a href="project.html">
+            <div class="view-all-projects-597tvW" data-id="40:596">View All Projects</div>
+          </a>
+        </div>
+      </div>
+      <div class="services-efo9xP" data-id="64:158">
+        <div class="frame-273-InUdAe" data-id="64:162-ca4638b1-0943-4dba-8556-96b01f468f75"></div>
+        <div class="frame-272-InUdAe frame-272" data-id="64:159">
+          <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b">
+            <div class="view-in-upwork-bHKO4e" data-id="64:160">View in Upwork</div>
+          </a>
+        </div>
+      </div>
+      <div class="social-media-xl4bh6" data-id="37:44">
+        <div class="frame-245-VJhZvr frame-245" data-id="37:45">
+          <div class="frame-245-GiN5cs frame-245" data-id="40:720">
+            <div class="frame-244" data-id="40:721"><img class="group" data-id="40:722"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/group-49@2x.png"
+                alt="Group">
+              <div class="social-media-xxxAcc manrope-medium-mountain-mist-14px" data-id="40:724">Social Media</div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-VJhZvr skills" data-id="61:699">
+          <div class="work-expertise-dutbL1 work-expertise" data-id="61:700"><img class="linked-in-t4ZlZ2 linked-in"
+              data-id="61:723" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250b9101848420b7b2c743/img/linkedin-1@2x.png"
+              alt="LinkedIn">
+            <a href="https://www.linkedin.com/in/adibuljabir/">
+              <div class="linked-in-1dtmIb linked-in raleway-normal-white-12px" data-id="61:701">LinkedIn</div>
+            </a>
+          </div>
+          <div class="work-expertise-WHwbsx work-expertise" data-id="61:702"><img class="git-hub-kcFQDS git-hub"
+              data-id="61:725" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250b9101848420b7b2c743/img/github-1@2x.png"
+              alt="GitHub">
+            <a href="https://github.com/adibuljabir">
+              <div class="git-hub-gbCOaA git-hub raleway-normal-white-12px" data-id="61:703">GitHub</div>
+            </a>
+          </div>
+          <div class="work-expertise-l8EQzx work-expertise" data-id="61:715"><img class="upwork-ztDqPg upwork"
+              data-id="61:729" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250b9101848420b7b2c743/img/upwork-1@2x.png"
+              alt="Upwork">
+            <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b">
+              <div class="upwork-vPPHQN upwork raleway-normal-white-12px" data-id="61:716">Upwork</div>
+            </a>
+          </div>
+          <div class="work-expertise-yLi1Yp work-expertise" data-id="61:708"><img class="sketchfab-EJQYwh sketchfab"
+              data-id="64:156" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250b9101848420b7b2c743/img/sketchfab-1@2x.png"
+              alt="Sketchfab">
+            <a href="https://sketchfab.com/ventrixon">
+              <div class="sketchfab-wmOAJt sketchfab raleway-normal-white-12px" data-id="61:709">Sketchfab</div>
+            </a>
+          </div>
+          <div class="work-expertise-trtyc6 work-expertise" data-id="64:150"><img class="x-YcPiKA" data-id="64:151"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250b9101848420b7b2c743/img/x-1@2x.png"
+              alt="X">
+            <a href="https://x.com/adibuljabir">
+              <div class="x-twitter-YcPiKA raleway-normal-white-12px" data-id="64:152">X (Twitter)</div>
+            </a>
+          </div>
+          <div class="work-expertise-R0PizS work-expertise" data-id="61:710"><img class="hackerrank-vrtzN2"
+              data-id="61:727" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250b9101848420b7b2c743/img/hackerrank-1@2x.png"
+              alt="Hackerrank">
+            <a href="https://www.hackerrank.com/profile/adibuljabir">
+              <div class="hacker-rank-vrtzN2 raleway-normal-white-12px" data-id="61:711">Hacker rank</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="skills-section-xl4bh6 skills-section" data-id="44:1439">
+        <div class="workskills-card-7f6yeK workskills-card" data-id="44:1440"></div>
+        <div class="worksoft-skills-7f6yeK worksoft-skills" data-id="44:1441">
+          <div class="work-soft-skills-3sC9a9 work-soft-skills" data-id="44:1442">
+            <div class="frame-245-ikYthx frame-245" data-id="44:1558">
+              <div class="frame-245-LJKGwT frame-245" data-id="44:1559">
+                <div class="frame-244" data-id="44:1560"><img class="group" data-id="44:1561"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/group-17@2x.png"
+                    alt="Group">
+                  <div class="working-skills-hiyzAj manrope-medium-mountain-mist-14px" data-id="44:1563">Working Skills
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-3sC9a9 skills" data-id="44:1445">
+            <div class="work-expertise-kvd3Hn work-expertise" data-id="44:1446">
+              <div class="blender-m8VqtZ raleway-normal-white-12px" data-id="44:1447">Blender</div>
+            </div>
+            <div class="work-expertise-pcWR6F work-expertise" data-id="44:1448">
+              <div class="adobe-illustrator-iAU82x raleway-normal-white-12px" data-id="44:1449">Adobe Illustrator</div>
+            </div>
+            <div class="work-expertise-N8S7tZ work-expertise" data-id="44:1464">
+              <div class="ms-office-nBH8Ix raleway-normal-white-12px" data-id="44:1465">MS Office</div>
+            </div>
+            <div class="work-expertise-pHRw9W work-expertise" data-id="44:1466">
+              <div class="after-effects-djAF63 raleway-normal-white-12px" data-id="44:1467">After Effects</div>
+            </div>
+            <div class="work-expertise-Wuidxi work-expertise" data-id="44:1474">
+              <div class="da-vinci-resolve-EuoJH9 raleway-normal-white-12px" data-id="44:1475">DaVinci Resolve</div>
+            </div>
+            <div class="work-expertise-IyUZLx work-expertise" data-id="44:1478">
+              <div class="python-7O2iJL raleway-normal-white-12px" data-id="44:1479">Python</div>
+            </div>
+          </div>
+        </div>
+        <div class="worksoft-skills-65JMRP worksoft-skills" data-id="44:1565">
+          <div class="work-soft-skills-xLSOcG work-soft-skills" data-id="44:1566">
+            <div class="frame-245-Bbb8ke frame-245" data-id="44:1567">
+              <div class="frame-245-X4V4uo frame-245" data-id="44:1568">
+                <div class="frame-244" data-id="44:1569"><img class="group" data-id="44:1570"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/group-17@2x.png"
+                    alt="Group">
+                  <div class="soft-skills-GNAKIz manrope-medium-mountain-mist-14px" data-id="44:1572">Soft Skills</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-xLSOcG skills" data-id="44:1573">
+            <div class="work-expertise-xBcZcy work-expertise" data-id="44:1574">
+              <div class="graphics-sense-UVVYGf raleway-normal-white-12px" data-id="44:1575">Graphics sense</div>
+            </div>
+            <div class="work-expertise-lYS1aC work-expertise" data-id="44:1576">
+              <div class="multi-taksing-3rM95f raleway-normal-white-12px" data-id="44:1577">Multi Taksing</div>
+            </div>
+            <div class="work-expertise-qIaptg work-expertise" data-id="44:1578">
+              <div class="cooperation-nxb0xr raleway-normal-white-12px" data-id="44:1579">Cooperation</div>
+            </div>
+            <div class="work-expertise-7BuxBD work-expertise" data-id="44:1580">
+              <div class="leadership-l29HJx raleway-normal-white-12px" data-id="44:1581">Leadership</div>
+            </div>
+            <div class="work-expertise-fchT4i work-expertise" data-id="44:1582">
+              <div class="communication-BchqkJ raleway-normal-white-12px" data-id="44:1583">Communication</div>
+            </div>
+            <div class="work-expertise-VuSXKk work-expertise" data-id="44:1584">
+              <div class="quality-BSrDH9 raleway-normal-white-12px" data-id="44:1585">Quality</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skills-section-efo9xP skills-section" data-id="65:24">
+        <div class="workskills-card-91qL9c workskills-card" data-id="65:25"></div>
+        <div class="worksoft-skills-91qL9c worksoft-skills" data-id="65:47">
+          <div class="work-soft-skills-BmusRG work-soft-skills" data-id="65:48">
+            <div class="frame-245-A4hQ4U frame-245" data-id="65:49">
+              <div class="frame-245-ylAw5n frame-245" data-id="65:50">
+                <div class="frame-244" data-id="65:51"><img class="group" data-id="65:52"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                    anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/group-17@2x.png"
+                    alt="Group">
+                  <div class="services-rj8thM manrope-medium-mountain-mist-14px" data-id="65:54">Services</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-BmusRG skills" data-id="65:55">
+            <div class="work-expertise-kGLTDE work-expertise" data-id="65:56">
+              <div class="product-animation-sdnavi raleway-normal-white-12px" data-id="65:57">Product Animation</div>
+              <div class="x20hr-sdnavi raleway-normal-white-12px" data-id="65:69">$20/hr</div>
+            </div>
+            <div class="work-expertise-d0Z2N9 work-expertise" data-id="65:58">
+              <div class="product-modeling-xzelgy raleway-normal-white-12px" data-id="65:59">Product Modeling</div>
+              <div class="x18hr-xzelgy raleway-normal-white-12px" data-id="65:71">$18/hr</div>
+            </div>
+            <div class="work-expertise-K4ewsW work-expertise" data-id="65:62">
+              <div class="illustration-8M8y9Z raleway-normal-white-12px" data-id="65:63">Illustration</div>
+              <div class="x10hr-8M8y9Z raleway-normal-white-12px" data-id="65:75">$10/hr</div>
+            </div>
+            <div class="work-expertise-rA2eoQ work-expertise" data-id="65:66">
+              <div class="webui-design-os1Vjq raleway-normal-white-12px" data-id="65:67">Web/UI Design</div>
+              <div class="x11hr-os1Vjq raleway-normal-white-12px" data-id="65:73">$11/hr</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="launchpad-js/launchpad-banner.js" async></script>
+  <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+</body>
+
+</html>
