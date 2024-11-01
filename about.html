@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+01/11/2024 17:17:59 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:500,400,600|Inter:400|Poppins:500|Manrope:500");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6723cce39623faf721765651.6723cce39623faf721765654.jVpLQkL.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --eerie-black: #1f1f1f;
+  --mountain-mist: #999999;
+  --t-blk: #00000099;
+  --vulcan: #141419;
+  --white: #ffffff;
+ 
+  --font-size-l: 14px;
+  --font-size-m: 13.9px;
+  --font-size-s: 12px;
+  --font-size-xl: 27.7px;
+  --font-size-xs: 11px;
+  --font-size-xxl: 32px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-manrope: "Manrope", Helvetica;
+  --font-family-poppins: "Poppins", Helvetica;
+  --font-family-raleway: "Raleway", Helvetica;
+}
+.raleway-normal-white-12px {
+  color: var(--white);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.raleway-normal-white-13-9px {
+  color: var(--white);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.raleway-semi-bold-white-13-9px {
+  color: var(--white);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.raleway-medium-white-13-9px {
+  color: var(--white);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.manrope-medium-mountain-mist-14px {
+  color: var(--mountain-mist);
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+
+:root {
+}
+
+
+/* screen - about-me */
+
+.about-me {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/desktop---1-2@4x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 899px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.about-me .left-bar-MuKjWR {
+  background-color: #3a3f3e;
+  border: 2px solid;
+  border-color: var(--black);
+  height: 899px;
+  left: 0px;
+  opacity: 0.1;
+  position: absolute;
+  top: 0px;
+  width: 380px;
+}
+
+.about-me .back-MuKjWR {
+  background-color: transparent;
+  height: 74px;
+  left: 279px;
+  position: absolute;
+  top: 752px;
+  transform: rotate(180deg);
+  width: 65px;
+}
+
+.about-me .polygon-2-t30EIc {
+  background-color: transparent;
+  height: 39px;
+  left: 19px;
+  position: absolute;
+  top: 24px;
+  transform: rotate(-180deg);
+  width: 34px;
+}
+
+.about-me .polygon-3-t30EIc {
+  background-color: transparent;
+  height: 39px;
+  left: 22px;
+  position: absolute;
+  top: 11px;
+  transform: rotate(-180deg);
+  width: 34px;
+}
+
+.about-me .group-194-MuKjWR {
+  background-color: transparent;
+  height: 207px;
+  left: 89px;
+  position: absolute;
+  top: 534px;
+  width: 209px;
+}
+
+.about-me .work-expertise-y4PS4K {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--t-blk);
+  height: 43px;
+  left: -1px;
+  top: -1px;
+  width: 211px;
+}
+
+.about-me .home-iTHA8H {
+  height: 30px;
+  width: 30px;
+}
+
+.about-me .home-4AhhRM {
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-GMPXA4 {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--t-blk);
+  height: 43px;
+  left: -1px;
+  top: 53px;
+  width: 211px;
+}
+
+.about-me .test-passed-juxOQy {
+  background-color: transparent;
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+
+.about-me .projects-juxOQy {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-6j7JPn {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--t-blk);
+  height: 43px;
+  left: -1px;
+  top: 107px;
+  width: 211px;
+}
+
+.about-me .video-c2wsqw {
+  background-color: transparent;
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+
+.about-me .videos-c2wsqw {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-NYNLTx {
+  background-color: #292033;
+  border: 1px solid;
+  border-color: var(--t-blk);
+  height: 43px;
+  left: -1px;
+  top: 165px;
+  width: 211px;
+}
+
+.about-me .info-squared-7OSc7f {
+  background-color: transparent;
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+
+.about-me .about-7OSc7f {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-MuKjWR {
+  background-color: var(--eerie-black);
+  height: 41px;
+  justify-content: center;
+  left: 210px;
+  top: 415px;
+  width: 120px;
+}
+
+.about-me .mail-FXxqzp {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-yQoGRU {
+  background-color: var(--eerie-black);
+  height: 41px;
+  justify-content: center;
+  left: 63px;
+  top: 415px;
+  width: 120px;
+}
+
+.about-me .whatsapp-HRz4SW {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .dp-name-MuKjWR {
+  height: 254px;
+  left: 61px;
+  top: 132px;
+  width: 275px;
+}
+
+.about-me .pic-l0iGOj {
+  height: 156px;
+  left: 51px;
+  width: 156px;
+}
+
+.about-me .title-l0iGOj {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 172px;
+  white-space: nowrap;
+  width: 269px;
+}
+
+.about-me .x3-d-animator-3-d-mod-l0iGOj {
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 38px;
+  left: 2px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 216px;
+  width: 269px;
+}
+
+.about-me .span0-rp9vaG {
+  color: var(--white);
+  font-style: normal;
+}
+
+.about-me .span1-rp9vaG {
+  color: var(--white);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+}
+
+.about-me .span2-rp9vaG {
+  color: #916be7;
+  font-size: var(--font-size-xs);
+  font-style: normal;
+}
+
+.about-me .group-195-MuKjWR {
+  background-color: transparent;
+  height: 593px;
+  left: 447px;
+  position: absolute;
+  top: 58px;
+  width: 348px;
+}
+
+.about-me .education-experience-details-hdaSmw {
+  height: 427px;
+  left: 0px;
+  top: 166px;
+  width: 348px;
+}
+
+.about-me .education-experience-heading-uHlpxY {
+  width: 283px;
+}
+
+.about-me .education-heading-Fc2bP4 {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 9.2457275390625px;
+  margin-bottom: -1.00px;
+  position: relative;
+}
+
+.about-me .icon-park-outlinedegree-hat-YxT9Rv {
+  background-color: transparent;
+  height: 27.7371826171875px;
+  position: relative;
+  width: 27.7371826171875px;
+}
+
+.about-me .education-YxT9Rv {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.69px;
+  line-height: 46.2px;
+  margin-top: -1.16px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .moringa-card-uHlpxY {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 116px;
+  left: 0px;
+  position: absolute;
+  top: 57px;
+  width: 346px;
+}
+
+.about-me .rectangle-25-bJDh1b {
+  width: 346px;
+}
+
+.about-me .moringa-details-bJDh1b {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.2457275390625px;
+  left: 0px;
+  padding: 9.2457275390625px;
+  position: absolute;
+  top: 15px;
+  width: 346px;
+}
+
+.about-me .x2024-2028-z1tiTo {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.16px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .b-sc-in-computer-ecience-and-engineering-z1tiTo {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .khulna-khan-bahadur-z1tiTo {
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .masinde-card-uHlpxY {
+  top: 311px;
+  width: 348px;
+}
+
+.about-me .rectangle-25-WSoUDF {
+  align-self: stretch;
+  width: 100%;
+}
+
+.about-me .university-details-WSoUDF {
+  width: 348px;
+}
+
+.about-me .x2017-2020-QRAlD5 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.16px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .ssc-in-science-QRAlD5 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .masinde-card-ey2WMl {
+  top: 184px;
+  width: 346px;
+}
+
+.about-me .rectangle-25-BpTmzw {
+  margin-right: -2.00px;
+  width: 348px;
+}
+
+.about-me .university-details-BpTmzw {
+  width: 346px;
+}
+
+.about-me .x2020-2023-ICaBOp {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.16px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .hsc-in-science-ICaBOp {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .education-experience-details-YhsdQA {
+  height: 166px;
+  left: 1px;
+  top: 0px;
+  width: 338px;
+}
+
+.about-me .education-experience-heading-MZzJXr {
+  width: 293px;
+}
+
+.about-me .experience-heading-Sh3aAx {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 9.2457275390625px;
+  margin-bottom: -1.00px;
+  position: relative;
+}
+
+.about-me .humbleiconsbriefcase-7cHqE2 {
+  background-color: transparent;
+  height: 27.7371826171875px;
+  position: relative;
+  width: 27.7371826171875px;
+}
+
+.about-me .experience-7cHqE2 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.69px;
+  line-height: 46.2px;
+  margin-top: -1.16px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .technical-mentor-MZzJXr {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 116px;
+  left: 4px;
+  position: absolute;
+  top: 50px;
+  width: 334px;
+}
+
+.about-me .rectangle-25-a9DM3p {
+  align-self: stretch;
+  width: 100%;
+}
+
+.about-me .technical-mentor-details-a9DM3p {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 9.2457275390625px;
+  left: 0px;
+  padding: 9.2457275390625px;
+  position: absolute;
+  top: 15px;
+}
+
+.about-me .x2023-jYMctd {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.16px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .freelance-3-d-animator-jYMctd {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .upwork-global-inc-jYMctd {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .dp-name-yQoGRU {
+  height: 498px;
+  left: 903px;
+  top: 101px;
+  width: 432px;
+}
+
+.about-me .pic-7DzZGm {
+  height: 504px;
+  left: -3px;
+  width: 438px;
+}
+
+.about-me .skillssss-MuKjWR {
+  align-items: flex-start;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 213px;
+  left: 445px;
+  position: absolute;
+  top: 673px;
+  width: 915px;
+}
+
+.about-me .workskills-card-5lwSPA {
+  align-self: stretch;
+  background-color: #0f0f0f;
+  border-radius: 0px 0px 8px 8px;
+  height: 213px;
+  position: relative;
+  width: 100%;
+}
+
+.about-me .worksoft-skills-5lwSPA {
+  left: 348px;
+  top: 25px;
+}
+
+.about-me .frame-245-qOD34c {
+  height: 42px;
+  justify-content: center;
+  width: 207px;
+}
+
+.about-me .frame-245-rKi0nP {
+  align-self: stretch;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.about-me .working-skills-3KvcZg {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.about-me .skills-OMUVI8 {
+  width: 209.84490966796875px;
+}
+
+.about-me .work-expertise-Jl8oE1 {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 1px;
+  top: 0px;
+  width: 66px;
+}
+
+.about-me .blender-NsfsWN {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-RuYseg {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 0px;
+  top: 41px;
+  width: 113px;
+}
+
+.about-me .adobe-illustrator-Spmv7y {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-YPC7hw {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 139px;
+  top: 41px;
+  width: 70px;
+}
+
+.about-me .ms-office-SsGFwy {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-Bx5eac {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 125px;
+  top: 0px;
+  width: 85px;
+}
+
+.about-me .after-effects-YWfPo1 {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-left: -0.52px;
+  margin-right: -0.52px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-VcYxx8 {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 105px;
+  top: 82px;
+  width: 104px;
+}
+
+.about-me .da-vinci-resolve-sxa03i {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-left: -2.00px;
+  margin-right: -2.00px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-v4OXSW {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 1px;
+  top: 82px;
+  width: 56px;
+}
+
+.about-me .python-UFsf7x {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-left: -0.50px;
+  margin-right: -0.50px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .worksoft-skills-ECYEk9 {
+  left: 639px;
+  top: 22px;
+}
+
+.about-me .frame-245-CFjWWj {
+  height: 42px;
+  justify-content: center;
+  width: 207px;
+}
+
+.about-me .frame-245-D57SpZ {
+  align-self: stretch;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.about-me .soft-skills-wd8lTD {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.about-me .skills-1BxSmS {
+  width: 210px;
+}
+
+.about-me .work-expertise-fF9jQP {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 1px;
+  top: 0px;
+  width: 104px;
+}
+
+.about-me .graphics-sense-xE1wM5 {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-TjZbLg {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 0px;
+  top: 41px;
+  width: 94px;
+}
+
+.about-me .multi-taksing-bhKdp4 {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-ZzYqg6 {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 119px;
+  top: 41px;
+  width: 90px;
+}
+
+.about-me .cooperation-08pAx0 {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-vtlpu5 {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 125px;
+  top: 0px;
+  width: 85px;
+}
+
+.about-me .leadership-NGMnjR {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-5TiLCX {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 98px;
+  top: 82px;
+  width: 112px;
+}
+
+.about-me .communication-szDQUs {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-YtUXah {
+  background-color: var(--eerie-black);
+  justify-content: center;
+  left: 1px;
+  top: 82px;
+  width: 60px;
+}
+
+.about-me .quality-AZFBv3 {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .worksoft-skills-oERqFn {
+  left: 57px;
+  top: 21px;
+}
+
+.about-me .frame-245-FMd50d {
+  height: 42px;
+  justify-content: center;
+  width: 207px;
+}
+
+.about-me .frame-245-0gocdX {
+  align-self: stretch;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.about-me .language-FJreBF {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.about-me .skills-dwIiTO {
+  width: 210px;
+}
+
+.about-me .work-expertise-wPULDs {
+  background-color: var(--eerie-black);
+  left: 1px;
+  top: 0px;
+  width: 209px;
+}
+
+.about-me .english-2Fdtx5 {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-aVLqoi {
+  background-color: var(--eerie-black);
+  left: 0px;
+  top: 41px;
+  width: 210px;
+}
+
+.about-me .arabic-szNZ8R {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-4MF5HO {
+  background-color: transparent;
+  left: 99px;
+  top: 41px;
+  width: 110px;
+}
+
+.about-me .conversational-2dJ4VA {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-WguI8y {
+  background-color: transparent;
+  left: 99px;
+  top: 0px;
+  width: 111px;
+}
+
+.about-me .fluent-rNXYp0 {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-SxgnGp {
+  background-color: var(--eerie-black);
+  left: 1px;
+  top: 82px;
+  width: 208px;
+}
+
+.about-me .bengali-x4bxwb {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .work-expertise-NFse2a {
+  background-color: transparent;
+  left: 100px;
+  top: 82px;
+  width: 110px;
+}
+
+.about-me .native-Aofaby {
+  background-color: transparent;
+  letter-spacing: 0.24px;
+  line-height: 24px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .bangladesh-noubahini-school-college {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.about-me .dp-name {
+  background-color: transparent;
+  position: absolute;
+}
+
+.about-me .education-experience-details {
+  background-color: transparent;
+  position: absolute;
+}
+
+.about-me .education-experience-heading {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 167px;
+  height: 46px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.about-me .frame-244 {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  justify-content: center;
+  padding: 6px 10px;
+  position: relative;
+}
+
+.about-me .frame-245 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.about-me .group {
+  background-color: transparent;
+  height: 14px;
+  position: relative;
+  width: 14px;
+}
+
+.about-me .home {
+  background-color: transparent;
+  position: relative;
+}
+
+.about-me .masinde-card {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 116px;
+  left: 0px;
+  position: absolute;
+}
+
+.about-me .pic {
+  background-color: transparent;
+  object-fit: cover;
+  position: absolute;
+  top: -3px;
+}
+
+.about-me .rectangle-25 {
+  background-color: var(--vulcan);
+  border-radius: 9.25px;
+  height: 116px;
+  position: relative;
+}
+
+.about-me .skills {
+  background-color: transparent;
+  height: 114px;
+  position: relative;
+}
+
+.about-me .university-details {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9.2457275390625px;
+  left: 0px;
+  padding: 9.2457275390625px;
+  position: absolute;
+  top: 15px;
+}
+
+.about-me .work-expertise {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  padding: 4px 8px;
+  position: absolute;
+}
+
+.about-me .work-soft-skills {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 160px;
+  height: 42px;
+  justify-content: center;
+  position: relative;
+  width: 209px;
+}
+
+.about-me .worksoft-skills {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+}
+</style></head><body style="margin: 0;"><input type="hidden" id="anPageName" name="page" value="about-me"><div class="container-center-horizontal"><div class="about-me screen " data-id="60:450"><div class="left-bar-MuKjWR" data-id="60:451"></div><div class="back-MuKjWR" data-id="60:452"><img class="polygon-2-t30EIc" data-id="60:453" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250d4454822532b09d2a4f/img/polygon-2-4.svg" alt="Polygon 2"><img class="polygon-3-t30EIc" data-id="60:454" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250d4454822532b09d2a4f/img/polygon-3-4.svg" alt="Polygon 3"></div><div class="group-194-MuKjWR" data-id="60:455"><div class="work-expertise-y4PS4K work-expertise" data-id="60:456"><img class="home-iTHA8H home" data-id="60:457" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/home@2x.png" alt="Home"><div class="home-4AhhRM home raleway-normal-white-12px" data-id="60:458">Home</div></div><div class="work-expertise-GMPXA4 work-expertise" data-id="60:459"><img class="test-passed-juxOQy" data-id="60:460" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/test-passed@2x.png" alt="Test Passed"><div class="projects-juxOQy raleway-normal-white-12px" data-id="60:461">Projects</div></div><div class="work-expertise-6j7JPn work-expertise" data-id="60:462"><img class="video-c2wsqw" data-id="60:463" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/video@2x.png" alt="Video"><div class="videos-c2wsqw raleway-normal-white-12px" data-id="60:464">Videos</div></div><div class="work-expertise-NYNLTx work-expertise" data-id="60:465"><img class="info-squared-7OSc7f" data-id="60:466" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c37b41b6643ddd446144/img/info-squared@2x.png" alt="Info Squared"><div class="about-7OSc7f raleway-normal-white-12px" data-id="60:467">About</div></div></div><div class="work-expertise-MuKjWR work-expertise" data-id="60:468"><div class="mail-FXxqzp raleway-normal-white-12px" data-id="60:469">Mail</div></div><div class="work-expertise-yQoGRU work-expertise" data-id="60:470"><div class="whatsapp-HRz4SW raleway-normal-white-12px" data-id="60:471">Whatsapp</div></div><div class="dp-name-MuKjWR dp-name" data-id="60:472"><img class="pic-l0iGOj pic" data-id="60:473" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724b6c4e0843804796ae54c/img/pic-2.png" alt="Pic"><h1 class="title-l0iGOj" data-id="60:474">ADIBUL JABIR</h1><p class="x3-d-animator-3-d-mod-l0iGOj valign-text-middle" data-id="60:475"><span><span class="span0-rp9vaG">3D Animator | 3DModeler | Illustrator<br></span><span class="span1-rp9vaG">BSc in Computer Science Engineering at KKBAUFounded </span><span class="span2-rp9vaG">Ventrixon</span></span></p></div><div class="group-195-MuKjWR" data-id="61:605"><div class="education-experience-details-hdaSmw education-experience-details" data-id="61:565"><div class="education-experience-heading-uHlpxY education-experience-heading" data-id="61:566"><div class="education-heading-Fc2bP4" data-id="61:567"><img class="icon-park-outlinedegree-hat-YxT9Rv" data-id="61:568" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250d4454822532b09d2a4f/img/icon-park-outline-degree-hat.svg" alt="icon-park-outline:degree-hat"><div class="education-YxT9Rv" data-id="61:572">Education</div></div></div><div class="moringa-card-uHlpxY" data-id="61:580"><div class="rectangle-25-bJDh1b rectangle-25" data-id="61:581"></div><div class="moringa-details-bJDh1b" data-id="61:582"><div class="x2024-2028-z1tiTo raleway-normal-white-13-9px" data-id="61:583">2024-2028</div><p class="b-sc-in-computer-ecience-and-engineering-z1tiTo raleway-semi-bold-white-13-9px" data-id="61:584">BSc in Computer Ecience and Engineering</p><a href="https://www.kkbau.ac.bd/" target="_blank"><p class="khulna-khan-bahadur-z1tiTo raleway-medium-white-13-9px" data-id="61:585">Khulna Khan Bahadur Ahsanullah University</p></a></div></div><div class="masinde-card-uHlpxY masinde-card" data-id="61:586"><div class="rectangle-25-WSoUDF rectangle-25" data-id="61:587"></div><div class="university-details-WSoUDF university-details" data-id="61:588"><div class="x2017-2020-QRAlD5 raleway-normal-white-13-9px" data-id="61:589">2017-2020</div><div class="ssc-in-science-QRAlD5 raleway-semi-bold-white-13-9px" data-id="61:590">SSC in Science</div><p class="bangladesh-noubahini-school-college raleway-medium-white-13-9px" data-id="61:591">Bangladesh Noubahini School &amp; College</p></div></div><div class="masinde-card-ey2WMl masinde-card" data-id="61:685"><div class="rectangle-25-BpTmzw rectangle-25" data-id="61:686"></div><div class="university-details-BpTmzw university-details" data-id="61:687"><div class="x2020-2023-ICaBOp raleway-normal-white-13-9px" data-id="61:688">2020-2023</div><div class="hsc-in-science-ICaBOp raleway-semi-bold-white-13-9px" data-id="61:689">HSC in Science</div><p class="bangladesh-noubahini-school-college raleway-medium-white-13-9px" data-id="61:690">Bangladesh Noubahini School &amp; College</p></div></div></div><div class="education-experience-details-YhsdQA education-experience-details" data-id="61:623"><div class="education-experience-heading-MZzJXr education-experience-heading" data-id="61:624"><div class="experience-heading-Sh3aAx" data-id="61:631"><img class="humbleiconsbriefcase-7cHqE2" data-id="61:632" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250d4454822532b09d2a4f/img/humbleicons-briefcase.svg" alt="humbleicons:briefcase"><div class="experience-7cHqE2" data-id="61:637">Experience</div></div></div><div class="technical-mentor-MZzJXr" data-id="61:650"><div class="rectangle-25-a9DM3p rectangle-25" data-id="61:651"></div><div class="technical-mentor-details-a9DM3p" data-id="61:652"><div class="x2023-jYMctd raleway-normal-white-13-9px" data-id="61:653">2023</div><div class="freelance-3-d-animator-jYMctd raleway-semi-bold-white-13-9px" data-id="61:654">Freelance 3D Animator</div><div class="upwork-global-inc-jYMctd raleway-medium-white-13-9px" data-id="61:655">Upwork® Global Inc</div></div></div></div></div><div class="dp-name-yQoGRU dp-name" data-id="61:616"><img class="pic-7DzZGm pic" data-id="61:617" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/67250d4454822532b09d2a4f/img/pic-5.png" alt="Pic"></div><div class="skillssss-MuKjWR" data-id="61:440"><div class="workskills-card-5lwSPA" data-id="61:441"></div><div class="worksoft-skills-5lwSPA worksoft-skills" data-id="61:442"><div class="work-soft-skills" data-id="61:443"><div class="frame-245-qOD34c frame-245" data-id="61:444"><div class="frame-245-rKi0nP frame-245" data-id="61:445"><div class="frame-244" data-id="61:446"><img class="group" data-id="61:447" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/group-17@2x.png" alt="Group"><div class="working-skills-3KvcZg manrope-medium-mountain-mist-14px" data-id="61:449">Working Skills</div></div></div></div></div><div class="skills-OMUVI8 skills" data-id="61:450"><div class="work-expertise-Jl8oE1 work-expertise" data-id="61:451"><div class="blender-NsfsWN raleway-normal-white-12px" data-id="61:452">Blender</div></div><div class="work-expertise-RuYseg work-expertise" data-id="61:453"><div class="adobe-illustrator-Spmv7y raleway-normal-white-12px" data-id="61:454">Adobe Illustrator</div></div><div class="work-expertise-YPC7hw work-expertise" data-id="61:455"><div class="ms-office-SsGFwy raleway-normal-white-12px" data-id="61:456">MS Office</div></div><div class="work-expertise-Bx5eac work-expertise" data-id="61:457"><div class="after-effects-YWfPo1 raleway-normal-white-12px" data-id="61:458">After Effects</div></div><div class="work-expertise-VcYxx8 work-expertise" data-id="61:459"><div class="da-vinci-resolve-sxa03i raleway-normal-white-12px" data-id="61:460">DaVinci Resolve</div></div><div class="work-expertise-v4OXSW work-expertise" data-id="61:461"><div class="python-UFsf7x raleway-normal-white-12px" data-id="61:462">Python</div></div></div></div><div class="worksoft-skills-ECYEk9 worksoft-skills" data-id="61:463"><div class="work-soft-skills" data-id="61:464"><div class="frame-245-CFjWWj frame-245" data-id="61:465"><div class="frame-245-D57SpZ frame-245" data-id="61:466"><div class="frame-244" data-id="61:467"><img class="group" data-id="61:468" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/group-17@2x.png" alt="Group"><div class="soft-skills-wd8lTD manrope-medium-mountain-mist-14px" data-id="61:470">Soft Skills</div></div></div></div></div><div class="skills-1BxSmS skills" data-id="61:471"><div class="work-expertise-fF9jQP work-expertise" data-id="61:472"><div class="graphics-sense-xE1wM5 raleway-normal-white-12px" data-id="61:473">Graphics sense</div></div><div class="work-expertise-TjZbLg work-expertise" data-id="61:474"><div class="multi-taksing-bhKdp4 raleway-normal-white-12px" data-id="61:475">Multi Taksing</div></div><div class="work-expertise-ZzYqg6 work-expertise" data-id="61:476"><div class="cooperation-08pAx0 raleway-normal-white-12px" data-id="61:477">Cooperation</div></div><div class="work-expertise-vtlpu5 work-expertise" data-id="61:478"><div class="leadership-NGMnjR raleway-normal-white-12px" data-id="61:479">Leadership</div></div><div class="work-expertise-5TiLCX work-expertise" data-id="61:480"><div class="communication-szDQUs raleway-normal-white-12px" data-id="61:481">Communication</div></div><div class="work-expertise-YtUXah work-expertise" data-id="61:482"><div class="quality-AZFBv3 raleway-normal-white-12px" data-id="61:483">Quality</div></div></div></div><div class="worksoft-skills-oERqFn worksoft-skills" data-id="61:663"><div class="work-soft-skills" data-id="61:664"><div class="frame-245-FMd50d frame-245" data-id="61:665"><div class="frame-245-0gocdX frame-245" data-id="61:666"><div class="frame-244" data-id="61:667"><img class="group" data-id="61:668" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6723cce49623faf721765656/releases/6724c1004ce3939fa869f78b/img/group-17@2x.png" alt="Group"><div class="language-FJreBF manrope-medium-mountain-mist-14px" data-id="61:670">Language</div></div></div></div></div><div class="skills-dwIiTO skills" data-id="61:671"><div class="work-expertise-wPULDs work-expertise" data-id="61:672"><div class="english-2Fdtx5 raleway-normal-white-12px" data-id="61:673">English</div></div><div class="work-expertise-aVLqoi work-expertise" data-id="61:674"><div class="arabic-szNZ8R raleway-normal-white-12px" data-id="61:675">Arabic</div></div><div class="work-expertise-4MF5HO work-expertise" data-id="61:676"><div class="conversational-2dJ4VA raleway-normal-white-12px" data-id="61:677">Conversational</div></div><div class="work-expertise-WguI8y work-expertise" data-id="61:678"><div class="fluent-rNXYp0 raleway-normal-white-12px" data-id="61:679">Fluent</div></div><div class="work-expertise-SxgnGp work-expertise" data-id="61:682"><div class="bengali-x4bxwb raleway-normal-white-12px" data-id="61:683">Bengali</div></div><div class="work-expertise-NFse2a work-expertise" data-id="61:680"><div class="native-Aofaby raleway-normal-white-12px" data-id="61:681">Native</div></div></div></div></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
