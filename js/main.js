@@ -1,5 +1,5 @@
 /**
- * Leven vCard & Portfolio - Main JavaScript
+ * Leven Minimalist - Main JavaScript
  * Author: Adibul Jabir
  */
 
@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Load saved theme or default to dark
-  const savedTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'dark');
+  // Load saved theme or default to light / system
+  const savedTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
   applyTheme(savedTheme);
 
   themeToggleBtns.forEach(btn => {
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 2. Navigation & Hash Router
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.site-nav .nav-item a');
   const sections = document.querySelectorAll('.tab-section');
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+  const mobileMenuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.site-nav');
 
   function switchTab(targetHash) {
     const cleanHash = targetHash ? targetHash.replace('#', '') : 'about';
@@ -60,18 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     targetSection.classList.add('active');
     
-    // Trigger counters / animations if viewing specific section
-    if (cleanHash === 'about') {
-      runCounters();
-    } else if (cleanHash === 'resume') {
+    // Trigger animations
+    if (cleanHash === 'resume') {
       animateSkillBars();
     }
 
     // Scroll smoothly to top of container on tab switch
-    const pageWrapper = document.querySelector('.page-wrapper');
-    if (pageWrapper) {
+    const pageContainer = document.querySelector('.page-container');
+    if (pageContainer) {
       window.scrollTo({
-        top: pageWrapper.offsetTop - 20,
+        top: pageContainer.offsetTop - 20,
         behavior: 'smooth'
       });
     }
@@ -101,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
           history.pushState(null, null, href);
           switchTab(targetId);
           
-          // Close mobile menu if open
           if (navMenu) {
             navMenu.classList.remove('open');
           }
@@ -118,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Typing / Rotating Text in Hero
-  const typingEl = document.querySelector('.role-typing-text');
+  const typingEl = document.querySelector('.role-typing');
   if (typingEl) {
     const roles = [
       '3D Animator',
@@ -146,12 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (!isDeleting && charIdx === currentRole.length) {
-        typingSpeed = 1800; // Pause at full word
+        typingSpeed = 1800;
         isDeleting = true;
       } else if (isDeleting && charIdx === 0) {
         isDeleting = false;
         roleIdx = (roleIdx + 1) % roles.length;
-        typingSpeed = 400; // Pause before new word
+        typingSpeed = 400;
       }
 
       setTimeout(typeEffect, typingSpeed);
@@ -160,37 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
   }
 
-  // 4. Fun Facts Counter Animation
-  let countersAnimated = false;
-  function runCounters() {
-    if (countersAnimated) return;
-    const counters = document.querySelectorAll('.fact-value');
-    counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-count'), 10) || 0;
-      const duration = 1500;
-      const stepTime = 25;
-      const steps = duration / stepTime;
-      const increment = target / steps;
-      let current = 0;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          counter.textContent = target + (counter.getAttribute('data-suffix') || '');
-          clearInterval(timer);
-        } else {
-          counter.textContent = Math.floor(current) + (counter.getAttribute('data-suffix') || '');
-        }
-      }, stepTime);
-    });
-    countersAnimated = true;
-  }
-
-  // 5. Skill Bars Animation
+  // 4. Skill Bars Animation
   let skillsAnimated = false;
   function animateSkillBars() {
     if (skillsAnimated) return;
-    const skillBars = document.querySelectorAll('.skill-progress-fill');
+    const skillBars = document.querySelectorAll('.skill-fill');
     skillBars.forEach(bar => {
       const targetWidth = bar.getAttribute('data-width') || '80%';
       bar.style.width = targetWidth;
@@ -198,9 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
     skillsAnimated = true;
   }
 
-  // 6. Portfolio Category Filtering
+  // 5. Portfolio Category Filtering
   const filterBtns = document.querySelectorAll('.filter-btn');
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -209,11 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const filterValue = btn.getAttribute('data-filter');
 
-      portfolioItems.forEach(item => {
+      portfolioCards.forEach(item => {
         const itemCategory = item.getAttribute('data-category');
         if (filterValue === 'all' || itemCategory === filterValue || (itemCategory && itemCategory.includes(filterValue))) {
-          item.style.display = 'flex';
-          item.style.animation = 'pageFadeIn 0.35s ease forwards';
+          item.style.display = 'block';
         } else {
           item.style.display = 'none';
         }
@@ -221,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Lightbox & Video Popup Modal
+  // 6. Lightbox Modal
   const modal = document.getElementById('lightbox-modal');
   const modalMedia = document.getElementById('lightbox-media');
   const modalTitle = document.getElementById('lightbox-title');
@@ -274,7 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Attach modal trigger to portfolio preview buttons
   document.querySelectorAll('.open-lightbox').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -286,26 +255,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. Contact Form Handler
+  // 7. Contact Form Handler
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
 
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = contactForm.querySelector('[name="name"]').value;
-      const email = contactForm.querySelector('[name="email"]').value;
-      const message = contactForm.querySelector('[name="message"]').value;
-
-      if (!name || !email || !message) {
-        alert('Please fill in all required fields.');
-        return;
-      }
-
-      // Simulate sending
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.innerHTML = 'Sending...';
       submitBtn.disabled = true;
 
       setTimeout(() => {
@@ -313,15 +272,15 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = false;
         contactForm.reset();
         if (formFeedback) {
-          formFeedback.className = 'form-feedback-alert success';
-          formFeedback.innerHTML = '<i class="fas fa-check-circle"></i> Thank you, ' + name + '! Your message has been sent successfully. I will get back to you soon.';
+          formFeedback.className = 'form-status success';
+          formFeedback.innerHTML = 'Thank you! Your message has been sent successfully.';
           formFeedback.style.display = 'block';
 
           setTimeout(() => {
             formFeedback.style.display = 'none';
-          }, 6000);
+          }, 5000);
         }
-      }, 1000);
+      }, 800);
     });
   }
 });
