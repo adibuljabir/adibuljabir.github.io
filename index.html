@@ -3,619 +3,633 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adibul Jabir - Resume / CV / 3D Artist</title>
-  <meta name="description" content="Portfolio and Resume of Adibul Jabir - 3D Animator, 3D Modeler, Illustrator, and CSE Student. Founder of Ventrixon.">
+  <title>Adibul Jabir - 3D Artist, Animator & Developer</title>
+  <meta name="description" content="Official portfolio and resume of Adibul Jabir - 3D Animator, 3D Modeler, Illustrator, and CSE Student. Founder of Ventrixon.">
   <meta name="keywords" content="Adibul Jabir, 3D Animator, 3D Modeler, Blender, After Effects, Illustrator, Ventrixon, Resume, Portfolio">
   <meta name="author" content="Adibul Jabir">
-  <link rel="shortcut icon" type="image/png" href="pic/favicon.png">
+  
+  <!-- Profile picture as Favicon -->
+  <link rel="shortcut icon" type="image/png" href="pic/profile.png">
+  <link rel="icon" type="image/png" href="pic/profile.png">
+  <link rel="apple-touch-icon" href="pic/profile.png">
 
-  <!-- Google Fonts -->
+  <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- Minimalist Leven Stylesheet -->
+  <!-- Minimalist Full-Width Leven Stylesheet -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-  <div class="page-container">
+  <div class="page-wrapper">
 
-    <!-- Site Header -->
+    <!-- Full-Width Site Header with Navbar on Right Side -->
     <header class="site-header">
-      <a href="#about" class="site-logo">
-        <div class="logo-symbol">A</div>
-        <div class="logo-text">Adibul <span>Jabir</span></div>
-      </a>
+      <div class="container-inner header-flex">
+        <!-- Logo (Left Side) -->
+        <a href="#about" class="site-logo">
+          <div class="logo-symbol">A</div>
+          <div class="logo-text">Adibul <span>Jabir</span></div>
+        </a>
 
-      <ul class="site-nav">
-        <li class="nav-item">
-          <a href="#about" class="active">About Me <i class="fas fa-angle-down" style="font-size: 11px; opacity: 0.6;"></i></a>
-        </li>
-        <li class="nav-item">
-          <a href="#resume">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a href="#portfolio">Portfolio <i class="fas fa-angle-down" style="font-size: 11px; opacity: 0.6;"></i></a>
-        </li>
-        <li class="nav-item">
-          <a href="#videos">Videos</a>
-        </li>
-        <li class="nav-item">
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+        <!-- Navbar & Tools (Right Side) -->
+        <div class="header-right">
+          <ul class="site-nav">
+            <li class="nav-item">
+              <a href="#about" class="active">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a href="#resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#videos">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
 
-      <div class="header-tools">
-        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
-          <i class="fas fa-sun"></i>
-        </button>
-        <button class="menu-toggle" aria-label="Toggle Menu">
-          <i class="fas fa-bars"></i>
-        </button>
+          <div class="header-tools">
+            <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+              <i class="fas fa-sun"></i>
+            </button>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content Area -->
     <div class="page-content">
+      <div class="container-inner">
 
-      <!-- ========================================== -->
-      <!-- 1. ABOUT ME (HOME)                         -->
-      <!-- ========================================== -->
-      <section id="about" class="tab-section active">
-        <!-- Hero Section -->
-        <div class="home-hero">
-          <div class="home-photo">
-            <div class="hp-inner" style="background-image: url('pic/profile.png');"></div>
-          </div>
+        <!-- ========================================== -->
+        <!-- 1. ABOUT ME (HOME)                         -->
+        <!-- ========================================== -->
+        <section id="about" class="tab-section active">
+          <!-- Hero Section -->
+          <div class="home-hero">
+            <div class="home-photo">
+              <div class="hp-inner" style="background-image: url('pic/profile.png');"></div>
+            </div>
 
-          <div class="home-text">
-            <div class="home-role">
-              <span class="role-typing">3D Animator</span>
-            </div>
-            <h1 class="home-title">Adibul Jabir</h1>
-            <p class="home-desc">
-              Welcome to my portfolio! I’m a Computer Science & Engineering student at KKBAU and passionate 3D Artist specializing in 3D modeling, animation, and digital visuals. Fast, reliable, and available up to 17 hours a day to transform visionary concepts into reality.
-            </p>
-            <div class="home-buttons">
-              <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download CV</a>
-              <a href="#contact" class="btn btn-secondary">Contact</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- What I Do -->
-        <div class="block-title">
-          <h2>What I Do</h2>
-        </div>
-
-        <div class="services-list">
-          <div class="service-item">
-            <div class="service-icon">
-              <i class="fas fa-pencil-alt"></i>
-            </div>
-            <div class="service-content">
-              <h4>3D Animation</h4>
-              <p>Dynamic 3D product visualizations, cinematic motion design, and promotional animations crafted in Blender and After Effects.</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon">
-              <i class="fas fa-store"></i>
-            </div>
-            <div class="service-content">
-              <h4>3D Product Modeling</h4>
-              <p>Precision 3D modeling, texturing, lighting, hard-surface assets, and realistic rendering for web and commercial use.</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon">
-              <i class="fas fa-desktop"></i>
-            </div>
-            <div class="service-content">
-              <h4>Web & UI Design</h4>
-              <p>Clean, minimalist, responsive digital interfaces and web experiences designed with modern aesthetics and usability in mind.</p>
-            </div>
-          </div>
-
-          <div class="service-item">
-            <div class="service-icon">
-              <i class="fas fa-bullhorn"></i>
-            </div>
-            <div class="service-content">
-              <h4>Illustration & Branding</h4>
-              <p>Custom vector graphics, digital character art, icon design, and brand visuals created in Adobe Illustrator.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ventrixon Feature -->
-        <div class="block-title">
-          <h2>Ventrixon Studio</h2>
-        </div>
-        <p style="margin-bottom: 30px; max-width: 800px; font-size: 13.5px; line-height: 1.8;">
-          Founded by Adibul Jabir, <strong>Ventrixon</strong> is a dedicated 3D animation and digital modeling studio specializing in Blender and After Effects workflows to produce educational animations, high-impact commercial ads, and 3D media.
-        </p>
-
-        <!-- Testimonials -->
-        <div class="block-title">
-          <h2>Testimonials</h2>
-        </div>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">
-              <img src="pic/profile.png" alt="Client 1">
-            </div>
-            <div class="testimonial-text">
-              "Adibul delivered outstanding 3D product animations with unbelievable turnaround time. Exceptional attention to detail and texture quality."
-            </div>
-            <div class="testimonial-author-box">
-              <div class="testimonial-author">
-                <h5>Billy Adams</h5>
-                <span>Rolling Thunder</span>
+            <div class="home-text">
+              <div class="home-role">
+                <span class="role-typing">3D Animator</span>
               </div>
-              <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">
-              <img src="pic/profile.png" alt="Client 2">
-            </div>
-            <div class="testimonial-text">
-              "Great communication, top-tier Blender 3D models, and very smooth cooperation. Highly recommended for any 3D design project."
-            </div>
-            <div class="testimonial-author-box">
-              <div class="testimonial-author">
-                <h5>Gary Johnson</h5>
-                <span>Locost Accessories</span>
-              </div>
-              <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Clients -->
-        <div class="block-title">
-          <h2>Clients</h2>
-        </div>
-
-        <div class="clients-grid">
-          <span class="client-logo">GOLDEN GRID</span>
-          <span class="client-logo">SWEETY</span>
-          <span class="client-logo">MAGIC FURNITURES</span>
-          <span class="client-logo">LIFEGUARD</span>
-          <span class="client-logo">DESIGN LOVERS</span>
-          <span class="client-logo">{LESS}</span>
-        </div>
-
-        <!-- Fun Facts -->
-        <div class="block-title">
-          <h2>Fun Facts</h2>
-        </div>
-
-        <div class="fun-facts-grid">
-          <div class="fact-box">
-            <div class="fact-icon"><i class="far fa-heart"></i></div>
-            <div class="fact-title">Happy Clients</div>
-            <div class="fact-number" data-count="50">50+</div>
-          </div>
-
-          <div class="fact-box">
-            <div class="fact-icon"><i class="far fa-clock"></i></div>
-            <div class="fact-title">Working Hours</div>
-            <div class="fact-number" data-count="4500">4,500</div>
-          </div>
-
-          <div class="fact-box">
-            <div class="fact-icon"><i class="far fa-star"></i></div>
-            <div class="fact-title">3D Assets Created</div>
-            <div class="fact-number" data-count="120">120</div>
-          </div>
-
-          <div class="fact-box">
-            <div class="fact-icon"><i class="fas fa-coffee"></i></div>
-            <div class="fact-title">Coffee Consumed</div>
-            <div class="fact-number" data-count="1286">1,286</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- 2. RESUME SECTION                          -->
-      <!-- ========================================== -->
-      <section id="resume" class="tab-section">
-        <div class="page-title">
-          <h1>Resume</h1>
-          <div class="page-subtitle">Education, Experience & Technical Skills</div>
-        </div>
-
-        <div class="resume-columns">
-          <!-- Education Timeline -->
-          <div>
-            <div class="block-title">
-              <h2>Education</h2>
-            </div>
-
-            <div class="timeline">
-              <div class="timeline-item">
-                <span class="timeline-period">2024 - 2028 (Ongoing)</span>
-                <span class="timeline-company">Khulna Khan Bahadur Ahsanullah University (KKBAU)</span>
-                <h4 class="timeline-title">BSc in Computer Science and Engineering</h4>
-                <p class="timeline-desc">Studying software engineering, algorithms, computer graphics, and systems architecture.</p>
-              </div>
-
-              <div class="timeline-item">
-                <span class="timeline-period">2020 - 2023</span>
-                <span class="timeline-company">Bangladesh Noubahini School & College</span>
-                <h4 class="timeline-title">Higher Secondary Certificate (HSC) in Science</h4>
-                <p class="timeline-desc">Completed high school education with strong focus in Science, mathematics, and physics.</p>
-              </div>
-
-              <div class="timeline-item">
-                <span class="timeline-period">2017 - 2020</span>
-                <span class="timeline-company">Bangladesh Noubahini School & College</span>
-                <h4 class="timeline-title">Secondary School Certificate (SSC) in Science</h4>
-                <p class="timeline-desc">Completed secondary school with fundamental studies in mathematics and computing.</p>
+              <h1 class="home-title">Adibul Jabir</h1>
+              <p class="home-desc">
+                Welcome to my portfolio! I’m a Computer Science & Engineering student at KKBAU and passionate 3D Artist specializing in 3D modeling, animation, and digital visuals. Fast, reliable, and available up to 17 hours a day to transform visionary concepts into reality.
+              </p>
+              <div class="home-buttons">
+                <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download CV</a>
+                <a href="#contact" class="btn btn-secondary">Contact</a>
               </div>
             </div>
           </div>
 
-          <!-- Experience Timeline -->
-          <div>
-            <div class="block-title">
-              <h2>Experience</h2>
+          <!-- What I Do -->
+          <div class="block-title">
+            <h2>What I Do</h2>
+          </div>
+
+          <div class="services-list">
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fas fa-pencil-alt"></i>
+              </div>
+              <div class="service-content">
+                <h4>3D Animation</h4>
+                <p>Dynamic 3D product visualizations, cinematic motion design, and promotional animations crafted in Blender and After Effects.</p>
+              </div>
             </div>
 
-            <div class="timeline">
-              <div class="timeline-item">
-                <span class="timeline-period">2023 - Present</span>
-                <span class="timeline-company">Upwork® Global Inc</span>
-                <h4 class="timeline-title">Freelance 3D Animator & Modeler</h4>
-                <p class="timeline-desc">Delivering custom 3D animations, product visualizations, hard-surface modeling, and video rendering for global clients.</p>
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fas fa-store"></i>
               </div>
+              <div class="service-content">
+                <h4>3D Product Modeling</h4>
+                <p>Precision 3D modeling, texturing, lighting, hard-surface assets, and realistic rendering for web and commercial use.</p>
+              </div>
+            </div>
 
-              <div class="timeline-item">
-                <span class="timeline-period">2023 - Present</span>
-                <span class="timeline-company">Ventrixon Studio</span>
-                <h4 class="timeline-title">Founder & Lead 3D Artist</h4>
-                <p class="timeline-desc">Leading 3D production pipelines, YouTube content development, and educational 3D visual assets.</p>
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fas fa-desktop"></i>
+              </div>
+              <div class="service-content">
+                <h4>Web & UI Design</h4>
+                <p>Clean, minimalist, responsive digital interfaces and web experiences designed with modern aesthetics and usability in mind.</p>
+              </div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-icon">
+                <i class="fas fa-bullhorn"></i>
+              </div>
+              <div class="service-content">
+                <h4>Illustration & Branding</h4>
+                <p>Custom vector graphics, digital character art, icon design, and brand visuals created in Adobe Illustrator.</p>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Skills Breakdown -->
-        <div class="resume-columns">
-          <div>
-            <div class="block-title">
-              <h2>Working Skills</h2>
-            </div>
+          <!-- Ventrixon Feature -->
+          <div class="block-title">
+            <h2>Ventrixon Studio</h2>
+          </div>
+          <p style="margin-bottom: 30px; max-width: 800px; font-size: 13.5px; line-height: 1.8;">
+            Founded by Adibul Jabir, <strong>Ventrixon</strong> is a dedicated 3D animation and digital modeling studio specializing in Blender and After Effects workflows to produce educational animations, high-impact commercial ads, and 3D media.
+          </p>
 
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Blender 3D</span>
-                <span>95%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="95%" style="width: 0%;"></div></div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Adobe Illustrator</span>
-                <span>90%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width: 0%;"></div></div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>After Effects</span>
-                <span>88%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>DaVinci Resolve</span>
-                <span>82%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="82%" style="width: 0%;"></div></div>
-            </div>
-
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Python</span>
-                <span>78%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-fill" data-width="78%" style="width: 0%;"></div></div>
-            </div>
+          <!-- Testimonials -->
+          <div class="block-title">
+            <h2>Testimonials</h2>
           </div>
 
-          <div>
-            <div class="block-title">
-              <h2>Soft Skills</h2>
-            </div>
-            <div class="badges-cloud">
-              <span class="badge-item">Graphics Sense</span>
-              <span class="badge-item">Multi-Tasking</span>
-              <span class="badge-item">Cooperation</span>
-              <span class="badge-item">Leadership</span>
-              <span class="badge-item">Communication</span>
-              <span class="badge-item">Quality Focus</span>
-            </div>
-
-            <div class="block-title" style="margin-top: 30px;">
-              <h2>Languages</h2>
-            </div>
-            <div class="badges-cloud">
-              <span class="badge-item">Bengali (Native)</span>
-              <span class="badge-item">English (Fluent)</span>
-              <span class="badge-item">Arabic (Conversational)</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- 3. PORTFOLIO SECTION                       -->
-      <!-- ========================================== -->
-      <section id="portfolio" class="tab-section">
-        <div class="page-title">
-          <h1>Portfolio</h1>
-          <div class="page-subtitle">My Works & 3D Creations</div>
-        </div>
-
-        <ul class="portfolio-filters">
-          <li><button class="filter-btn active" data-filter="all">All</button></li>
-          <li><button class="filter-btn" data-filter="animation">3D Animation</button></li>
-          <li><button class="filter-btn" data-filter="model">3D Modeling</button></li>
-          <li><button class="filter-btn" data-filter="design">Illustration</button></li>
-        </ul>
-
-        <div class="portfolio-grid">
-          <!-- Card 1 -->
-          <div class="portfolio-card" data-category="animation">
-            <div class="portfolio-thumb-box">
-              <img src="pic/BG web.png" alt="3D Product Animation">
-              <div class="portfolio-overlay">
-                <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" title="View 3D"><i class="fas fa-cube"></i></a>
-                <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" title="Upwork"><i class="fas fa-external-link-alt"></i></a>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="pic/profile.png" alt="Billy Adams">
               </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">3D Animation</span>
-              <h4 class="portfolio-title">3D Product Showcase</h4>
-              <p class="portfolio-desc">High quality 3D model visualization with photorealistic lighting in Blender.</p>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="portfolio-card" data-category="model">
-            <div class="portfolio-thumb-box">
-              <img src="pic/bg.jpg" alt="Ventrixon 3D Environment">
-              <div class="portfolio-overlay">
-                <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" title="Sketchfab"><i class="fas fa-cube"></i></a>
-                <button class="open-lightbox" data-type="image" data-src="pic/bg.jpg" data-title="Ventrixon 3D Environment" data-desc="Rendered 3D scene designed for game environments and digital visuals."><i class="fas fa-search-plus"></i></button>
+              <div class="testimonial-text">
+                "Adibul delivered outstanding 3D product animations with unbelievable turnaround time. Exceptional attention to detail and texture quality."
               </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">3D Modeling</span>
-              <h4 class="portfolio-title">Ventrixon 3D Scene</h4>
-              <p class="portfolio-desc">Custom stylized 3D environment modeled, textured, and rendered with custom PBR materials.</p>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="portfolio-card" data-category="design">
-            <div class="portfolio-thumb-box">
-              <img src="pic/BG web.png" alt="Vector Art">
-              <div class="portfolio-overlay">
-                <button class="open-lightbox" data-type="image" data-src="pic/BG web.png" data-title="Vector Art & Graphics" data-desc="Scalable vector illustration and logo assets designed in Adobe Illustrator."><i class="fas fa-search-plus"></i></button>
-              </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">Illustration</span>
-              <h4 class="portfolio-title">Vector Art & Branding</h4>
-              <p class="portfolio-desc">Clean geometric vector artwork designed for web and print applications.</p>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="portfolio-card" data-category="model">
-            <div class="portfolio-thumb-box">
-              <img src="pic/bg.jpg" alt="Hard Surface Model">
-              <div class="portfolio-overlay">
-                <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" title="View 3D"><i class="fas fa-cube"></i></a>
-              </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">3D Modeling</span>
-              <h4 class="portfolio-title">Hard Surface Asset</h4>
-              <p class="portfolio-desc">Topology-optimized 3D asset modeling suitable for real-time visualization.</p>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="portfolio-card" data-category="animation">
-            <div class="portfolio-thumb-box">
-              <img src="pic/BG web.png" alt="Motion Graphics">
-              <div class="portfolio-overlay">
-                <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" title="View Reel"><i class="fas fa-play"></i></a>
-              </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">3D Animation</span>
-              <h4 class="portfolio-title">Commercial Motion Reel</h4>
-              <p class="portfolio-desc">Engaging digital advertisements and motion clips created with After Effects.</p>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="portfolio-card" data-category="design">
-            <div class="portfolio-thumb-box">
-              <img src="pic/bg.jpg" alt="UI Design">
-              <div class="portfolio-overlay">
-                <a href="https://github.com/adibuljabir" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">UI / Web Design</span>
-              <h4 class="portfolio-title">Modern Web UI Layout</h4>
-              <p class="portfolio-desc">Minimalist frontend interface with clean layout and responsive typography.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- 4. VIDEOS SECTION                          -->
-      <!-- ========================================== -->
-      <section id="videos" class="tab-section">
-        <div class="page-title">
-          <h1>Videos</h1>
-          <div class="page-subtitle">3D Animations & Motion Reels</div>
-        </div>
-
-        <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <div class="portfolio-thumb-box">
-              <img src="pic/BG web.png" alt="Ventrixon 3D Reel">
-              <div class="portfolio-overlay">
-                <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer"><i class="fas fa-cube"></i></a>
-                <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer"><i class="fas fa-play"></i></a>
-              </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">Ventrixon</span>
-              <h4 class="portfolio-title">3D Animation Showcase</h4>
-              <p class="portfolio-desc">Showcase reel highlighting 3D modeling and photorealistic rendering.</p>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-thumb-box">
-              <img src="pic/bg.jpg" alt="Educational Animation">
-              <div class="portfolio-overlay">
-                <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer"><i class="fas fa-cube"></i></a>
-              </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">Motion Design</span>
-              <h4 class="portfolio-title">Educational 3D Series</h4>
-              <p class="portfolio-desc">Explainer videos detailing complex concepts through 3D animations.</p>
-            </div>
-          </div>
-
-          <div class="portfolio-card">
-            <div class="portfolio-thumb-box">
-              <img src="pic/BG web.png" alt="Commercial Ad">
-              <div class="portfolio-overlay">
-                <a href="https://wa.me/qr/OOP5CMY4RLZKP1" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-              </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">Commercial</span>
-              <h4 class="portfolio-title">Commercial Promo Ad</h4>
-              <p class="portfolio-desc">High-engagement promotional video formatted for digital marketing.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================== -->
-      <!-- 5. CONTACT SECTION                         -->
-      <!-- ========================================== -->
-      <section id="contact" class="tab-section">
-        <div class="page-title">
-          <h1>Contact</h1>
-          <div class="page-subtitle">Get in touch</div>
-        </div>
-
-        <div class="contact-layout">
-          <div>
-            <div class="contact-info-block">
-              <a href="mailto:adibuljabir@outlook.com" class="contact-info-item">
-                <i class="fas fa-envelope"></i>
-                <span>adibuljabir@outlook.com</span>
-              </a>
-
-              <a href="https://wa.me/qr/OOP5CMY4RLZKP1" target="_blank" rel="noopener noreferrer" class="contact-info-item">
-                <i class="fab fa-whatsapp"></i>
-                <span>Chat on WhatsApp</span>
-              </a>
-
-              <div class="contact-info-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Khulna, Bangladesh</span>
-              </div>
-
-              <div class="contact-info-item">
-                <i class="fas fa-check"></i>
-                <span>Available for Freelance</span>
-              </div>
-            </div>
-
-            <div class="block-title">
-              <h2>Social Profiles</h2>
-            </div>
-            <div class="social-links-list">
-              <a href="https://www.linkedin.com/in/adibuljabir/" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-              <a href="https://github.com/adibuljabir" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-briefcase"></i> Upwork</a>
-              <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-cube"></i> Sketchfab</a>
-              <a href="https://x.com/adibuljabir" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-x-twitter"></i> Twitter</a>
-            </div>
-          </div>
-
-          <div class="contact-form-col">
-            <div class="block-title" style="margin-top: 0;">
-              <h2>Send a Message</h2>
-            </div>
-
-            <form id="contact-form">
-              <div class="form-row">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+              <div class="testimonial-author-box">
+                <div class="testimonial-author">
+                  <h5>Billy Adams</h5>
+                  <span>Rolling Thunder</span>
                 </div>
-                <div class="form-group">
-                  <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-avatar">
+                <img src="pic/profile.png" alt="Gary Johnson">
+              </div>
+              <div class="testimonial-text">
+                "Great communication, top-tier Blender 3D models, and very smooth cooperation. Highly recommended for any 3D design project."
+              </div>
+              <div class="testimonial-author-box">
+                <div class="testimonial-author">
+                  <h5>Gary Johnson</h5>
+                  <span>Locost Accessories</span>
+                </div>
+                <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Clients -->
+          <div class="block-title">
+            <h2>Clients</h2>
+          </div>
+
+          <div class="clients-grid">
+            <span class="client-logo">GOLDEN GRID</span>
+            <span class="client-logo">SWEETY</span>
+            <span class="client-logo">MAGIC FURNITURES</span>
+            <span class="client-logo">LIFEGUARD</span>
+            <span class="client-logo">DESIGN LOVERS</span>
+            <span class="client-logo">{LESS}</span>
+          </div>
+
+          <!-- Fun Facts -->
+          <div class="block-title">
+            <h2>Fun Facts</h2>
+          </div>
+
+          <div class="fun-facts-grid">
+            <div class="fact-box">
+              <div class="fact-icon"><i class="far fa-heart"></i></div>
+              <div class="fact-title">Happy Clients</div>
+              <div class="fact-number" data-count="50">50+</div>
+            </div>
+
+            <div class="fact-box">
+              <div class="fact-icon"><i class="far fa-clock"></i></div>
+              <div class="fact-title">Working Hours</div>
+              <div class="fact-number" data-count="4500">4,500</div>
+            </div>
+
+            <div class="fact-box">
+              <div class="fact-icon"><i class="far fa-star"></i></div>
+              <div class="fact-title">3D Assets Created</div>
+              <div class="fact-number" data-count="120">120</div>
+            </div>
+
+            <div class="fact-box">
+              <div class="fact-icon"><i class="fas fa-coffee"></i></div>
+              <div class="fact-title">Coffee Consumed</div>
+              <div class="fact-number" data-count="1286">1,286</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 2. RESUME SECTION                          -->
+        <!-- ========================================== -->
+        <section id="resume" class="tab-section">
+          <div class="page-title">
+            <h1>Resume</h1>
+            <div class="page-subtitle">Education, Experience & Technical Skills</div>
+          </div>
+
+          <div class="resume-columns">
+            <!-- Education Timeline -->
+            <div>
+              <div class="block-title">
+                <h2>Education</h2>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="timeline-period">2024 - 2028 (Ongoing)</span>
+                  <span class="timeline-company">Khulna Khan Bahadur Ahsanullah University (KKBAU)</span>
+                  <h4 class="timeline-title">BSc in Computer Science and Engineering</h4>
+                  <p class="timeline-desc">Studying software engineering, algorithms, computer graphics, and systems architecture.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="timeline-period">2020 - 2023</span>
+                  <span class="timeline-company">Bangladesh Noubahini School & College</span>
+                  <h4 class="timeline-title">Higher Secondary Certificate (HSC) in Science</h4>
+                  <p class="timeline-desc">Completed high school education with strong focus in Science, mathematics, and physics.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="timeline-period">2017 - 2020</span>
+                  <span class="timeline-company">Bangladesh Noubahini School & College</span>
+                  <h4 class="timeline-title">Secondary School Certificate (SSC) in Science</h4>
+                  <p class="timeline-desc">Completed secondary school with fundamental studies in mathematics and computing.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div>
+              <div class="block-title">
+                <h2>Experience</h2>
+              </div>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="timeline-period">2023 - Present</span>
+                  <span class="timeline-company">Upwork® Global Inc</span>
+                  <h4 class="timeline-title">Freelance 3D Animator & Modeler</h4>
+                  <p class="timeline-desc">Delivering custom 3D animations, product visualizations, hard-surface modeling, and video rendering for global clients.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="timeline-period">2023 - Present</span>
+                  <span class="timeline-company">Ventrixon Studio</span>
+                  <h4 class="timeline-title">Founder & Lead 3D Artist</h4>
+                  <p class="timeline-desc">Leading 3D production pipelines, YouTube content development, and educational 3D visual assets.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Breakdown -->
+          <div class="resume-columns">
+            <div>
+              <div class="block-title">
+                <h2>Working Skills</h2>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Blender 3D</span>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="95%" style="width: 0%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Adobe Illustrator</span>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width: 0%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>After Effects</span>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>DaVinci Resolve</span>
+                  <span>82%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="82%" style="width: 0%;"></div></div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span>Python</span>
+                  <span>78%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-fill" data-width="78%" style="width: 0%;"></div></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="block-title">
+                <h2>Soft Skills</h2>
+              </div>
+              <div class="badges-cloud">
+                <span class="badge-item">Graphics Sense</span>
+                <span class="badge-item">Multi-Tasking</span>
+                <span class="badge-item">Cooperation</span>
+                <span class="badge-item">Leadership</span>
+                <span class="badge-item">Communication</span>
+                <span class="badge-item">Quality Focus</span>
+              </div>
+
+              <div class="block-title" style="margin-top: 30px;">
+                <h2>Languages</h2>
+              </div>
+              <div class="badges-cloud">
+                <span class="badge-item">Bengali (Native)</span>
+                <span class="badge-item">English (Fluent)</span>
+                <span class="badge-item">Arabic (Conversational)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 3. PORTFOLIO SECTION                       -->
+        <!-- ========================================== -->
+        <section id="portfolio" class="tab-section">
+          <div class="page-title">
+            <h1>Portfolio</h1>
+            <div class="page-subtitle">My Works & 3D Creations</div>
+          </div>
+
+          <ul class="portfolio-filters">
+            <li><button class="filter-btn active" data-filter="all">All</button></li>
+            <li><button class="filter-btn" data-filter="animation">3D Animation</button></li>
+            <li><button class="filter-btn" data-filter="model">3D Modeling</button></li>
+            <li><button class="filter-btn" data-filter="design">Illustration</button></li>
+          </ul>
+
+          <div class="portfolio-grid">
+            <!-- Card 1 -->
+            <div class="portfolio-card" data-category="animation">
+              <div class="portfolio-thumb-box">
+                <img src="pic/BG web.png" alt="3D Product Animation">
+                <div class="portfolio-overlay">
+                  <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" title="View 3D"><i class="fas fa-cube"></i></a>
+                  <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" title="Upwork"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">3D Animation</span>
+                <h4 class="portfolio-title">3D Product Showcase</h4>
+                <p class="portfolio-desc">High quality 3D model visualization with photorealistic lighting in Blender.</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="portfolio-card" data-category="model">
+              <div class="portfolio-thumb-box">
+                <img src="pic/bg.jpg" alt="Ventrixon 3D Scene">
+                <div class="portfolio-overlay">
+                  <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" title="Sketchfab"><i class="fas fa-cube"></i></a>
+                  <button class="open-lightbox" data-type="image" data-src="pic/bg.jpg" data-title="Ventrixon 3D Environment" data-desc="Rendered 3D scene designed for game environments and digital visuals."><i class="fas fa-search-plus"></i></button>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">3D Modeling</span>
+                <h4 class="portfolio-title">Ventrixon 3D Scene</h4>
+                <p class="portfolio-desc">Custom stylized 3D environment modeled, textured, and rendered with custom PBR materials.</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="portfolio-card" data-category="design">
+              <div class="portfolio-thumb-box">
+                <img src="pic/BG web.png" alt="Vector Art">
+                <div class="portfolio-overlay">
+                  <button class="open-lightbox" data-type="image" data-src="pic/BG web.png" data-title="Vector Art & Graphics" data-desc="Scalable vector illustration and logo assets designed in Adobe Illustrator."><i class="fas fa-search-plus"></i></button>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">Illustration</span>
+                <h4 class="portfolio-title">Vector Art & Branding</h4>
+                <p class="portfolio-desc">Clean geometric vector artwork designed for web and print applications.</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="portfolio-card" data-category="model">
+              <div class="portfolio-thumb-box">
+                <img src="pic/bg.jpg" alt="Hard Surface Model">
+                <div class="portfolio-overlay">
+                  <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" title="View 3D"><i class="fas fa-cube"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">3D Modeling</span>
+                <h4 class="portfolio-title">Hard Surface Asset</h4>
+                <p class="portfolio-desc">Topology-optimized 3D asset modeling suitable for real-time visualization.</p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="portfolio-card" data-category="animation">
+              <div class="portfolio-thumb-box">
+                <img src="pic/BG web.png" alt="Motion Graphics">
+                <div class="portfolio-overlay">
+                  <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" title="View Reel"><i class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">3D Animation</span>
+                <h4 class="portfolio-title">Commercial Motion Reel</h4>
+                <p class="portfolio-desc">Engaging digital advertisements and motion clips created with After Effects.</p>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="portfolio-card" data-category="design">
+              <div class="portfolio-thumb-box">
+                <img src="pic/bg.jpg" alt="UI Design">
+                <div class="portfolio-overlay">
+                  <a href="https://github.com/adibuljabir" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">UI / Web Design</span>
+                <h4 class="portfolio-title">Modern Web UI Layout</h4>
+                <p class="portfolio-desc">Minimalist frontend interface with clean layout and responsive typography.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 4. VIDEOS SECTION                          -->
+        <!-- ========================================== -->
+        <section id="videos" class="tab-section">
+          <div class="page-title">
+            <h1>Videos</h1>
+            <div class="page-subtitle">3D Animations & Motion Reels</div>
+          </div>
+
+          <div class="portfolio-grid">
+            <div class="portfolio-card">
+              <div class="portfolio-thumb-box">
+                <img src="pic/BG web.png" alt="Ventrixon 3D Reel">
+                <div class="portfolio-overlay">
+                  <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer"><i class="fas fa-cube"></i></a>
+                  <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer"><i class="fas fa-play"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">Ventrixon</span>
+                <h4 class="portfolio-title">3D Animation Showcase</h4>
+                <p class="portfolio-desc">Showcase reel highlighting 3D modeling and photorealistic rendering.</p>
+              </div>
+            </div>
+
+            <div class="portfolio-card">
+              <div class="portfolio-thumb-box">
+                <img src="pic/bg.jpg" alt="Educational Animation">
+                <div class="portfolio-overlay">
+                  <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer"><i class="fas fa-cube"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">Motion Design</span>
+                <h4 class="portfolio-title">Educational 3D Series</h4>
+                <p class="portfolio-desc">Explainer videos detailing complex concepts through 3D animations.</p>
+              </div>
+            </div>
+
+            <div class="portfolio-card">
+              <div class="portfolio-thumb-box">
+                <img src="pic/BG web.png" alt="Commercial Ad">
+                <div class="portfolio-overlay">
+                  <a href="https://wa.me/qr/OOP5CMY4RLZKP1" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-details">
+                <span class="portfolio-category">Commercial</span>
+                <h4 class="portfolio-title">Commercial Promo Ad</h4>
+                <p class="portfolio-desc">High-engagement promotional video formatted for digital marketing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 5. CONTACT SECTION                         -->
+        <!-- ========================================== -->
+        <section id="contact" class="tab-section">
+          <div class="page-title">
+            <h1>Contact</h1>
+            <div class="page-subtitle">Get in touch</div>
+          </div>
+
+          <div class="contact-layout">
+            <div>
+              <div class="contact-info-block">
+                <a href="mailto:adibuljabir@outlook.com" class="contact-info-item">
+                  <i class="fas fa-envelope"></i>
+                  <span>adibuljabir@outlook.com</span>
+                </a>
+
+                <a href="https://wa.me/qr/OOP5CMY4RLZKP1" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                  <i class="fab fa-whatsapp"></i>
+                  <span>Chat on WhatsApp</span>
+                </a>
+
+                <div class="contact-info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Khulna, Bangladesh</span>
+                </div>
+
+                <div class="contact-info-item">
+                  <i class="fas fa-check"></i>
+                  <span>Available for Freelance</span>
                 </div>
               </div>
 
-              <div class="form-group">
-                <input type="text" name="subject" class="form-control" placeholder="Subject">
+              <div class="block-title">
+                <h2>Social Profiles</h2>
+              </div>
+              <div class="social-links-list">
+                <a href="https://www.linkedin.com/in/adibuljabir/" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <a href="https://github.com/adibuljabir" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-briefcase"></i> Upwork</a>
+                <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-cube"></i> Sketchfab</a>
+                <a href="https://x.com/adibuljabir" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-x-twitter"></i> Twitter</a>
+              </div>
+            </div>
+
+            <div class="contact-form-col">
+              <div class="block-title" style="margin-top: 0;">
+                <h2>Send a Message</h2>
               </div>
 
-              <div class="form-group">
-                <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-              </div>
+              <form id="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                  </div>
+                </div>
 
-              <button type="submit" class="btn btn-primary">Send Message</button>
-              <div id="form-feedback" class="form-status"></div>
-            </form>
+                <div class="form-group">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject">
+                </div>
+
+                <div class="form-group">
+                  <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="form-feedback" class="form-status"></div>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+      </div>
     </div>
 
-    <!-- Site Footer -->
+    <!-- Full-Width Site Footer -->
     <footer class="site-footer">
-      <div>&copy; 2026 Adibul Jabir. All rights reserved.</div>
-      <div class="footer-social-icons">
-        <a href="https://www.linkedin.com/in/adibuljabir/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/adibuljabir" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" aria-label="Upwork"><i class="fas fa-briefcase"></i></a>
-        <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" aria-label="Sketchfab"><i class="fas fa-cube"></i></a>
-        <a href="https://x.com/adibuljabir" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <div class="container-inner">
+        <div>&copy; 2026 Adibul Jabir. All rights reserved.</div>
+        <div class="footer-social-icons">
+          <a href="https://www.linkedin.com/in/adibuljabir/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/adibuljabir" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" aria-label="Upwork"><i class="fas fa-briefcase"></i></a>
+          <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" aria-label="Sketchfab"><i class="fas fa-cube"></i></a>
+          <a href="https://x.com/adibuljabir" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
       </div>
     </footer>
 

@@ -65,14 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
       animateSkillBars();
     }
 
-    // Scroll smoothly to top of container on tab switch
-    const pageContainer = document.querySelector('.page-container');
-    if (pageContainer) {
-      window.scrollTo({
-        top: pageContainer.offsetTop - 20,
-        behavior: 'smooth'
-      });
-    }
+    // Scroll smoothly to top on tab switch
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
   // Handle URL hash on load
