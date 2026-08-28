@@ -837,8 +837,22 @@ a:hover {
   color: var(--primary);
 }
 
+/* Resume Role Tab Panes */
+.resume-role-filters {
+  margin-bottom: 35px;
+}
+
+.resume-role-pane {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.resume-role-pane.active {
+  display: block;
+}
+
 /* ===================================================================
- * Portfolio & Videos Grid
+ * Portfolio & Grid Filters
  * =================================================================== */
 .portfolio-filters {
   display: flex;

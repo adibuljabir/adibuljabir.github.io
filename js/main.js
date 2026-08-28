@@ -44,7 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.querySelector('.site-nav');
 
   function switchTab(targetHash) {
-    const cleanHash = targetHash ? targetHash.replace('#', '') : 'about';
+    let cleanHash = targetHash ? targetHash.replace('#', '') : 'about';
+    let filterToApply = null;
+
+    if (cleanHash === 'videos') {
+      cleanHash = 'portfolio';
+      filterToApply = 'video';
+    }
+
     const targetSection = document.getElementById(cleanHash) || document.getElementById('about');
 
     if (!targetSection) return;
@@ -62,7 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Trigger animations
     if (cleanHash === 'resume') {
-      animateSkillBars();
+      animateActiveSkillBars();
+    }
+
+    if (cleanHash === 'portfolio' && filterToApply) {
+      applyPortfolioFilter(filterToApply);
     }
 
     // Scroll smoothly to top on tab switch
@@ -91,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (href && href.length > 1 && href.startsWith('#')) {
         const targetId = href.replace('#', '');
         const targetSection = document.getElementById(targetId);
-        if (targetSection) {
+        if (targetSection || targetId === 'videos') {
           e.preventDefault();
           history.pushState(null, null, href);
           switchTab(targetId);
@@ -155,40 +166,71 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 4. Skill Bars Animation
-  let skillsAnimated = false;
-  function animateSkillBars() {
-    if (skillsAnimated) return;
-    const skillBars = document.querySelectorAll('.skill-fill');
+  function animateActiveSkillBars() {
+    const activePane = document.querySelector('.resume-role-pane.active') || document.getElementById('role-all');
+    if (!activePane) return;
+    const skillBars = activePane.querySelectorAll('.skill-fill');
     skillBars.forEach(bar => {
       const targetWidth = bar.getAttribute('data-width') || '80%';
-      bar.style.width = targetWidth;
+      bar.style.width = '0%';
+      setTimeout(() => {
+        bar.style.width = targetWidth;
+      }, 50);
     });
-    skillsAnimated = true;
   }
 
-  // 5. Portfolio Category Filtering
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const portfolioCards = document.querySelectorAll('.portfolio-card');
+  // 5. Resume Role Tabs
+  const resumeRoleBtns = document.querySelectorAll('.resume-filter-btn');
+  const resumePanes = document.querySelectorAll('.resume-role-pane');
 
-  filterBtns.forEach(btn => {
+  resumeRoleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
+      resumeRoleBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const filterValue = btn.getAttribute('data-filter');
+      const role = btn.getAttribute('data-role');
+      const targetPane = document.getElementById(`role-${role}`) || document.getElementById('role-all');
 
-      portfolioCards.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        if (filterValue === 'all' || itemCategory === filterValue || (itemCategory && itemCategory.includes(filterValue))) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+      resumePanes.forEach(pane => pane.classList.remove('active'));
+      if (targetPane) {
+        targetPane.classList.add('active');
+        animateActiveSkillBars();
+      }
     });
   });
 
-  // 6. Lightbox Modal
+  // 6. Portfolio Category Filtering
+  const portfolioFilterBtns = document.querySelectorAll('.portfolio-filters:not(.resume-role-filters) .filter-btn');
+  const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+  function applyPortfolioFilter(filterValue) {
+    portfolioFilterBtns.forEach(b => {
+      if (b.getAttribute('data-filter') === filterValue) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
+    portfolioCards.forEach(item => {
+      const itemCategory = (item.getAttribute('data-category') || '').toLowerCase();
+      const categories = itemCategory.split(/\s+/);
+      if (filterValue === 'all' || categories.includes(filterValue.toLowerCase())) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  portfolioFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filterValue = btn.getAttribute('data-filter') || 'all';
+      applyPortfolioFilter(filterValue);
+    });
+  });
+
+  // 7. Lightbox Modal
   const modal = document.getElementById('lightbox-modal');
   const modalMedia = document.getElementById('lightbox-media');
   const modalTitle = document.getElementById('lightbox-title');
@@ -252,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Contact Form Handler
+  // 8. Contact Form Handler
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
 
