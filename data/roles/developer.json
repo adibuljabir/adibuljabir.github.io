@@ -1,0 +1,158 @@
+{
+  "roleId": "developer",
+  "roleName": "Developer",
+  "downloadLabel": "Download Developer Resume",
+  "downloadUrl": "assets/Adibul_Jabir_Developer_Resume.pdf",
+  "resumeFileName": "Adibul_Jabir_Developer_Resume.pdf",
+  "portfolio": [
+    {
+      "id": "tada-tour-bill",
+      "category": "dev",
+      "type": "code",
+      "title": "TA-DA Bill Generator",
+      "subtitle": "C • CLI • File I/O",
+      "description": "CLI logistics & allowance calculator with robust file stream persistence in C.",
+      "langTag": "C / Systems",
+      "roleTag": "Author & Maintainer",
+      "codeSnippet": [
+        "FILE *Tour_Diary = fopen(\"Tour_Diary.txt\", \"a\");",
+        "int distance, expense1, expense2;",
+        "fprintf(Transport_Bill, \"| %02d-%02d-%04d |...\");"
+      ],
+      "repoName": "adibuljabir/TA-DA-Tour...",
+      "stars": "1",
+      "githubUrl": "https://github.com/adibuljabir/TA-DA-Tour-Transport-Bill-Generator",
+      "sourceUrl": "https://github.com/adibuljabir/TA-DA-Tour-Transport-Bill-Generator/blob/master/TourBill.c"
+    },
+    {
+      "id": "findit-app",
+      "category": "dev",
+      "type": "code",
+      "title": "FindIT Mobile App",
+      "subtitle": "Android • Kotlin • Mobile",
+      "description": "Native Android utility built for intuitive item tracking and index discovery.",
+      "langTag": "Kotlin / Android",
+      "langColor": "#a78bfa",
+      "roleTag": "Android App",
+      "codeSnippet": [
+        "class FindItemActivity : AppCompatActivity() {",
+        "  val tracker = rememberTracker()",
+        "  initLocationIndex(savedInstanceState)",
+        "}"
+      ],
+      "repoName": "adibuljabir/FindIT",
+      "footerMeta": "Gradle • Kotlin",
+      "githubUrl": "https://github.com/adibuljabir/FindIT"
+    },
+    {
+      "id": "khaon-management",
+      "category": "dev",
+      "type": "code",
+      "title": "Khaon Food Management",
+      "subtitle": "Java • Software Architecture",
+      "description": "Modular food ordering and inventory system built with clean OOP architecture.",
+      "langTag": "Java / OOP",
+      "langColor": "#fb923c",
+      "roleTag": "Software System",
+      "codeSnippet": [
+        "public class KhaonManager {",
+        "  private List<OrderItem> orders;",
+        "  public double calculateInventory() { ... }",
+        "}"
+      ],
+      "repoName": "adibuljabir/Khaon",
+      "footerMeta": "Java • OOP Design",
+      "githubUrl": "https://github.com/adibuljabir/Khaon"
+    },
+    {
+      "id": "collab-repos",
+      "category": "dev",
+      "type": "code",
+      "title": "Collaborative Repos & PRs",
+      "subtitle": "Git • Open Source • Team Repos",
+      "description": "Active collaborator in university competitions, team projects, and open repositories.",
+      "langTag": "Open Source",
+      "langColor": "#4ade80",
+      "roleTag": "Contributor",
+      "codeSnippet": [
+        "git checkout -b feature/ui-improvement",
+        "git commit -m \"feat: optimize pipeline\"",
+        "git push origin pull-request"
+      ],
+      "repoName": "github.com/adibuljabir",
+      "footerMeta": "PRs • Code Review",
+      "githubUrl": "https://github.com/adibuljabir"
+    }
+  ],
+  "experience": [
+    {
+      "period": "2023 - Present",
+      "company": "Independent & Open Source",
+      "title": "Frontend & Software Developer",
+      "description": "Building high-performance web applications and software utilities with modern JavaScript (ES6+), Python, HTML5, and CSS3."
+    },
+    {
+      "period": "2023 - Present",
+      "company": "Ventrixon Digital Platforms",
+      "title": "Web Solutions Architect",
+      "description": "Architecting clean, responsive web platforms, portfolio systems, and API-driven interactive user interfaces."
+    }
+  ],
+  "education": [
+    {
+      "period": "2024 - 2028 (Ongoing)",
+      "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+      "title": "BSc in Computer Science and Engineering",
+      "description": "Algorithms, Data Structures, Database Management Systems, Computer Networks, and Object-Oriented Software Design."
+    },
+    {
+      "period": "Continuous",
+      "company": "Competitive Programming & Problem Solving",
+      "title": "Algorithmic Logic & C/C++ / Python",
+      "description": "Active participation in university contests, implementing algorithmic solutions with clean time/space efficiency."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development (HTML5 / CSS3 / Modern JS)",
+      "percent": "90%"
+    },
+    {
+      "name": "C / C++ (Algorithms & Systems)",
+      "percent": "85%"
+    },
+    {
+      "name": "Python & Scripting",
+      "percent": "82%"
+    },
+    {
+      "name": "Java & OOP Principles",
+      "percent": "80%"
+    },
+    {
+      "name": "Git, GitHub & Version Control",
+      "percent": "88%"
+    },
+    {
+      "name": "REST APIs & Data Structures",
+      "percent": "82%"
+    }
+  ],
+  "competencies": [
+    "Data Structures",
+    "Algorithms",
+    "DOM Manipulation",
+    "Clean Code Architecture",
+    "Git Version Control",
+    "REST APIs",
+    "Object-Oriented Design",
+    "Linux & CLI",
+    "Software Testing",
+    "Optimization"
+  ],
+  "languages": [
+    "Bengali (Native)",
+    "English (Fluent)",
+    "Arabic (Conversational)"
+  ]
+}

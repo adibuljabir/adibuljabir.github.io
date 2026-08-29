@@ -1,0 +1,123 @@
+{
+  "roleId": "brand",
+  "roleName": "Brand Designer",
+  "downloadLabel": "Download Brand Designer Resume",
+  "downloadUrl": "assets/Adibul_Jabir_Brand_Designer_Resume.pdf",
+  "resumeFileName": "Adibul_Jabir_Brand_Designer_Resume.pdf",
+  "portfolio": [
+    {
+      "id": "ventrixon-logo-anim",
+      "category": "branding 3d",
+      "title": "Ventrixon Logo Animation",
+      "subtitle": "Brand Motion Graphics",
+      "description": "Smooth brand-driven motion graphics and cinematic reveal timing in After Effects.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif",
+      "badge": "Branding Motion",
+      "youtubeUrl": "https://www.youtube.com/@Ventrixon",
+      "behanceUrl": "https://www.behance.net/gallery/246479509/Ventrixon-Logo-Animation"
+    },
+    {
+      "id": "motion-logo-intro",
+      "category": "branding 3d",
+      "title": "4K Motion Logo Intro",
+      "subtitle": "Brand Motion Graphics",
+      "description": "Cinematic 4K brand-driven motion graphics and fluid reveal animations.",
+      "thumbnail": "https://i.ytimg.com/vi/hBbHoIONYf0/hqdefault.jpg",
+      "badge": "4K Motion",
+      "ytId": "hBbHoIONYf0",
+      "youtubeUrl": "https://www.youtube.com/watch?v=hBbHoIONYf0",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/hBbHoIONYf0?autoplay=1&rel=0"
+    },
+    {
+      "id": "hoodie-3d-cloth",
+      "category": "branding 3d",
+      "title": "Hoodie Apparel Animation",
+      "subtitle": "3D Branding Simulation",
+      "description": "Dynamic cloth simulation and stylized commercial showcase for apparel brands.",
+      "thumbnail": "https://i.ytimg.com/vi/-oDgaHYAk5M/hqdefault.jpg",
+      "badge": "3D Cloth Sim",
+      "ytId": "-oDgaHYAk5M",
+      "youtubeUrl": "https://www.youtube.com/shorts/-oDgaHYAk5M",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/-oDgaHYAk5M?autoplay=1&rel=0"
+    },
+    {
+      "id": "dpxi-fc-intro",
+      "category": "branding",
+      "title": "DP Xi FC Video Intro",
+      "subtitle": "Branding & Video",
+      "description": "High-energy cinematic sports promo with synchronized beat cuts and titles.",
+      "thumbnail": "https://i.ytimg.com/vi/khtonJIabQ0/hqdefault.jpg",
+      "badge": "Branding Video",
+      "ytId": "khtonJIabQ0",
+      "youtubeUrl": "https://www.youtube.com/watch?v=khtonJIabQ0",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/khtonJIabQ0?autoplay=1&rel=0"
+    }
+  ],
+  "experience": [
+    {
+      "period": "2023 - Present",
+      "company": "Ventrixon Studio",
+      "title": "Brand Identity & Visual Mark Designer",
+      "description": "Created the complete Ventrixon brand mark, vector style guide, typography pairing, and visual assets."
+    },
+    {
+      "period": "2023 - Present",
+      "company": "Global Clients",
+      "title": "Freelance Brand & Vector Designer",
+      "description": "Delivered vector marks, typography pairings, color palettes, and brand guidelines for international businesses."
+    }
+  ],
+  "education": [
+    {
+      "period": "Applied Mastery",
+      "company": "Self-Directed & Professional Practice",
+      "title": "Vector Design & Visual Identity Systems",
+      "description": "Logo design theory, scalable vector construction in Adobe Illustrator, color palettes, and typographic pairings."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Adobe Illustrator (Vector Marks)",
+      "percent": "95%"
+    },
+    {
+      "name": "Brand Identity Systems",
+      "percent": "92%"
+    },
+    {
+      "name": "Color Theory & Palette Harmony",
+      "percent": "90%"
+    },
+    {
+      "name": "Typography Pairing & Hierarchy",
+      "percent": "88%"
+    },
+    {
+      "name": "Adobe Photoshop (Mockups & Visuals)",
+      "percent": "85%"
+    },
+    {
+      "name": "Print & Vector Asset Packaging",
+      "percent": "90%"
+    }
+  ],
+  "competencies": [
+    "Logo Design",
+    "Vector Graphics",
+    "Color Palette Systems",
+    "Typography Styling",
+    "Brand Guidelines",
+    "Iconography",
+    "Vector Merchandise",
+    "Print Ready Art",
+    "Visual Assets"
+  ],
+  "languages": [
+    "Bengali (Native)",
+    "English (Fluent)",
+    "Arabic (Conversational)"
+  ]
+}

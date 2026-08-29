@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adibul Jabir</title>
+  <title>Adibul Jabir â€” 3D Artist, Developer & Designer</title>
   <meta name="description" content="Official portfolio and resume of Adibul Jabir - 3D Artist, Developer, UI/UX Designer, Brand Designer, and CSE Student. Founder of Ventrixon.">
   <meta name="keywords" content="Adibul Jabir, 3D Artist, 3D Modeling, Blender, After Effects, Illustrator, Ventrixon, Resume, Portfolio">
   <meta name="author" content="Adibul Jabir">
@@ -69,6 +69,7 @@
 
     <!-- Full-Width Site Header with Navbar on Right Side -->
     <header class="site-header">
+      <div class="scroll-progress-bar"></div>
       <div class="container-inner header-flex">
         <!-- Logo (Left Side) -->
         <a href="#about" class="site-logo">
@@ -81,9 +82,6 @@
           <ul class="site-nav">
             <li class="nav-item">
               <a href="#about" class="active">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
               <a href="#resume">Resume</a>
@@ -125,14 +123,17 @@
               </div>
               <h1 class="home-title">Adibul Jabir</h1>
               <p class="home-desc">
-                Welcome to my portfolio! I’m a Computer Science & Engineering student at KKBAU and passionate 3D Artist specializing in 3D modeling, animation, and digital visuals. Fast, reliable, and available up to 17 hours a day to transform visionary concepts into reality.
+                Welcome to my portfolio! Iâ€™m a Computer Science & Engineering student at KKBAU and passionate 3D Artist specializing in 3D modeling, animation, and digital visuals. Fast, reliable, and available up to 17 hours a day to transform visionary concepts into reality.
               </p>
               <div class="home-buttons">
-                <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download CV</a>
+                <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download Resume</a>
                 <a href="#contact" class="btn btn-secondary">Contact</a>
               </div>
             </div>
           </div>
+
+          <!-- Collaborated With (Top Social Proof Marquee Without Title) -->
+          <div class="clients-marquee-wrapper" id="clients-marquee-wrapper"><div class="clients-marquee-track" id="clients-marquee-track"></div></div>
 
           <!-- What I Do -->
           <div class="block-title">
@@ -151,33 +152,11 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- 3. PORTFOLIO SECTION                       -->
-        <!-- ========================================== -->
-        <section id="portfolio" class="tab-section">
-          <div class="page-title">
-            <h1>Portfolio</h1>
-            <div class="page-subtitle">My Works, 3D Creations & Motion Videos</div>
-          </div>
-
-          <ul class="portfolio-filters">
-            <li><button class="filter-btn active" data-filter="uiux">UI/UX</button></li>
-            <li><button class="filter-btn" data-filter="dev">Dev</button></li>
-            <li><button class="filter-btn" data-filter="branding">Branding</button></li>
-            <li><button class="filter-btn" data-filter="3d">3D</button></li>
-          </ul>
-
-          <div class="portfolio-grid" id="portfolio-grid">
-            <!-- Dynamically populated from data/portfolio.json -->
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 4. RESUME SECTION                          -->
+        <!-- 2. RESUME & PORTFOLIO SECTION              -->
         <!-- ========================================== -->
         <section id="resume" class="tab-section">
-          <div class="page-title">
-            <h1>Resume</h1>
-            <div class="page-subtitle">Education, Experience & Specialized Skillsets</div>
+          <div class="block-title">
+            <h2>Resume & Portfolio</h2>
           </div>
 
           <!-- Role Controls & Dynamic Download Button -->
@@ -191,12 +170,12 @@
 
             <div class="resume-download-box">
               <a id="resume-download-btn" href="assets/Adibul_Jabir_UIUX_Resume.pdf" download="Adibul_Jabir_UIUX_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary resume-download-btn">
-                <i class="fas fa-file-download"></i> <span id="resume-download-text">Download UI/UX CV</span>
+                <i class="fas fa-file-download"></i> <span id="resume-download-text">Download UI/UX Resume</span>
               </a>
             </div>
           </div>
 
-          <!-- Role Panes Container (Dynamically populated from data/resume.json) -->
+          <!-- Role Panes Container (Dynamically populated from data/roles/*.json) -->
           <div id="resume-panes-container"></div>
 
           <!-- Achievements Section -->
@@ -204,52 +183,14 @@
             <h2>Achievements</h2>
           </div>
 
-          <div class="resume-columns">
-            <!-- Left Column: Professional Recognition -->
-            <div>
-              <div class="timeline">
-                <div class="timeline-item">
-                  <span class="timeline-period">5.0 Star Rating</span>
-                  <span class="timeline-company">UpworkÂ® Global Inc</span>
-                  <h4 class="timeline-title">5-Star Rated Freelance 3D Specialist</h4>
-                  <p class="timeline-desc">Maintained a 100% five-star rating with stellar client reviews across precision 3D product visualizations, hard-surface assets, and motion graphics.</p>
-                </div>
-              </div>
-            </div>
+          <div class="resume-columns" id="achievements-container"></div>
 
-            <!-- Right Column: Competitions & Innovation -->
-            <div>
-              <div class="timeline">
-                <div class="timeline-item">
-                  <span class="timeline-period">Grant & Innovation</span>
-<h4 class="timeline-title">UIHP Seed Stage Innovation</h4>
-                  <p class="timeline-desc">Selected and recognized in the University Innovation Hub Program (UIHP) Seed stage for human-centric digital healthcare interface design.</p>
-                </div>
-
-                <div class="timeline-item">
-                  <span class="timeline-period">Competitive Programming</span>
-                  <span class="timeline-company">KKBAU Computer Science</span>
-                  <h4 class="timeline-title">University Programming Contest</h4>
-                  <p class="timeline-desc">Active participant in university programming competitions, solving algorithmic challenges in C/C++ and Python with clean logic.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-<!-- Testimonials -->
+          <!-- Testimonials -->
           <div class="block-title">
             <h2>Testimonials</h2>
           </div>
 
           <div class="testimonials-grid" id="testimonials-grid"></div>
-
-          <!-- Clients -->
-          <div class="block-title">
-            <h2>Collaborated With</h2>
-          </div>
-
-          <div class="clients-marquee-wrapper" id="clients-marquee-wrapper"><div class="clients-marquee-track" id="clients-marquee-track"></div></div>
 
           <!-- Services & Collaboration Packages -->
           <div class="block-title">
@@ -270,101 +211,112 @@
               <ul class="pricing-features">
                 <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> User Flows & Wireframing</li>
                 <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> High-Fidelity Figma UI Screens</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Responsive Design System & Assets</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Interactive Clickable Prototype</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Interactive Prototypes</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Design System & Style Guide</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Developer Handoff Specs</li>
               </ul>
             </div>
 
-            <!-- 3D Animation (Featured) -->
-            <div class="pricing-card featured">
+            <!-- 3D Animation Package -->
+            <div class="pricing-card popular">
               <div class="pricing-header">
-                <h4 class="pricing-plan-title featured-title">3D & Motion Production</h4>
-                <div class="pricing-price">$750</div>
-                <div class="pricing-period">per commercial asset</div>
+                <h4 class="pricing-plan-title">3D Animation & Modeling</h4>
+                <div class="pricing-price">$650</div>
+                <div class="pricing-period">per animation project</div>
               </div>
               <div class="pricing-btn-box">
                 <a href="#contact" class="btn btn-primary pricing-btn">Get Started</a>
               </div>
               <ul class="pricing-features">
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Precision 3D Hard-Surface Modeling</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Photorealistic PBR Textures & Lighting</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> 4K Commercial Motion Graphics Reel</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Video Editing & Sound Synchronization</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Hard-Surface / Organic 3D Modeling</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> PBR Shading & Photoreal Lighting</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> 4K Product Showcase Animation</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Camera Directing & Motion Design</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Commercial Video Post-Production</li>
               </ul>
             </div>
 
-            <!-- Full-Stack Development -->
+            <!-- Full-Stack / Branding Package -->
             <div class="pricing-card">
               <div class="pricing-header">
-                <h4 class="pricing-plan-title">Software & Web App</h4>
-                <div class="pricing-price">$950</div>
-                <div class="pricing-period">per milestone</div>
+                <h4 class="pricing-plan-title">Brand Identity & Dev</h4>
+                <div class="pricing-price">$550</div>
+                <div class="pricing-period">per brand release</div>
               </div>
               <div class="pricing-btn-box">
                 <a href="#contact" class="btn btn-secondary pricing-btn">Get Started</a>
               </div>
               <ul class="pricing-features">
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Custom Frontend & Backend Architecture</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> High-Performance Responsive Web App</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> API Integration & Database Persistence</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Full Source Code & Deployment Support</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Vector Logo & Identity System</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Typography & Color Harmony</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Web App / Landing Development</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> SEO, Core Web Vitals & Speed</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Source Vector & Code Repo Assets</li>
               </ul>
             </div>
           </div>
+
         </section>
 
-<section id="contact" class="tab-section">
-          <div class="page-title">
-            <h1>Contact</h1>
-            <div class="page-subtitle">Get in touch</div>
+        <!-- ========================================== -->
+        <!-- 3. CONTACT SECTION                         -->
+        <!-- ========================================== -->
+        <section id="contact" class="tab-section">
+          <div class="block-title">
+            <h2>Contact</h2>
           </div>
 
           <div class="contact-layout">
-            <div>
+            <!-- Left Info Column -->
+            <div class="contact-info-col">
               <div class="contact-info-block">
-                <a href="mailto:adibuljabir@outlook.com" class="contact-info-item">
-                  <i class="fas fa-envelope"></i>
-                  <span>adibuljabir@outlook.com</span>
-                </a>
-
-                <a href="https://wa.me/qr/OOP5CMY4RLZKP1" target="_blank" rel="noopener noreferrer" class="contact-info-item">
-                  <i class="fab fa-whatsapp"></i>
-                  <span>Chat on WhatsApp</span>
-                </a>
-
-                <div class="contact-info-item">
+                <div class="ci-icon">
                   <i class="fas fa-map-marker-alt"></i>
-                  <span>Khulna, Bangladesh</span>
                 </div>
-
-                <div class="contact-info-item">
-                  <i class="fas fa-check"></i>
-                  <span>Available for Freelance</span>
+                <div class="ci-content">
+                  <h5>Location</h5>
+                  <p>Khulna, Bangladesh</p>
                 </div>
               </div>
 
-              <div class="block-title">
-                <h2>Social Profiles</h2>
+              <div class="contact-info-block">
+                <div class="ci-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="ci-content">
+                  <h5>Email</h5>
+                  <p><a href="mailto:adibuljabir@gmail.com">adibuljabir@gmail.com</a></p>
+                </div>
               </div>
-              <div class="social-links-list">
-                <a href="https://www.youtube.com/@Ventrixon" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-youtube"></i> YouTube</a>
-                <a href="https://www.behance.net/adibuljabir" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-behance"></i> Behance</a>
-                <a href="https://www.linkedin.com/in/adibuljabir/" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                <a href="https://github.com/adibuljabir" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-briefcase"></i> Upwork</a>
-                <a href="https://sketchfab.com/ventrixon" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-cube"></i> Sketchfab</a>
-                <a href="https://x.com/adibuljabir" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-x-twitter"></i> Twitter</a>
+
+              <div class="contact-info-block">
+                <div class="ci-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="ci-content">
+                  <h5>Working Hours</h5>
+                  <p>Available Up to 17h/day (GMT+6)</p>
+                </div>
+              </div>
+
+              <div class="contact-info-block">
+                <div class="ci-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="ci-content">
+                  <h5>Freelance Availability</h5>
+                  <p><span class="badge-status">Available for Direct Contracts</span></p>
+                </div>
               </div>
             </div>
 
+            <!-- Right Form Column -->
             <div class="contact-form-col">
-              <div class="block-title" style="margin-top: 0;">
-                <h2>Send a Message</h2>
-              </div>
-
-              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="177234ad-484b-4163-a198-efcdd6f1c3f0">
-                <input type="hidden" name="from_name" value="Adibul Jabir Portfolio">
+              <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms API Key -->
+                <input type="hidden" name="access_key" value="9b6cbba3-b4cf-473d-82d3-1382587f73db">
+                <input type="hidden" name="from_name" value="Adibul Jabir Portfolio Contact">
+                
                 <!-- Anti-spam Honeypot -->
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 

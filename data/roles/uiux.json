@@ -1,0 +1,157 @@
+{
+  "roleId": "uiux",
+  "roleName": "UI/UX Designer",
+  "downloadLabel": "Download UI/UX Resume",
+  "downloadUrl": "assets/Adibul_Jabir_UIUX_Resume.pdf",
+  "resumeFileName": "Adibul_Jabir_UIUX_Resume.pdf",
+  "portfolio": [
+    {
+      "id": "cellfin-app",
+      "category": "uiux",
+      "title": "Cellfin Banking App",
+      "subtitle": "UI/UX Case Study",
+      "description": "Complete mobile banking redesign simplifying transaction flows and user confidence.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/248330667/Cellfin-Banking-App-%28Case-Study%29"
+    },
+    {
+      "id": "saas-landing",
+      "category": "uiux",
+      "title": "SaaS Landing Page",
+      "subtitle": "Web & UI/UX",
+      "description": "Conversion-focused, scalable design system created for high-growth SaaS web platforms.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/247425937/SaaS-Landing-Page"
+    },
+    {
+      "id": "nsaas-dashboard",
+      "category": "uiux",
+      "title": "NSaaS Analytics Dashboard",
+      "subtitle": "Dashboard UI",
+      "description": "Modern SaaS analytics dashboard engineered for complex metrics and clean readability.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/246613705/NSaaS-Analytics-Dashboard-Modern-SaaS-UI-Design"
+    },
+    {
+      "id": "gaming-controller",
+      "category": "uiux",
+      "title": "Gaming Controller Landing Page",
+      "subtitle": "Product Landing Page",
+      "description": "Bold and immersive product landing page design showcasing gaming hardware.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/246580577/Gaming-Controller-Landing-Page"
+    },
+    {
+      "id": "tech-community",
+      "category": "uiux",
+      "title": "Tech Community Platform",
+      "subtitle": "Web Platform UI",
+      "description": "Structured community hub UI designed to promote collaboration and event engagement.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/246457181/Tech-Community-Platform-UI-Innovation-Club"
+    },
+    {
+      "id": "fast-food-ui",
+      "category": "uiux",
+      "title": "Fast Food Restaurant UI",
+      "subtitle": "UI / Web Design",
+      "description": "Modern ordering interface designed for swift digital menu browsing and checkout.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/246406463/Fast-Food-Restaurant-Website-UI"
+    },
+    {
+      "id": "ngo-charity-ui",
+      "category": "uiux",
+      "title": "NGO Charity Platform",
+      "subtitle": "UI / Social Impact",
+      "description": "Accessible charity portal with structured donation flows and expense tracking dashboard.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/246404011/NGO-Charity-Platform-UI-Donation-Volunteer"
+    }
+  ],
+  "experience": [
+    {
+      "period": "2023 - Present",
+      "company": "Ventrixon Studio",
+      "title": "UI/UX Designer & Prototyper",
+      "description": "Designing user interfaces, wireframes, and responsive web/mobile prototypes in Figma for software and digital platforms."
+    },
+    {
+      "period": "2023 - Present",
+      "company": "Freelance & Client Projects",
+      "title": "Product Designer",
+      "description": "Delivering high-converting landing pages, SaaS dashboards, and digital product redesigns."
+    }
+  ],
+  "education": [
+    {
+      "period": "2024 - 2028 (Ongoing)",
+      "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+      "title": "BSc in Computer Science & Engineering (HCI Focus)",
+      "description": "Human-Computer Interaction (HCI), design systems, web ergonomics, and user-centric software design."
+    },
+    {
+      "period": "Continuous Specialization",
+      "company": "Self-Directed & Applied Practice",
+      "title": "Design Systems & Interactive Prototyping",
+      "description": "Advanced Figma components, auto-layout, interactive variants, and scalable web/mobile design frameworks."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Figma (UI/UX Design & Prototyping)",
+      "percent": "95%"
+    },
+    {
+      "name": "User Interface & Wireframing",
+      "percent": "92%"
+    },
+    {
+      "name": "Design Systems & Component Libraries",
+      "percent": "90%"
+    },
+    {
+      "name": "Adobe Photoshop & Illustrator",
+      "percent": "88%"
+    },
+    {
+      "name": "Responsive Mobile & Web UI",
+      "percent": "92%"
+    },
+    {
+      "name": "Human-Computer Interaction (HCI)",
+      "percent": "85%"
+    }
+  ],
+  "competencies": [
+    "User Flow Mapping",
+    "Interactive Wireframes",
+    "Design Systems",
+    "Mobile UI",
+    "Web Prototyping",
+    "Usability Principles",
+    "Figma Variables",
+    "Auto Layout Master",
+    "Visual Hierarchy",
+    "Micro-interactions"
+  ],
+  "languages": [
+    "Bengali (Native)",
+    "English (Fluent)",
+    "Arabic (Conversational)"
+  ]
+}

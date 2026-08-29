@@ -1,0 +1,187 @@
+{
+  "roleId": "3d",
+  "roleName": "3D Artist",
+  "downloadLabel": "Download 3D Artist Resume",
+  "downloadUrl": "assets/Adibul_Jabir_3D_Artist_Resume.pdf",
+  "resumeFileName": "Adibul_Jabir_3D_Artist_Resume.pdf",
+  "portfolio": [
+    {
+      "id": "ventrixon-logo-anim",
+      "category": "branding 3d",
+      "title": "Ventrixon Logo Animation",
+      "subtitle": "Brand Motion Graphics",
+      "description": "Smooth brand-driven motion graphics and cinematic reveal timing in After Effects.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif",
+      "badge": "Branding Motion",
+      "youtubeUrl": "https://www.youtube.com/@Ventrixon",
+      "behanceUrl": "https://www.behance.net/gallery/246479509/Ventrixon-Logo-Animation"
+    },
+    {
+      "id": "motion-logo-intro",
+      "category": "branding 3d",
+      "title": "4K Motion Logo Intro",
+      "subtitle": "Brand Motion Graphics",
+      "description": "Cinematic 4K brand-driven motion graphics and fluid reveal animations.",
+      "thumbnail": "https://i.ytimg.com/vi/hBbHoIONYf0/hqdefault.jpg",
+      "badge": "4K Motion",
+      "ytId": "hBbHoIONYf0",
+      "youtubeUrl": "https://www.youtube.com/watch?v=hBbHoIONYf0",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/hBbHoIONYf0?autoplay=1&rel=0"
+    },
+    {
+      "id": "hoodie-3d-cloth",
+      "category": "branding 3d",
+      "title": "Hoodie Apparel Animation",
+      "subtitle": "3D Branding Simulation",
+      "description": "Dynamic cloth simulation and stylized commercial showcase for apparel brands.",
+      "thumbnail": "https://i.ytimg.com/vi/-oDgaHYAk5M/hqdefault.jpg",
+      "badge": "3D Cloth Sim",
+      "ytId": "-oDgaHYAk5M",
+      "youtubeUrl": "https://www.youtube.com/shorts/-oDgaHYAk5M",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/-oDgaHYAk5M?autoplay=1&rel=0"
+    },
+    {
+      "id": "motherboard-3d",
+      "category": "3d",
+      "title": "Motherboard 3D Animation",
+      "subtitle": "3D Animation",
+      "description": "Detailed hardware component visualization and cinematic motion graphics.",
+      "thumbnail": "https://i.ytimg.com/vi/0Eb3AAcaTEc/hqdefault.jpg",
+      "badge": "3D Hardware",
+      "ytId": "0Eb3AAcaTEc",
+      "youtubeUrl": "https://www.youtube.com/watch?v=0Eb3AAcaTEc",
+      "behanceUrl": "https://www.behance.net/gallery/212128653/Full-Youtube-Video-of-Motherboard-Animation",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/0Eb3AAcaTEc?autoplay=1&rel=0"
+    },
+    {
+      "id": "refrigerator-ad",
+      "category": "3d",
+      "title": "Refrigerator Commercial Ad",
+      "subtitle": "Commercial 3D Video",
+      "description": "Commercial product video featuring photorealistic lighting, shaders, and appliance animation.",
+      "thumbnail": "https://i.ytimg.com/vi/FkkAfB6_9SU/hqdefault.jpg",
+      "badge": "Commercial 3D",
+      "ytId": "FkkAfB6_9SU",
+      "youtubeUrl": "https://www.youtube.com/watch?v=FkkAfB6_9SU",
+      "behanceUrl": "https://www.behance.net/gallery/215395279/Animation-of-Refrigerator-Advertisement",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/FkkAfB6_9SU?autoplay=1&rel=0"
+    },
+    {
+      "id": "low-poly-gun",
+      "category": "3d",
+      "title": "Low Poly Anti-Aircraft Gun",
+      "subtitle": "3D Modeling",
+      "description": "Stylized game-ready 3D prop modeled with clean topology and color-based materials.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/246476437/Low-Poly-Anti-Aircraft-Gun",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png"
+    },
+    {
+      "id": "low-poly-train",
+      "category": "3d",
+      "title": "Low Poly Train Model",
+      "subtitle": "3D Modeling",
+      "description": "Stylized 3D model of the EMD GT42ACL locomotive with passenger coach in Blender.",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+      "behanceUrl": "https://www.behance.net/gallery/246476151/Low-Poly-Train-Model",
+      "lightboxType": "image",
+      "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png"
+    },
+    {
+      "id": "locomotive-anim",
+      "category": "3d",
+      "title": "Locomotive 3D Animation",
+      "subtitle": "3D Vehicle Animation",
+      "description": "Stylized 3D low poly train animation featuring realistic mechanical motion.",
+      "thumbnail": "https://i.ytimg.com/vi/9dpz015aejE/hqdefault.jpg",
+      "badge": "3D Animation",
+      "ytId": "9dpz015aejE",
+      "youtubeUrl": "https://www.youtube.com/watch?v=9dpz015aejE",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/9dpz015aejE?autoplay=1&rel=0"
+    },
+    {
+      "id": "donut-recreation",
+      "category": "3d",
+      "title": "Realistic 3D Donut",
+      "subtitle": "3D Modeling & Shading",
+      "description": "Photorealistic procedural texturing, particle sprinkles, and lighting in Blender.",
+      "thumbnail": "https://i.ytimg.com/vi/dYq1ATkLAj8/hqdefault.jpg",
+      "badge": "3D Shading",
+      "ytId": "dYq1ATkLAj8",
+      "youtubeUrl": "https://www.youtube.com/watch?v=dYq1ATkLAj8",
+      "lightboxType": "video",
+      "lightboxSrc": "https://www.youtube-nocookie.com/embed/dYq1ATkLAj8?autoplay=1&rel=0"
+    }
+  ],
+  "experience": [
+    {
+      "period": "2023 - Present",
+      "company": "Ventrixon Studio",
+      "title": "Founder & Lead 3D Artist",
+      "description": "Directing 3D animations, product visualizations, motion graphics, and educational 3D modeling content on YouTube."
+    },
+    {
+      "period": "2023 - Present",
+      "company": "UpworkÂ® Global Inc",
+      "title": "Freelance 3D Specialist (5-Star Track)",
+      "description": "Delivering custom 3D animations, photorealistic product visualizations, and cinematic renders for international clients."
+    }
+  ],
+  "education": [
+    {
+      "period": "2023 - Present",
+      "company": "Specialized Applied Practice",
+      "title": "Hard-Surface 3D Modeling & Animation Pipelines",
+      "description": "Mastering topology, PBR node shading, procedural textures, cinematic camera animation, and particle simulations in Blender."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Blender 3D Modeling & Topology",
+      "percent": "95%"
+    },
+    {
+      "name": "PBR Material Shading & Texturing",
+      "percent": "92%"
+    },
+    {
+      "name": "Cinematic Lighting & Cameras",
+      "percent": "92%"
+    },
+    {
+      "name": "Commercial Product Animation",
+      "percent": "90%"
+    },
+    {
+      "name": "Adobe After Effects (Motion Post)",
+      "percent": "88%"
+    },
+    {
+      "name": "Hard-Surface Asset Optimization",
+      "percent": "90%"
+    }
+  ],
+  "competencies": [
+    "Hard Surface Modeling",
+    "PBR Shaders",
+    "Cycles & Eevee",
+    "Motion Graphics",
+    "Cloth Physics Simulation",
+    "Low-Poly Assets",
+    "Cinematic Lighting",
+    "Video Post-Production",
+    "DaVinci Resolve",
+    "Animation Curves"
+  ],
+  "languages": [
+    "Bengali (Native)",
+    "English (Fluent)",
+    "Arabic (Conversational)"
+  ]
+}

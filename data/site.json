@@ -1,4 +1,30 @@
-﻿{
+{
+  "collaboratedWith": [
+    {
+      "name": "Sprigs",
+      "url": "https://sprigs.com/",
+      "logo": "images/sprigs.png",
+      "alt": "Sprigs"
+    },
+    {
+      "name": "KKBAU",
+      "url": "https://www.kkbau.ac.bd/",
+      "logo": "images/kkbau.png",
+      "alt": "KKBAU"
+    },
+    {
+      "name": "PRISM Club",
+      "url": "https://www.facebook.com/prism.kkbau.ac.bd",
+      "logo": "images/prism-club.png",
+      "alt": "PRISM Club"
+    },
+    {
+      "name": "Chisas",
+      "url": "https://www.facebook.com/Chinnomul.Samajik.Songstha",
+      "logo": "images/chisas.png",
+      "alt": "Chisas"
+    }
+  ],
   "whatIDo": [
     {
       "icon": "fas fa-layer-group",
@@ -43,6 +69,26 @@
       "count": "1,286"
     }
   ],
+  "achievements": [
+    {
+      "period": "5.0 Star Rating",
+      "company": "Upwork® Global Inc",
+      "title": "5-Star Rated Freelance 3D Specialist",
+      "description": "Maintained a 100% five-star rating with stellar client reviews across precision 3D product visualizations, hard-surface assets, and motion graphics."
+    },
+    {
+      "period": "Grant & Innovation",
+      "company": "Shasthocare Healthtech",
+      "title": "UIHP Seed Stage Innovation",
+      "description": "Selected and recognized in the University Innovation Hub Program (UIHP) Seed stage for human-centric digital healthcare interface design."
+    },
+    {
+      "period": "Competitive Programming",
+      "company": "KKBAU Computer Science",
+      "title": "University Programming Contest",
+      "description": "Active participant in university programming competitions, solving algorithmic challenges in C/C++ and Python with clean logic."
+    }
+  ],
   "testimonials": [
     {
       "name": "Val Ciptak Viera",
@@ -50,32 +96,6 @@
       "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
       "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
       "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
-    }
-  ],
-  "collaboratedWith": [
-    {
-      "name": "Sprigs",
-      "url": "https://sprigs.com/",
-      "logo": "images/sprigs.png",
-      "alt": "Sprigs"
-    },
-    {
-      "name": "KKBAU",
-      "url": "https://www.kkbau.ac.bd/",
-      "logo": "images/kkbau.png",
-      "alt": "KKBAU"
-    },
-    {
-      "name": "PRISM Club",
-      "url": "https://www.facebook.com/prism.kkbau.ac.bd",
-      "logo": "images/prism-club.png",
-      "alt": "PRISM Club"
-    },
-    {
-      "name": "Chisas",
-      "url": "https://www.facebook.com/Chinnomul.Samajik.Songstha",
-      "logo": "images/chisas.png",
-      "alt": "Chisas"
     }
   ]
 }

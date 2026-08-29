@@ -437,53 +437,57 @@ a:hover {
  * =================================================================== */
 .page-content {
   flex-grow: 1;
-  padding: 40px 0 80px;
+  padding: 20px 0 60px;
   width: 100%;
 }
 
 @media (max-width: 768px) {
   .page-content {
-    padding: 25px 0 50px;
+    padding: 15px 0 40px;
   }
 }
 
 .tab-section,
 .page-section {
   display: block;
-  padding: 55px 0 70px;
+  padding: 35px 0 45px;
   position: relative;
-  scroll-margin-top: 90px;
-}
-
-.tab-section + .tab-section,
-.page-section + .page-section {
-  border-top: 1px solid var(--border-color);
+  scroll-margin-top: 85px;
 }
 
 .tab-section:first-of-type,
 .page-section:first-of-type {
-  padding-top: 20px;
+  padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .tab-section,
+  .page-section {
+    padding: 25px 0 35px;
+  }
 }
 
 /* ===================================================================
- * Section Titles (with Blue Underline)
+ * Section Titles & Eyebrows (Enhanced Information Hierarchy)
  * =================================================================== */
 .block-title {
-  margin: 50px 0 28px;
+  margin: 36px 0 20px;
   position: relative;
 }
 
 .block-title:first-child {
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .block-title h2 {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--heading-color);
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
+  letter-spacing: -0.02em;
 }
 
 .block-title h2::after {
@@ -491,25 +495,10 @@ a:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 30px;
-  height: 2px;
+  width: 32px;
+  height: 2.5px;
+  border-radius: 2px;
   background-color: var(--primary);
-}
-
-.page-title {
-  margin-bottom: 36px;
-}
-
-.page-title h1 {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.page-subtitle {
-  font-size: 13.5px;
-  color: var(--muted-color);
-  font-weight: 400;
 }
 
 /* ===================================================================
@@ -518,16 +507,16 @@ a:hover {
 .home-hero {
   display: flex;
   align-items: center;
-  gap: 80px;
-  padding: 50px 0 75px;
+  gap: 60px;
+  padding: 15px 0 30px;
 }
 
 @media (max-width: 900px) {
   .home-hero {
     flex-direction: column;
     text-align: center;
-    gap: 35px;
-    padding: 25px 0 45px;
+    gap: 25px;
+    padding: 15px 0 25px;
   }
 }
 
@@ -800,7 +789,7 @@ a:hover {
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding: 12px 0 45px;
+  padding: 8px 0 20px;
   box-sizing: border-box;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -1261,6 +1250,57 @@ a:hover {
   .resume-download-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+.role-portfolio-wrapper {
+  margin-bottom: 45px;
+}
+
+.role-portfolio-wrapper .portfolio-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 22px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 2px 20px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.role-portfolio-wrapper .portfolio-grid::-webkit-scrollbar {
+  height: 5px;
+}
+
+.role-portfolio-wrapper .portfolio-grid::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.role-portfolio-wrapper .portfolio-grid::-webkit-scrollbar-thumb {
+  background: var(--btn-sec-border);
+  border-radius: 4px;
+  transition: background 0.25s ease;
+}
+
+.role-portfolio-wrapper .portfolio-grid:hover::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+.role-portfolio-wrapper .portfolio-grid .portfolio-card {
+  flex: 0 0 340px;
+  max-width: 340px;
+  min-width: 290px;
+}
+
+@media (max-width: 768px) {
+  .role-portfolio-wrapper .portfolio-grid .portfolio-card {
+    flex: 0 0 280px;
+    max-width: 280px;
+    min-width: 260px;
   }
 }
 
@@ -1859,31 +1899,43 @@ textarea.form-control {
 }
 
 /* ===================================================================
- * Section-wise Scroll Reveal & Stagger Animations
+ * Section-wise Scroll Reveal, Stagger & Progress Bar
  * =================================================================== */
+.scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), #38bdf8);
+  z-index: 105;
+  transition: width 0.08s linear;
+}
+
 .reveal-scroll {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
-.reveal-scroll.is-revealed {
-  opacity: 1;
-  transform: translateY(0);
+.js-reveal-ready .reveal-scroll:not(.is-revealed) {
+  opacity: 0;
+  transform: translateY(20px) scale(0.985);
 }
 
-/* Staggered entry for grid items */
+.js-reveal-ready .reveal-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Staggered entry for grid items and card children */
 .reveal-stagger:nth-child(1) { transition-delay: 40ms; }
-.reveal-stagger:nth-child(2) { transition-delay: 90ms; }
-.reveal-stagger:nth-child(3) { transition-delay: 140ms; }
-.reveal-stagger:nth-child(4) { transition-delay: 190ms; }
-.reveal-stagger:nth-child(5) { transition-delay: 240ms; }
-.reveal-stagger:nth-child(6) { transition-delay: 290ms; }
-.reveal-stagger:nth-child(7) { transition-delay: 340ms; }
-.reveal-stagger:nth-child(8) { transition-delay: 390ms; }
-.reveal-stagger:nth-child(9) { transition-delay: 440ms; }
-.reveal-stagger:nth-child(10) { transition-delay: 490ms; }
-.reveal-stagger:nth-child(11) { transition-delay: 540ms; }
-.reveal-stagger:nth-child(12) { transition-delay: 590ms; }
+.reveal-stagger:nth-child(2) { transition-delay: 100ms; }
+.reveal-stagger:nth-child(3) { transition-delay: 160ms; }
+.reveal-stagger:nth-child(4) { transition-delay: 220ms; }
+.reveal-stagger:nth-child(5) { transition-delay: 280ms; }
+.reveal-stagger:nth-child(6) { transition-delay: 340ms; }
+.reveal-stagger:nth-child(7) { transition-delay: 400ms; }
+.reveal-stagger:nth-child(8) { transition-delay: 460ms; }
