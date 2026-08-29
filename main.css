@@ -1,10 +1,7 @@
 /* ===================================================================
  * Leven Full-Width Minimalist Theme - Adibul Jabir
- * Clean Edge-to-Edge Minimal Design with Inter Font
  * Light & Dark Themes
  * =================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   --primary: #007ced;
@@ -18,17 +15,17 @@
   --card-border: #e8e8e8;
   --header-bg: #ffffff;
   
-  --text-color: #666666;
+  --text-color: #4b5563;
   --heading-color: #111827;
-  --muted-color: #6b7280;
-  --light-gray-num: #d1d5db;
-  --border-color: #f3f4f6;
+  --muted-color: #4b5563;
+  --light-gray-num: #cbd5e1;
+  --border-color: #f1f5f9;
   
-  --btn-sec-border: #e5e7eb;
-  --btn-sec-text: #374151;
+  --btn-sec-border: #e2e8f0;
+  --btn-sec-text: #1e293b;
   
-  --input-bg: #fafafa;
-  --input-border: #e5e7eb;
+  --input-bg: #f8fafc;
+  --input-border: #e2e8f0;
   
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
   --shadow-avatar: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -44,12 +41,12 @@
   
   --text-color: #9ca3af;
   --heading-color: #f9fafb;
-  --muted-color: #6b7280;
-  --light-gray-num: #4b5563;
+  --muted-color: #9ca3af;
+  --light-gray-num: #64748b;
   --border-color: #2e3543;
   
   --btn-sec-border: #374151;
-  --btn-sec-text: #e5e7eb;
+  --btn-sec-text: #f1f5f9;
   
   --input-bg: #191c23;
   --input-border: #374151;
@@ -795,16 +792,26 @@ a:hover {
 .clients-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 20px;
   align-items: center;
-  margin-bottom: 50px;
-  padding: 15px 0;
+  margin-bottom: 45px;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .clients-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
@@ -812,15 +819,18 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  padding: 10px 16px;
+  height: 68px;
+  padding: 8px 12px;
   cursor: pointer;
   text-decoration: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .client-item img {
-  max-height: 44px;
-  max-width: 190px;
+  max-width: 100%;
+  max-height: 38px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -830,20 +840,19 @@ a:hover {
 
 /* Optical visual weight balance across different logo aspect ratios */
 .client-item img[alt="Sprigs"] {
-  max-height: 32px;
+  max-height: 30px;
 }
 
 .client-item img[alt="Chisas"] {
-  max-height: 36px;
-}
-
-.client-item img[alt="KKBAU"] {
   max-height: 34px;
 }
 
+.client-item img[alt="KKBAU"] {
+  max-height: 32px;
+}
+
 .client-item img[alt="PRISM Club"] {
-  max-height: 30px;
-  max-width: 200px;
+  max-height: 28px;
 }
 
 [data-theme="dark"] .client-item img {
@@ -852,7 +861,7 @@ a:hover {
 
 .client-item:hover img {
   filter: grayscale(0%) brightness(1) opacity(1);
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 /* ===================================================================
@@ -1451,14 +1460,38 @@ textarea.form-control {
 }
 
 .form-status {
-  margin-top: 12px;
+  margin-top: 14px;
   font-size: 13px;
+  font-weight: 500;
   display: none;
+  padding: 10px 14px;
+  border-radius: 6px;
 }
 
 .form-status.success {
   display: block;
-  color: #10b981;
+  color: #065f46;
+  background-color: #d1fae5;
+  border: 1px solid #a7f3d0;
+}
+
+[data-theme="dark"] .form-status.success {
+  color: #6ee7b7;
+  background-color: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.form-status.error {
+  display: block;
+  color: #991b1b;
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+[data-theme="dark"] .form-status.error {
+  color: #fca5a5;
+  background-color: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
 }
 
 /* ===================================================================

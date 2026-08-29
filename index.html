@@ -13,15 +13,25 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon.png">
 
-  <!-- Minimalist Sans Fonts (Plus Jakarta Sans & Geist) -->
+  <!-- Preconnect & DNS-Prefetch for Critical CDNs -->
+  <link rel="preconnect" href="https://media.licdn.com" crossorigin>
+  <link rel="dns-prefetch" href="https://media.licdn.com">
+  <link rel="preconnect" href="https://mir-s3-cdn-cf.behance.net" crossorigin>
+  <link rel="dns-prefetch" href="https://mir-s3-cdn-cf.behance.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome 6 Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Preload Critical LCP Hero Avatar -->
+  <link rel="preload" as="image" href="https://media.licdn.com/dms/image/v2/D5603AQFFW1fZ3rqwqQ/profile-displayphoto-scale_400_400/B56aBLf8DiIAAg-/0/1787973061989?e=1789603200&v=beta&t=5gRf6u82dZeYKjy3c9TpjlE5Dy4__sRHvCPGptw9Rfk" fetchpriority="high">
+
+  <!-- Minimalist Sans Fonts (Plus Jakarta Sans & Geist) with font-display: swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Non-Blocking Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   
-  <!-- Minimalist Full-Width Leven Stylesheet -->
+  <!-- Minimalist Full-Width Stylesheet -->
   <link rel="stylesheet" href="main.css">
 
   <!-- Early Theme Detection to prevent theme flash -->
@@ -45,7 +55,7 @@
   <div id="preloader" class="preloader">
     <div class="preloader-content">
       <div class="preloader-avatar-box">
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQFFW1fZ3rqwqQ/profile-displayphoto-scale_400_400/B56aBLf8DiIAAg-/0/1787973061989?e=1789603200&v=beta&t=5gRf6u82dZeYKjy3c9TpjlE5Dy4__sRHvCPGptw9Rfk" alt="Adibul Jabir" class="preloader-avatar" referrerpolicy="no-referrer">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQFFW1fZ3rqwqQ/profile-displayphoto-scale_400_400/B56aBLf8DiIAAg-/0/1787973061989?e=1789603200&v=beta&t=5gRf6u82dZeYKjy3c9TpjlE5Dy4__sRHvCPGptw9Rfk" alt="Adibul Jabir" class="preloader-avatar" width="170" height="170" fetchpriority="high" referrerpolicy="no-referrer">
         <div class="preloader-ring"></div>
       </div>
       <div class="preloader-name">Adibul <span>Jabir</span></div>
@@ -221,7 +231,7 @@
           <div class="testimonials-grid">
             <div class="testimonial-card">
               <div class="testimonial-avatar">
-                <img src="https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8" alt="Val Ciptak Viera" referrerpolicy="no-referrer">
+                <img src="https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8" alt="Val Ciptak Viera" width="40" height="40" loading="lazy" referrerpolicy="no-referrer">
               </div>
               <div class="testimonial-text">
                 "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
@@ -243,16 +253,16 @@
 
           <div class="clients-grid">
             <a href="https://sprigs.com/" target="_blank" rel="noopener noreferrer" class="client-item" title="Sprigs">
-              <img src="images/sprigs.png" alt="Sprigs">
+              <img src="images/sprigs.png" alt="Sprigs" width="120" height="40" loading="lazy">
             </a>
             <a href="https://www.kkbau.ac.bd/" target="_blank" rel="noopener noreferrer" class="client-item" title="KKBAU">
-              <img src="images/kkbau.png" alt="KKBAU">
+              <img src="images/kkbau.png" alt="KKBAU" width="120" height="40" loading="lazy">
             </a>
             <a href="https://www.facebook.com/prism.kkbau.ac.bd" target="_blank" rel="noopener noreferrer" class="client-item" title="PRISM Club">
-              <img src="images/prism-club.png" alt="PRISM Club">
+              <img src="images/prism-club.png" alt="PRISM Club" width="120" height="40" loading="lazy">
             </a>
             <a href="https://www.facebook.com/Chinnomul.Samajik.Songstha" target="_blank" rel="noopener noreferrer" class="client-item" title="Chisas">
-              <img src="images/chisas.png" alt="Chisas">
+              <img src="images/chisas.png" alt="Chisas" width="120" height="40" loading="lazy">
             </a>
           </div>
 
@@ -958,7 +968,7 @@
             <!-- Card 1: Cellfin Banking App -->
             <div class="portfolio-card" data-category="design">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Cellfin Banking App" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Cellfin Banking App" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/248330667/Cellfin-Banking-App-%28Case-Study%29" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Cellfin Banking App (Case Study)" data-desc="Mobile banking fund transfer redesign focusing on clear flow and simplified cognitive load."><i class="fas fa-search-plus"></i></button>
@@ -974,7 +984,7 @@
             <!-- Card 2: SaaS Landing Page -->
             <div class="portfolio-card" data-category="design">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" alt="SaaS Landing Page" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" alt="SaaS Landing Page" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/247425937/SaaS-Landing-Page" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" data-title="SaaS Landing Page" data-desc="Clean, conversion-focused modern UI/UX design for SaaS platforms and scalable web products."><i class="fas fa-search-plus"></i></button>
@@ -990,7 +1000,7 @@
             <!-- Card 3: NSaaS Analytics Dashboard -->
             <div class="portfolio-card" data-category="design">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="NSaaS Analytics Dashboard" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="NSaaS Analytics Dashboard" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/246613705/NSaaS-Analytics-Dashboard-Modern-SaaS-UI-Design" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="NSaaS Analytics Dashboard" data-desc="Data-driven SaaS analytics dashboard interface with visual hierarchy and performance metrics."><i class="fas fa-search-plus"></i></button>
@@ -1006,7 +1016,7 @@
             <!-- Card 4: Gaming Controller Landing Page -->
             <div class="portfolio-card" data-category="design">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" alt="Gaming Controller Landing Page" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" alt="Gaming Controller Landing Page" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/246580577/Gaming-Controller-Landing-Page" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" data-title="Gaming Controller Landing Page" data-desc="Bold, immersive landing page highlighting hardware design and conversion-driven features."><i class="fas fa-search-plus"></i></button>
@@ -1022,7 +1032,7 @@
             <!-- Card 5: Ventrixon Logo Animation -->
             <div class="portfolio-card" data-category="3d video">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif" alt="Ventrixon Logo Animation" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif" alt="Ventrixon Logo Animation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/246479509/Ventrixon-Logo-Animation" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                 </div>
@@ -1037,7 +1047,7 @@
             <!-- Card 6: Low Poly Anti-Aircraft Gun -->
             <div class="portfolio-card" data-category="3d">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Low Poly Anti-Aircraft Gun" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Low Poly Anti-Aircraft Gun" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/246476437/Low-Poly-Anti-Aircraft-Gun" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Low Poly Anti-Aircraft Gun" data-desc="Stylized low poly 3D anti-aircraft artillery asset designed for game engines."><i class="fas fa-search-plus"></i></button>
@@ -1053,7 +1063,7 @@
             <!-- Card 7: Low Poly Train Model -->
             <div class="portfolio-card" data-category="3d">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Low Poly Train Model" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Low Poly Train Model" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/246476151/Low-Poly-Train-Model" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Low Poly Train Model" data-desc="Stylized low poly 3D model of the EMD GT42ACL locomotive with passenger coach."><i class="fas fa-search-plus"></i></button>
@@ -1069,7 +1079,7 @@
             <!-- Card 8: Tech Community Platform UI -->
             <div class="portfolio-card" data-category="design">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Tech Community Platform UI" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Tech Community Platform UI" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/246457181/Tech-Community-Platform-UI-Innovation-Club" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Tech Community Platform UI" data-desc="Community hub UI designed for innovation clubs with event management and collaboration tools."><i class="fas fa-search-plus"></i></button>
@@ -1085,7 +1095,7 @@
             <!-- Card 9: Fast Food Restaurant Website UI -->
             <div class="portfolio-card" data-category="design">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Fast Food Restaurant UI" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Fast Food Restaurant UI" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/246406463/Fast-Food-Restaurant-Website-UI" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Fast Food Restaurant Website UI" data-desc="Conversion-driven food ordering web interface with appetizing visual hierarchy."><i class="fas fa-search-plus"></i></button>
@@ -1101,7 +1111,7 @@
             <!-- Card 10: NGO Charity Platform UI -->
             <div class="portfolio-card" data-category="design">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="NGO Charity Platform UI" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="NGO Charity Platform UI" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/246404011/NGO-Charity-Platform-UI-Donation-Volunteer" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                   <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="NGO Charity Platform UI" data-desc="Transparent donation and volunteer portal with clear expense visualization."><i class="fas fa-search-plus"></i></button>
@@ -1117,7 +1127,7 @@
             <!-- Card 11: Motherboard 3D Animation Video -->
             <div class="portfolio-card" data-category="3d video">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/a2cecf212128653.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Motherboard 3D Animation" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/a2cecf212128653.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Motherboard 3D Animation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/212128653/Full-Youtube-Video-of-Motherboard-Animation" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                 </div>
@@ -1132,7 +1142,7 @@
             <!-- Card 12: Refrigerator Advertisement Animation -->
             <div class="portfolio-card" data-category="3d video">
               <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/378024215395279.Y3JvcCwxMzgwLDEwODAsMjkwLDA.png" alt="Refrigerator Advertisement Animation" referrerpolicy="no-referrer" loading="lazy">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/378024215395279.Y3JvcCwxMzgwLDEwODAsMjkwLDA.png" alt="Refrigerator Advertisement Animation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
                 <div class="portfolio-overlay">
                   <a href="https://www.behance.net/gallery/215395279/Animation-of-Refrigerator-Advertisement" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
                 </div>
@@ -1197,22 +1207,27 @@
                 <h2>Send a Message</h2>
               </div>
 
-              <form id="contact-form">
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="177234ad-484b-4163-a198-efcdd6f1c3f0">
+                <input type="hidden" name="from_name" value="Adibul Jabir Portfolio">
+                <!-- Anti-spam Honeypot -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                 <div class="form-row">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" aria-label="Full Name" required>
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address" required>
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" aria-label="Subject">
                 </div>
 
                 <div class="form-group">
-                  <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                  <textarea name="message" class="form-control" placeholder="Your Message" aria-label="Your Message" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Send Message</button>

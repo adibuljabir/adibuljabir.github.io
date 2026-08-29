@@ -4,25 +4,20 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Preloader Blend Out
+  // Preloader Fast Reveal (Optimized for Core Web Vitals LCP/FCP)
   const preloader = document.getElementById('preloader');
   if (preloader) {
     const hidePreloader = () => {
+      preloader.classList.add('fade-out');
       setTimeout(() => {
-        preloader.classList.add('fade-out');
-        setTimeout(() => {
-          preloader.style.display = 'none';
-        }, 700);
-      }, 600);
+        preloader.style.display = 'none';
+      }, 400);
     };
 
-    if (document.readyState === 'complete') {
-      hidePreloader();
-    } else {
-      window.addEventListener('load', hidePreloader);
-      // Safety fallback in case window load takes longer
-      setTimeout(hidePreloader, 2000);
-    }
+    // Instant fade-out as soon as interactive DOM is ready
+    requestAnimationFrame(() => {
+      setTimeout(hidePreloader, 150);
+    });
   }
 
   // 1. Theme Management (System Detection & Saved Persistence)
@@ -351,32 +346,64 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. Contact Form Handler
+  // 8. Contact Form Handler (Web3Forms AJAX Integration)
   const contactForm = document.getElementById('contact-form');
   const formFeedback = document.getElementById('form-feedback');
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = 'Sending...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
       submitBtn.disabled = true;
 
-      setTimeout(() => {
+      const formData = new FormData(contactForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+
+        const result = await response.json();
+
+        if (response.status === 200 && result.success) {
+          contactForm.reset();
+          if (formFeedback) {
+            formFeedback.className = 'form-status success';
+            formFeedback.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.';
+            formFeedback.style.display = 'block';
+          }
+        } else {
+          if (formFeedback) {
+            formFeedback.className = 'form-status error';
+            formFeedback.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${result.message || 'Something went wrong. Please try again later.'}`;
+            formFeedback.style.display = 'block';
+          }
+        }
+      } catch (error) {
+        if (formFeedback) {
+          formFeedback.className = 'form-status error';
+          formFeedback.innerHTML = '<i class="fas fa-exclamation-circle"></i> Failed to send message. Please check your network connection.';
+          formFeedback.style.display = 'block';
+        }
+      } finally {
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        contactForm.reset();
-        if (formFeedback) {
-          formFeedback.className = 'form-status success';
-          formFeedback.innerHTML = 'Thank you! Your message has been sent successfully.';
-          formFeedback.style.display = 'block';
 
+        if (formFeedback) {
           setTimeout(() => {
             formFeedback.style.display = 'none';
-          }, 5000);
+          }, 6000);
         }
-      }, 800);
+      }
     });
   }
 });
