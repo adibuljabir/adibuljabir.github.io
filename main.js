@@ -106,6 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
       applyPortfolioFilter(filterToApply);
     }
 
+    if (typeof refreshScrollAnimations === 'function') {
+      setTimeout(refreshScrollAnimations, 60);
+    }
+
     // Scroll smoothly to top on tab switch
     window.scrollTo({
       top: 0,
@@ -406,4 +410,163 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 9. Section-wise Scroll Reveal & Stagger Animations
+  function initScrollAnimations() {
+    const animatedSelectors = [
+      '.home-hero',
+      '.block-title',
+      '.page-title',
+      '.service-card',
+      '.timeline-item',
+      '.testimonial-card',
+      '.client-item',
+      '.fact-box',
+      '.portfolio-card',
+      '.resume-card',
+      '.skill-item',
+      '.contact-info-block',
+      '.contact-form-col'
+    ];
+
+    const elementsToAnimate = document.querySelectorAll(animatedSelectors.join(', '));
+
+    elementsToAnimate.forEach((el) => {
+      el.classList.add('reveal-scroll');
+      if (el.parentElement && (
+        el.parentElement.classList.contains('portfolio-grid') ||
+        el.parentElement.classList.contains('clients-grid') ||
+        el.parentElement.classList.contains('fun-facts-grid') ||
+        el.parentElement.classList.contains('services-grid')
+      )) {
+        el.classList.add('reveal-stagger');
+      }
+    });
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          
+          if (entry.target.classList.contains('fact-box')) {
+            animateFactCounter(entry.target);
+          }
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    elementsToAnimate.forEach(el => scrollObserver.observe(el));
+
+    window.refreshScrollAnimations = function() {
+      const activeSection = document.querySelector('.tab-section.active');
+      if (activeSection) {
+        const inViewElements = activeSection.querySelectorAll('.reveal-scroll:not(.is-revealed)');
+        inViewElements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('is-revealed');
+            if (el.classList.contains('fact-box')) animateFactCounter(el);
+          } else {
+            scrollObserver.observe(el);
+          }
+        });
+      }
+    };
+  }
+
+  // Smooth Numeric Count-Up for Fun Fact counters
+  function animateFactCounter(factBox) {
+    const numEl = factBox.querySelector('.fact-number');
+    if (!numEl || numEl.dataset.animated) return;
+    numEl.dataset.animated = 'true';
+
+    const targetVal = numEl.getAttribute('data-count') || numEl.textContent;
+    const isPlus = targetVal.includes('+');
+    const cleanNum = parseInt(targetVal.replace(/[^0-9]/g, ''), 10);
+    if (isNaN(cleanNum)) return;
+
+    const duration = 1200;
+    const startTime = performance.now();
+
+    function updateCount(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = 1 - Math.pow(1 - progress, 3); // Cubic ease out
+      const current = Math.floor(easeProgress * cleanNum);
+
+      numEl.textContent = current.toLocaleString() + (isPlus ? '+' : '');
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      } else {
+        numEl.textContent = cleanNum.toLocaleString() + (isPlus ? '+' : '');
+      }
+    }
+
+    requestAnimationFrame(updateCount);
+  }
+
+  // 10. YouTube & Video Hover Playback Controller
+  function initVideoHoverPlayback() {
+    const videoCards = document.querySelectorAll('.portfolio-card[data-yt-id], .portfolio-card[data-category*="video"]');
+    
+    videoCards.forEach(card => {
+      const ytId = card.getAttribute('data-yt-id');
+      const thumbBox = card.querySelector('.portfolio-thumb-box');
+      const video = card.querySelector('video');
+
+      // Native HTML5 Video support
+      if (video) {
+        card.addEventListener('mouseenter', () => {
+          video.currentTime = 0;
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {});
+          }
+        });
+        card.addEventListener('mouseleave', () => {
+          video.pause();
+          video.currentTime = 0;
+        });
+      }
+
+      // YouTube Hover Preview Stream
+      if (ytId && thumbBox) {
+        let previewIframe = null;
+        let hoverTimeout = null;
+
+        card.addEventListener('mouseenter', () => {
+          hoverTimeout = setTimeout(() => {
+            if (!previewIframe && !thumbBox.querySelector('.yt-hover-iframe')) {
+              previewIframe = document.createElement('iframe');
+              previewIframe.className = 'yt-hover-iframe';
+              previewIframe.src = `https://www.youtube-nocookie.com/embed/${ytId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${ytId}&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&iv_load_policy=3&disablekb=1`;
+              previewIframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+              previewIframe.setAttribute('title', 'Video Preview');
+              thumbBox.appendChild(previewIframe);
+            }
+          }, 50);
+        });
+
+        card.addEventListener('mouseleave', () => {
+          if (hoverTimeout) clearTimeout(hoverTimeout);
+          if (previewIframe) {
+            previewIframe.remove();
+            previewIframe = null;
+          }
+        });
+      }
+    });
+  }
+
+  // Initialize Features
+  initScrollAnimations();
+  initVideoHoverPlayback();
 });
