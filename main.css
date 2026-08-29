@@ -1235,7 +1235,36 @@ a:hover {
   aspect-ratio: 16/10;
   overflow: hidden;
   position: relative;
-  background-color: #000000;
+  background-color: var(--input-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.no-thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--muted-color);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+
+.no-thumbnail i {
+  font-size: 24px;
+  color: var(--muted-color);
+  opacity: 0.6;
+}
+
+.portfolio-card:hover .no-thumbnail {
+  opacity: 0.35;
 }
 
 .portfolio-thumb-box img {
