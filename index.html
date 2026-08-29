@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -273,45 +273,35 @@
           <div class="contact-layout">
             <!-- Left Info Column -->
             <div class="contact-info-col">
-              <div class="contact-info-block">
+              <div class="contact-info-item">
                 <div class="ci-icon">
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div class="ci-content">
-                  <h5>Location</h5>
-                  <p>Khulna, Bangladesh</p>
+                  <span class="ci-label">Location</span>
+                  <span class="ci-value">Khulna, Bangladesh</span>
                 </div>
               </div>
 
-              <div class="contact-info-block">
+              <a href="mailto:adibuljabir@gmail.com" class="contact-info-item contact-info-link" title="Send direct email">
                 <div class="ci-icon">
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div class="ci-content">
-                  <h5>Email</h5>
-                  <p><a href="mailto:adibuljabir@gmail.com">adibuljabir@gmail.com</a></p>
+                  <span class="ci-label">Email</span>
+                  <span class="ci-value">adibuljabir@gmail.com</span>
                 </div>
-              </div>
+              </a>
 
-              <div class="contact-info-block">
-                <div class="ci-icon">
-                  <i class="fas fa-clock"></i>
+              <a href="https://wa.me/adibuljabir" target="_blank" rel="noopener noreferrer" class="contact-info-item contact-info-link whatsapp-link" title="Chat on WhatsApp">
+                <div class="ci-icon whatsapp-icon">
+                  <i class="fab fa-whatsapp"></i>
                 </div>
                 <div class="ci-content">
-                  <h5>Working Hours</h5>
-                  <p>Available Up to 17h/day (GMT+6)</p>
+                  <span class="ci-label">WhatsApp</span>
+                  <span class="ci-value">adibuljabir</span>
                 </div>
-              </div>
-
-              <div class="contact-info-block">
-                <div class="ci-icon">
-                  <i class="fas fa-check-circle"></i>
-                </div>
-                <div class="ci-content">
-                  <h5>Freelance Availability</h5>
-                  <p><span class="badge-status">Available for Direct Contracts</span></p>
-                </div>
-              </div>
+              </a>
             </div>
 
             <!-- Right Form Column -->
@@ -326,10 +316,10 @@
 
                 <div class="form-row">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" aria-label="Full Name" required>
+                    <input type="text" name="name" class="form-control" placeholder="Full Name *" aria-label="Full Name" required>
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address" required>
+                    <input type="email" name="email" class="form-control" placeholder="Email Address *" aria-label="Email Address" required>
                   </div>
                 </div>
 
@@ -338,10 +328,15 @@
                 </div>
 
                 <div class="form-group">
-                  <textarea name="message" class="form-control" placeholder="Your Message" aria-label="Your Message" required></textarea>
+                  <textarea name="message" class="form-control" placeholder="Your Message *" aria-label="Your Message" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div class="form-submit-row">
+                  <button type="submit" class="btn btn-primary" id="contact-submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Send Message</span>
+                  </button>
+                </div>
                 <div id="form-feedback" class="form-status"></div>
               </form>
             </div>

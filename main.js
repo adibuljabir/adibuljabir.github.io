@@ -762,6 +762,14 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       if (!formFeedback) return;
 
+      const submitBtn = document.getElementById('contact-submit-btn') || contactForm.querySelector('button[type="submit"]');
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '<i class="fas fa-paper-plane"></i> <span>Send Message</span>';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Sending...</span>';
+      }
+
       formFeedback.textContent = 'Sending message...';
       formFeedback.className = 'form-status';
 
@@ -786,6 +794,11 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {
         formFeedback.textContent = 'Network error. Please try again later or email me directly.';
         formFeedback.className = 'form-status error';
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
       }
     });
   }
@@ -800,7 +813,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '.timeline-item',
       '.skill-item',
       '.pricing-card',
-      '.contact-info-block',
+      '.contact-info-col',
       '.contact-form-col'
     ];
 
