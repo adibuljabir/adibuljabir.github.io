@@ -4,21 +4,42 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Theme Management (Light / Dark)
+  // Preloader Blend Out
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    const hidePreloader = () => {
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+        setTimeout(() => {
+          preloader.style.display = 'none';
+        }, 700);
+      }, 600);
+    };
+
+    if (document.readyState === 'complete') {
+      hidePreloader();
+    } else {
+      window.addEventListener('load', hidePreloader);
+      // Safety fallback in case window load takes longer
+      setTimeout(hidePreloader, 2000);
+    }
+  }
+
+  // 1. Theme Management (System Detection & Saved Persistence)
   const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
   
-  function applyTheme(theme) {
+  function applyTheme(theme, save = true) {
     if (theme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
+      if (save) localStorage.setItem('theme', 'dark');
       themeToggleBtns.forEach(btn => {
         btn.innerHTML = '<i class="fas fa-sun"></i>';
         btn.setAttribute('title', 'Switch to Light Theme');
       });
     } else {
       document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
+      if (save) localStorage.setItem('theme', 'light');
       themeToggleBtns.forEach(btn => {
         btn.innerHTML = '<i class="fas fa-moon"></i>';
         btn.setAttribute('title', 'Switch to Dark Theme');
@@ -26,14 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Load saved theme or default to light / system
-  const savedTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
-  applyTheme(savedTheme);
+  // Load previously saved theme OR fallback to current system OS theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme, false);
+  } else {
+    applyTheme(prefersDarkScheme.matches ? 'dark' : 'light', false);
+  }
 
+  // Listen for live system theme changes if user hasn't manually chosen a preference
+  if (prefersDarkScheme.addEventListener) {
+    prefersDarkScheme.addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        applyTheme(e.matches ? 'dark' : 'light', false);
+      }
+    });
+  }
+
+  // Manual Toggle by user (persists to localStorage)
   themeToggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      applyTheme(isDark ? 'light' : 'dark');
+      applyTheme(isDark ? 'light' : 'dark', true);
     });
   });
 
@@ -122,15 +157,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Typing / Rotating Text in Hero
+  // 3. Interactive 3D Parallax Tilt for Profile Picture
+  const homePhoto = document.querySelector('.home-photo');
+  const hpInner = document.querySelector('.hp-inner');
+  if (homePhoto && hpInner) {
+    homePhoto.addEventListener('mousemove', (e) => {
+      const rect = homePhoto.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = ((y - centerY) / centerY) * -12;
+      const rotateY = ((x - centerX) / centerX) * 12;
+
+      hpInner.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.05, 1.05, 1.05)`;
+    });
+
+    homePhoto.addEventListener('mouseleave', () => {
+      hpInner.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    });
+  }
+
+  // 4. Typing / Rotating Text in Hero
   const typingEl = document.querySelector('.role-typing');
   if (typingEl) {
     const roles = [
-      '3D Animator',
-      '3D Modeler',
-      'Illustrator',
-      'Founder @ Ventrixon',
-      'CSE Student @ KKBAU'
+      '3D Artist',
+      'UI/UX Designer',
+      'Developer',
+      'Brand Designer',
+      'Founder @ Ventrixon'
     ];
     let roleIdx = 0;
     let charIdx = 0;

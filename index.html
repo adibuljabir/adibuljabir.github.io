@@ -3,28 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adibul Jabir - 3D Artist, Animator & Developer</title>
-  <meta name="description" content="Official portfolio and resume of Adibul Jabir - 3D Animator, 3D Modeler, Illustrator, and CSE Student. Founder of Ventrixon.">
-  <meta name="keywords" content="Adibul Jabir, 3D Animator, 3D Modeler, Blender, After Effects, Illustrator, Ventrixon, Resume, Portfolio">
+  <title>Adibul Jabir</title>
+  <meta name="description" content="Official portfolio and resume of Adibul Jabir - 3D Artist, Developer, UI/UX Designer, Brand Designer, and CSE Student. Founder of Ventrixon.">
+  <meta name="keywords" content="Adibul Jabir, 3D Artist, 3D Modeling, Blender, After Effects, Illustrator, Ventrixon, Resume, Portfolio">
   <meta name="author" content="Adibul Jabir">
   
-  <!-- Profile picture as Favicon -->
-  <link rel="shortcut icon" type="image/png" href="images/profile.png">
-  <link rel="icon" type="image/png" href="images/profile.png">
-  <link rel="apple-touch-icon" href="images/profile.png">
+  <!-- Circular Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
 
-  <!-- Inter Font -->
+  <!-- Minimalist Sans Fonts (Plus Jakarta Sans & Geist) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Minimalist Full-Width Leven Stylesheet -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Early Theme Detection to prevent theme flash -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-avatar-box">
+        <img src="images/profile.png" alt="Adibul Jabir" class="preloader-avatar">
+        <div class="preloader-ring"></div>
+      </div>
+      <div class="preloader-name">Adibul <span>Jabir</span></div>
+      <div class="preloader-line">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
 
   <div class="page-wrapper">
 
@@ -101,54 +130,88 @@
           </div>
 
           <div class="services-list">
+            <!-- 1. UI/UX Design -->
             <div class="service-item">
               <div class="service-icon">
-                <i class="fas fa-pencil-alt"></i>
+                <i class="fas fa-layer-group"></i>
               </div>
               <div class="service-content">
-                <h4>3D Animation</h4>
-                <p>Dynamic 3D product visualizations, cinematic motion design, and promotional animations crafted in Blender and After Effects.</p>
+                <h4>UI/UX Design</h4>
+                <p>Crafting intuitive user interfaces, interactive wireframes, responsive web/mobile designs, and modern component design systems.</p>
               </div>
             </div>
 
+            <!-- 2. Developer -->
             <div class="service-item">
               <div class="service-icon">
-                <i class="fas fa-store"></i>
+                <i class="fas fa-code"></i>
               </div>
               <div class="service-content">
-                <h4>3D Product Modeling</h4>
-                <p>Precision 3D modeling, texturing, lighting, hard-surface assets, and realistic rendering for web and commercial use.</p>
+                <h4>Developer</h4>
+                <p>Building clean, responsive, high-performance web applications and software solutions with modern JavaScript, Python, and CSE foundations.</p>
               </div>
             </div>
 
+            <!-- 3. 3D Artist -->
             <div class="service-item">
               <div class="service-icon">
-                <i class="fas fa-desktop"></i>
+                <i class="fas fa-cube"></i>
               </div>
               <div class="service-content">
-                <h4>Web & UI Design</h4>
-                <p>Clean, minimalist, responsive digital interfaces and web experiences designed with modern aesthetics and usability in mind.</p>
+                <h4>3D Artist</h4>
+                <p>Precision 3D product modeling, cinematic motion graphics, photorealistic PBR rendering, and video visual effects in Blender and After Effects.</p>
               </div>
             </div>
 
+            <!-- 4. Brand Design -->
             <div class="service-item">
               <div class="service-icon">
-                <i class="fas fa-bullhorn"></i>
+                <i class="fas fa-vector-square"></i>
               </div>
               <div class="service-content">
-                <h4>Illustration & Branding</h4>
-                <p>Custom vector graphics, digital character art, icon design, and brand visuals created in Adobe Illustrator.</p>
+                <h4>Brand Design</h4>
+                <p>Creating distinct brand marks, scalable vector identity systems, cohesive color theory palettes, and visual style guidelines.</p>
               </div>
             </div>
           </div>
 
-          <!-- Ventrixon Feature -->
+          <!-- Achievements Section -->
           <div class="block-title">
-            <h2>Ventrixon Studio</h2>
+            <h2>Achievements</h2>
           </div>
-          <p style="margin-bottom: 30px; max-width: 800px; font-size: 13.5px; line-height: 1.8;">
-            Founded by Adibul Jabir, <strong>Ventrixon</strong> is a dedicated 3D animation and digital modeling studio specializing in Blender and After Effects workflows to produce educational animations, high-impact commercial ads, and 3D media.
-          </p>
+
+          <div class="resume-columns">
+            <!-- Left Column: Professional Recognition -->
+            <div>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="timeline-period">5.0 Star Rating</span>
+                  <span class="timeline-company">Upwork® Global Inc</span>
+                  <h4 class="timeline-title">5-Star Rated Freelance 3D Specialist</h4>
+                  <p class="timeline-desc">Maintained a 100% five-star rating with stellar client reviews across precision 3D product visualizations, hard-surface assets, and motion graphics.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Competitions & Innovation -->
+            <div>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="timeline-period">Grant & Innovation</span>
+                  <span class="timeline-company">Shasthocare Healthtech</span>
+                  <h4 class="timeline-title">UIHP Seed Stage Innovation</h4>
+                  <p class="timeline-desc">Selected and recognized in the University Innovation Hub Program (UIHP) Seed stage for human-centric digital healthcare interface design.</p>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="timeline-period">Competitive Programming</span>
+                  <span class="timeline-company">KKBAU Computer Science</span>
+                  <h4 class="timeline-title">University Programming Contest</h4>
+                  <p class="timeline-desc">Active participant in university programming competitions, solving algorithmic challenges in C/C++ and Python with clean logic.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Testimonials -->
           <div class="block-title">
@@ -158,31 +221,15 @@
           <div class="testimonials-grid">
             <div class="testimonial-card">
               <div class="testimonial-avatar">
-                <img src="images/profile.png" alt="Billy Adams">
+                <img src="https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8" alt="Val Ciptak Viera" referrerpolicy="no-referrer">
               </div>
               <div class="testimonial-text">
-                "Adibul delivered outstanding 3D product animations with unbelievable turnaround time. Exceptional attention to detail and texture quality."
+                "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
               </div>
               <div class="testimonial-author-box">
                 <div class="testimonial-author">
-                  <h5>Billy Adams</h5>
-                  <span>Rolling Thunder</span>
-                </div>
-                <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-avatar">
-                <img src="images/profile.png" alt="Gary Johnson">
-              </div>
-              <div class="testimonial-text">
-                "Great communication, top-tier Blender 3D models, and very smooth cooperation. Highly recommended for any 3D design project."
-              </div>
-              <div class="testimonial-author-box">
-                <div class="testimonial-author">
-                  <h5>Gary Johnson</h5>
-                  <span>Locost Accessories</span>
+                  <h5><a href="https://www.linkedin.com/in/val-ciptak-viera-35a4737/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Val Ciptak Viera</a></h5>
+                  <span>President at Sprigs &bull; New York, USA</span>
                 </div>
                 <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
               </div>
@@ -191,16 +238,22 @@
 
           <!-- Clients -->
           <div class="block-title">
-            <h2>Clients</h2>
+            <h2>Clients & Affiliations</h2>
           </div>
 
           <div class="clients-grid">
-            <span class="client-logo">GOLDEN GRID</span>
-            <span class="client-logo">SWEETY</span>
-            <span class="client-logo">MAGIC FURNITURES</span>
-            <span class="client-logo">LIFEGUARD</span>
-            <span class="client-logo">DESIGN LOVERS</span>
-            <span class="client-logo">{LESS}</span>
+            <a href="https://sprigs.com/" target="_blank" rel="noopener noreferrer" class="client-item" title="Sprigs">
+              <img src="images/sprigs.png" alt="Sprigs">
+            </a>
+            <a href="https://www.kkbau.ac.bd/" target="_blank" rel="noopener noreferrer" class="client-item" title="KKBAU">
+              <img src="images/kkbau.png" alt="KKBAU">
+            </a>
+            <a href="https://www.facebook.com/prism.kkbau.ac.bd" target="_blank" rel="noopener noreferrer" class="client-item" title="PRISM Club">
+              <img src="images/prism-club.png" alt="PRISM Club">
+            </a>
+            <a href="https://www.facebook.com/Chinnomul.Samajik.Songstha" target="_blank" rel="noopener noreferrer" class="client-item" title="Chisas">
+              <img src="images/chisas.png" alt="Chisas">
+            </a>
           </div>
 
           <!-- Fun Facts -->
@@ -233,6 +286,67 @@
               <div class="fact-number" data-count="1286">1,286</div>
             </div>
           </div>
+
+          <!-- Pricing Section -->
+          <div class="block-title">
+            <h2>Pricing</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Silver Plan -->
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h4 class="pricing-plan-title">Silver</h4>
+                <div class="pricing-price">$64</div>
+                <div class="pricing-period">per month</div>
+              </div>
+              <div class="pricing-btn-box">
+                <a href="#contact" class="btn btn-secondary pricing-btn">Free Trial</a>
+              </div>
+              <ul class="pricing-features">
+                <li>Lorem ipsum dolor</li>
+                <li>Pellentesque scelerisque</li>
+                <li>Morbi eu sagittis</li>
+              </ul>
+            </div>
+
+            <!-- Gold Plan (Featured) -->
+            <div class="pricing-card featured">
+              <div class="pricing-header">
+                <h4 class="pricing-plan-title featured-title">Gold</h4>
+                <div class="pricing-price">$128</div>
+                <div class="pricing-period">per month</div>
+              </div>
+              <div class="pricing-btn-box">
+                <a href="#contact" class="btn btn-primary pricing-btn">Free Trial</a>
+              </div>
+              <ul class="pricing-features">
+                <li>Lorem ipsum dolor</li>
+                <li>Pellentesque scelerisque</li>
+                <li>Morbi eu sagittis</li>
+                <li>Donec non diam</li>
+              </ul>
+            </div>
+
+            <!-- Platinum Plan -->
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h4 class="pricing-plan-title">Platinum</h4>
+                <div class="pricing-price">$256</div>
+                <div class="pricing-period">per month</div>
+              </div>
+              <div class="pricing-btn-box">
+                <a href="#contact" class="btn btn-primary pricing-btn">Free Trial</a>
+              </div>
+              <ul class="pricing-features">
+                <li>Lorem ipsum dolor</li>
+                <li>Pellentesque scelerisque</li>
+                <li>Morbi eu sagittis</li>
+                <li>Donec non diam</li>
+                <li>Aenean nec libero</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <!-- ========================================== -->
@@ -250,14 +364,13 @@
             <li><button class="filter-btn resume-filter-btn" data-role="uiux">UI/UX Designer</button></li>
             <li><button class="filter-btn resume-filter-btn" data-role="developer">Developer</button></li>
             <li><button class="filter-btn resume-filter-btn" data-role="brand">Brand Designer</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="graphic">Graphics Designer</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="3d">3D Modeler & Animator</button></li>
+            <li><button class="filter-btn resume-filter-btn" data-role="3d">3D Artist</button></li>
           </ul>
 
-          <!-- Pane 1: All Roles Overview -->
+          <!-- Pane 1: All Roles Overview (Aggregated from all tabs) -->
           <div class="resume-role-pane active" id="role-all">
             <div class="resume-columns">
-              <!-- Education Timeline -->
+              <!-- Education Timeline (All Disciplines) -->
               <div>
                 <div class="block-title">
                   <h2>Education</h2>
@@ -268,26 +381,33 @@
                     <span class="timeline-period">2024 - 2028 (Ongoing)</span>
                     <span class="timeline-company">Khulna Khan Bahadur Ahsanullah University (KKBAU)</span>
                     <h4 class="timeline-title">BSc in Computer Science and Engineering</h4>
-                    <p class="timeline-desc">Studying software engineering, algorithms, computer graphics, and systems architecture.</p>
+                    <p class="timeline-desc">Comprehensive curriculum covering Software Engineering, Data Structures, Algorithms, Human-Computer Interaction (HCI), Computer Graphics pipelines, and Database Systems.</p>
                   </div>
 
                   <div class="timeline-item">
                     <span class="timeline-period">2020 - 2023</span>
                     <span class="timeline-company">Bangladesh Noubahini School & College</span>
                     <h4 class="timeline-title">Higher Secondary Certificate (HSC) in Science</h4>
-                    <p class="timeline-desc">Completed high school education with strong focus in Science, mathematics, and physics.</p>
+                    <p class="timeline-desc">Completed higher secondary education with major focus on mathematics, physics, and computer science fundamentals.</p>
                   </div>
 
                   <div class="timeline-item">
                     <span class="timeline-period">2017 - 2020</span>
                     <span class="timeline-company">Bangladesh Noubahini School & College</span>
                     <h4 class="timeline-title">Secondary School Certificate (SSC) in Science</h4>
-                    <p class="timeline-desc">Completed secondary school with fundamental studies in mathematics and computing.</p>
+                    <p class="timeline-desc">Completed secondary school with distinction in core science, mathematics, and computing logic.</p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-period">Continuous Specialization</span>
+                    <span class="timeline-company">Self-Directed & Applied Practice</span>
+                    <h4 class="timeline-title">Multi-Disciplinary Design & 3D Engineering</h4>
+                    <p class="timeline-desc">Applied mastery in Blender 3D pipelines, Figma UI/UX prototyping, After Effects motion graphics, and Adobe Illustrator vector branding systems.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- Experience Timeline -->
+              <!-- Experience Timeline (All Disciplines) -->
               <div>
                 <div class="block-title">
                   <h2>Experience</h2>
@@ -296,29 +416,43 @@
                 <div class="timeline">
                   <div class="timeline-item">
                     <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Upwork® Global Inc</span>
-                    <h4 class="timeline-title">Freelance 3D Animator & Modeler</h4>
-                    <p class="timeline-desc">Delivering custom 3D animations, product visualizations, hard-surface modeling, and video rendering for global clients.</p>
-                  </div>
-
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
                     <span class="timeline-company">Ventrixon Studio</span>
                     <h4 class="timeline-title">Founder & Lead 3D Artist</h4>
-                    <p class="timeline-desc">Leading 3D production pipelines, YouTube content development, and educational 3D visual assets.</p>
+                    <p class="timeline-desc">Leading 3D production pipelines, YouTube content development, educational 3D series, and delivering 50+ global client visual projects in Blender and After Effects.</p>
                   </div>
 
                   <div class="timeline-item">
                     <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Independent & Client Projects</span>
-                    <h4 class="timeline-title">Developer & UI/Brand Designer</h4>
-                    <p class="timeline-desc">Designing responsive digital web interfaces, brand identity systems, and frontend applications.</p>
+                    <span class="timeline-company">Upwork® Global Inc</span>
+                    <h4 class="timeline-title">Freelance 3D Animator & Modeler (5-Star Track)</h4>
+                    <p class="timeline-desc">Delivering custom 3D animations, photorealistic product visualizations, hard-surface modeling, and cinematic renders for international clients.</p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-period">2023 - Present</span>
+                    <span class="timeline-company">Freelance & Independent Projects</span>
+                    <h4 class="timeline-title">UI/UX Designer & Prototyper</h4>
+                    <p class="timeline-desc">Designing intuitive user interfaces, wireframes, component design systems, and responsive web/mobile prototypes in Figma.</p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-period">2023 - Present</span>
+                    <span class="timeline-company">Independent & Open Source</span>
+                    <h4 class="timeline-title">Frontend & Software Developer</h4>
+                    <p class="timeline-desc">Building clean, high-performance web applications and software utilities with modern JavaScript (ES6+), Python, HTML5, and CSS3.</p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-period">2023 - Present</span>
+                    <span class="timeline-company">Global Clients</span>
+                    <h4 class="timeline-title">Brand Identity & Vector Designer</h4>
+                    <p class="timeline-desc">Creating scalable vector brand marks, typography pairings, color palettes, and comprehensive visual style guidelines in Adobe Illustrator.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Skills Breakdown -->
+            <!-- Skills Breakdown (Cross-Discipline) -->
             <div class="resume-columns">
               <div>
                 <div class="block-title">
@@ -335,7 +469,15 @@
 
                 <div class="skill-item">
                   <div class="skill-info">
-                    <span>Adobe Illustrator (Branding & Graphics)</span>
+                    <span>Adobe Illustrator (Branding & Vector Art)</span>
+                    <span>95%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="95%" style="width: 0%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>Figma (UI/UX Design & Prototyping)</span>
                     <span>92%</span>
                   </div>
                   <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
@@ -343,7 +485,23 @@
 
                 <div class="skill-item">
                   <div class="skill-info">
-                    <span>After Effects & Motion Graphics</span>
+                    <span>Hard-Surface & 3D Product Modeling</span>
+                    <span>92%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>3D Lighting & PBR Texturing</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width: 0%;"></div></div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="skill-info">
+                    <span>Adobe After Effects (Motion Graphics)</span>
                     <span>88%</span>
                   </div>
                   <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
@@ -351,33 +509,41 @@
 
                 <div class="skill-item">
                   <div class="skill-info">
-                    <span>Web Development (HTML/CSS/JS)</span>
-                    <span>85%</span>
+                    <span>Web Development (HTML5 / CSS3 / JavaScript)</span>
+                    <span>88%</span>
                   </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="85%" style="width: 0%;"></div></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
                 </div>
 
                 <div class="skill-item">
                   <div class="skill-info">
                     <span>Python & Problem Solving</span>
-                    <span>80%</span>
+                    <span>82%</span>
                   </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="80%" style="width: 0%;"></div></div>
+                  <div class="skill-bar"><div class="skill-fill" data-width="82%" style="width: 0%;"></div></div>
                 </div>
               </div>
 
               <div>
                 <div class="block-title">
-                  <h2>Soft Skills & Competencies</h2>
+                  <h2>Multi-Disciplinary Competencies</h2>
                 </div>
                 <div class="badges-cloud">
-                  <span class="badge-item">3D Modeling</span>
-                  <span class="badge-item">Motion Animation</span>
-                  <span class="badge-item">UI/UX Prototyping</span>
-                  <span class="badge-item">Brand Identity</span>
-                  <span class="badge-item">Frontend Code</span>
-                  <span class="badge-item">Visual Hierarchy</span>
-                  <span class="badge-item">Cooperation</span>
+                  <span class="badge-item">3D Product Modeling</span>
+                  <span class="badge-item">Cinematic Animation</span>
+                  <span class="badge-item">Hard-Surface Topology</span>
+                  <span class="badge-item">PBR Material Shading</span>
+                  <span class="badge-item">Figma UI/UX Prototyping</span>
+                  <span class="badge-item">Design Systems</span>
+                  <span class="badge-item">Wireframing</span>
+                  <span class="badge-item">Brand Identity Systems</span>
+                  <span class="badge-item">Scalable Vector Art</span>
+                  <span class="badge-item">Frontend Architecture</span>
+                  <span class="badge-item">Clean JavaScript</span>
+                  <span class="badge-item">Python Algorithms</span>
+                  <span class="badge-item">Motion Graphics</span>
+                  <span class="badge-item">DaVinci Resolve</span>
+                  <span class="badge-item">Typography Pairing</span>
                   <span class="badge-item">Quality Focus</span>
                 </div>
 
@@ -678,112 +844,19 @@
             </div>
           </div>
 
-          <!-- Pane 5: Graphics Designer -->
-          <div class="resume-role-pane" id="role-graphic">
-            <div class="resume-columns">
-              <!-- Education -->
-              <div>
-                <div class="block-title">
-                  <h2>Graphic Arts & Media</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2020 - Present</span>
-                    <span class="timeline-company">Creative Arts & Computing</span>
-                    <h4 class="timeline-title">Digital Graphic & Vector Artistry</h4>
-                    <p class="timeline-desc">Specialized in vector illustration, commercial advertising creatives, social graphics, and digital composition.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Experience -->
-              <div>
-                <div class="block-title">
-                  <h2>Graphic Design Experience</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Freelance Visual Artist</span>
-                    <h4 class="timeline-title">Digital Graphic & Vector Artist</h4>
-                    <p class="timeline-desc">Crafting high-converting digital advertising graphics, social media banners, vector illustrations, and print media for clients worldwide.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Ventrixon Studio</span>
-                    <h4 class="timeline-title">Multimedia Visual Specialist</h4>
-                    <p class="timeline-desc">Producing digital marketing assets, thumbnail artwork, custom vector illustrations, and visual promotion packages.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="resume-columns">
-              <div>
-                <div class="block-title">
-                  <h2>Graphic Design Skills</h2>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Adobe Illustrator</span><span>94%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="94%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Adobe Photoshop</span><span>88%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Vector Illustration & Art</span><span>92%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Marketing & Social Creatives</span><span>90%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Layout & Visual Composition</span><span>86%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="86%" style="width: 0%;"></div></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="block-title">
-                  <h2>Design Competencies</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Vector Illustration</span>
-                  <span class="badge-item">Banner Ad Design</span>
-                  <span class="badge-item">Marketing Creatives</span>
-                  <span class="badge-item">Visual Composition</span>
-                  <span class="badge-item">Color Grading</span>
-                  <span class="badge-item">Typography Selection</span>
-                  <span class="badge-item">Print Production</span>
-                </div>
-                <div class="block-title" style="margin-top: 30px;">
-                  <h2>Languages</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Bengali (Native)</span>
-                  <span class="badge-item">English (Fluent)</span>
-                  <span class="badge-item">Arabic (Conversational)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pane 6: 3D Modeler & Animator -->
+          <!-- Pane 5: 3D Artist -->
           <div class="resume-role-pane" id="role-3d">
             <div class="resume-columns">
               <!-- Education -->
               <div>
                 <div class="block-title">
-                  <h2>3D & Computer Graphics</h2>
+                  <h2>3D Art & Computer Graphics</h2>
                 </div>
                 <div class="timeline">
                   <div class="timeline-item">
                     <span class="timeline-period">2024 - 2028 (Ongoing)</span>
                     <span class="timeline-company">Khulna Khan Bahadur Ahsanullah University (KKBAU)</span>
-                    <h4 class="timeline-title">BSc in CSE (Computer Graphics)</h4>
+                    <h4 class="timeline-title">BSc in CSE (3D Graphics & Visual Arts)</h4>
                     <p class="timeline-desc">Specializing in 3D geometry algorithms, computer graphics pipelines, visual rendering, and spatial modeling.</p>
                   </div>
                 </div>
@@ -792,13 +865,13 @@
               <!-- Experience -->
               <div>
                 <div class="block-title">
-                  <h2>3D & Animation Experience</h2>
+                  <h2>3D Art & Animation Experience</h2>
                 </div>
                 <div class="timeline">
                   <div class="timeline-item">
                     <span class="timeline-period">2023 - Present</span>
                     <span class="timeline-company">Upwork® Global Inc</span>
-                    <h4 class="timeline-title">Freelance 3D Animator & Modeler</h4>
+                    <h4 class="timeline-title">Freelance 3D Artist & Animator</h4>
                     <p class="timeline-desc">Delivering custom 3D animations, product visualizations, hard-surface modeling, and video rendering for global clients.</p>
                   </div>
                   <div class="timeline-item">
@@ -815,7 +888,7 @@
             <div class="resume-columns">
               <div>
                 <div class="block-title">
-                  <h2>3D & Animation Skills</h2>
+                  <h2>3D Art & Visualization Skills</h2>
                 </div>
                 <div class="skill-item">
                   <div class="skill-info"><span>Blender 3D</span><span>95%</span></div>
@@ -1128,6 +1201,6 @@
     </div>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
