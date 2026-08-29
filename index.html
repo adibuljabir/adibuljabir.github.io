@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -80,13 +80,13 @@
         <div class="header-right">
           <ul class="site-nav">
             <li class="nav-item">
-              <a href="#about" class="active">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a href="#resume">Resume</a>
+              <a href="#about" class="active">About</a>
             </li>
             <li class="nav-item">
               <a href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#resume">Resume</a>
             </li>
             <li class="nav-item">
               <a href="#contact">Contact</a>
@@ -185,6 +185,80 @@
             </div>
           </div>
 
+          
+<!-- Fun Facts -->
+          <div class="block-title">
+            <h2>Fun Facts</h2>
+          </div>
+
+          <div class="fun-facts-grid">
+            <div class="fact-box">
+              <div class="fact-icon"><i class="far fa-heart"></i></div>
+              <div class="fact-title">Happy Clients</div>
+              <div class="fact-number" data-count="50">50+</div>
+            </div>
+
+            <div class="fact-box">
+              <div class="fact-icon"><i class="far fa-clock"></i></div>
+              <div class="fact-title">Working Hours</div>
+              <div class="fact-number" data-count="4500">4,500</div>
+            </div>
+
+            <div class="fact-box">
+              <div class="fact-icon"><i class="far fa-star"></i></div>
+              <div class="fact-title">3D Assets Created</div>
+              <div class="fact-number" data-count="120">120</div>
+            </div>
+
+            <div class="fact-box">
+              <div class="fact-icon"><i class="fas fa-coffee"></i></div>
+              <div class="fact-title">Coffee Consumed</div>
+              <div class="fact-number" data-count="1286">1,286</div>
+            </div>
+          </div>
+
+                  </section>
+
+<section id="portfolio" class="tab-section">
+          <div class="page-title">
+            <h1>Portfolio</h1>
+            <div class="page-subtitle">My Works, 3D Creations & Motion Videos</div>
+          </div>
+
+          <ul class="portfolio-filters">
+            <li><button class="filter-btn active" data-filter="uiux">UI/UX</button></li>
+            <li><button class="filter-btn" data-filter="dev">Dev</button></li>
+            <li><button class="filter-btn" data-filter="branding">Branding</button></li>
+            <li><button class="filter-btn" data-filter="3d">3D</button></li>
+          </ul>
+
+          <div class="portfolio-grid" id="portfolio-grid">
+            <!-- Dynamically populated from data/portfolio.json -->
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- 5. CONTACT SECTION                         -->
+        <!-- ========================================== -->
+        
+
+<section id="resume" class="tab-section">
+          <div class="page-title">
+            <h1>Resume</h1>
+            <div class="page-subtitle">Education, Experience & Specialized Skillsets</div>
+          </div>
+
+          <!-- Role Filter Tabs -->
+          <ul class="portfolio-filters resume-role-filters">
+            <li><button class="filter-btn active resume-filter-btn" data-role="uiux">UI/UX Designer</button></li>
+            <li><button class="filter-btn resume-filter-btn" data-role="developer">Developer</button></li>
+            <li><button class="filter-btn resume-filter-btn" data-role="brand">Brand Designer</button></li>
+            <li><button class="filter-btn resume-filter-btn" data-role="3d">3D Artist</button></li>
+          </ul>
+
+          <!-- Role Panes Container (Dynamically populated from data/resume.json) -->
+          <div id="resume-panes-container"></div>
+
           <!-- Achievements Section -->
           <div class="block-title">
             <h2>Achievements</h2>
@@ -223,7 +297,8 @@
             </div>
           </div>
 
-          <!-- Testimonials -->
+          
+<!-- Testimonials -->
           <div class="block-title">
             <h2>Testimonials</h2>
           </div>
@@ -246,7 +321,8 @@
             </div>
           </div>
 
-          <!-- Clients -->
+          
+<!-- Clients -->
           <div class="block-title">
             <h2>Collaborated With</h2>
           </div>
@@ -266,1117 +342,70 @@
             </a>
           </div>
 
-          <!-- Fun Facts -->
+          
+          <!-- Services & Collaboration Packages -->
           <div class="block-title">
-            <h2>Fun Facts</h2>
-          </div>
-
-          <div class="fun-facts-grid">
-            <div class="fact-box">
-              <div class="fact-icon"><i class="far fa-heart"></i></div>
-              <div class="fact-title">Happy Clients</div>
-              <div class="fact-number" data-count="50">50+</div>
-            </div>
-
-            <div class="fact-box">
-              <div class="fact-icon"><i class="far fa-clock"></i></div>
-              <div class="fact-title">Working Hours</div>
-              <div class="fact-number" data-count="4500">4,500</div>
-            </div>
-
-            <div class="fact-box">
-              <div class="fact-icon"><i class="far fa-star"></i></div>
-              <div class="fact-title">3D Assets Created</div>
-              <div class="fact-number" data-count="120">120</div>
-            </div>
-
-            <div class="fact-box">
-              <div class="fact-icon"><i class="fas fa-coffee"></i></div>
-              <div class="fact-title">Coffee Consumed</div>
-              <div class="fact-number" data-count="1286">1,286</div>
-            </div>
-          </div>
-
-          <!-- Pricing Section -->
-          <div class="block-title">
-            <h2>Pricing</h2>
+            <h2>Collaboration Packages</h2>
           </div>
 
           <div class="pricing-grid">
-            <!-- Silver Plan -->
+            <!-- UI/UX Package -->
             <div class="pricing-card">
               <div class="pricing-header">
-                <h4 class="pricing-plan-title">Silver</h4>
-                <div class="pricing-price">$64</div>
-                <div class="pricing-period">per month</div>
+                <h4 class="pricing-plan-title">UI/UX & Product Design</h4>
+                <div class="pricing-price">$450</div>
+                <div class="pricing-period">per project scope</div>
               </div>
               <div class="pricing-btn-box">
-                <a href="#contact" class="btn btn-secondary pricing-btn">Free Trial</a>
+                <a href="#contact" class="btn btn-secondary pricing-btn">Get Started</a>
               </div>
               <ul class="pricing-features">
-                <li>Lorem ipsum dolor</li>
-                <li>Pellentesque scelerisque</li>
-                <li>Morbi eu sagittis</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> User Flows & Wireframing</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> High-Fidelity Figma UI Screens</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Responsive Design System & Assets</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Interactive Clickable Prototype</li>
               </ul>
             </div>
 
-            <!-- Gold Plan (Featured) -->
+            <!-- 3D Animation (Featured) -->
             <div class="pricing-card featured">
               <div class="pricing-header">
-                <h4 class="pricing-plan-title featured-title">Gold</h4>
-                <div class="pricing-price">$128</div>
-                <div class="pricing-period">per month</div>
+                <h4 class="pricing-plan-title featured-title">3D & Motion Production</h4>
+                <div class="pricing-price">$750</div>
+                <div class="pricing-period">per commercial asset</div>
               </div>
               <div class="pricing-btn-box">
-                <a href="#contact" class="btn btn-primary pricing-btn">Free Trial</a>
+                <a href="#contact" class="btn btn-primary pricing-btn">Get Started</a>
               </div>
               <ul class="pricing-features">
-                <li>Lorem ipsum dolor</li>
-                <li>Pellentesque scelerisque</li>
-                <li>Morbi eu sagittis</li>
-                <li>Donec non diam</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Precision 3D Hard-Surface Modeling</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Photorealistic PBR Textures & Lighting</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> 4K Commercial Motion Graphics Reel</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Video Editing & Sound Synchronization</li>
               </ul>
             </div>
 
-            <!-- Platinum Plan -->
+            <!-- Full-Stack Development -->
             <div class="pricing-card">
               <div class="pricing-header">
-                <h4 class="pricing-plan-title">Platinum</h4>
-                <div class="pricing-price">$256</div>
-                <div class="pricing-period">per month</div>
+                <h4 class="pricing-plan-title">Software & Web App</h4>
+                <div class="pricing-price">$950</div>
+                <div class="pricing-period">per milestone</div>
               </div>
               <div class="pricing-btn-box">
-                <a href="#contact" class="btn btn-primary pricing-btn">Free Trial</a>
+                <a href="#contact" class="btn btn-secondary pricing-btn">Get Started</a>
               </div>
               <ul class="pricing-features">
-                <li>Lorem ipsum dolor</li>
-                <li>Pellentesque scelerisque</li>
-                <li>Morbi eu sagittis</li>
-                <li>Donec non diam</li>
-                <li>Aenean nec libero</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Custom Frontend & Backend Architecture</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> High-Performance Responsive Web App</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> API Integration & Database Persistence</li>
+                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Full Source Code & Deployment Support</li>
               </ul>
             </div>
           </div>
         </section>
 
-        <!-- ========================================== -->
-        <!-- 2. RESUME SECTION                          -->
-        <!-- ========================================== -->
-        <section id="resume" class="tab-section">
-          <div class="page-title">
-            <h1>Resume</h1>
-            <div class="page-subtitle">Education, Experience & Specialized Skillsets</div>
-          </div>
-
-          <!-- Role Filter Tabs -->
-          <ul class="portfolio-filters resume-role-filters">
-            <li><button class="filter-btn active resume-filter-btn" data-role="all">All</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="uiux">UI/UX Designer</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="developer">Developer</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="brand">Brand Designer</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="3d">3D Artist</button></li>
-          </ul>
-
-          <!-- Pane 1: All Roles Overview (Aggregated from all tabs) -->
-          <div class="resume-role-pane active" id="role-all">
-            <div class="resume-columns">
-              <!-- Education Timeline (All Disciplines) -->
-              <div>
-                <div class="block-title">
-                  <h2>Education</h2>
-                </div>
-
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2024 - 2028 (Ongoing)</span>
-                    <span class="timeline-company">Khulna Khan Bahadur Ahsanullah University (KKBAU)</span>
-                    <h4 class="timeline-title">BSc in Computer Science and Engineering</h4>
-                    <p class="timeline-desc">Comprehensive curriculum covering Software Engineering, Data Structures, Algorithms, Human-Computer Interaction (HCI), Computer Graphics pipelines, and Database Systems.</p>
-                  </div>
-
-                  <div class="timeline-item">
-                    <span class="timeline-period">2020 - 2023</span>
-                    <span class="timeline-company">Bangladesh Noubahini School & College</span>
-                    <h4 class="timeline-title">Higher Secondary Certificate (HSC) in Science</h4>
-                    <p class="timeline-desc">Completed higher secondary education with major focus on mathematics, physics, and computer science fundamentals.</p>
-                  </div>
-
-                  <div class="timeline-item">
-                    <span class="timeline-period">2017 - 2020</span>
-                    <span class="timeline-company">Bangladesh Noubahini School & College</span>
-                    <h4 class="timeline-title">Secondary School Certificate (SSC) in Science</h4>
-                    <p class="timeline-desc">Completed secondary school with distinction in core science, mathematics, and computing logic.</p>
-                  </div>
-
-                  <div class="timeline-item">
-                    <span class="timeline-period">Continuous Specialization</span>
-                    <span class="timeline-company">Self-Directed & Applied Practice</span>
-                    <h4 class="timeline-title">Multi-Disciplinary Design & 3D Engineering</h4>
-                    <p class="timeline-desc">Applied mastery in Blender 3D pipelines, Figma UI/UX prototyping, After Effects motion graphics, and Adobe Illustrator vector branding systems.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Experience Timeline (All Disciplines) -->
-              <div>
-                <div class="block-title">
-                  <h2>Experience</h2>
-                </div>
-
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Ventrixon Studio</span>
-                    <h4 class="timeline-title">Founder & Lead 3D Artist</h4>
-                    <p class="timeline-desc">Leading 3D production pipelines, YouTube content development, educational 3D series, and delivering 50+ global client visual projects in Blender and After Effects.</p>
-                  </div>
-
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Upwork® Global Inc</span>
-                    <h4 class="timeline-title">Freelance 3D Animator & Modeler (5-Star Track)</h4>
-                    <p class="timeline-desc">Delivering custom 3D animations, photorealistic product visualizations, hard-surface modeling, and cinematic renders for international clients.</p>
-                  </div>
-
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Freelance & Independent Projects</span>
-                    <h4 class="timeline-title">UI/UX Designer & Prototyper</h4>
-                    <p class="timeline-desc">Designing intuitive user interfaces, wireframes, component design systems, and responsive web/mobile prototypes in Figma.</p>
-                  </div>
-
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Independent & Open Source</span>
-                    <h4 class="timeline-title">Frontend & Software Developer</h4>
-                    <p class="timeline-desc">Building clean, high-performance web applications and software utilities with modern JavaScript (ES6+), Python, HTML5, and CSS3.</p>
-                  </div>
-
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Global Clients</span>
-                    <h4 class="timeline-title">Brand Identity & Vector Designer</h4>
-                    <p class="timeline-desc">Creating scalable vector brand marks, typography pairings, color palettes, and comprehensive visual style guidelines in Adobe Illustrator.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Skills Breakdown (Cross-Discipline) -->
-            <div class="resume-columns">
-              <div>
-                <div class="block-title">
-                  <h2>Working Skills</h2>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span>Blender 3D & Animation</span>
-                    <span>95%</span>
-                  </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="95%" style="width: 0%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span>Adobe Illustrator (Branding & Vector Art)</span>
-                    <span>95%</span>
-                  </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="95%" style="width: 0%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span>Figma (UI/UX Design & Prototyping)</span>
-                    <span>92%</span>
-                  </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span>Hard-Surface & 3D Product Modeling</span>
-                    <span>92%</span>
-                  </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span>3D Lighting & PBR Texturing</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width: 0%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span>Adobe After Effects (Motion Graphics)</span>
-                    <span>88%</span>
-                  </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span>Web Development (HTML5 / CSS3 / JavaScript)</span>
-                    <span>88%</span>
-                  </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span>Python & Problem Solving</span>
-                    <span>82%</span>
-                  </div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="82%" style="width: 0%;"></div></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="block-title">
-                  <h2>Multi-Disciplinary Competencies</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">3D Product Modeling</span>
-                  <span class="badge-item">Cinematic Animation</span>
-                  <span class="badge-item">Hard-Surface Topology</span>
-                  <span class="badge-item">PBR Material Shading</span>
-                  <span class="badge-item">Figma UI/UX Prototyping</span>
-                  <span class="badge-item">Design Systems</span>
-                  <span class="badge-item">Wireframing</span>
-                  <span class="badge-item">Brand Identity Systems</span>
-                  <span class="badge-item">Scalable Vector Art</span>
-                  <span class="badge-item">Frontend Architecture</span>
-                  <span class="badge-item">Clean JavaScript</span>
-                  <span class="badge-item">Python Algorithms</span>
-                  <span class="badge-item">Motion Graphics</span>
-                  <span class="badge-item">DaVinci Resolve</span>
-                  <span class="badge-item">Typography Pairing</span>
-                  <span class="badge-item">Quality Focus</span>
-                </div>
-
-                <div class="block-title" style="margin-top: 30px;">
-                  <h2>Languages</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Bengali (Native)</span>
-                  <span class="badge-item">English (Fluent)</span>
-                  <span class="badge-item">Arabic (Conversational)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pane 2: UI/UX Designer -->
-          <div class="resume-role-pane" id="role-uiux">
-            <div class="resume-columns">
-              <!-- Education -->
-              <div>
-                <div class="block-title">
-                  <h2>UI/UX Focus & Education</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2024 - 2028 (Ongoing)</span>
-                    <span class="timeline-company">Khulna Khan Bahadur Ahsanullah University (KKBAU)</span>
-                    <h4 class="timeline-title">BSc in CSE (HCI & UI Systems)</h4>
-                    <p class="timeline-desc">Focusing on Human-Computer Interaction, usability engineering, user-centered interface architecture, and web systems.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span class="timeline-period">Self-Directed & Professional</span>
-                    <span class="timeline-company">Design Systems & Ergonomics</span>
-                    <h4 class="timeline-title">Modern Interface Design Practice</h4>
-                    <p class="timeline-desc">Mastering wireframing, user journeys, accessibility (WCAG), interactive prototyping, and component-driven UI systems.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Experience -->
-              <div>
-                <div class="block-title">
-                  <h2>UI/UX Experience</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Freelance & Independent Projects</span>
-                    <h4 class="timeline-title">UI/UX Designer & Prototyper</h4>
-                    <p class="timeline-desc">Designing intuitive user interfaces, wireframes, high-fidelity prototypes, and design systems for web and mobile applications.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Ventrixon Digital</span>
-                    <h4 class="timeline-title">Lead Product UI Designer</h4>
-                    <p class="timeline-desc">Creating user interfaces, clean navigation layouts, and responsive design guidelines for digital products and platforms.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="resume-columns">
-              <div>
-                <div class="block-title">
-                  <h2>UI/UX Skills</h2>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Figma & FigJam</span><span>92%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>UI Wireframing & Prototyping</span><span>88%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Responsive Web & Mobile UI</span><span>90%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Design Systems & Component Libraries</span><span>86%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="86%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>HTML5 & CSS3 Interface Styling</span><span>84%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="84%" style="width: 0%;"></div></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="block-title">
-                  <h2>Specialized Competencies</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">User Flow Analysis</span>
-                  <span class="badge-item">Mobile-First Design</span>
-                  <span class="badge-item">Interactive Prototyping</span>
-                  <span class="badge-item">Accessibility (A11y)</span>
-                  <span class="badge-item">Micro-interactions</span>
-                  <span class="badge-item">Usability Testing</span>
-                  <span class="badge-item">Visual Hierarchy</span>
-                </div>
-                <div class="block-title" style="margin-top: 30px;">
-                  <h2>Languages</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Bengali (Native)</span>
-                  <span class="badge-item">English (Fluent)</span>
-                  <span class="badge-item">Arabic (Conversational)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pane 3: Developer -->
-          <div class="resume-role-pane" id="role-developer">
-            <div class="resume-columns">
-              <!-- Education -->
-              <div>
-                <div class="block-title">
-                  <h2>Computer Science & Engineering</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2024 - 2028 (Ongoing)</span>
-                    <span class="timeline-company">Khulna Khan Bahadur Ahsanullah University (KKBAU)</span>
-                    <h4 class="timeline-title">BSc in Computer Science & Engineering</h4>
-                    <p class="timeline-desc">Rigorous coursework in Data Structures, Algorithms, Software Engineering, Database Systems, and Object-Oriented Programming.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Experience -->
-              <div>
-                <div class="block-title">
-                  <h2>Development Experience</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Independent & Open Source</span>
-                    <h4 class="timeline-title">Frontend & Web Developer</h4>
-                    <p class="timeline-desc">Building clean, fast, responsive web applications, interactive user interfaces, and modular JavaScript components.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Academic & Software Projects</span>
-                    <h4 class="timeline-title">Python & Software Solutions</h4>
-                    <p class="timeline-desc">Developing algorithm implementations, automation scripts, and problem-solving solutions with clean code architecture.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="resume-columns">
-              <div>
-                <div class="block-title">
-                  <h2>Technical Skills</h2>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>JavaScript (ES6+) & DOM</span><span>88%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>HTML5 / CSS3 / Responsive Layouts</span><span>92%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Python Programming</span><span>82%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="82%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Git & GitHub Workflow</span><span>85%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="85%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>C / C++ & Algorithm Analysis</span><span>78%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="78%" style="width: 0%;"></div></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="block-title">
-                  <h2>Developer Competencies</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Frontend Architecture</span>
-                  <span class="badge-item">Clean Code</span>
-                  <span class="badge-item">RESTful Integration</span>
-                  <span class="badge-item">Git Workflow</span>
-                  <span class="badge-item">Data Structures</span>
-                  <span class="badge-item">Performance Optimization</span>
-                  <span class="badge-item">Cross-Browser Support</span>
-                </div>
-                <div class="block-title" style="margin-top: 30px;">
-                  <h2>Languages</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Bengali (Native)</span>
-                  <span class="badge-item">English (Fluent)</span>
-                  <span class="badge-item">Arabic (Conversational)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pane 4: Brand Designer -->
-          <div class="resume-role-pane" id="role-brand">
-            <div class="resume-columns">
-              <!-- Education -->
-              <div>
-                <div class="block-title">
-                  <h2>Visual Identity & Design</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2024 - 2028 (Ongoing)</span>
-                    <span class="timeline-company">KKBAU & Independent Study</span>
-                    <h4 class="timeline-title">Visual Computing & Identity Systems</h4>
-                    <p class="timeline-desc">Specialized in vector graphics geometry, brand psychology, color harmonization, and typography hierarchy.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Experience -->
-              <div>
-                <div class="block-title">
-                  <h2>Brand Design Experience</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Ventrixon Studio</span>
-                    <h4 class="timeline-title">Brand Identity & Visual Strategist</h4>
-                    <p class="timeline-desc">Created the full brand identity, visual style guide, emblem, vector assets, and digital media positioning for Ventrixon.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Global Freelance Clients</span>
-                    <h4 class="timeline-title">Logo & Brand System Designer</h4>
-                    <p class="timeline-desc">Designing memorable brand marks, cohesive visual collateral, typography guidelines, and scalable vector assets for diverse businesses.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="resume-columns">
-              <div>
-                <div class="block-title">
-                  <h2>Brand Design Skills</h2>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Adobe Illustrator</span><span>95%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="95%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Logo & Vector Iconography</span><span>92%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Brand Style Guidelines</span><span>88%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Color Harmony & Typography</span><span>90%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Print & Digital Asset Packaging</span><span>85%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="85%" style="width: 0%;"></div></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="block-title">
-                  <h2>Brand Competencies</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Brand Identity Systems</span>
-                  <span class="badge-item">Scalable Vector Art</span>
-                  <span class="badge-item">Logo Construction</span>
-                  <span class="badge-item">Typography Pairing</span>
-                  <span class="badge-item">Palette Formulation</span>
-                  <span class="badge-item">Brand Storytelling</span>
-                  <span class="badge-item">Visual Consistency</span>
-                </div>
-                <div class="block-title" style="margin-top: 30px;">
-                  <h2>Languages</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Bengali (Native)</span>
-                  <span class="badge-item">English (Fluent)</span>
-                  <span class="badge-item">Arabic (Conversational)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pane 5: 3D Artist -->
-          <div class="resume-role-pane" id="role-3d">
-            <div class="resume-columns">
-              <!-- Education -->
-              <div>
-                <div class="block-title">
-                  <h2>3D Art & Computer Graphics</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2024 - 2028 (Ongoing)</span>
-                    <span class="timeline-company">Khulna Khan Bahadur Ahsanullah University (KKBAU)</span>
-                    <h4 class="timeline-title">BSc in CSE (3D Graphics & Visual Arts)</h4>
-                    <p class="timeline-desc">Specializing in 3D geometry algorithms, computer graphics pipelines, visual rendering, and spatial modeling.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Experience -->
-              <div>
-                <div class="block-title">
-                  <h2>3D Art & Animation Experience</h2>
-                </div>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Upwork® Global Inc</span>
-                    <h4 class="timeline-title">Freelance 3D Artist & Animator</h4>
-                    <p class="timeline-desc">Delivering custom 3D animations, product visualizations, hard-surface modeling, and video rendering for global clients.</p>
-                  </div>
-                  <div class="timeline-item">
-                    <span class="timeline-period">2023 - Present</span>
-                    <span class="timeline-company">Ventrixon Studio</span>
-                    <h4 class="timeline-title">Founder & Lead 3D Artist</h4>
-                    <p class="timeline-desc">Leading 3D production pipelines, YouTube content development, educational animations, and photorealistic 3D visual assets.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="resume-columns">
-              <div>
-                <div class="block-title">
-                  <h2>3D Art & Visualization Skills</h2>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Blender 3D</span><span>95%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="95%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Adobe After Effects</span><span>88%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="88%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>3D Lighting & PBR Texturing</span><span>90%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>Hard-Surface & Product Modeling</span><span>92%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="92%" style="width: 0%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-info"><span>DaVinci Resolve</span><span>82%</span></div>
-                  <div class="skill-bar"><div class="skill-fill" data-width="82%" style="width: 0%;"></div></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="block-title">
-                  <h2>3D Competencies</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Cinematic Animation</span>
-                  <span class="badge-item">Product Visualization</span>
-                  <span class="badge-item">Hard-Surface Topology</span>
-                  <span class="badge-item">PBR Material Shading</span>
-                  <span class="badge-item">Motion Graphics</span>
-                  <span class="badge-item">Video Compositing</span>
-                  <span class="badge-item">Render Optimization</span>
-                </div>
-                <div class="block-title" style="margin-top: 30px;">
-                  <h2>Languages</h2>
-                </div>
-                <div class="badges-cloud">
-                  <span class="badge-item">Bengali (Native)</span>
-                  <span class="badge-item">English (Fluent)</span>
-                  <span class="badge-item">Arabic (Conversational)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 3. PORTFOLIO SECTION                       -->
-        <!-- ========================================== -->
-        <section id="portfolio" class="tab-section">
-          <div class="page-title">
-            <h1>Portfolio</h1>
-            <div class="page-subtitle">My Works, 3D Creations & Motion Videos</div>
-          </div>
-
-          <ul class="portfolio-filters">
-            <li><button class="filter-btn active" data-filter="all">All</button></li>
-            <li><button class="filter-btn" data-filter="uiux">UI/UX</button></li>
-            <li><button class="filter-btn" data-filter="dev">Dev</button></li>
-            <li><button class="filter-btn" data-filter="branding">Branding</button></li>
-            <li><button class="filter-btn" data-filter="3d">3D</button></li>
-          </ul>
-
-          <div class="portfolio-grid">
-            <!-- ================= UI/UX PROJECTS ================= -->
-            <!-- UI/UX Card 1: Cellfin Banking App -->
-            <div class="portfolio-card" data-category="uiux">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Cellfin Banking App" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/248330667/Cellfin-Banking-App-%28Case-Study%29" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Cellfin Banking App (Case Study)" data-desc="Mobile banking fund transfer redesign focusing on clear flow and simplified cognitive load."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">UI/UX Case Study</span>
-                <h4 class="portfolio-title">Cellfin Banking App</h4>
-                <p class="portfolio-desc">Complete mobile banking redesign simplifying transaction flows and user confidence.</p>
-              </div>
-            </div>
-
-            <!-- UI/UX Card 2: SaaS Landing Page -->
-            <div class="portfolio-card" data-category="uiux">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" alt="SaaS Landing Page" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/247425937/SaaS-Landing-Page" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" data-title="SaaS Landing Page" data-desc="Clean, conversion-focused modern UI/UX design for SaaS platforms and scalable web products."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Web & UI/UX</span>
-                <h4 class="portfolio-title">SaaS Landing Page</h4>
-                <p class="portfolio-desc">Conversion-focused, scalable design system created for high-growth SaaS web platforms.</p>
-              </div>
-            </div>
-
-            <!-- UI/UX Card 3: NSaaS Analytics Dashboard -->
-            <div class="portfolio-card" data-category="uiux">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="NSaaS Analytics Dashboard" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/246613705/NSaaS-Analytics-Dashboard-Modern-SaaS-UI-Design" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="NSaaS Analytics Dashboard" data-desc="Data-driven SaaS analytics dashboard interface with visual hierarchy and performance metrics."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Dashboard UI</span>
-                <h4 class="portfolio-title">NSaaS Analytics Dashboard</h4>
-                <p class="portfolio-desc">Modern SaaS analytics dashboard engineered for complex metrics and clean readability.</p>
-              </div>
-            </div>
-
-            <!-- UI/UX Card 4: Gaming Controller Landing Page -->
-            <div class="portfolio-card" data-category="uiux">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" alt="Gaming Controller Landing Page" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/246580577/Gaming-Controller-Landing-Page" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png" data-title="Gaming Controller Landing Page" data-desc="Bold, immersive landing page highlighting hardware design and conversion-driven features."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Product Landing Page</span>
-                <h4 class="portfolio-title">Gaming Controller Landing Page</h4>
-                <p class="portfolio-desc">Bold and immersive product landing page design showcasing gaming hardware.</p>
-              </div>
-            </div>
-
-            <!-- UI/UX Card 5: Tech Community Platform UI -->
-            <div class="portfolio-card" data-category="uiux">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Tech Community Platform UI" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/246457181/Tech-Community-Platform-UI-Innovation-Club" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Tech Community Platform UI" data-desc="Community hub UI designed for innovation clubs with event management and collaboration tools."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Web Platform UI</span>
-                <h4 class="portfolio-title">Tech Community Platform</h4>
-                <p class="portfolio-desc">Structured community hub UI designed to promote collaboration and event engagement.</p>
-              </div>
-            </div>
-
-            <!-- UI/UX Card 6: Fast Food Restaurant Website UI -->
-            <div class="portfolio-card" data-category="uiux">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Fast Food Restaurant UI" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/246406463/Fast-Food-Restaurant-Website-UI" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Fast Food Restaurant Website UI" data-desc="Conversion-driven food ordering web interface with appetizing visual hierarchy."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">UI / Web Design</span>
-                <h4 class="portfolio-title">Fast Food Restaurant UI</h4>
-                <p class="portfolio-desc">Modern ordering interface designed for swift digital menu browsing and checkout.</p>
-              </div>
-            </div>
-
-            <!-- UI/UX Card 7: NGO Charity Platform UI -->
-            <div class="portfolio-card" data-category="uiux">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="NGO Charity Platform UI" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/246404011/NGO-Charity-Platform-UI-Donation-Volunteer" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="NGO Charity Platform UI" data-desc="Transparent donation and volunteer portal with clear expense visualization."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">UI / Social Impact</span>
-                <h4 class="portfolio-title">NGO Charity Platform</h4>
-                <p class="portfolio-desc">Accessible charity portal with structured donation flows and expense tracking dashboard.</p>
-              </div>
-            </div>
-
-            <!-- ================= DEV PROJECTS ================= -->
-            <!-- Dev Card 1: TA-DA Tour Diary & Transport Bill Generator (C) -->
-            <div class="portfolio-card" data-category="dev">
-              <div class="portfolio-thumb-box">
-                <div class="code-thumb-preview">
-                  <div class="code-thumb-header">
-                    <span class="code-lang-tag"><i class="fas fa-terminal"></i> C / Systems</span>
-                    <span class="code-role-tag">Author & Maintainer</span>
-                  </div>
-                  <div class="code-thumb-snippet">
-                    <div><span class="code-kw">FILE</span> *Tour_Diary = <span class="code-fn">fopen</span>(<span style="color:#a7f3d0">"Tour_Diary.txt"</span>, <span style="color:#a7f3d0">"a"</span>);</div>
-                    <div><span class="code-kw">int</span> distance, expense1, expense2;</div>
-                    <div><span class="code-fn">fprintf</span>(Transport_Bill, <span style="color:#a7f3d0">"| %02d-%02d-%04d |..."</span>);</div>
-                  </div>
-                  <div class="code-thumb-footer">
-                    <span><i class="fab fa-github"></i> adibuljabir/TA-DA-Tour...</span>
-                    <span><i class="fas fa-star" style="color: #fbbf24;"></i> 1</span>
-                  </div>
-                </div>
-                <div class="portfolio-overlay">
-                  <a href="https://github.com/adibuljabir/TA-DA-Tour-Transport-Bill-Generator" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>
-                  <a href="https://github.com/adibuljabir/TA-DA-Tour-Transport-Bill-Generator/blob/master/TourBill.c" target="_blank" rel="noopener noreferrer" title="View C Source Code"><i class="fas fa-code"></i></a>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">C &bull; CLI &bull; File I/O</span>
-                <h4 class="portfolio-title">TA-DA Bill Generator</h4>
-                <p class="portfolio-desc">CLI logistics & allowance calculator with robust file stream persistence in C.</p>
-              </div>
-            </div>
-
-            <!-- Dev Card 2: FindIT Mobile App (Kotlin) -->
-            <div class="portfolio-card" data-category="dev">
-              <div class="portfolio-thumb-box">
-                <div class="code-thumb-preview">
-                  <div class="code-thumb-header">
-                    <span class="code-lang-tag" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);"><i class="fab fa-android"></i> Kotlin / Android</span>
-                    <span class="code-role-tag">Android App</span>
-                  </div>
-                  <div class="code-thumb-snippet">
-                    <div><span class="code-kw">class</span> <span class="code-fn">FindItemActivity</span> : <span class="code-kw">AppCompatActivity</span>() {</div>
-                    <div>&nbsp;&nbsp;<span class="code-kw">val</span> tracker = <span class="code-fn">rememberTracker</span>()</div>
-                    <div>&nbsp;&nbsp;<span class="code-fn">initLocationIndex</span>(savedInstanceState)</div>
-                    <div>}</div>
-                  </div>
-                  <div class="code-thumb-footer">
-                    <span><i class="fab fa-github"></i> adibuljabir/FindIT</span>
-                    <span>Gradle &bull; Kotlin</span>
-                  </div>
-                </div>
-                <div class="portfolio-overlay">
-                  <a href="https://github.com/adibuljabir/FindIT" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Android &bull; Kotlin &bull; Mobile</span>
-                <h4 class="portfolio-title">FindIT Mobile App</h4>
-                <p class="portfolio-desc">Native Android utility built for intuitive item tracking and index discovery.</p>
-              </div>
-            </div>
-
-            <!-- Dev Card 3: Khaon Food Management System (Java) -->
-            <div class="portfolio-card" data-category="dev">
-              <div class="portfolio-thumb-box">
-                <div class="code-thumb-preview">
-                  <div class="code-thumb-header">
-                    <span class="code-lang-tag" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);"><i class="fab fa-java"></i> Java / OOP</span>
-                    <span class="code-role-tag">Software System</span>
-                  </div>
-                  <div class="code-thumb-snippet">
-                    <div><span class="code-kw">public class</span> <span class="code-fn">KhaonManager</span> {</div>
-                    <div>&nbsp;&nbsp;<span class="code-kw">private</span> <span class="code-fn">List</span>&lt;OrderItem&gt; orders;</div>
-                    <div>&nbsp;&nbsp;<span class="code-kw">public double</span> <span class="code-fn">calculateInventory</span>() { ... }</div>
-                    <div>}</div>
-                  </div>
-                  <div class="code-thumb-footer">
-                    <span><i class="fab fa-github"></i> adibuljabir/Khaon</span>
-                    <span>Java &bull; OOP Design</span>
-                  </div>
-                </div>
-                <div class="portfolio-overlay">
-                  <a href="https://github.com/adibuljabir/Khaon" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Java &bull; Software Architecture</span>
-                <h4 class="portfolio-title">Khaon Food Management</h4>
-                <p class="portfolio-desc">Modular food ordering and inventory system built with clean OOP architecture.</p>
-              </div>
-            </div>
-
-            <!-- Dev Card 4: Open Source & Team Collaboration -->
-            <div class="portfolio-card" data-category="dev">
-              <div class="portfolio-thumb-box">
-                <div class="code-thumb-preview">
-                  <div class="code-thumb-header">
-                    <span class="code-lang-tag" style="color: #4ade80; border-color: rgba(74, 222, 128, 0.4);"><i class="fas fa-code-branch"></i> Open Source</span>
-                    <span class="code-role-tag">Contributor</span>
-                  </div>
-                  <div class="code-thumb-snippet">
-                    <div><span class="code-kw">git</span> checkout -b feature/ui-improvement</div>
-                    <div><span class="code-kw">git</span> commit -m <span style="color:#a7f3d0">"feat: optimize pipeline"</span></div>
-                    <div><span class="code-kw">git</span> push origin pull-request</div>
-                  </div>
-                  <div class="code-thumb-footer">
-                    <span><i class="fab fa-github"></i> github.com/adibuljabir</span>
-                    <span>PRs &bull; Code Review</span>
-                  </div>
-                </div>
-                <div class="portfolio-overlay">
-                  <a href="https://github.com/adibuljabir" target="_blank" rel="noopener noreferrer" title="View GitHub Profile"><i class="fab fa-github"></i></a>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Git &bull; Open Source &bull; Team Repos</span>
-                <h4 class="portfolio-title">Collaborative Repos & PRs</h4>
-                <p class="portfolio-desc">Active collaborator in university competitions, team projects, and open repositories.</p>
-              </div>
-            </div>
-
-            <!-- ================= BRANDING PROJECTS ================= -->
-            <!-- Branding Card 1: Ventrixon Logo Animation -->
-            <div class="portfolio-card" data-category="branding 3d">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif" alt="Ventrixon Logo Animation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="video-play-badge"><i class="fas fa-play"></i> Branding Motion</div>
-                <div class="portfolio-overlay">
-                  <a href="https://www.youtube.com/@Ventrixon" target="_blank" rel="noopener noreferrer" title="Watch on YouTube Channel"><i class="fab fa-youtube"></i></a>
-                  <a href="https://www.behance.net/gallery/246479509/Ventrixon-Logo-Animation" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Brand Motion Graphics</span>
-                <h4 class="portfolio-title">Ventrixon Logo Animation</h4>
-                <p class="portfolio-desc">Smooth brand-driven motion graphics and cinematic reveal timing in After Effects.</p>
-              </div>
-            </div>
-
-            <!-- Branding Card 2: 4K Motion Logo Final Intro -->
-            <div class="portfolio-card" data-category="branding 3d" data-yt-id="hBbHoIONYf0">
-              <div class="portfolio-thumb-box">
-                <img src="https://i.ytimg.com/vi/hBbHoIONYf0/hqdefault.jpg" alt="4K Motion Logo Final Intro" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="video-play-badge"><i class="fas fa-play"></i> 4K Motion</div>
-                <div class="portfolio-overlay">
-                  <a href="https://www.youtube.com/watch?v=hBbHoIONYf0" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
-                  <button class="open-lightbox" data-type="video" data-src="https://www.youtube-nocookie.com/embed/hBbHoIONYf0?autoplay=1&rel=0" data-title="4K Motion Logo Final Intro: Ventrixon Animated" data-desc="Smooth 4K brand-driven motion graphics and cinematic reveal timing."><i class="fas fa-play"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Brand Motion Graphics</span>
-                <h4 class="portfolio-title">4K Motion Logo Intro</h4>
-                <p class="portfolio-desc">Cinematic 4K brand-driven motion graphics and fluid reveal animations.</p>
-              </div>
-            </div>
-
-            <!-- Branding Card 3: Hoodie 3D Cloth Animation -->
-            <div class="portfolio-card" data-category="branding 3d" data-yt-id="-oDgaHYAk5M">
-              <div class="portfolio-thumb-box">
-                <img src="https://i.ytimg.com/vi/-oDgaHYAk5M/hqdefault.jpg" alt="Hoodie 3D Cloth Animation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="video-play-badge"><i class="fas fa-play"></i> 3D Cloth Sim</div>
-                <div class="portfolio-overlay">
-                  <a href="https://www.youtube.com/shorts/-oDgaHYAk5M" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
-                  <button class="open-lightbox" data-type="video" data-src="https://www.youtube-nocookie.com/embed/-oDgaHYAk5M?autoplay=1&rel=0" data-title="Hoodie Animation For Business" data-desc="Dynamic 3D cloth physics simulation and commercial apparel motion graphics."><i class="fas fa-play"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">3D Branding Simulation</span>
-                <h4 class="portfolio-title">Hoodie Apparel Animation</h4>
-                <p class="portfolio-desc">Dynamic cloth simulation and stylized commercial showcase for apparel brands.</p>
-              </div>
-            </div>
-
-            <!-- Branding Card 4: DP Xi FC Video Intro -->
-            <div class="portfolio-card" data-category="branding" data-yt-id="khtonJIabQ0">
-              <div class="portfolio-thumb-box">
-                <img src="https://i.ytimg.com/vi/khtonJIabQ0/hqdefault.jpg" alt="DP Xi FC Video Intro" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="video-play-badge"><i class="fas fa-play"></i> Branding Video</div>
-                <div class="portfolio-overlay">
-                  <a href="https://www.youtube.com/watch?v=khtonJIabQ0" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
-                  <button class="open-lightbox" data-type="video" data-src="https://www.youtube-nocookie.com/embed/khtonJIabQ0?autoplay=1&rel=0" data-title="DP Xi FC 1min Video Intro" data-desc="Fast-paced sports video editing, dynamic beat cuts, and motion graphics."><i class="fas fa-play"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Branding & Video</span>
-                <h4 class="portfolio-title">DP Xi FC Video Intro</h4>
-                <p class="portfolio-desc">High-energy cinematic sports promo with synchronized beat cuts and titles.</p>
-              </div>
-            </div>
-
-            <!-- ================= 3D PROJECTS ================= -->
-            <!-- 3D Card 1: Motherboard 3D Animation Video -->
-            <div class="portfolio-card" data-category="3d" data-yt-id="0Eb3AAcaTEc">
-              <div class="portfolio-thumb-box">
-                <img src="https://i.ytimg.com/vi/0Eb3AAcaTEc/hqdefault.jpg" alt="Motherboard 3D Animation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="video-play-badge"><i class="fas fa-play"></i> 3D Hardware</div>
-                <div class="portfolio-overlay">
-                  <a href="https://www.youtube.com/watch?v=0Eb3AAcaTEc" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
-                  <button class="open-lightbox" data-type="video" data-src="https://www.youtube-nocookie.com/embed/0Eb3AAcaTEc?autoplay=1&rel=0" data-title="The Ultimate Motherboard Explanation" data-desc="Detailed 3D hardware component visualization and cinematic motion graphics."><i class="fas fa-play"></i></button>
-                  <a href="https://www.behance.net/gallery/212128653/Full-Youtube-Video-of-Motherboard-Animation" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">3D Animation</span>
-                <h4 class="portfolio-title">Motherboard 3D Animation</h4>
-                <p class="portfolio-desc">Detailed hardware component visualization and cinematic motion graphics.</p>
-              </div>
-            </div>
-
-            <!-- 3D Card 2: Refrigerator Advertisement Animation -->
-            <div class="portfolio-card" data-category="3d" data-yt-id="FkkAfB6_9SU">
-              <div class="portfolio-thumb-box">
-                <img src="https://i.ytimg.com/vi/FkkAfB6_9SU/hqdefault.jpg" alt="Refrigerator Advertisement Animation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="video-play-badge"><i class="fas fa-play"></i> Commercial 3D</div>
-                <div class="portfolio-overlay">
-                  <a href="https://www.youtube.com/watch?v=FkkAfB6_9SU" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
-                  <button class="open-lightbox" data-type="video" data-src="https://www.youtube-nocookie.com/embed/FkkAfB6_9SU?autoplay=1&rel=0" data-title="Animation of Refrigerator Advertisement" data-desc="Commercial product video featuring photorealistic lighting, shaders, and appliance animation."><i class="fas fa-play"></i></button>
-                  <a href="https://www.behance.net/gallery/215395279/Animation-of-Refrigerator-Advertisement" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">Commercial 3D Video</span>
-                <h4 class="portfolio-title">Refrigerator Commercial Ad</h4>
-                <p class="portfolio-desc">Commercial product video featuring photorealistic lighting, shaders, and appliance animation.</p>
-              </div>
-            </div>
-
-            <!-- 3D Card 3: Low Poly Anti-Aircraft Gun -->
-            <div class="portfolio-card" data-category="3d">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Low Poly Anti-Aircraft Gun" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/246476437/Low-Poly-Anti-Aircraft-Gun" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Low Poly Anti-Aircraft Gun" data-desc="Stylized low poly 3D anti-aircraft artillery asset designed for game engines."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">3D Modeling</span>
-                <h4 class="portfolio-title">Low Poly Anti-Aircraft Gun</h4>
-                <p class="portfolio-desc">Stylized game-ready 3D prop modeled with clean topology and color-based materials.</p>
-              </div>
-            </div>
-
-            <!-- 3D Card 4: Low Poly Train Model -->
-            <div class="portfolio-card" data-category="3d">
-              <div class="portfolio-thumb-box">
-                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" alt="Low Poly Train Model" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="portfolio-overlay">
-                  <a href="https://www.behance.net/gallery/246476151/Low-Poly-Train-Model" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>
-                  <button class="open-lightbox" data-type="image" data-src="https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png" data-title="Low Poly Train Model" data-desc="Stylized low poly 3D model of the EMD GT42ACL locomotive with passenger coach."><i class="fas fa-search-plus"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">3D Modeling</span>
-                <h4 class="portfolio-title">Low Poly Train Model</h4>
-                <p class="portfolio-desc">Stylized 3D model of the EMD GT42ACL locomotive with passenger coach in Blender.</p>
-              </div>
-            </div>
-
-            <!-- 3D Card 5: EMD GT42ACL Locomotive 3D Animation -->
-            <div class="portfolio-card" data-category="3d" data-yt-id="9dpz015aejE">
-              <div class="portfolio-thumb-box">
-                <img src="https://i.ytimg.com/vi/9dpz015aejE/hqdefault.jpg" alt="Locomotive 3D Animation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="video-play-badge"><i class="fas fa-play"></i> 3D Animation</div>
-                <div class="portfolio-overlay">
-                  <a href="https://www.youtube.com/watch?v=9dpz015aejE" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
-                  <button class="open-lightbox" data-type="video" data-src="https://www.youtube-nocookie.com/embed/9dpz015aejE?autoplay=1&rel=0" data-title="EMD GT42ACL Locomotive 3D Animation" data-desc="Stylized 3D low poly train model animation with passenger coaches in motion."><i class="fas fa-play"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">3D Vehicle Animation</span>
-                <h4 class="portfolio-title">Locomotive 3D Animation</h4>
-                <p class="portfolio-desc">Stylized 3D low poly train animation featuring realistic mechanical motion.</p>
-              </div>
-            </div>
-
-            <!-- 3D Card 6: Realistic 3D Donut Recreation -->
-            <div class="portfolio-card" data-category="3d" data-yt-id="dYq1ATkLAj8">
-              <div class="portfolio-thumb-box">
-                <img src="https://i.ytimg.com/vi/dYq1ATkLAj8/hqdefault.jpg" alt="Realistic 3D Donut Recreation" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-                <div class="video-play-badge"><i class="fas fa-play"></i> 3D Shading</div>
-                <div class="portfolio-overlay">
-                  <a href="https://www.youtube.com/watch?v=dYq1ATkLAj8" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>
-                  <button class="open-lightbox" data-type="video" data-src="https://www.youtube-nocookie.com/embed/dYq1ATkLAj8?autoplay=1&rel=0" data-title="Realistic 3D Donut Recreation" data-desc="Photorealistic 3D modeling, procedural texturing, and subsurface scattering in Blender."><i class="fas fa-play"></i></button>
-                </div>
-              </div>
-              <div class="portfolio-details">
-                <span class="portfolio-category">3D Modeling & Shading</span>
-                <h4 class="portfolio-title">Realistic 3D Donut</h4>
-                <p class="portfolio-desc">Photorealistic procedural texturing, particle sprinkles, and lighting in Blender.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- 5. CONTACT SECTION                         -->
-        <!-- ========================================== -->
-        <section id="contact" class="tab-section">
+<section id="contact" class="tab-section">
           <div class="page-title">
             <h1>Contact</h1>
             <div class="page-subtitle">Get in touch</div>

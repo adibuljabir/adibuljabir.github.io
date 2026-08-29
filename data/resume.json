@@ -1,0 +1,217 @@
+﻿{
+  "uiux": {
+    "roleId": "uiux",
+    "roleName": "UI/UX Designer",
+    "education": [
+      {
+        "period": "2024 - 2028 (Ongoing)",
+        "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+        "title": "BSc in Computer Science & Engineering (HCI Focus)",
+        "desc": "Human-Computer Interaction (HCI), design systems, web ergonomics, and user-centric software design."
+      },
+      {
+        "period": "Continuous Specialization",
+        "company": "Self-Directed & Applied Practice",
+        "title": "Design Systems & Interactive Prototyping",
+        "desc": "Advanced Figma components, auto-layout, interactive variants, and scalable web/mobile design frameworks."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "company": "Ventrixon Studio",
+        "title": "UI/UX Designer & Prototyper",
+        "desc": "Designing user interfaces, wireframes, and responsive web/mobile prototypes in Figma for software and digital platforms."
+      },
+      {
+        "period": "2023 - Present",
+        "company": "Freelance & Client Projects",
+        "title": "Product Designer",
+        "desc": "Delivering high-converting landing pages, SaaS dashboards, and digital product redesigns."
+      }
+    ],
+    "skills": [
+      { "name": "Figma (UI/UX Design & Prototyping)", "percent": "95%" },
+      { "name": "User Interface & Wireframing", "percent": "92%" },
+      { "name": "Design Systems & Component Libraries", "percent": "90%" },
+      { "name": "Adobe Photoshop & Illustrator", "percent": "88%" },
+      { "name": "Responsive Mobile & Web UI", "percent": "92%" },
+      { "name": "Human-Computer Interaction (HCI)", "percent": "85%" }
+    ],
+    "competencies": [
+      "User Flow Mapping",
+      "Interactive Wireframes",
+      "Design Systems",
+      "Mobile UI",
+      "Web Prototyping",
+      "Usability Principles",
+      "Figma Variables",
+      "Auto Layout Master",
+      "Visual Hierarchy",
+      "Micro-interactions"
+    ],
+    "languages": [
+      "Bengali (Native)",
+      "English (Fluent)",
+      "Arabic (Conversational)"
+    ]
+  },
+  "developer": {
+    "roleId": "developer",
+    "roleName": "Developer",
+    "education": [
+      {
+        "period": "2024 - 2028 (Ongoing)",
+        "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+        "title": "BSc in Computer Science and Engineering",
+        "desc": "Algorithms, Data Structures, Database Management Systems, Computer Networks, and Object-Oriented Software Design."
+      },
+      {
+        "period": "Continuous",
+        "company": "Competitive Programming & Problem Solving",
+        "title": "Algorithmic Logic & C/C++ / Python",
+        "desc": "Active participation in university contests, implementing algorithmic solutions with clean time/space efficiency."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "company": "Independent & Open Source",
+        "title": "Frontend & Software Developer",
+        "desc": "Building high-performance web applications and software utilities with modern JavaScript (ES6+), Python, HTML5, and CSS3."
+      },
+      {
+        "period": "2023 - Present",
+        "company": "Ventrixon Digital Platforms",
+        "title": "Web Solutions Architect",
+        "desc": "Architecting clean, responsive web platforms, portfolio systems, and API-driven interactive user interfaces."
+      }
+    ],
+    "skills": [
+      { "name": "Web Development (HTML5 / CSS3 / Modern JS)", "percent": "90%" },
+      { "name": "C / C++ (Algorithms & Systems)", "percent": "85%" },
+      { "name": "Python & Scripting", "percent": "82%" },
+      { "name": "Java & OOP Principles", "percent": "80%" },
+      { "name": "Git, GitHub & Version Control", "percent": "88%" },
+      { "name": "REST APIs & Data Structures", "percent": "82%" }
+    ],
+    "competencies": [
+      "Data Structures",
+      "Algorithms",
+      "DOM Manipulation",
+      "Clean Code Architecture",
+      "Git Version Control",
+      "REST APIs",
+      "Object-Oriented Design",
+      "Linux & CLI",
+      "Software Testing",
+      "Optimization"
+    ],
+    "languages": [
+      "Bengali (Native)",
+      "English (Fluent)",
+      "Arabic (Conversational)"
+    ]
+  },
+  "brand": {
+    "roleId": "brand",
+    "roleName": "Brand Designer",
+    "education": [
+      {
+        "period": "Applied Mastery",
+        "company": "Self-Directed & Professional Practice",
+        "title": "Vector Design & Visual Identity Systems",
+        "desc": "Logo design theory, scalable vector construction in Adobe Illustrator, color palettes, and typographic pairings."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "company": "Ventrixon Studio",
+        "title": "Brand Identity & Visual Mark Designer",
+        "desc": "Created the complete Ventrixon brand mark, vector style guide, typography pairing, and visual assets."
+      },
+      {
+        "period": "2023 - Present",
+        "company": "Global Clients",
+        "title": "Freelance Brand & Vector Designer",
+        "desc": "Delivered vector marks, typography pairings, color palettes, and brand guidelines for international businesses."
+      }
+    ],
+    "skills": [
+      { "name": "Adobe Illustrator (Vector Marks)", "percent": "95%" },
+      { "name": "Brand Identity Systems", "percent": "92%" },
+      { "name": "Color Theory & Palette Harmony", "percent": "90%" },
+      { "name": "Typography Pairing & Hierarchy", "percent": "88%" },
+      { "name": "Adobe Photoshop (Mockups & Visuals)", "percent": "85%" },
+      { "name": "Print & Vector Asset Packaging", "percent": "90%" }
+    ],
+    "competencies": [
+      "Logo Design",
+      "Vector Graphics",
+      "Color Palette Systems",
+      "Typography Styling",
+      "Brand Guidelines",
+      "Iconography",
+      "Vector Merchandise",
+      "Print Ready Art",
+      "Visual Assets"
+    ],
+    "languages": [
+      "Bengali (Native)",
+      "English (Fluent)",
+      "Arabic (Conversational)"
+    ]
+  },
+  "3d": {
+    "roleId": "3d",
+    "roleName": "3D Artist",
+    "education": [
+      {
+        "period": "2023 - Present",
+        "company": "Specialized Applied Practice",
+        "title": "Hard-Surface 3D Modeling & Animation Pipelines",
+        "desc": "Mastering topology, PBR node shading, procedural textures, cinematic camera animation, and particle simulations in Blender."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "company": "Ventrixon Studio",
+        "title": "Founder & Lead 3D Artist",
+        "desc": "Directing 3D animations, product visualizations, motion graphics, and educational 3D modeling content on YouTube."
+      },
+      {
+        "period": "2023 - Present",
+        "company": "UpworkÂ® Global Inc",
+        "title": "Freelance 3D Specialist (5-Star Track)",
+        "desc": "Delivering custom 3D animations, photorealistic product visualizations, and cinematic renders for international clients."
+      }
+    ],
+    "skills": [
+      { "name": "Blender 3D Modeling & Topology", "percent": "95%" },
+      { "name": "PBR Material Shading & Texturing", "percent": "92%" },
+      { "name": "Cinematic Lighting & Cameras", "percent": "92%" },
+      { "name": "Commercial Product Animation", "percent": "90%" },
+      { "name": "Adobe After Effects (Motion Post)", "percent": "88%" },
+      { "name": "Hard-Surface Asset Optimization", "percent": "90%" }
+    ],
+    "competencies": [
+      "Hard Surface Modeling",
+      "PBR Shaders",
+      "Cycles & Eevee",
+      "Motion Graphics",
+      "Cloth Physics Simulation",
+      "Low-Poly Assets",
+      "Cinematic Lighting",
+      "Video Post-Production",
+      "DaVinci Resolve",
+      "Animation Curves"
+    ],
+    "languages": [
+      "Bengali (Native)",
+      "English (Fluent)",
+      "Arabic (Conversational)"
+    ]
+  }
+}

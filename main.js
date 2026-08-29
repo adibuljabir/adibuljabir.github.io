@@ -269,9 +269,184 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
   }
 
-  // 4. Skill Bars Animation
+  // 4. Dynamic Data Loader & Render Engine
+  let currentPortfolioFilter = 'uiux';
+
+  function renderPortfolioCards(items) {
+    const grid = document.getElementById('portfolio-grid');
+    if (!grid || !items || !items.length) return;
+
+    grid.innerHTML = items.map(item => {
+      if (item.type === 'code') {
+        const langStyle = item.langColor ? `style="color: ${item.langColor}; border-color: ${item.langColor}40;"` : '';
+        const snippetHtml = (item.codeSnippet || []).map(line => `<div>${line}</div>`).join('');
+        const footerSpan2 = item.stars ? `<span><i class="fas fa-star" style="color: #fbbf24;"></i> ${item.stars}</span>` : `<span>${item.footerMeta || ''}</span>`;
+        const sourceBtn = item.sourceUrl ? `<a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer" title="View Source Code"><i class="fas fa-code"></i></a>` : '';
+
+        return `
+          <div class="portfolio-card" data-category="${item.category}">
+            <div class="portfolio-thumb-box">
+              <div class="code-thumb-preview">
+                <div class="code-thumb-header">
+                  <span class="code-lang-tag" ${langStyle}>${item.langTag || 'Code'}</span>
+                  <span class="code-role-tag">${item.roleTag || 'Project'}</span>
+                </div>
+                <div class="code-thumb-snippet">
+                  ${snippetHtml}
+                </div>
+                <div class="code-thumb-footer">
+                  <span><i class="fab fa-github"></i> ${item.repoName || 'Repository'}</span>
+                  ${footerSpan2}
+                </div>
+              </div>
+              <div class="portfolio-overlay">
+                <a href="${item.githubUrl}" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>
+                ${sourceBtn}
+              </div>
+            </div>
+            <div class="portfolio-details">
+              <span class="portfolio-category">${item.subtitle || ''}</span>
+              <h4 class="portfolio-title">${item.title}</h4>
+              <p class="portfolio-desc">${item.description || ''}</p>
+            </div>
+          </div>
+        `;
+      }
+
+      // Image / Video Card
+      const ytAttr = item.ytId ? `data-yt-id="${item.ytId}"` : '';
+      const badgeHtml = item.badge ? `<div class="video-play-badge"><i class="fas fa-play"></i> ${item.badge}</div>` : '';
+      
+      let overlayActions = '';
+      if (item.youtubeUrl) {
+        overlayActions += `<a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>`;
+      }
+      if (item.lightboxType) {
+        overlayActions += `<button class="open-lightbox" data-type="${item.lightboxType}" data-src="${item.lightboxSrc}" data-title="${item.title}" data-desc="${item.description || ''}"><i class="${item.lightboxType === 'video' ? 'fas fa-play' : 'fas fa-search-plus'}"></i></button>`;
+      }
+      if (item.behanceUrl) {
+        overlayActions += `<a href="${item.behanceUrl}" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>`;
+      }
+
+      return `
+        <div class="portfolio-card" data-category="${item.category}" ${ytAttr}>
+          <div class="portfolio-thumb-box">
+            <img src="${item.thumbnail}" alt="${item.title}" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
+            ${badgeHtml}
+            <div class="portfolio-overlay">
+              ${overlayActions}
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-category">${item.subtitle || ''}</span>
+            <h4 class="portfolio-title">${item.title}</h4>
+            <p class="portfolio-desc">${item.description || ''}</p>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    initLightboxEvents();
+    initVideoHoverPlayback();
+    applyPortfolioFilter(currentPortfolioFilter || 'uiux');
+  }
+
+  function renderResumeRoles(rolesData) {
+    const container = document.getElementById('resume-panes-container');
+    if (!container || !rolesData) return;
+
+    const roleKeys = Object.keys(rolesData);
+    container.innerHTML = roleKeys.map((key, index) => {
+      const role = rolesData[key];
+      const activeClass = index === 0 ? 'active' : '';
+
+      const eduItems = (role.education || []).map(e => `
+        <div class="timeline-item">
+          <span class="timeline-period">${e.period}</span>
+          <span class="timeline-company">${e.company}</span>
+          <h4 class="timeline-title">${e.title}</h4>
+          <p class="timeline-desc">${e.desc}</p>
+        </div>
+      `).join('');
+
+      const expItems = (role.experience || []).map(e => `
+        <div class="timeline-item">
+          <span class="timeline-period">${e.period}</span>
+          <span class="timeline-company">${e.company}</span>
+          <h4 class="timeline-title">${e.title}</h4>
+          <p class="timeline-desc">${e.desc}</p>
+        </div>
+      `).join('');
+
+      const skillItems = (role.skills || []).map(s => `
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>${s.name}</span>
+            <span>${s.percent}</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="${s.percent}" style="width: 0%;"></div></div>
+        </div>
+      `).join('');
+
+      const compBadges = (role.competencies || []).map(c => `<span class="badge-item">${c}</span>`).join('');
+      const langBadges = (role.languages || ['Bengali (Native)', 'English (Fluent)', 'Arabic (Conversational)']).map(l => `<span class="badge-item">${l}</span>`).join('');
+
+      return `
+        <div class="resume-role-pane ${activeClass}" id="role-${key}">
+          <div class="resume-columns">
+            <div>
+              <div class="block-title">
+                <h2>Education</h2>
+              </div>
+              <div class="timeline">
+                ${eduItems}
+              </div>
+            </div>
+
+            <div>
+              <div class="block-title">
+                <h2>Experience</h2>
+              </div>
+              <div class="timeline">
+                ${expItems}
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-columns">
+            <div>
+              <div class="block-title">
+                <h2>Working Skills</h2>
+              </div>
+              ${skillItems}
+            </div>
+
+            <div>
+              <div class="block-title">
+                <h2>Specialized Competencies</h2>
+              </div>
+              <div class="badges-cloud">
+                ${compBadges}
+              </div>
+
+              <div class="block-title" style="margin-top: 30px;">
+                <h2>Languages</h2>
+              </div>
+              <div class="badges-cloud">
+                ${langBadges}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    initResumeRoleTabs();
+  }
+
+  // 5. Skill Bars Animation
   function animateActiveSkillBars() {
-    const activePane = document.querySelector('.resume-role-pane.active') || document.getElementById('role-all');
+    const activePane = document.querySelector('.resume-role-pane.active') || document.getElementById('role-uiux');
     if (!activePane) return;
     const skillBars = activePane.querySelectorAll('.skill-fill');
     skillBars.forEach(bar => {
@@ -283,43 +458,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Resume Role Tabs
-  const resumeRoleBtns = document.querySelectorAll('.resume-filter-btn');
-  const resumePanes = document.querySelectorAll('.resume-role-pane');
+  // 6. Resume Role Tabs
+  function initResumeRoleTabs() {
+    const resumeRoleBtns = document.querySelectorAll('.resume-filter-btn');
+    const resumePanes = document.querySelectorAll('.resume-role-pane');
 
-  resumeRoleBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      resumeRoleBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+    resumeRoleBtns.forEach(btn => {
+      btn.onclick = () => {
+        resumeRoleBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-      const role = btn.getAttribute('data-role');
-      const targetPane = document.getElementById(`role-${role}`) || document.getElementById('role-all');
+        const role = btn.getAttribute('data-role');
+        const targetPane = document.getElementById(`role-${role}`) || document.getElementById('role-uiux');
 
-      resumePanes.forEach(pane => pane.classList.remove('active'));
-      if (targetPane) {
-        targetPane.classList.add('active');
-        animateActiveSkillBars();
-      }
+        resumePanes.forEach(pane => pane.classList.remove('active'));
+        if (targetPane) {
+          targetPane.classList.add('active');
+          animateActiveSkillBars();
+        }
+      };
     });
-  });
+  }
 
-  // 6. Portfolio Category Filtering
+  // 7. Portfolio Category Filtering
   const portfolioFilterBtns = document.querySelectorAll('.portfolio-filters:not(.resume-role-filters) .filter-btn');
-  const portfolioCards = document.querySelectorAll('.portfolio-card');
 
   function applyPortfolioFilter(filterValue) {
+    currentPortfolioFilter = filterValue || 'uiux';
     portfolioFilterBtns.forEach(b => {
-      if (b.getAttribute('data-filter') === filterValue) {
+      if (b.getAttribute('data-filter') === currentPortfolioFilter) {
         b.classList.add('active');
       } else {
         b.classList.remove('active');
       }
     });
 
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
     portfolioCards.forEach(item => {
       const itemCategory = (item.getAttribute('data-category') || '').toLowerCase();
       const categories = itemCategory.split(/\s+/);
-      if (filterValue === 'all' || categories.includes(filterValue.toLowerCase())) {
+      if (categories.includes(currentPortfolioFilter.toLowerCase())) {
         item.style.display = 'block';
       } else {
         item.style.display = 'none';
@@ -329,12 +507,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   portfolioFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const filterValue = btn.getAttribute('data-filter') || 'all';
+      const filterValue = btn.getAttribute('data-filter') || 'uiux';
       applyPortfolioFilter(filterValue);
     });
   });
 
-  // 7. Lightbox Modal
+  // Async JSON Fetcher
+  async function loadJsonData() {
+    try {
+      const pRes = await fetch('data/portfolio.json');
+      if (pRes.ok) {
+        const pData = await pRes.json();
+        if (Array.isArray(pData) && pData.length) {
+          renderPortfolioCards(pData);
+        }
+      }
+    } catch (e) {
+      console.error('Error fetching data/portfolio.json:', e);
+    }
+
+    try {
+      const rRes = await fetch('data/resume.json');
+      if (rRes.ok) {
+        const rData = await rRes.json();
+        if (rData && typeof rData === 'object') {
+          renderResumeRoles(rData);
+        }
+      }
+    } catch (e) {
+      console.error('Error fetching data/resume.json:', e);
+    }
+  }
+
+  // 8. Lightbox Modal
   const modal = document.getElementById('lightbox-modal');
   const modalMedia = document.getElementById('lightbox-media');
   const modalTitle = document.getElementById('lightbox-title');
@@ -387,16 +592,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  document.querySelectorAll('.open-lightbox').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const type = btn.getAttribute('data-type') || 'image';
-      const src = btn.getAttribute('data-src') || btn.getAttribute('href');
-      const title = btn.getAttribute('data-title') || '';
-      const desc = btn.getAttribute('data-desc') || '';
-      openModal(type, src, title, desc);
+  function initLightboxEvents() {
+    document.querySelectorAll('.open-lightbox').forEach(btn => {
+      btn.onclick = (e) => {
+        e.preventDefault();
+        const type = btn.getAttribute('data-type') || 'image';
+        const src = btn.getAttribute('data-src') || btn.getAttribute('href');
+        const title = btn.getAttribute('data-title') || '';
+        const desc = btn.getAttribute('data-desc') || '';
+        openModal(type, src, title, desc);
+      };
     });
-  });
+  }
 
   // 8. Contact Form Handler (Web3Forms AJAX Integration)
   const contactForm = document.getElementById('contact-form');
@@ -615,6 +822,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Initialize Features
+  loadJsonData();
   initScrollAnimations();
   initVideoHoverPlayback();
 });
