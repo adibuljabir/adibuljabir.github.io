@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Leven Minimalist - Main JavaScript
  * Author: Adibul Jabir
  */
@@ -270,6 +270,507 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 4. Dynamic Data Loader & Render Engine
+  const DEFAULT_PORTFOLIO = [
+  {
+    "id": "cellfin-app",
+    "category": "uiux",
+    "title": "Cellfin Banking App",
+    "subtitle": "UI/UX Case Study",
+    "description": "Complete mobile banking redesign simplifying transaction flows and user confidence.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/248330667/Cellfin-Banking-App-%28Case-Study%29"
+  },
+  {
+    "id": "saas-landing",
+    "category": "uiux",
+    "title": "SaaS Landing Page",
+    "subtitle": "Web & UI/UX",
+    "description": "Conversion-focused, scalable design system created for high-growth SaaS web platforms.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/247425937/SaaS-Landing-Page"
+  },
+  {
+    "id": "nsaas-dashboard",
+    "category": "uiux",
+    "title": "NSaaS Analytics Dashboard",
+    "subtitle": "Dashboard UI",
+    "description": "Modern SaaS analytics dashboard engineered for complex metrics and clean readability.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/246613705/NSaaS-Analytics-Dashboard-Modern-SaaS-UI-Design"
+  },
+  {
+    "id": "gaming-controller",
+    "category": "uiux",
+    "title": "Gaming Controller Landing Page",
+    "subtitle": "Product Landing Page",
+    "description": "Bold and immersive product landing page design showcasing gaming hardware.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/246580577/Gaming-Controller-Landing-Page"
+  },
+  {
+    "id": "tech-community",
+    "category": "uiux",
+    "title": "Tech Community Platform",
+    "subtitle": "Web Platform UI",
+    "description": "Structured community hub UI designed to promote collaboration and event engagement.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/246457181/Tech-Community-Platform-UI-Innovation-Club"
+  },
+  {
+    "id": "fast-food-ui",
+    "category": "uiux",
+    "title": "Fast Food Restaurant UI",
+    "subtitle": "UI / Web Design",
+    "description": "Modern ordering interface designed for swift digital menu browsing and checkout.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/246406463/Fast-Food-Restaurant-Website-UI"
+  },
+  {
+    "id": "ngo-charity-ui",
+    "category": "uiux",
+    "title": "NGO Charity Platform",
+    "subtitle": "UI / Social Impact",
+    "description": "Accessible charity portal with structured donation flows and expense tracking dashboard.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/246404011/NGO-Charity-Platform-UI-Donation-Volunteer"
+  },
+  {
+    "id": "tada-tour-bill",
+    "category": "dev",
+    "type": "code",
+    "title": "TA-DA Bill Generator",
+    "subtitle": "C â€¢ CLI â€¢ File I/O",
+    "description": "CLI logistics & allowance calculator with robust file stream persistence in C.",
+    "langTag": "C / Systems",
+    "roleTag": "Author & Maintainer",
+    "codeSnippet": [
+      "FILE *Tour_Diary = fopen(\"Tour_Diary.txt\", \"a\");",
+      "int distance, expense1, expense2;",
+      "fprintf(Transport_Bill, \"| %02d-%02d-%04d |...\");"
+    ],
+    "repoName": "adibuljabir/TA-DA-Tour...",
+    "stars": "1",
+    "githubUrl": "https://github.com/adibuljabir/TA-DA-Tour-Transport-Bill-Generator",
+    "sourceUrl": "https://github.com/adibuljabir/TA-DA-Tour-Transport-Bill-Generator/blob/master/TourBill.c"
+  },
+  {
+    "id": "findit-app",
+    "category": "dev",
+    "type": "code",
+    "title": "FindIT Mobile App",
+    "subtitle": "Android â€¢ Kotlin â€¢ Mobile",
+    "description": "Native Android utility built for intuitive item tracking and index discovery.",
+    "langTag": "Kotlin / Android",
+    "langColor": "#a78bfa",
+    "roleTag": "Android App",
+    "codeSnippet": [
+      "class FindItemActivity : AppCompatActivity() {",
+      "  val tracker = rememberTracker()",
+      "  initLocationIndex(savedInstanceState)",
+      "}"
+    ],
+    "repoName": "adibuljabir/FindIT",
+    "footerMeta": "Gradle â€¢ Kotlin",
+    "githubUrl": "https://github.com/adibuljabir/FindIT"
+  },
+  {
+    "id": "khaon-management",
+    "category": "dev",
+    "type": "code",
+    "title": "Khaon Food Management",
+    "subtitle": "Java â€¢ Software Architecture",
+    "description": "Modular food ordering and inventory system built with clean OOP architecture.",
+    "langTag": "Java / OOP",
+    "langColor": "#fb923c",
+    "roleTag": "Software System",
+    "codeSnippet": [
+      "public class KhaonManager {",
+      "  private List<OrderItem> orders;",
+      "  public double calculateInventory() { ... }",
+      "}"
+    ],
+    "repoName": "adibuljabir/Khaon",
+    "footerMeta": "Java â€¢ OOP Design",
+    "githubUrl": "https://github.com/adibuljabir/Khaon"
+  },
+  {
+    "id": "collab-repos",
+    "category": "dev",
+    "type": "code",
+    "title": "Collaborative Repos & PRs",
+    "subtitle": "Git â€¢ Open Source â€¢ Team Repos",
+    "description": "Active collaborator in university competitions, team projects, and open repositories.",
+    "langTag": "Open Source",
+    "langColor": "#4ade80",
+    "roleTag": "Contributor",
+    "codeSnippet": [
+      "git checkout -b feature/ui-improvement",
+      "git commit -m \"feat: optimize pipeline\"",
+      "git push origin pull-request"
+    ],
+    "repoName": "github.com/adibuljabir",
+    "footerMeta": "PRs â€¢ Code Review",
+    "githubUrl": "https://github.com/adibuljabir"
+  },
+  {
+    "id": "ventrixon-logo-anim",
+    "category": "branding 3d",
+    "title": "Ventrixon Logo Animation",
+    "subtitle": "Brand Motion Graphics",
+    "description": "Smooth brand-driven motion graphics and cinematic reveal timing in After Effects.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif",
+    "badge": "Branding Motion",
+    "youtubeUrl": "https://www.youtube.com/@Ventrixon",
+    "behanceUrl": "https://www.behance.net/gallery/246479509/Ventrixon-Logo-Animation"
+  },
+  {
+    "id": "motion-logo-intro",
+    "category": "branding 3d",
+    "title": "4K Motion Logo Intro",
+    "subtitle": "Brand Motion Graphics",
+    "description": "Cinematic 4K brand-driven motion graphics and fluid reveal animations.",
+    "ytId": "hBbHoIONYf0",
+    "thumbnail": "https://i.ytimg.com/vi/hBbHoIONYf0/hqdefault.jpg",
+    "badge": "4K Motion",
+    "youtubeUrl": "https://www.youtube.com/watch?v=hBbHoIONYf0",
+    "lightboxType": "video",
+    "lightboxSrc": "https://www.youtube-nocookie.com/embed/hBbHoIONYf0?autoplay=1&rel=0"
+  },
+  {
+    "id": "hoodie-3d-cloth",
+    "category": "branding 3d",
+    "title": "Hoodie Apparel Animation",
+    "subtitle": "3D Branding Simulation",
+    "description": "Dynamic cloth simulation and stylized commercial showcase for apparel brands.",
+    "ytId": "-oDgaHYAk5M",
+    "thumbnail": "https://i.ytimg.com/vi/-oDgaHYAk5M/hqdefault.jpg",
+    "badge": "3D Cloth Sim",
+    "youtubeUrl": "https://www.youtube.com/shorts/-oDgaHYAk5M",
+    "lightboxType": "video",
+    "lightboxSrc": "https://www.youtube-nocookie.com/embed/-oDgaHYAk5M?autoplay=1&rel=0"
+  },
+  {
+    "id": "dpxi-fc-intro",
+    "category": "branding",
+    "title": "DP Xi FC Video Intro",
+    "subtitle": "Branding & Video",
+    "description": "High-energy cinematic sports promo with synchronized beat cuts and titles.",
+    "ytId": "khtonJIabQ0",
+    "thumbnail": "https://i.ytimg.com/vi/khtonJIabQ0/hqdefault.jpg",
+    "badge": "Branding Video",
+    "youtubeUrl": "https://www.youtube.com/watch?v=khtonJIabQ0",
+    "lightboxType": "video",
+    "lightboxSrc": "https://www.youtube-nocookie.com/embed/khtonJIabQ0?autoplay=1&rel=0"
+  },
+  {
+    "id": "motherboard-3d",
+    "category": "3d",
+    "title": "Motherboard 3D Animation",
+    "subtitle": "3D Animation",
+    "description": "Detailed hardware component visualization and cinematic motion graphics.",
+    "ytId": "0Eb3AAcaTEc",
+    "thumbnail": "https://i.ytimg.com/vi/0Eb3AAcaTEc/hqdefault.jpg",
+    "badge": "3D Hardware",
+    "youtubeUrl": "https://www.youtube.com/watch?v=0Eb3AAcaTEc",
+    "behanceUrl": "https://www.behance.net/gallery/212128653/Full-Youtube-Video-of-Motherboard-Animation",
+    "lightboxType": "video",
+    "lightboxSrc": "https://www.youtube-nocookie.com/embed/0Eb3AAcaTEc?autoplay=1&rel=0"
+  },
+  {
+    "id": "refrigerator-ad",
+    "category": "3d",
+    "title": "Refrigerator Commercial Ad",
+    "subtitle": "Commercial 3D Video",
+    "description": "Commercial product video featuring photorealistic lighting, shaders, and appliance animation.",
+    "ytId": "FkkAfB6_9SU",
+    "thumbnail": "https://i.ytimg.com/vi/FkkAfB6_9SU/hqdefault.jpg",
+    "badge": "Commercial 3D",
+    "youtubeUrl": "https://www.youtube.com/watch?v=FkkAfB6_9SU",
+    "behanceUrl": "https://www.behance.net/gallery/215395279/Animation-of-Refrigerator-Advertisement",
+    "lightboxType": "video",
+    "lightboxSrc": "https://www.youtube-nocookie.com/embed/FkkAfB6_9SU?autoplay=1&rel=0"
+  },
+  {
+    "id": "low-poly-gun",
+    "category": "3d",
+    "title": "Low Poly Anti-Aircraft Gun",
+    "subtitle": "3D Modeling",
+    "description": "Stylized game-ready 3D prop modeled with clean topology and color-based materials.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/246476437/Low-Poly-Anti-Aircraft-Gun",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png"
+  },
+  {
+    "id": "low-poly-train",
+    "category": "3d",
+    "title": "Low Poly Train Model",
+    "subtitle": "3D Modeling",
+    "description": "Stylized 3D model of the EMD GT42ACL locomotive with passenger coach in Blender.",
+    "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+    "behanceUrl": "https://www.behance.net/gallery/246476151/Low-Poly-Train-Model",
+    "lightboxType": "image",
+    "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png"
+  },
+  {
+    "id": "locomotive-anim",
+    "category": "3d",
+    "title": "Locomotive 3D Animation",
+    "subtitle": "3D Vehicle Animation",
+    "description": "Stylized 3D low poly train animation featuring realistic mechanical motion.",
+    "ytId": "9dpz015aejE",
+    "thumbnail": "https://i.ytimg.com/vi/9dpz015aejE/hqdefault.jpg",
+    "badge": "3D Animation",
+    "youtubeUrl": "https://www.youtube.com/watch?v=9dpz015aejE",
+    "lightboxType": "video",
+    "lightboxSrc": "https://www.youtube-nocookie.com/embed/9dpz015aejE?autoplay=1&rel=0"
+  },
+  {
+    "id": "donut-recreation",
+    "category": "3d",
+    "title": "Realistic 3D Donut",
+    "subtitle": "3D Modeling & Shading",
+    "description": "Photorealistic procedural texturing, particle sprinkles, and lighting in Blender.",
+    "ytId": "dYq1ATkLAj8",
+    "thumbnail": "https://i.ytimg.com/vi/dYq1ATkLAj8/hqdefault.jpg",
+    "badge": "3D Shading",
+    "youtubeUrl": "https://www.youtube.com/watch?v=dYq1ATkLAj8",
+    "lightboxType": "video",
+    "lightboxSrc": "https://www.youtube-nocookie.com/embed/dYq1ATkLAj8?autoplay=1&rel=0"
+  }
+];
+  const DEFAULT_RESUME = {
+  "uiux": {
+    "roleId": "uiux",
+    "roleName": "UI/UX Designer",
+    "education": [
+      {
+        "period": "2024 - 2028 (Ongoing)",
+        "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+        "title": "BSc in Computer Science & Engineering (HCI Focus)",
+        "desc": "Human-Computer Interaction (HCI), design systems, web ergonomics, and user-centric software design."
+      },
+      {
+        "period": "Continuous Specialization",
+        "company": "Self-Directed & Applied Practice",
+        "title": "Design Systems & Interactive Prototyping",
+        "desc": "Advanced Figma components, auto-layout, interactive variants, and scalable web/mobile design frameworks."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "company": "Ventrixon Studio",
+        "title": "UI/UX Designer & Prototyper",
+        "desc": "Designing user interfaces, wireframes, and responsive web/mobile prototypes in Figma for software and digital platforms."
+      },
+      {
+        "period": "2023 - Present",
+        "company": "Freelance & Client Projects",
+        "title": "Product Designer",
+        "desc": "Delivering high-converting landing pages, SaaS dashboards, and digital product redesigns."
+      }
+    ],
+    "skills": [
+      { "name": "Figma (UI/UX Design & Prototyping)", "percent": "95%" },
+      { "name": "User Interface & Wireframing", "percent": "92%" },
+      { "name": "Design Systems & Component Libraries", "percent": "90%" },
+      { "name": "Adobe Photoshop & Illustrator", "percent": "88%" },
+      { "name": "Responsive Mobile & Web UI", "percent": "92%" },
+      { "name": "Human-Computer Interaction (HCI)", "percent": "85%" }
+    ],
+    "competencies": [
+      "User Flow Mapping",
+      "Interactive Wireframes",
+      "Design Systems",
+      "Mobile UI",
+      "Web Prototyping",
+      "Usability Principles",
+      "Figma Variables",
+      "Auto Layout Master",
+      "Visual Hierarchy",
+      "Micro-interactions"
+    ],
+    "languages": [
+      "Bengali (Native)",
+      "English (Fluent)",
+      "Arabic (Conversational)"
+    ]
+  },
+  "developer": {
+    "roleId": "developer",
+    "roleName": "Developer",
+    "education": [
+      {
+        "period": "2024 - 2028 (Ongoing)",
+        "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+        "title": "BSc in Computer Science and Engineering",
+        "desc": "Algorithms, Data Structures, Database Management Systems, Computer Networks, and Object-Oriented Software Design."
+      },
+      {
+        "period": "Continuous",
+        "company": "Competitive Programming & Problem Solving",
+        "title": "Algorithmic Logic & C/C++ / Python",
+        "desc": "Active participation in university contests, implementing algorithmic solutions with clean time/space efficiency."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "company": "Independent & Open Source",
+        "title": "Frontend & Software Developer",
+        "desc": "Building high-performance web applications and software utilities with modern JavaScript (ES6+), Python, HTML5, and CSS3."
+      },
+      {
+        "period": "2023 - Present",
+        "company": "Ventrixon Digital Platforms",
+        "title": "Web Solutions Architect",
+        "desc": "Architecting clean, responsive web platforms, portfolio systems, and API-driven interactive user interfaces."
+      }
+    ],
+    "skills": [
+      { "name": "Web Development (HTML5 / CSS3 / Modern JS)", "percent": "90%" },
+      { "name": "C / C++ (Algorithms & Systems)", "percent": "85%" },
+      { "name": "Python & Scripting", "percent": "82%" },
+      { "name": "Java & OOP Principles", "percent": "80%" },
+      { "name": "Git, GitHub & Version Control", "percent": "88%" },
+      { "name": "REST APIs & Data Structures", "percent": "82%" }
+    ],
+    "competencies": [
+      "Data Structures",
+      "Algorithms",
+      "DOM Manipulation",
+      "Clean Code Architecture",
+      "Git Version Control",
+      "REST APIs",
+      "Object-Oriented Design",
+      "Linux & CLI",
+      "Software Testing",
+      "Optimization"
+    ],
+    "languages": [
+      "Bengali (Native)",
+      "English (Fluent)",
+      "Arabic (Conversational)"
+    ]
+  },
+  "brand": {
+    "roleId": "brand",
+    "roleName": "Brand Designer",
+    "education": [
+      {
+        "period": "Applied Mastery",
+        "company": "Self-Directed & Professional Practice",
+        "title": "Vector Design & Visual Identity Systems",
+        "desc": "Logo design theory, scalable vector construction in Adobe Illustrator, color palettes, and typographic pairings."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "company": "Ventrixon Studio",
+        "title": "Brand Identity & Visual Mark Designer",
+        "desc": "Created the complete Ventrixon brand mark, vector style guide, typography pairing, and visual assets."
+      },
+      {
+        "period": "2023 - Present",
+        "company": "Global Clients",
+        "title": "Freelance Brand & Vector Designer",
+        "desc": "Delivered vector marks, typography pairings, color palettes, and brand guidelines for international businesses."
+      }
+    ],
+    "skills": [
+      { "name": "Adobe Illustrator (Vector Marks)", "percent": "95%" },
+      { "name": "Brand Identity Systems", "percent": "92%" },
+      { "name": "Color Theory & Palette Harmony", "percent": "90%" },
+      { "name": "Typography Pairing & Hierarchy", "percent": "88%" },
+      { "name": "Adobe Photoshop (Mockups & Visuals)", "percent": "85%" },
+      { "name": "Print & Vector Asset Packaging", "percent": "90%" }
+    ],
+    "competencies": [
+      "Logo Design",
+      "Vector Graphics",
+      "Color Palette Systems",
+      "Typography Styling",
+      "Brand Guidelines",
+      "Iconography",
+      "Vector Merchandise",
+      "Print Ready Art",
+      "Visual Assets"
+    ],
+    "languages": [
+      "Bengali (Native)",
+      "English (Fluent)",
+      "Arabic (Conversational)"
+    ]
+  },
+  "3d": {
+    "roleId": "3d",
+    "roleName": "3D Artist",
+    "education": [
+      {
+        "period": "2023 - Present",
+        "company": "Specialized Applied Practice",
+        "title": "Hard-Surface 3D Modeling & Animation Pipelines",
+        "desc": "Mastering topology, PBR node shading, procedural textures, cinematic camera animation, and particle simulations in Blender."
+      }
+    ],
+    "experience": [
+      {
+        "period": "2023 - Present",
+        "company": "Ventrixon Studio",
+        "title": "Founder & Lead 3D Artist",
+        "desc": "Directing 3D animations, product visualizations, motion graphics, and educational 3D modeling content on YouTube."
+      },
+      {
+        "period": "2023 - Present",
+        "company": "UpworkÂ® Global Inc",
+        "title": "Freelance 3D Specialist (5-Star Track)",
+        "desc": "Delivering custom 3D animations, photorealistic product visualizations, and cinematic renders for international clients."
+      }
+    ],
+    "skills": [
+      { "name": "Blender 3D Modeling & Topology", "percent": "95%" },
+      { "name": "PBR Material Shading & Texturing", "percent": "92%" },
+      { "name": "Cinematic Lighting & Cameras", "percent": "92%" },
+      { "name": "Commercial Product Animation", "percent": "90%" },
+      { "name": "Adobe After Effects (Motion Post)", "percent": "88%" },
+      { "name": "Hard-Surface Asset Optimization", "percent": "90%" }
+    ],
+    "competencies": [
+      "Hard Surface Modeling",
+      "PBR Shaders",
+      "Cycles & Eevee",
+      "Motion Graphics",
+      "Cloth Physics Simulation",
+      "Low-Poly Assets",
+      "Cinematic Lighting",
+      "Video Post-Production",
+      "DaVinci Resolve",
+      "Animation Curves"
+    ],
+    "languages": [
+      "Bengali (Native)",
+      "English (Fluent)",
+      "Arabic (Conversational)"
+    ]
+  }
+};
+
   let currentPortfolioFilter = 'uiux';
 
   function renderPortfolioCards(items) {
@@ -278,72 +779,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
     grid.innerHTML = items.map(item => {
       if (item.type === 'code') {
-        const langStyle = item.langColor ? `style="color: ${item.langColor}; border-color: ${item.langColor}40;"` : '';
-        const snippetHtml = (item.codeSnippet || []).map(line => `<div>${line}</div>`).join('');
-        const footerSpan2 = item.stars ? `<span><i class="fas fa-star" style="color: #fbbf24;"></i> ${item.stars}</span>` : `<span>${item.footerMeta || ''}</span>`;
-        const sourceBtn = item.sourceUrl ? `<a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer" title="View Source Code"><i class="fas fa-code"></i></a>` : '';
+        const langStyle = item.langColor ? 'style="color: ' + item.langColor + '; border-color: ' + item.langColor + '40;"' : '';
+        const snippetHtml = (item.codeSnippet || []).map(line => '<div>' + line + '</div>').join('');
+        const footerSpan2 = item.stars ? '<span><i class="fas fa-star" style="color: #fbbf24;"></i> ' + item.stars + '</span>' : '<span>' + (item.footerMeta || '') + '</span>';
+        const sourceBtn = item.sourceUrl ? '<a href="' + item.sourceUrl + '" target="_blank" rel="noopener noreferrer" title="View Source Code"><i class="fas fa-code"></i></a>' : '';
 
-        return `
-          <div class="portfolio-card" data-category="${item.category}">
-            <div class="portfolio-thumb-box">
-              <div class="code-thumb-preview">
-                <div class="code-thumb-header">
-                  <span class="code-lang-tag" ${langStyle}>${item.langTag || 'Code'}</span>
-                  <span class="code-role-tag">${item.roleTag || 'Project'}</span>
-                </div>
-                <div class="code-thumb-snippet">
-                  ${snippetHtml}
-                </div>
-                <div class="code-thumb-footer">
-                  <span><i class="fab fa-github"></i> ${item.repoName || 'Repository'}</span>
-                  ${footerSpan2}
-                </div>
-              </div>
-              <div class="portfolio-overlay">
-                <a href="${item.githubUrl}" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>
-                ${sourceBtn}
-              </div>
-            </div>
-            <div class="portfolio-details">
-              <span class="portfolio-category">${item.subtitle || ''}</span>
-              <h4 class="portfolio-title">${item.title}</h4>
-              <p class="portfolio-desc">${item.description || ''}</p>
-            </div>
-          </div>
-        `;
+        return '<div class="portfolio-card" data-category="' + item.category + '">' +
+          '<div class="portfolio-thumb-box">' +
+            '<div class="code-thumb-preview">' +
+              '<div class="code-thumb-header">' +
+                '<span class="code-lang-tag" ' + langStyle + '>' + (item.langTag || 'Code') + '</span>' +
+                '<span class="code-role-tag">' + (item.roleTag || 'Project') + '</span>' +
+              '</div>' +
+              '<div class="code-thumb-snippet">' + snippetHtml + '</div>' +
+              '<div class="code-thumb-footer">' +
+                '<span><i class="fab fa-github"></i> ' + (item.repoName || 'Repository') + '</span>' +
+                footerSpan2 +
+              '</div>' +
+            '</div>' +
+            '<div class="portfolio-overlay">' +
+              '<a href="' + item.githubUrl + '" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>' +
+              sourceBtn +
+            '</div>' +
+          '</div>' +
+          '<div class="portfolio-details">' +
+            '<span class="portfolio-category">' + (item.subtitle || '') + '</span>' +
+            '<h4 class="portfolio-title">' + item.title + '</h4>' +
+            '<p class="portfolio-desc">' + (item.description || '') + '</p>' +
+          '</div>' +
+        '</div>';
       }
 
       // Image / Video Card
-      const ytAttr = item.ytId ? `data-yt-id="${item.ytId}"` : '';
-      const badgeHtml = item.badge ? `<div class="video-play-badge"><i class="fas fa-play"></i> ${item.badge}</div>` : '';
+      const ytAttr = item.ytId ? 'data-yt-id="' + item.ytId + '"' : '';
+      const badgeHtml = item.badge ? '<div class="video-play-badge"><i class="fas fa-play"></i> ' + item.badge + '</div>' : '';
       
       let overlayActions = '';
       if (item.youtubeUrl) {
-        overlayActions += `<a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>`;
+        overlayActions += '<a href="' + item.youtubeUrl + '" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>';
       }
       if (item.lightboxType) {
-        overlayActions += `<button class="open-lightbox" data-type="${item.lightboxType}" data-src="${item.lightboxSrc}" data-title="${item.title}" data-desc="${item.description || ''}"><i class="${item.lightboxType === 'video' ? 'fas fa-play' : 'fas fa-search-plus'}"></i></button>`;
+        overlayActions += '<button class="open-lightbox" data-type="' + item.lightboxType + '" data-src="' + item.lightboxSrc + '" data-title="' + item.title + '" data-desc="' + (item.description || '') + '"><i class="' + (item.lightboxType === 'video' ? 'fas fa-play' : 'fas fa-search-plus') + '"></i></button>';
       }
       if (item.behanceUrl) {
-        overlayActions += `<a href="${item.behanceUrl}" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>`;
+        overlayActions += '<a href="' + item.behanceUrl + '" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>';
       }
 
-      return `
-        <div class="portfolio-card" data-category="${item.category}" ${ytAttr}>
-          <div class="portfolio-thumb-box">
-            <img src="${item.thumbnail}" alt="${item.title}" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
-            ${badgeHtml}
-            <div class="portfolio-overlay">
-              ${overlayActions}
-            </div>
-          </div>
-          <div class="portfolio-details">
-            <span class="portfolio-category">${item.subtitle || ''}</span>
-            <h4 class="portfolio-title">${item.title}</h4>
-            <p class="portfolio-desc">${item.description || ''}</p>
-          </div>
-        </div>
-      `;
+      return '<div class="portfolio-card" data-category="' + item.category + '" ' + ytAttr + '>' +
+        '<div class="portfolio-thumb-box">' +
+          '<img src="' + item.thumbnail + '" alt="' + item.title + '" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">' +
+          badgeHtml +
+          '<div class="portfolio-overlay">' + overlayActions + '</div>' +
+        '</div>' +
+        '<div class="portfolio-details">' +
+          '<span class="portfolio-category">' + (item.subtitle || '') + '</span>' +
+          '<h4 class="portfolio-title">' + item.title + '</h4>' +
+          '<p class="portfolio-desc">' + (item.description || '') + '</p>' +
+        '</div>' +
+      '</div>';
     }).join('');
 
     initLightboxEvents();
@@ -360,85 +853,61 @@ document.addEventListener('DOMContentLoaded', () => {
       const role = rolesData[key];
       const activeClass = index === 0 ? 'active' : '';
 
-      const eduItems = (role.education || []).map(e => `
-        <div class="timeline-item">
-          <span class="timeline-period">${e.period}</span>
-          <span class="timeline-company">${e.company}</span>
-          <h4 class="timeline-title">${e.title}</h4>
-          <p class="timeline-desc">${e.desc}</p>
-        </div>
-      `).join('');
+      const eduItems = (role.education || []).map(e => 
+        '<div class="timeline-item">' +
+          '<span class="timeline-period">' + e.period + '</span>' +
+          '<span class="timeline-company">' + e.company + '</span>' +
+          '<h4 class="timeline-title">' + e.title + '</h4>' +
+          '<p class="timeline-desc">' + e.desc + '</p>' +
+        '</div>'
+      ).join('');
 
-      const expItems = (role.experience || []).map(e => `
-        <div class="timeline-item">
-          <span class="timeline-period">${e.period}</span>
-          <span class="timeline-company">${e.company}</span>
-          <h4 class="timeline-title">${e.title}</h4>
-          <p class="timeline-desc">${e.desc}</p>
-        </div>
-      `).join('');
+      const expItems = (role.experience || []).map(e => 
+        '<div class="timeline-item">' +
+          '<span class="timeline-period">' + e.period + '</span>' +
+          '<span class="timeline-company">' + e.company + '</span>' +
+          '<h4 class="timeline-title">' + e.title + '</h4>' +
+          '<p class="timeline-desc">' + e.desc + '</p>' +
+        '</div>'
+      ).join('');
 
-      const skillItems = (role.skills || []).map(s => `
-        <div class="skill-item">
-          <div class="skill-info">
-            <span>${s.name}</span>
-            <span>${s.percent}</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-width="${s.percent}" style="width: 0%;"></div></div>
-        </div>
-      `).join('');
+      const skillItems = (role.skills || []).map(s => 
+        '<div class="skill-item">' +
+          '<div class="skill-info">' +
+            '<span>' + s.name + '</span>' +
+            '<span>' + s.percent + '</span>' +
+          '</div>' +
+          '<div class="skill-bar"><div class="skill-fill" data-width="' + s.percent + '" style="width: 0%;"></div></div>' +
+        '</div>'
+      ).join('');
 
-      const compBadges = (role.competencies || []).map(c => `<span class="badge-item">${c}</span>`).join('');
-      const langBadges = (role.languages || ['Bengali (Native)', 'English (Fluent)', 'Arabic (Conversational)']).map(l => `<span class="badge-item">${l}</span>`).join('');
+      const compBadges = (role.competencies || []).map(c => '<span class="badge-item">' + c + '</span>').join('');
+      const langBadges = (role.languages || ['Bengali (Native)', 'English (Fluent)', 'Arabic (Conversational)']).map(l => '<span class="badge-item">' + l + '</span>').join('');
 
-      return `
-        <div class="resume-role-pane ${activeClass}" id="role-${key}">
-          <div class="resume-columns">
-            <div>
-              <div class="block-title">
-                <h2>Education</h2>
-              </div>
-              <div class="timeline">
-                ${eduItems}
-              </div>
-            </div>
-
-            <div>
-              <div class="block-title">
-                <h2>Experience</h2>
-              </div>
-              <div class="timeline">
-                ${expItems}
-              </div>
-            </div>
-          </div>
-
-          <div class="resume-columns">
-            <div>
-              <div class="block-title">
-                <h2>Working Skills</h2>
-              </div>
-              ${skillItems}
-            </div>
-
-            <div>
-              <div class="block-title">
-                <h2>Specialized Competencies</h2>
-              </div>
-              <div class="badges-cloud">
-                ${compBadges}
-              </div>
-
-              <div class="block-title" style="margin-top: 30px;">
-                <h2>Languages</h2>
-              </div>
-              <div class="badges-cloud">
-                ${langBadges}
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
+      return '<div class="resume-role-pane ' + activeClass + '" id="role-' + key + '">' +
+        '<div class="resume-columns">' +
+          '<div>' +
+            '<div class="block-title"><h2>Education</h2></div>' +
+            '<div class="timeline">' + eduItems + '</div>' +
+          '</div>' +
+          '<div>' +
+            '<div class="block-title"><h2>Experience</h2></div>' +
+            '<div class="timeline">' + expItems + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="resume-columns">' +
+          '<div>' +
+            '<div class="block-title"><h2>Working Skills</h2></div>' +
+            skillItems +
+          '</div>' +
+          '<div>' +
+            '<div class="block-title"><h2>Specialized Competencies</h2></div>' +
+            '<div class="badges-cloud">' + compBadges + '</div>' +
+            '<div class="block-title" style="margin-top: 30px;"><h2>Languages</h2></div>' +
+            '<div class="badges-cloud">' + langBadges + '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
     }).join('');
 
     initResumeRoleTabs();
@@ -461,7 +930,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Resume Role Tabs
   function initResumeRoleTabs() {
     const resumeRoleBtns = document.querySelectorAll('.resume-filter-btn');
-    const resumePanes = document.querySelectorAll('.resume-role-pane');
 
     resumeRoleBtns.forEach(btn => {
       btn.onclick = () => {
@@ -469,7 +937,8 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
 
         const role = btn.getAttribute('data-role');
-        const targetPane = document.getElementById(`role-${role}`) || document.getElementById('role-uiux');
+        const targetPane = document.getElementById('role-' + role) || document.getElementById('role-uiux');
+        const resumePanes = document.querySelectorAll('.resume-role-pane');
 
         resumePanes.forEach(pane => pane.classList.remove('active'));
         if (targetPane) {
@@ -481,11 +950,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 7. Portfolio Category Filtering
-  const portfolioFilterBtns = document.querySelectorAll('.portfolio-filters:not(.resume-role-filters) .filter-btn');
-
   function applyPortfolioFilter(filterValue) {
     currentPortfolioFilter = filterValue || 'uiux';
-    portfolioFilterBtns.forEach(b => {
+    const filterBtns = document.querySelectorAll('.portfolio-filters:not(.resume-role-filters) .filter-btn');
+    filterBtns.forEach(b => {
       if (b.getAttribute('data-filter') === currentPortfolioFilter) {
         b.classList.add('active');
       } else {
@@ -505,6 +973,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const portfolioFilterBtns = document.querySelectorAll('.portfolio-filters:not(.resume-role-filters) .filter-btn');
   portfolioFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const filterValue = btn.getAttribute('data-filter') || 'uiux';
@@ -512,31 +981,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Async JSON Fetcher
+  // Dual-Layer Initial Render & Async JSON Sync
+  renderPortfolioCards(DEFAULT_PORTFOLIO);
+  renderResumeRoles(DEFAULT_RESUME);
+
   async function loadJsonData() {
     try {
-      const pRes = await fetch('data/portfolio.json');
+      const pRes = await fetch('./data/portfolio.json');
       if (pRes.ok) {
         const pData = await pRes.json();
         if (Array.isArray(pData) && pData.length) {
           renderPortfolioCards(pData);
         }
       }
-    } catch (e) {
-      console.error('Error fetching data/portfolio.json:', e);
-    }
+    } catch (e) {}
 
     try {
-      const rRes = await fetch('data/resume.json');
+      const rRes = await fetch('./data/resume.json');
       if (rRes.ok) {
         const rData = await rRes.json();
         if (rData && typeof rData === 'object') {
           renderResumeRoles(rData);
         }
       }
-    } catch (e) {
-      console.error('Error fetching data/resume.json:', e);
-    }
+    } catch (e) {}
   }
 
   // 8. Lightbox Modal
