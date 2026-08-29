@@ -67,83 +67,117 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Navigation & Hash Router
+  // 2. Single-Page Navigation, Smooth Scroll & ScrollSpy
   const navLinks = document.querySelectorAll('.site-nav .nav-item a');
-  const sections = document.querySelectorAll('.tab-section');
+  const sections = document.querySelectorAll('.tab-section, .page-section, section[id]');
   const mobileMenuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.site-nav');
 
-  function switchTab(targetHash) {
-    let cleanHash = targetHash ? targetHash.replace('#', '') : 'about';
-    let filterToApply = null;
-
-    if (cleanHash === 'videos') {
-      cleanHash = 'portfolio';
-      filterToApply = 'video';
-    }
-
-    const targetSection = document.getElementById(cleanHash) || document.getElementById('about');
-
+  function scrollToSection(targetId, filterToApply = null) {
+    const targetSection = document.getElementById(targetId);
     if (!targetSection) return;
 
-    sections.forEach(sec => sec.classList.remove('active'));
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      const href = link.getAttribute('href');
-      if (href === '#' + cleanHash || href === cleanHash) {
-        link.classList.add('active');
-      }
-    });
-
-    targetSection.classList.add('active');
-    
-    // Trigger animations
-    if (cleanHash === 'resume') {
-      animateActiveSkillBars();
-    }
-
-    if (cleanHash === 'portfolio' && filterToApply) {
+    if (filterToApply && typeof applyPortfolioFilter === 'function') {
       applyPortfolioFilter(filterToApply);
     }
 
-    if (typeof refreshScrollAnimations === 'function') {
-      setTimeout(refreshScrollAnimations, 60);
-    }
+    targetSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
 
-    // Scroll smoothly to top on tab switch
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    updateActiveNavLink(targetId);
+
+    if (targetId === 'resume') {
+      animateActiveSkillBars();
+    }
+  }
+
+  function updateActiveNavLink(currentId) {
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href') || '';
+      const linkId = href.replace('#', '');
+      if (linkId === currentId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     });
   }
 
-  // Handle URL hash on load
-  if (window.location.hash) {
-    switchTab(window.location.hash);
-  } else {
-    switchTab('about');
+  function handleHashRoute(rawHash) {
+    if (!rawHash) return;
+    const clean = rawHash.replace('#', '').toLowerCase();
+    
+    if (clean === 'dev' || clean === 'code') {
+      scrollToSection('portfolio', 'dev');
+    } else if (clean === '3d') {
+      scrollToSection('portfolio', '3d');
+    } else if (clean === 'uiux' || clean === 'ui-ux' || clean === 'design') {
+      scrollToSection('portfolio', 'uiux');
+    } else if (clean === 'branding') {
+      scrollToSection('portfolio', 'branding');
+    } else if (document.getElementById(clean)) {
+      scrollToSection(clean);
+    }
   }
 
-  // Handle Hash Changes
-  window.addEventListener('hashchange', () => {
-    switchTab(window.location.hash);
-  });
+  // ScrollSpy with IntersectionObserver
+  function initScrollSpy() {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    };
 
-  // Handle click on any internal hash link
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          if (sectionId) {
+            updateActiveNavLink(sectionId);
+            if (sectionId === 'resume') {
+              animateActiveSkillBars();
+            }
+          }
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(sec => spyObserver.observe(sec));
+  }
+
+  // Handle all internal hash clicks
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
       if (href && href.length > 1 && href.startsWith('#')) {
         const targetId = href.replace('#', '');
-        const targetSection = document.getElementById(targetId);
-        if (targetSection || targetId === 'videos') {
+        
+        if (navMenu) {
+          navMenu.classList.remove('open');
+        }
+
+        if (targetId === 'dev' || targetId === 'code') {
           e.preventDefault();
           history.pushState(null, null, href);
-          switchTab(targetId);
-          
-          if (navMenu) {
-            navMenu.classList.remove('open');
-          }
+          scrollToSection('portfolio', 'dev');
+        } else if (targetId === '3d') {
+          e.preventDefault();
+          history.pushState(null, null, href);
+          scrollToSection('portfolio', '3d');
+        } else if (targetId === 'uiux' || targetId === 'ui-ux' || targetId === 'design') {
+          e.preventDefault();
+          history.pushState(null, null, href);
+          scrollToSection('portfolio', 'uiux');
+        } else if (targetId === 'branding') {
+          e.preventDefault();
+          history.pushState(null, null, href);
+          scrollToSection('portfolio', 'branding');
+        } else if (document.getElementById(targetId)) {
+          e.preventDefault();
+          history.pushState(null, null, href);
+          scrollToSection(targetId);
         }
       }
     });
@@ -155,6 +189,20 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('open');
     });
   }
+
+  // Initialize ScrollSpy
+  initScrollSpy();
+
+  // On page load handle hash if present
+  if (window.location.hash) {
+    setTimeout(() => {
+      handleHashRoute(window.location.hash);
+    }, 120);
+  }
+
+  window.addEventListener('hashchange', () => {
+    handleHashRoute(window.location.hash);
+  });
 
   // 3. Interactive 3D Parallax Tilt for Profile Picture
   const homePhoto = document.querySelector('.home-photo');

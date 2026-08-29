@@ -447,18 +447,22 @@ a:hover {
   }
 }
 
-.tab-section {
-  display: none;
-  animation: fadeIn 0.3s ease;
-}
-
-.tab-section.active {
+.tab-section,
+.page-section {
   display: block;
+  padding: 55px 0 70px;
+  position: relative;
+  scroll-margin-top: 90px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+.tab-section + .tab-section,
+.page-section + .page-section {
+  border-top: 1px solid var(--border-color);
+}
+
+.tab-section:first-of-type,
+.page-section:first-of-type {
+  padding-top: 20px;
 }
 
 /* ===================================================================
@@ -1274,6 +1278,80 @@ a:hover {
 
 .portfolio-card:hover .no-thumbnail {
   opacity: 0.35;
+}
+
+/* Code Project Thumbnail Graphic */
+.code-thumb-preview {
+  width: 100%;
+  height: 100%;
+  background: #181b22;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 18px;
+  box-sizing: border-box;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+[data-theme="dark"] .code-thumb-preview {
+  background: #13161c;
+}
+
+.portfolio-card:hover .code-thumb-preview {
+  transform: scale(1.03);
+}
+
+.code-thumb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.code-lang-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0, 124, 237, 0.18);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+
+.code-role-tag {
+  font-size: 10.5px;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.code-thumb-snippet {
+  font-size: 11.5px;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.code-thumb-snippet .code-fn {
+  color: #60a5fa;
+}
+
+.code-thumb-snippet .code-kw {
+  color: #f472b6;
+}
+
+.code-thumb-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748b;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 6px;
 }
 
 .portfolio-thumb-box img {
