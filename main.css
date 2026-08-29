@@ -663,12 +663,11 @@ a:hover {
 
 @media (max-width: 900px) {
   .hero-screen-wrap {
-    min-height: calc(100svh - 58px);
-    min-height: calc(100dvh - 58px);
+    min-height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 6px 0 10px;
+    justify-content: flex-start;
+    padding: 20px 0 10px;
     box-sizing: border-box;
   }
   .home-hero {
@@ -676,41 +675,41 @@ a:hover {
     text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 2px 0 6px;
-    flex-grow: 1;
+    gap: 16px;
+    padding: 0 0 10px;
+    flex-grow: 0;
     margin: 0;
   }
   .home-photo {
-    width: clamp(140px, 35vw, 185px);
-    height: clamp(140px, 35vw, 185px);
+    width: clamp(160px, 42vw, 210px);
+    height: clamp(160px, 42vw, 210px);
     margin: 0 auto;
   }
   .home-role {
-    font-size: 12.5px;
-    min-height: 18px;
-    margin-bottom: 2px;
+    font-size: 13.5px;
+    min-height: auto;
+    margin-bottom: 4px;
   }
   .home-title {
-    font-size: clamp(24px, 6.5vw, 30px);
-    margin-bottom: 4px;
+    font-size: clamp(28px, 7vw, 36px);
+    margin-bottom: 8px;
     line-height: 1.15;
   }
   .home-desc {
     margin-left: auto;
     margin-right: auto;
-    font-size: 12.5px;
-    line-height: 1.55;
-    margin-bottom: 14px;
-    max-width: 92%;
+    font-size: 13px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    max-width: 100%;
   }
   .home-buttons {
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
   }
   .home-buttons .btn {
-    padding: 8px 20px;
-    font-size: 12px;
+    padding: 10px 24px;
+    font-size: 13px;
   }
 }
 
@@ -1073,19 +1072,19 @@ a:hover {
 
 @media (max-width: 768px) {
   .clients-marquee-wrapper {
-    padding: 4px 0 8px;
-    margin-top: auto;
+    padding: 10px 0 16px;
+    margin-top: 10px;
   }
   .clients-track-group {
-    gap: 22px;
-    padding-right: 22px;
+    gap: 24px;
+    padding-right: 24px;
   }
   .client-item {
-    height: 44px;
-    padding: 4px 8px;
+    height: 48px;
+    padding: 4px 10px;
   }
   .client-item img {
-    max-height: 24px;
+    max-height: 26px;
   }
   .clients-marquee-track {
     animation-duration: 16s;
