@@ -735,19 +735,44 @@ a:hover {
 }
 
 /* ===================================================================
- * Testimonials Cards
+ * Testimonials (Infinite Smooth Horizontal Marquee)
  * =================================================================== */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px 40px;
-  margin-bottom: 50px;
+.testimonials-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 30px 0 25px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
 }
 
-@media (max-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
+.testimonials-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: testimonialsContinuous 28s linear infinite;
+  will-change: transform;
+}
+
+.testimonials-marquee-wrapper:hover .testimonials-marquee-track {
+  animation-play-state: paused;
+}
+
+.testimonials-track-group {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  padding-right: 30px;
+  flex-shrink: 0;
+}
+
+@keyframes testimonialsContinuous {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333333%);
   }
 }
 
@@ -756,19 +781,37 @@ a:hover {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 12px;
-  padding: 30px 25px 25px 25px;
-  margin-top: 25px;
+  padding: 32px 26px 24px 26px;
+  margin-top: 15px;
+  width: 400px;
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .testimonial-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 .testimonial-avatar {
   position: absolute;
-  top: -24px;
-  left: 25px;
-  width: 48px;
-  height: 48px;
+  top: -22px;
+  left: 24px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: 2px solid var(--body-bg);
 }
 
@@ -779,11 +822,11 @@ a:hover {
 }
 
 .testimonial-text {
-  font-size: 13px;
+  font-size: 13.5px;
   font-style: italic;
   color: var(--text-color);
-  margin-bottom: 16px;
-  line-height: 1.65;
+  margin-bottom: 20px;
+  line-height: 1.7;
 }
 
 .testimonial-author-box {
@@ -807,6 +850,21 @@ a:hover {
 .testimonial-quote-icon {
   font-size: 22px;
   color: var(--light-gray-num);
+}
+
+@media (max-width: 768px) {
+  .testimonials-marquee-wrapper {
+    padding: 24px 0 20px;
+  }
+  .testimonials-track-group {
+    gap: 18px;
+    padding-right: 18px;
+  }
+  .testimonial-card {
+    width: 310px;
+    flex: 0 0 310px;
+    padding: 28px 20px 20px 20px;
+  }
 }
 
 /* ===================================================================
@@ -1284,126 +1342,93 @@ a:hover {
   }
 }
 
+/* ===================================================================
+ * Role Portfolio Horizontal Infinite Marquee
+ * =================================================================== */
 .role-portfolio-wrapper {
   margin-bottom: 45px;
-}
-
-.role-portfolio-wrapper .portfolio-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 22px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 4px 2px 20px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary) transparent;
-}
-
-.role-portfolio-wrapper .portfolio-grid::-webkit-scrollbar {
-  height: 5px;
-}
-
-.role-portfolio-wrapper .portfolio-grid::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 4px;
-}
-
-.role-portfolio-wrapper .portfolio-grid::-webkit-scrollbar-thumb {
-  background: var(--btn-sec-border);
-  border-radius: 4px;
-  transition: background 0.25s ease;
-}
-
-.role-portfolio-wrapper .portfolio-grid:hover::-webkit-scrollbar-thumb {
-  background: var(--primary);
-}
-
-.role-portfolio-wrapper .portfolio-grid .portfolio-card {
-  flex: 0 0 340px;
-  max-width: 340px;
-  min-width: 290px;
-}
-
-@media (max-width: 768px) {
-  .role-portfolio-wrapper .portfolio-grid .portfolio-card {
-    flex: 0 0 280px;
-    max-width: 280px;
-    min-width: 260px;
-  }
-}
-
-/* ===================================================================
- * Portfolio & Grid Filters
- * =================================================================== */
-.portfolio-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-.filter-btn {
-  background: transparent;
-  border: none;
-  font-family: inherit;
-  font-size: 13.5px;
-  font-weight: 500;
-  color: var(--muted-color);
-  cursor: pointer;
-  padding: 4px 0;
-  position: relative;
-  transition: color 0.2s ease;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  color: var(--heading-color);
-  font-weight: 600;
-}
-
-.filter-btn.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  height: 2px;
-  background-color: var(--primary);
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+.portfolio-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 6px 0 20px;
+  box-sizing: border-box;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
 }
 
-@media (max-width: 900px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
+.portfolio-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: portfolioContinuous 32s linear infinite;
+  will-change: transform;
+}
+
+.portfolio-marquee-wrapper:hover .portfolio-marquee-track {
+  animation-play-state: paused;
+}
+
+.portfolio-track-group {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  padding-right: 24px;
+  flex-shrink: 0;
+}
+
+@keyframes portfolioContinuous {
+  0% {
+    transform: translateX(0);
   }
-}
-
-@media (max-width: 600px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
+  100% {
+    transform: translateX(-33.333333%);
   }
 }
 
 .portfolio-card {
-  border-radius: 10px;
-  overflow: hidden;
+  width: 340px;
+  flex: 0 0 340px;
+  max-width: 340px;
+  position: relative;
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .portfolio-card:hover {
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 768px) {
+  .portfolio-marquee-wrapper {
+    padding: 6px 0 16px;
+  }
+  .portfolio-track-group {
+    gap: 16px;
+    padding-right: 16px;
+  }
+  .portfolio-card {
+    width: 280px;
+    flex: 0 0 280px;
+    max-width: 280px;
+  }
+  .portfolio-marquee-track {
+    animation-duration: 24s;
+  }
 }
 
 .portfolio-thumb-box {

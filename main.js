@@ -292,28 +292,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
-  // --- Testimonials Renderer ---
+  // --- Testimonials Renderer (Infinite Horizontal Animated Marquee) ---
   function renderTestimonials(testimonials) {
-    const container = document.getElementById('testimonials-grid');
-    if (!container || !testimonials || !testimonials.length) return;
+    const track = document.getElementById('testimonials-marquee-track');
+    if (!track || !testimonials || !testimonials.length) return;
 
-    container.innerHTML = testimonials.map(t => `
-      <div class="testimonial-card">
-        <div class="testimonial-avatar">
-          <img src="${t.avatar}" alt="${t.name}" width="40" height="40" loading="lazy" referrerpolicy="no-referrer">
-        </div>
-        <div class="testimonial-text">
-          "${t.quote}"
-        </div>
-        <div class="testimonial-author-box">
-          <div class="testimonial-author">
-            <h5><a href="${t.linkedinUrl || '#'}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">${t.name}</a></h5>
-            <span>${t.role}</span>
+    const makeGroup = (isAriaHidden = false) => `
+      <div class="testimonials-track-group" ${isAriaHidden ? 'aria-hidden="true"' : ''}>
+        ${testimonials.map(t => `
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <img src="${t.avatar}" alt="${t.name}" width="48" height="48" loading="lazy" referrerpolicy="no-referrer">
+            </div>
+            <div class="testimonial-text">
+              "${t.quote}"
+            </div>
+            <div class="testimonial-author-box">
+              <div class="testimonial-author">
+                <h5><a href="${t.linkedinUrl || '#'}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">${t.name}</a></h5>
+                <span>${t.role}</span>
+              </div>
+              <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
+            </div>
           </div>
-          <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
-        </div>
+        `).join('')}
       </div>
-    `).join('');
+    `;
+
+    track.innerHTML = makeGroup(false) + makeGroup(true) + makeGroup(true);
   }
 
   // --- Collaborated With Marquee Renderer ---
@@ -507,18 +513,28 @@ document.addEventListener('DOMContentLoaded', () => {
       const compBadges = (role.competencies || []).map(c => `<span class="badge-item">${c}</span>`).join('');
       const langBadges = (role.languages || ['Bengali (Native)', 'English (Fluent)', 'Arabic (Conversational)']).map(l => `<span class="badge-item">${l}</span>`).join('');
 
-      // Merged portfolio directly from the role's JSON definition
+      // Merged portfolio directly from the role's JSON definition with continuous horizontal marquee animation
       const roleProjects = role.portfolio || [];
-      const portfolioCardsHtml = roleProjects.map(generatePortfolioCardHtml).join('');
+      const makePortfolioGroup = (isAriaHidden = false) => `
+        <div class="portfolio-track-group" ${isAriaHidden ? 'aria-hidden="true"' : ''}>
+          ${roleProjects.map(generatePortfolioCardHtml).join('')}
+        </div>
+      `;
+
+      const portfolioMarqueeHtml = roleProjects.length > 0 ? `
+        <div class="role-portfolio-wrapper" style="margin-bottom: 45px;">
+          <div class="portfolio-marquee-wrapper">
+            <div class="portfolio-marquee-track">
+              ${makePortfolioGroup(false) + makePortfolioGroup(true) + makePortfolioGroup(true)}
+            </div>
+          </div>
+        </div>
+      ` : '';
 
       return `
         <div class="resume-role-pane ${activeClass}" id="role-${key}">
-          <!-- 1. Featured Portfolio Projects (Top Showcase) -->
-          <div class="role-portfolio-wrapper" style="margin-bottom: 45px;">
-            <div class="portfolio-grid">
-              ${portfolioCardsHtml}
-            </div>
-          </div>
+          <!-- 1. Featured Portfolio Projects (Horizontal Animated Showcase) -->
+          ${portfolioMarqueeHtml}
 
           <!-- 2. Work Experience & Education -->
           <div class="resume-columns">
@@ -781,10 +797,8 @@ document.addEventListener('DOMContentLoaded', () => {
       '.block-title',
       '.service-item',
       '.fact-box',
-      '.portfolio-card',
       '.timeline-item',
       '.skill-item',
-      '.testimonial-card',
       '.pricing-card',
       '.contact-info-block',
       '.contact-form-col'
@@ -797,10 +811,8 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('reveal-scroll');
       }
       if (el.parentElement && (
-        el.parentElement.classList.contains('portfolio-grid') ||
         el.parentElement.classList.contains('fun-facts-grid') ||
         el.parentElement.classList.contains('services-list') ||
-        el.parentElement.classList.contains('testimonials-grid') ||
         el.parentElement.classList.contains('pricing-grid') ||
         el.parentElement.classList.contains('timeline')
       )) {
