@@ -664,52 +664,54 @@ a:hover {
 @media (max-width: 900px) {
   .hero-screen-wrap {
     min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 20px 0 10px;
+    display: block;
+    padding: 10px 0 0;
     box-sizing: border-box;
   }
   .home-hero {
+    display: flex;
     flex-direction: column;
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     padding: 0 0 10px;
     flex-grow: 0;
     margin: 0;
   }
   .home-photo {
-    width: clamp(160px, 42vw, 210px);
-    height: clamp(160px, 42vw, 210px);
-    margin: 0 auto;
+    width: clamp(150px, 40vw, 190px);
+    height: clamp(150px, 40vw, 190px);
+    margin: 0 auto 4px;
   }
   .home-role {
-    font-size: 13.5px;
+    font-size: 13px;
     min-height: auto;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
   .home-title {
-    font-size: clamp(28px, 7vw, 36px);
-    margin-bottom: 8px;
+    font-size: clamp(28px, 7vw, 34px);
+    margin-bottom: 6px;
     line-height: 1.15;
   }
   .home-desc {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 16px;
     font-size: 13px;
-    line-height: 1.65;
-    margin-bottom: 20px;
+    line-height: 1.6;
     max-width: 100%;
   }
   .home-buttons {
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 12px;
   }
   .home-buttons .btn {
-    padding: 10px 24px;
-    font-size: 13px;
+    padding: 9px 22px;
+    font-size: 12.5px;
+  }
+  .clients-marquee-wrapper {
+    padding: 8px 0 16px;
+    margin-top: 10px;
   }
 }
 
@@ -982,7 +984,6 @@ a:hover {
   position: relative;
   width: 100%;
   padding: 6px 0 14px;
-  margin-top: auto;
   box-sizing: border-box;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
