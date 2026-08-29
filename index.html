@@ -139,87 +139,21 @@
             <h2>What I Do</h2>
           </div>
 
-          <div class="services-list">
-            <!-- 1. UI/UX Design -->
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="fas fa-layer-group"></i>
-              </div>
-              <div class="service-content">
-                <h4>UI/UX Design</h4>
-                <p>Crafting intuitive user interfaces, interactive wireframes, responsive web/mobile designs, and modern component design systems.</p>
-              </div>
-            </div>
+          <div class="services-list" id="services-list"></div>
 
-            <!-- 2. Developer -->
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <div class="service-content">
-                <h4>Developer</h4>
-                <p>Building clean, responsive, high-performance web applications and software solutions with modern JavaScript, Python, and CSE foundations.</p>
-              </div>
-            </div>
-
-            <!-- 3. 3D Artist -->
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="fas fa-cube"></i>
-              </div>
-              <div class="service-content">
-                <h4>3D Artist</h4>
-                <p>Precision 3D product modeling, cinematic motion graphics, photorealistic PBR rendering, and video visual effects in Blender and After Effects.</p>
-              </div>
-            </div>
-
-            <!-- 4. Brand Design -->
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="fas fa-vector-square"></i>
-              </div>
-              <div class="service-content">
-                <h4>Brand Design</h4>
-                <p>Creating distinct brand marks, scalable vector identity systems, cohesive color theory palettes, and visual style guidelines.</p>
-              </div>
-            </div>
-          </div>
-
-          
-<!-- Fun Facts -->
+          <!-- Fun Facts -->
           <div class="block-title">
             <h2>Fun Facts</h2>
           </div>
 
-          <div class="fun-facts-grid">
-            <div class="fact-box">
-              <div class="fact-icon"><i class="far fa-heart"></i></div>
-              <div class="fact-title">Happy Clients</div>
-              <div class="fact-number" data-count="50">50+</div>
-            </div>
+          <div class="fun-facts-grid" id="fun-facts-grid"></div>
 
-            <div class="fact-box">
-              <div class="fact-icon"><i class="far fa-clock"></i></div>
-              <div class="fact-title">Working Hours</div>
-              <div class="fact-number" data-count="4500">4,500</div>
-            </div>
+        </section>
 
-            <div class="fact-box">
-              <div class="fact-icon"><i class="far fa-star"></i></div>
-              <div class="fact-title">3D Assets Created</div>
-              <div class="fact-number" data-count="120">120</div>
-            </div>
-
-            <div class="fact-box">
-              <div class="fact-icon"><i class="fas fa-coffee"></i></div>
-              <div class="fact-title">Coffee Consumed</div>
-              <div class="fact-number" data-count="1286">1,286</div>
-            </div>
-          </div>
-
-                  </section>
-
-<section id="portfolio" class="tab-section">
+        <!-- ========================================== -->
+        <!-- 3. PORTFOLIO SECTION                       -->
+        <!-- ========================================== -->
+        <section id="portfolio" class="tab-section">
           <div class="page-title">
             <h1>Portfolio</h1>
             <div class="page-subtitle">My Works, 3D Creations & Motion Videos</div>
@@ -238,23 +172,29 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- 5. CONTACT SECTION                         -->
+        <!-- 4. RESUME SECTION                          -->
         <!-- ========================================== -->
-        
-
-<section id="resume" class="tab-section">
+        <section id="resume" class="tab-section">
           <div class="page-title">
             <h1>Resume</h1>
             <div class="page-subtitle">Education, Experience & Specialized Skillsets</div>
           </div>
 
-          <!-- Role Filter Tabs -->
-          <ul class="portfolio-filters resume-role-filters">
-            <li><button class="filter-btn active resume-filter-btn" data-role="uiux">UI/UX Designer</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="developer">Developer</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="brand">Brand Designer</button></li>
-            <li><button class="filter-btn resume-filter-btn" data-role="3d">3D Artist</button></li>
-          </ul>
+          <!-- Role Controls & Dynamic Download Button -->
+          <div class="resume-header-controls">
+            <ul class="portfolio-filters resume-role-filters">
+              <li><button class="filter-btn active resume-filter-btn" data-role="uiux">UI/UX Designer</button></li>
+              <li><button class="filter-btn resume-filter-btn" data-role="developer">Developer</button></li>
+              <li><button class="filter-btn resume-filter-btn" data-role="brand">Brand Designer</button></li>
+              <li><button class="filter-btn resume-filter-btn" data-role="3d">3D Artist</button></li>
+            </ul>
+
+            <div class="resume-download-box">
+              <a id="resume-download-btn" href="assets/Adibul_Jabir_UIUX_Resume.pdf" download="Adibul_Jabir_UIUX_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary resume-download-btn">
+                <i class="fas fa-file-download"></i> <span id="resume-download-text">Download UI/UX CV</span>
+              </a>
+            </div>
+          </div>
 
           <!-- Role Panes Container (Dynamically populated from data/resume.json) -->
           <div id="resume-panes-container"></div>
@@ -270,7 +210,7 @@
               <div class="timeline">
                 <div class="timeline-item">
                   <span class="timeline-period">5.0 Star Rating</span>
-                  <span class="timeline-company">Upwork® Global Inc</span>
+                  <span class="timeline-company">UpworkÂ® Global Inc</span>
                   <h4 class="timeline-title">5-Star Rated Freelance 3D Specialist</h4>
                   <p class="timeline-desc">Maintained a 100% five-star rating with stellar client reviews across precision 3D product visualizations, hard-surface assets, and motion graphics.</p>
                 </div>
@@ -282,8 +222,7 @@
               <div class="timeline">
                 <div class="timeline-item">
                   <span class="timeline-period">Grant & Innovation</span>
-                  <span class="timeline-company">Shasthocare Healthtech</span>
-                  <h4 class="timeline-title">UIHP Seed Stage Innovation</h4>
+<h4 class="timeline-title">UIHP Seed Stage Innovation</h4>
                   <p class="timeline-desc">Selected and recognized in the University Innovation Hub Program (UIHP) Seed stage for human-centric digital healthcare interface design.</p>
                 </div>
 
@@ -303,46 +242,15 @@
             <h2>Testimonials</h2>
           </div>
 
-          <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <div class="testimonial-avatar">
-                <img src="https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8" alt="Val Ciptak Viera" width="40" height="40" loading="lazy" referrerpolicy="no-referrer">
-              </div>
-              <div class="testimonial-text">
-                "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
-              </div>
-              <div class="testimonial-author-box">
-                <div class="testimonial-author">
-                  <h5><a href="https://www.linkedin.com/in/val-ciptak-viera-35a4737/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Val Ciptak Viera</a></h5>
-                  <span>President at Sprigs &bull; New York, USA</span>
-                </div>
-                <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
-              </div>
-            </div>
-          </div>
+          <div class="testimonials-grid" id="testimonials-grid"></div>
 
-          
-<!-- Clients -->
+          <!-- Clients -->
           <div class="block-title">
             <h2>Collaborated With</h2>
           </div>
 
-          <div class="clients-grid">
-            <a href="https://sprigs.com/" target="_blank" rel="noopener noreferrer" class="client-item" title="Sprigs">
-              <img src="images/sprigs.png" alt="Sprigs" width="120" height="40" loading="lazy">
-            </a>
-            <a href="https://www.kkbau.ac.bd/" target="_blank" rel="noopener noreferrer" class="client-item" title="KKBAU">
-              <img src="images/kkbau.png" alt="KKBAU" width="120" height="40" loading="lazy">
-            </a>
-            <a href="https://www.facebook.com/prism.kkbau.ac.bd" target="_blank" rel="noopener noreferrer" class="client-item" title="PRISM Club">
-              <img src="images/prism-club.png" alt="PRISM Club" width="120" height="40" loading="lazy">
-            </a>
-            <a href="https://www.facebook.com/Chinnomul.Samajik.Songstha" target="_blank" rel="noopener noreferrer" class="client-item" title="Chisas">
-              <img src="images/chisas.png" alt="Chisas" width="120" height="40" loading="lazy">
-            </a>
-          </div>
+          <div class="clients-marquee-wrapper" id="clients-marquee-wrapper"><div class="clients-marquee-track" id="clients-marquee-track"></div></div>
 
-          
           <!-- Services & Collaboration Packages -->
           <div class="block-title">
             <h2>Collaboration Packages</h2>

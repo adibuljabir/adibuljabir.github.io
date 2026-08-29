@@ -554,289 +554,538 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 ];
   const DEFAULT_RESUME = {
-  "uiux": {
-    "roleId": "uiux",
-    "roleName": "UI/UX Designer",
-    "education": [
-      {
-        "period": "2024 - 2028 (Ongoing)",
-        "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
-        "title": "BSc in Computer Science & Engineering (HCI Focus)",
-        "desc": "Human-Computer Interaction (HCI), design systems, web ergonomics, and user-centric software design."
-      },
-      {
-        "period": "Continuous Specialization",
-        "company": "Self-Directed & Applied Practice",
-        "title": "Design Systems & Interactive Prototyping",
-        "desc": "Advanced Figma components, auto-layout, interactive variants, and scalable web/mobile design frameworks."
-      }
-    ],
-    "experience": [
-      {
-        "period": "2023 - Present",
-        "company": "Ventrixon Studio",
-        "title": "UI/UX Designer & Prototyper",
-        "desc": "Designing user interfaces, wireframes, and responsive web/mobile prototypes in Figma for software and digital platforms."
-      },
-      {
-        "period": "2023 - Present",
-        "company": "Freelance & Client Projects",
-        "title": "Product Designer",
-        "desc": "Delivering high-converting landing pages, SaaS dashboards, and digital product redesigns."
-      }
-    ],
-    "skills": [
-      { "name": "Figma (UI/UX Design & Prototyping)", "percent": "95%" },
-      { "name": "User Interface & Wireframing", "percent": "92%" },
-      { "name": "Design Systems & Component Libraries", "percent": "90%" },
-      { "name": "Adobe Photoshop & Illustrator", "percent": "88%" },
-      { "name": "Responsive Mobile & Web UI", "percent": "92%" },
-      { "name": "Human-Computer Interaction (HCI)", "percent": "85%" }
-    ],
-    "competencies": [
-      "User Flow Mapping",
-      "Interactive Wireframes",
-      "Design Systems",
-      "Mobile UI",
-      "Web Prototyping",
-      "Usability Principles",
-      "Figma Variables",
-      "Auto Layout Master",
-      "Visual Hierarchy",
-      "Micro-interactions"
-    ],
-    "languages": [
-      "Bengali (Native)",
-      "English (Fluent)",
-      "Arabic (Conversational)"
-    ]
-  },
-  "developer": {
-    "roleId": "developer",
-    "roleName": "Developer",
-    "education": [
-      {
-        "period": "2024 - 2028 (Ongoing)",
-        "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
-        "title": "BSc in Computer Science and Engineering",
-        "desc": "Algorithms, Data Structures, Database Management Systems, Computer Networks, and Object-Oriented Software Design."
-      },
-      {
-        "period": "Continuous",
-        "company": "Competitive Programming & Problem Solving",
-        "title": "Algorithmic Logic & C/C++ / Python",
-        "desc": "Active participation in university contests, implementing algorithmic solutions with clean time/space efficiency."
-      }
-    ],
-    "experience": [
-      {
-        "period": "2023 - Present",
-        "company": "Independent & Open Source",
-        "title": "Frontend & Software Developer",
-        "desc": "Building high-performance web applications and software utilities with modern JavaScript (ES6+), Python, HTML5, and CSS3."
-      },
-      {
-        "period": "2023 - Present",
-        "company": "Ventrixon Digital Platforms",
-        "title": "Web Solutions Architect",
-        "desc": "Architecting clean, responsive web platforms, portfolio systems, and API-driven interactive user interfaces."
-      }
-    ],
-    "skills": [
-      { "name": "Web Development (HTML5 / CSS3 / Modern JS)", "percent": "90%" },
-      { "name": "C / C++ (Algorithms & Systems)", "percent": "85%" },
-      { "name": "Python & Scripting", "percent": "82%" },
-      { "name": "Java & OOP Principles", "percent": "80%" },
-      { "name": "Git, GitHub & Version Control", "percent": "88%" },
-      { "name": "REST APIs & Data Structures", "percent": "82%" }
-    ],
-    "competencies": [
-      "Data Structures",
-      "Algorithms",
-      "DOM Manipulation",
-      "Clean Code Architecture",
-      "Git Version Control",
-      "REST APIs",
-      "Object-Oriented Design",
-      "Linux & CLI",
-      "Software Testing",
-      "Optimization"
-    ],
-    "languages": [
-      "Bengali (Native)",
-      "English (Fluent)",
-      "Arabic (Conversational)"
-    ]
-  },
-  "brand": {
-    "roleId": "brand",
-    "roleName": "Brand Designer",
-    "education": [
-      {
-        "period": "Applied Mastery",
-        "company": "Self-Directed & Professional Practice",
-        "title": "Vector Design & Visual Identity Systems",
-        "desc": "Logo design theory, scalable vector construction in Adobe Illustrator, color palettes, and typographic pairings."
-      }
-    ],
-    "experience": [
-      {
-        "period": "2023 - Present",
-        "company": "Ventrixon Studio",
-        "title": "Brand Identity & Visual Mark Designer",
-        "desc": "Created the complete Ventrixon brand mark, vector style guide, typography pairing, and visual assets."
-      },
-      {
-        "period": "2023 - Present",
-        "company": "Global Clients",
-        "title": "Freelance Brand & Vector Designer",
-        "desc": "Delivered vector marks, typography pairings, color palettes, and brand guidelines for international businesses."
-      }
-    ],
-    "skills": [
-      { "name": "Adobe Illustrator (Vector Marks)", "percent": "95%" },
-      { "name": "Brand Identity Systems", "percent": "92%" },
-      { "name": "Color Theory & Palette Harmony", "percent": "90%" },
-      { "name": "Typography Pairing & Hierarchy", "percent": "88%" },
-      { "name": "Adobe Photoshop (Mockups & Visuals)", "percent": "85%" },
-      { "name": "Print & Vector Asset Packaging", "percent": "90%" }
-    ],
-    "competencies": [
-      "Logo Design",
-      "Vector Graphics",
-      "Color Palette Systems",
-      "Typography Styling",
-      "Brand Guidelines",
-      "Iconography",
-      "Vector Merchandise",
-      "Print Ready Art",
-      "Visual Assets"
-    ],
-    "languages": [
-      "Bengali (Native)",
-      "English (Fluent)",
-      "Arabic (Conversational)"
-    ]
-  },
-  "3d": {
-    "roleId": "3d",
-    "roleName": "3D Artist",
-    "education": [
-      {
-        "period": "2023 - Present",
-        "company": "Specialized Applied Practice",
-        "title": "Hard-Surface 3D Modeling & Animation Pipelines",
-        "desc": "Mastering topology, PBR node shading, procedural textures, cinematic camera animation, and particle simulations in Blender."
-      }
-    ],
-    "experience": [
-      {
-        "period": "2023 - Present",
-        "company": "Ventrixon Studio",
-        "title": "Founder & Lead 3D Artist",
-        "desc": "Directing 3D animations, product visualizations, motion graphics, and educational 3D modeling content on YouTube."
-      },
-      {
-        "period": "2023 - Present",
-        "company": "UpworkÂ® Global Inc",
-        "title": "Freelance 3D Specialist (5-Star Track)",
-        "desc": "Delivering custom 3D animations, photorealistic product visualizations, and cinematic renders for international clients."
-      }
-    ],
-    "skills": [
-      { "name": "Blender 3D Modeling & Topology", "percent": "95%" },
-      { "name": "PBR Material Shading & Texturing", "percent": "92%" },
-      { "name": "Cinematic Lighting & Cameras", "percent": "92%" },
-      { "name": "Commercial Product Animation", "percent": "90%" },
-      { "name": "Adobe After Effects (Motion Post)", "percent": "88%" },
-      { "name": "Hard-Surface Asset Optimization", "percent": "90%" }
-    ],
-    "competencies": [
-      "Hard Surface Modeling",
-      "PBR Shaders",
-      "Cycles & Eevee",
-      "Motion Graphics",
-      "Cloth Physics Simulation",
-      "Low-Poly Assets",
-      "Cinematic Lighting",
-      "Video Post-Production",
-      "DaVinci Resolve",
-      "Animation Curves"
-    ],
-    "languages": [
-      "Bengali (Native)",
-      "English (Fluent)",
-      "Arabic (Conversational)"
-    ]
-  }
+    "uiux":  {
+                 "roleId":  "uiux",
+                 "roleName":  "UI/UX Designer",
+                 "education":  [
+                                   {
+                                       "period":  "2024 - 2028 (Ongoing)",
+                                       "company":  "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+                                       "title":  "BSc in Computer Science \u0026 Engineering (HCI Focus)",
+                                       "desc":  "Human-Computer Interaction (HCI), design systems, web ergonomics, and user-centric software design."
+                                   },
+                                   {
+                                       "period":  "Continuous Specialization",
+                                       "company":  "Self-Directed \u0026 Applied Practice",
+                                       "title":  "Design Systems \u0026 Interactive Prototyping",
+                                       "desc":  "Advanced Figma components, auto-layout, interactive variants, and scalable web/mobile design frameworks."
+                                   }
+                               ],
+                 "experience":  [
+                                    {
+                                        "period":  "2023 - Present",
+                                        "company":  "Ventrixon Studio",
+                                        "title":  "UI/UX Designer \u0026 Prototyper",
+                                        "desc":  "Designing user interfaces, wireframes, and responsive web/mobile prototypes in Figma for software and digital platforms."
+                                    },
+                                    {
+                                        "period":  "2023 - Present",
+                                        "company":  "Freelance \u0026 Client Projects",
+                                        "title":  "Product Designer",
+                                        "desc":  "Delivering high-converting landing pages, SaaS dashboards, and digital product redesigns."
+                                    }
+                                ],
+                 "skills":  [
+                                {
+                                    "name":  "Figma (UI/UX Design \u0026 Prototyping)",
+                                    "percent":  "95%"
+                                },
+                                {
+                                    "name":  "User Interface \u0026 Wireframing",
+                                    "percent":  "92%"
+                                },
+                                {
+                                    "name":  "Design Systems \u0026 Component Libraries",
+                                    "percent":  "90%"
+                                },
+                                {
+                                    "name":  "Adobe Photoshop \u0026 Illustrator",
+                                    "percent":  "88%"
+                                },
+                                {
+                                    "name":  "Responsive Mobile \u0026 Web UI",
+                                    "percent":  "92%"
+                                },
+                                {
+                                    "name":  "Human-Computer Interaction (HCI)",
+                                    "percent":  "85%"
+                                }
+                            ],
+                 "competencies":  [
+                                      "User Flow Mapping",
+                                      "Interactive Wireframes",
+                                      "Design Systems",
+                                      "Mobile UI",
+                                      "Web Prototyping",
+                                      "Usability Principles",
+                                      "Figma Variables",
+                                      "Auto Layout Master",
+                                      "Visual Hierarchy",
+                                      "Micro-interactions"
+                                  ],
+                 "languages":  [
+                                   "Bengali (Native)",
+                                   "English (Fluent)",
+                                   "Arabic (Conversational)"
+                               ],
+                 "downloadUrl":  "assets/Adibul_Jabir_UIUX_Resume.pdf",
+                 "resumeFileName":  "Adibul_Jabir_UIUX_Resume.pdf"
+             },
+    "developer":  {
+                      "roleId":  "developer",
+                      "roleName":  "Developer",
+                      "education":  [
+                                        {
+                                            "period":  "2024 - 2028 (Ongoing)",
+                                            "company":  "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+                                            "title":  "BSc in Computer Science and Engineering",
+                                            "desc":  "Algorithms, Data Structures, Database Management Systems, Computer Networks, and Object-Oriented Software Design."
+                                        },
+                                        {
+                                            "period":  "Continuous",
+                                            "company":  "Competitive Programming \u0026 Problem Solving",
+                                            "title":  "Algorithmic Logic \u0026 C/C++ / Python",
+                                            "desc":  "Active participation in university contests, implementing algorithmic solutions with clean time/space efficiency."
+                                        }
+                                    ],
+                      "experience":  [
+                                         {
+                                             "period":  "2023 - Present",
+                                             "company":  "Independent \u0026 Open Source",
+                                             "title":  "Frontend \u0026 Software Developer",
+                                             "desc":  "Building high-performance web applications and software utilities with modern JavaScript (ES6+), Python, HTML5, and CSS3."
+                                         },
+                                         {
+                                             "period":  "2023 - Present",
+                                             "company":  "Ventrixon Digital Platforms",
+                                             "title":  "Web Solutions Architect",
+                                             "desc":  "Architecting clean, responsive web platforms, portfolio systems, and API-driven interactive user interfaces."
+                                         }
+                                     ],
+                      "skills":  [
+                                     {
+                                         "name":  "Web Development (HTML5 / CSS3 / Modern JS)",
+                                         "percent":  "90%"
+                                     },
+                                     {
+                                         "name":  "C / C++ (Algorithms \u0026 Systems)",
+                                         "percent":  "85%"
+                                     },
+                                     {
+                                         "name":  "Python \u0026 Scripting",
+                                         "percent":  "82%"
+                                     },
+                                     {
+                                         "name":  "Java \u0026 OOP Principles",
+                                         "percent":  "80%"
+                                     },
+                                     {
+                                         "name":  "Git, GitHub \u0026 Version Control",
+                                         "percent":  "88%"
+                                     },
+                                     {
+                                         "name":  "REST APIs \u0026 Data Structures",
+                                         "percent":  "82%"
+                                     }
+                                 ],
+                      "competencies":  [
+                                           "Data Structures",
+                                           "Algorithms",
+                                           "DOM Manipulation",
+                                           "Clean Code Architecture",
+                                           "Git Version Control",
+                                           "REST APIs",
+                                           "Object-Oriented Design",
+                                           "Linux \u0026 CLI",
+                                           "Software Testing",
+                                           "Optimization"
+                                       ],
+                      "languages":  [
+                                        "Bengali (Native)",
+                                        "English (Fluent)",
+                                        "Arabic (Conversational)"
+                                    ],
+                      "downloadUrl":  "assets/Adibul_Jabir_Developer_Resume.pdf",
+                      "resumeFileName":  "Adibul_Jabir_Developer_Resume.pdf"
+                  },
+    "brand":  {
+                  "roleId":  "brand",
+                  "roleName":  "Brand Designer",
+                  "education":  [
+                                    {
+                                        "period":  "Applied Mastery",
+                                        "company":  "Self-Directed \u0026 Professional Practice",
+                                        "title":  "Vector Design \u0026 Visual Identity Systems",
+                                        "desc":  "Logo design theory, scalable vector construction in Adobe Illustrator, color palettes, and typographic pairings."
+                                    }
+                                ],
+                  "experience":  [
+                                     {
+                                         "period":  "2023 - Present",
+                                         "company":  "Ventrixon Studio",
+                                         "title":  "Brand Identity \u0026 Visual Mark Designer",
+                                         "desc":  "Created the complete Ventrixon brand mark, vector style guide, typography pairing, and visual assets."
+                                     },
+                                     {
+                                         "period":  "2023 - Present",
+                                         "company":  "Global Clients",
+                                         "title":  "Freelance Brand \u0026 Vector Designer",
+                                         "desc":  "Delivered vector marks, typography pairings, color palettes, and brand guidelines for international businesses."
+                                     }
+                                 ],
+                  "skills":  [
+                                 {
+                                     "name":  "Adobe Illustrator (Vector Marks)",
+                                     "percent":  "95%"
+                                 },
+                                 {
+                                     "name":  "Brand Identity Systems",
+                                     "percent":  "92%"
+                                 },
+                                 {
+                                     "name":  "Color Theory \u0026 Palette Harmony",
+                                     "percent":  "90%"
+                                 },
+                                 {
+                                     "name":  "Typography Pairing \u0026 Hierarchy",
+                                     "percent":  "88%"
+                                 },
+                                 {
+                                     "name":  "Adobe Photoshop (Mockups \u0026 Visuals)",
+                                     "percent":  "85%"
+                                 },
+                                 {
+                                     "name":  "Print \u0026 Vector Asset Packaging",
+                                     "percent":  "90%"
+                                 }
+                             ],
+                  "competencies":  [
+                                       "Logo Design",
+                                       "Vector Graphics",
+                                       "Color Palette Systems",
+                                       "Typography Styling",
+                                       "Brand Guidelines",
+                                       "Iconography",
+                                       "Vector Merchandise",
+                                       "Print Ready Art",
+                                       "Visual Assets"
+                                   ],
+                  "languages":  [
+                                    "Bengali (Native)",
+                                    "English (Fluent)",
+                                    "Arabic (Conversational)"
+                                ],
+                  "downloadUrl":  "assets/Adibul_Jabir_Brand_Designer_Resume.pdf",
+                  "resumeFileName":  "Adibul_Jabir_Brand_Designer_Resume.pdf"
+              },
+    "3d":  {
+               "roleId":  "3d",
+               "roleName":  "3D Artist",
+               "education":  [
+                                 {
+                                     "period":  "2023 - Present",
+                                     "company":  "Specialized Applied Practice",
+                                     "title":  "Hard-Surface 3D Modeling \u0026 Animation Pipelines",
+                                     "desc":  "Mastering topology, PBR node shading, procedural textures, cinematic camera animation, and particle simulations in Blender."
+                                 }
+                             ],
+               "experience":  [
+                                  {
+                                      "period":  "2023 - Present",
+                                      "company":  "Ventrixon Studio",
+                                      "title":  "Founder \u0026 Lead 3D Artist",
+                                      "desc":  "Directing 3D animations, product visualizations, motion graphics, and educational 3D modeling content on YouTube."
+                                  },
+                                  {
+                                      "period":  "2023 - Present",
+                                      "company":  "UpworkÂ® Global Inc",
+                                      "title":  "Freelance 3D Specialist (5-Star Track)",
+                                      "desc":  "Delivering custom 3D animations, photorealistic product visualizations, and cinematic renders for international clients."
+                                  }
+                              ],
+               "skills":  [
+                              {
+                                  "name":  "Blender 3D Modeling \u0026 Topology",
+                                  "percent":  "95%"
+                              },
+                              {
+                                  "name":  "PBR Material Shading \u0026 Texturing",
+                                  "percent":  "92%"
+                              },
+                              {
+                                  "name":  "Cinematic Lighting \u0026 Cameras",
+                                  "percent":  "92%"
+                              },
+                              {
+                                  "name":  "Commercial Product Animation",
+                                  "percent":  "90%"
+                              },
+                              {
+                                  "name":  "Adobe After Effects (Motion Post)",
+                                  "percent":  "88%"
+                              },
+                              {
+                                  "name":  "Hard-Surface Asset Optimization",
+                                  "percent":  "90%"
+                              }
+                          ],
+               "competencies":  [
+                                    "Hard Surface Modeling",
+                                    "PBR Shaders",
+                                    "Cycles \u0026 Eevee",
+                                    "Motion Graphics",
+                                    "Cloth Physics Simulation",
+                                    "Low-Poly Assets",
+                                    "Cinematic Lighting",
+                                    "Video Post-Production",
+                                    "DaVinci Resolve",
+                                    "Animation Curves"
+                                ],
+               "languages":  [
+                                 "Bengali (Native)",
+                                 "English (Fluent)",
+                                 "Arabic (Conversational)"
+                             ],
+               "downloadUrl":  "assets/Adibul_Jabir_3D_Artist_Resume.pdf",
+               "resumeFileName":  "Adibul_Jabir_3D_Artist_Resume.pdf"
+           }
 };
+  const DEFAULT_SITE = {
+  "whatIDo": [
+    {
+      "icon": "fas fa-layer-group",
+      "title": "UI/UX Design",
+      "description": "Crafting intuitive user interfaces, interactive wireframes, responsive web/mobile designs, and modern component design systems."
+    },
+    {
+      "icon": "fas fa-code",
+      "title": "Developer",
+      "description": "Building clean, responsive, high-performance web applications and software solutions with modern JavaScript, Python, and CSE foundations."
+    },
+    {
+      "icon": "fas fa-cube",
+      "title": "3D Artist",
+      "description": "Precision 3D product modeling, cinematic motion graphics, photorealistic PBR rendering, and video visual effects in Blender and After Effects."
+    },
+    {
+      "icon": "fas fa-vector-square",
+      "title": "Brand Design",
+      "description": "Creating distinct brand marks, scalable vector identity systems, cohesive color theory palettes, and visual style guidelines."
+    }
+  ],
+  "funFacts": [
+    {
+      "icon": "far fa-heart",
+      "title": "Happy Clients",
+      "count": "50+"
+    },
+    {
+      "icon": "far fa-clock",
+      "title": "Working Hours",
+      "count": "4,500"
+    },
+    {
+      "icon": "far fa-star",
+      "title": "3D Assets Created",
+      "count": "120"
+    },
+    {
+      "icon": "fas fa-coffee",
+      "title": "Coffee Consumed",
+      "count": "1,286"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Val Ciptak Viera",
+      "role": "President at Sprigs • New York, USA",
+      "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
+      "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
+      "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
+    }
+  ],
+  "collaboratedWith": [
+    {
+      "name": "Sprigs",
+      "url": "https://sprigs.com/",
+      "logo": "images/sprigs.png",
+      "alt": "Sprigs"
+    },
+    {
+      "name": "KKBAU",
+      "url": "https://www.kkbau.ac.bd/",
+      "logo": "images/kkbau.png",
+      "alt": "KKBAU"
+    },
+    {
+      "name": "PRISM Club",
+      "url": "https://www.facebook.com/prism.kkbau.ac.bd",
+      "logo": "images/prism-club.png",
+      "alt": "PRISM Club"
+    },
+    {
+      "name": "Chisas",
+      "url": "https://www.facebook.com/Chinnomul.Samajik.Songstha",
+      "logo": "images/chisas.png",
+      "alt": "Chisas"
+    }
+  ]
+}
+;
 
   let currentPortfolioFilter = 'uiux';
+  let currentResumeData = DEFAULT_RESUME;
 
+  // --- What I Do Renderer ---
+  function renderWhatIDo(items) {
+    const container = document.getElementById('services-list');
+    if (!container || !items || !items.length) return;
+
+    container.innerHTML = items.map(item => `
+      <div class="service-item">
+        <div class="service-icon">
+          <i class="${item.icon}"></i>
+        </div>
+        <div class="service-content">
+          <h4>${item.title}</h4>
+          <p>${item.description}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // --- Fun Facts Renderer ---
+  function renderFunFacts(facts) {
+    const container = document.getElementById('fun-facts-grid');
+    if (!container || !facts || !facts.length) return;
+
+    container.innerHTML = facts.map(f => {
+      const cleanCount = (f.count || '').toString();
+      return `
+        <div class="fact-box">
+          <div class="fact-icon"><i class="${f.icon}"></i></div>
+          <div class="fact-title">${f.title}</div>
+          <div class="fact-number" data-count="${cleanCount}">${cleanCount}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // --- Testimonials Renderer ---
+  function renderTestimonials(testimonials) {
+    const container = document.getElementById('testimonials-grid');
+    if (!container || !testimonials || !testimonials.length) return;
+
+    container.innerHTML = testimonials.map(t => `
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">
+          <img src="${t.avatar}" alt="${t.name}" width="40" height="40" loading="lazy" referrerpolicy="no-referrer">
+        </div>
+        <div class="testimonial-text">
+          "${t.quote}"
+        </div>
+        <div class="testimonial-author-box">
+          <div class="testimonial-author">
+            <h5><a href="${t.linkedinUrl || '#'}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">${t.name}</a></h5>
+            <span>${t.role}</span>
+          </div>
+          <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // --- Collaborated With Marquee Renderer ---
+  function renderCollaboratedWith(clients) {
+    const track = document.getElementById('clients-marquee-track');
+    if (!track || !clients || !clients.length) return;
+
+    const makeGroup = (isAriaHidden = false) => `
+      <div class="clients-track-group" ${isAriaHidden ? 'aria-hidden="true"' : ''}>
+        ${clients.map(c => `
+          <a href="${c.url}" target="_blank" rel="noopener noreferrer" class="client-item" title="${c.name}">
+            <img src="${c.logo}" alt="${c.alt || c.name}" width="120" height="40" loading="lazy">
+          </a>
+        `).join('')}
+      </div>
+    `;
+
+    track.innerHTML = makeGroup(false) + makeGroup(true) + makeGroup(true);
+  }
+
+  // --- Portfolio Cards Renderer ---
   function renderPortfolioCards(items) {
     const grid = document.getElementById('portfolio-grid');
     if (!grid || !items || !items.length) return;
 
     grid.innerHTML = items.map(item => {
       if (item.type === 'code') {
-        const langStyle = item.langColor ? 'style="color: ' + item.langColor + '; border-color: ' + item.langColor + '40;"' : '';
-        const snippetHtml = (item.codeSnippet || []).map(line => '<div>' + line + '</div>').join('');
-        const footerSpan2 = item.stars ? '<span><i class="fas fa-star" style="color: #fbbf24;"></i> ' + item.stars + '</span>' : '<span>' + (item.footerMeta || '') + '</span>';
-        const sourceBtn = item.sourceUrl ? '<a href="' + item.sourceUrl + '" target="_blank" rel="noopener noreferrer" title="View Source Code"><i class="fas fa-code"></i></a>' : '';
+        const langStyle = item.langColor ? `style="color: ${item.langColor}; border-color: ${item.langColor}40;"` : '';
+        const snippetHtml = (item.codeSnippet || []).map(line => `<div>${line}</div>`).join('');
+        const footerSpan2 = item.stars ? `<span><i class="fas fa-star" style="color: #fbbf24;"></i> ${item.stars}</span>` : `<span>${item.footerMeta || ''}</span>`;
+        const sourceBtn = item.sourceUrl ? `<a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer" title="View Source Code"><i class="fas fa-code"></i></a>` : '';
 
-        return '<div class="portfolio-card" data-category="' + item.category + '">' +
-          '<div class="portfolio-thumb-box">' +
-            '<div class="code-thumb-preview">' +
-              '<div class="code-thumb-header">' +
-                '<span class="code-lang-tag" ' + langStyle + '>' + (item.langTag || 'Code') + '</span>' +
-                '<span class="code-role-tag">' + (item.roleTag || 'Project') + '</span>' +
-              '</div>' +
-              '<div class="code-thumb-snippet">' + snippetHtml + '</div>' +
-              '<div class="code-thumb-footer">' +
-                '<span><i class="fab fa-github"></i> ' + (item.repoName || 'Repository') + '</span>' +
-                footerSpan2 +
-              '</div>' +
-            '</div>' +
-            '<div class="portfolio-overlay">' +
-              '<a href="' + item.githubUrl + '" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>' +
-              sourceBtn +
-            '</div>' +
-          '</div>' +
-          '<div class="portfolio-details">' +
-            '<span class="portfolio-category">' + (item.subtitle || '') + '</span>' +
-            '<h4 class="portfolio-title">' + item.title + '</h4>' +
-            '<p class="portfolio-desc">' + (item.description || '') + '</p>' +
-          '</div>' +
-        '</div>';
+        return `
+          <div class="portfolio-card" data-category="${item.category}">
+            <div class="portfolio-thumb-box">
+              <div class="code-thumb-preview">
+                <div class="code-thumb-header">
+                  <span class="code-lang-tag" ${langStyle}>${item.langTag || 'Code'}</span>
+                  <span class="code-role-tag">${item.roleTag || 'Project'}</span>
+                </div>
+                <div class="code-thumb-snippet">
+                  ${snippetHtml}
+                </div>
+                <div class="code-thumb-footer">
+                  <span><i class="fab fa-github"></i> ${item.repoName || 'Repository'}</span>
+                  ${footerSpan2}
+                </div>
+              </div>
+              <div class="portfolio-overlay">
+                <a href="${item.githubUrl}" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>
+                ${sourceBtn}
+              </div>
+            </div>
+            <div class="portfolio-details">
+              <span class="portfolio-category">${item.subtitle || ''}</span>
+              <h4 class="portfolio-title">${item.title}</h4>
+              <p class="portfolio-desc">${item.description || ''}</p>
+            </div>
+          </div>
+        `;
       }
 
       // Image / Video Card
-      const ytAttr = item.ytId ? 'data-yt-id="' + item.ytId + '"' : '';
-      const badgeHtml = item.badge ? '<div class="video-play-badge"><i class="fas fa-play"></i> ' + item.badge + '</div>' : '';
+      const ytAttr = item.ytId ? `data-yt-id="${item.ytId}"` : '';
+      const badgeHtml = item.badge ? `<div class="video-play-badge"><i class="fas fa-play"></i> ${item.badge}</div>` : '';
       
       let overlayActions = '';
       if (item.youtubeUrl) {
-        overlayActions += '<a href="' + item.youtubeUrl + '" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>';
+        overlayActions += `<a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>`;
       }
       if (item.lightboxType) {
-        overlayActions += '<button class="open-lightbox" data-type="' + item.lightboxType + '" data-src="' + item.lightboxSrc + '" data-title="' + item.title + '" data-desc="' + (item.description || '') + '"><i class="' + (item.lightboxType === 'video' ? 'fas fa-play' : 'fas fa-search-plus') + '"></i></button>';
+        overlayActions += `<button class="open-lightbox" data-type="${item.lightboxType}" data-src="${item.lightboxSrc}" data-title="${item.title}" data-desc="${item.description || ''}"><i class="${item.lightboxType === 'video' ? 'fas fa-play' : 'fas fa-search-plus'}"></i></button>`;
       }
       if (item.behanceUrl) {
-        overlayActions += '<a href="' + item.behanceUrl + '" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>';
+        overlayActions += `<a href="${item.behanceUrl}" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>`;
       }
 
-      return '<div class="portfolio-card" data-category="' + item.category + '" ' + ytAttr + '>' +
-        '<div class="portfolio-thumb-box">' +
-          '<img src="' + item.thumbnail + '" alt="' + item.title + '" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">' +
-          badgeHtml +
-          '<div class="portfolio-overlay">' + overlayActions + '</div>' +
-        '</div>' +
-        '<div class="portfolio-details">' +
-          '<span class="portfolio-category">' + (item.subtitle || '') + '</span>' +
-          '<h4 class="portfolio-title">' + item.title + '</h4>' +
-          '<p class="portfolio-desc">' + (item.description || '') + '</p>' +
-        '</div>' +
-      '</div>';
+      return `
+        <div class="portfolio-card" data-category="${item.category}" ${ytAttr}>
+          <div class="portfolio-thumb-box">
+            <img src="${item.thumbnail}" alt="${item.title}" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
+            ${badgeHtml}
+            <div class="portfolio-overlay">
+              ${overlayActions}
+            </div>
+          </div>
+          <div class="portfolio-details">
+            <span class="portfolio-category">${item.subtitle || ''}</span>
+            <h4 class="portfolio-title">${item.title}</h4>
+            <p class="portfolio-desc">${item.description || ''}</p>
+          </div>
+        </div>
+      `;
     }).join('');
 
     initLightboxEvents();
@@ -844,73 +1093,121 @@ document.addEventListener('DOMContentLoaded', () => {
     applyPortfolioFilter(currentPortfolioFilter || 'uiux');
   }
 
+  // --- Dynamic Resume Download Button Updater ---
+  function updateResumeDownloadButton(roleKey) {
+    const dlBtn = document.getElementById('resume-download-btn');
+    const dlText = document.getElementById('resume-download-text');
+    if (!dlBtn) return;
+
+    const key = roleKey || 'uiux';
+    const roleData = (currentResumeData && currentResumeData[key]) || (DEFAULT_RESUME && DEFAULT_RESUME[key]);
+    if (!roleData) return;
+
+    const url = roleData.downloadUrl || `assets/Adibul_Jabir_${key}_Resume.pdf`;
+    const filename = roleData.resumeFileName || `Adibul_Jabir_${key}_Resume.pdf`;
+    const label = roleData.downloadLabel || `Download ${roleData.roleName || 'Role'} CV`;
+
+    dlBtn.href = url;
+    dlBtn.setAttribute('download', filename);
+    if (dlText) {
+      dlText.textContent = label;
+    }
+  }
+
+  // --- Resume Roles Renderer ---
   function renderResumeRoles(rolesData) {
     const container = document.getElementById('resume-panes-container');
     if (!container || !rolesData) return;
 
+    currentResumeData = rolesData;
     const roleKeys = Object.keys(rolesData);
     container.innerHTML = roleKeys.map((key, index) => {
       const role = rolesData[key];
       const activeClass = index === 0 ? 'active' : '';
 
-      const eduItems = (role.education || []).map(e => 
-        '<div class="timeline-item">' +
-          '<span class="timeline-period">' + e.period + '</span>' +
-          '<span class="timeline-company">' + e.company + '</span>' +
-          '<h4 class="timeline-title">' + e.title + '</h4>' +
-          '<p class="timeline-desc">' + e.desc + '</p>' +
-        '</div>'
-      ).join('');
+      const eduItems = (role.education || []).map(e => `
+        <div class="timeline-item">
+          <span class="timeline-period">${e.period}</span>
+          <span class="timeline-company">${e.company}</span>
+          <h4 class="timeline-title">${e.title}</h4>
+          <p class="timeline-desc">${e.desc}</p>
+        </div>
+      `).join('');
 
-      const expItems = (role.experience || []).map(e => 
-        '<div class="timeline-item">' +
-          '<span class="timeline-period">' + e.period + '</span>' +
-          '<span class="timeline-company">' + e.company + '</span>' +
-          '<h4 class="timeline-title">' + e.title + '</h4>' +
-          '<p class="timeline-desc">' + e.desc + '</p>' +
-        '</div>'
-      ).join('');
+      const expItems = (role.experience || []).map(e => `
+        <div class="timeline-item">
+          <span class="timeline-period">${e.period}</span>
+          <span class="timeline-company">${e.company}</span>
+          <h4 class="timeline-title">${e.title}</h4>
+          <p class="timeline-desc">${e.desc}</p>
+        </div>
+      `).join('');
 
-      const skillItems = (role.skills || []).map(s => 
-        '<div class="skill-item">' +
-          '<div class="skill-info">' +
-            '<span>' + s.name + '</span>' +
-            '<span>' + s.percent + '</span>' +
-          '</div>' +
-          '<div class="skill-bar"><div class="skill-fill" data-width="' + s.percent + '" style="width: 0%;"></div></div>' +
-        '</div>'
-      ).join('');
+      const skillItems = (role.skills || []).map(s => `
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>${s.name}</span>
+            <span>${s.percent}</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-width="${s.percent}" style="width: 0%;"></div></div>
+        </div>
+      `).join('');
 
-      const compBadges = (role.competencies || []).map(c => '<span class="badge-item">' + c + '</span>').join('');
-      const langBadges = (role.languages || ['Bengali (Native)', 'English (Fluent)', 'Arabic (Conversational)']).map(l => '<span class="badge-item">' + l + '</span>').join('');
+      const compBadges = (role.competencies || []).map(c => `<span class="badge-item">${c}</span>`).join('');
+      const langBadges = (role.languages || ['Bengali (Native)', 'English (Fluent)', 'Arabic (Conversational)']).map(l => `<span class="badge-item">${l}</span>`).join('');
 
-      return '<div class="resume-role-pane ' + activeClass + '" id="role-' + key + '">' +
-        '<div class="resume-columns">' +
-          '<div>' +
-            '<div class="block-title"><h2>Education</h2></div>' +
-            '<div class="timeline">' + eduItems + '</div>' +
-          '</div>' +
-          '<div>' +
-            '<div class="block-title"><h2>Experience</h2></div>' +
-            '<div class="timeline">' + expItems + '</div>' +
-          '</div>' +
-        '</div>' +
-        '<div class="resume-columns">' +
-          '<div>' +
-            '<div class="block-title"><h2>Working Skills</h2></div>' +
-            skillItems +
-          '</div>' +
-          '<div>' +
-            '<div class="block-title"><h2>Specialized Competencies</h2></div>' +
-            '<div class="badges-cloud">' + compBadges + '</div>' +
-            '<div class="block-title" style="margin-top: 30px;"><h2>Languages</h2></div>' +
-            '<div class="badges-cloud">' + langBadges + '</div>' +
-          '</div>' +
-        '</div>' +
-      '</div>';
+      return `
+        <div class="resume-role-pane ${activeClass}" id="role-${key}">
+          <div class="resume-columns">
+            <div>
+              <div class="block-title">
+                <h2>Education</h2>
+              </div>
+              <div class="timeline">
+                ${eduItems}
+              </div>
+            </div>
+
+            <div>
+              <div class="block-title">
+                <h2>Experience</h2>
+              </div>
+              <div class="timeline">
+                ${expItems}
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-columns">
+            <div>
+              <div class="block-title">
+                <h2>Working Skills</h2>
+              </div>
+              ${skillItems}
+            </div>
+
+            <div>
+              <div class="block-title">
+                <h2>Specialized Competencies</h2>
+              </div>
+              <div class="badges-cloud">
+                ${compBadges}
+              </div>
+
+              <div class="block-title" style="margin-top: 30px;">
+                <h2>Languages</h2>
+              </div>
+              <div class="badges-cloud">
+                ${langBadges}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
     }).join('');
 
     initResumeRoleTabs();
+    updateResumeDownloadButton('uiux');
   }
 
   // 5. Skill Bars Animation
@@ -937,7 +1234,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
 
         const role = btn.getAttribute('data-role');
-        const targetPane = document.getElementById('role-' + role) || document.getElementById('role-uiux');
+        const targetPane = document.getElementById(`role-${role}`) || document.getElementById('role-uiux');
         const resumePanes = document.querySelectorAll('.resume-role-pane');
 
         resumePanes.forEach(pane => pane.classList.remove('active'));
@@ -945,6 +1242,8 @@ document.addEventListener('DOMContentLoaded', () => {
           targetPane.classList.add('active');
           animateActiveSkillBars();
         }
+
+        updateResumeDownloadButton(role);
       };
     });
   }
@@ -964,7 +1263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const portfolioCards = document.querySelectorAll('.portfolio-card');
     portfolioCards.forEach(item => {
       const itemCategory = (item.getAttribute('data-category') || '').toLowerCase();
-      const categories = itemCategory.split(/\s+/);
+      const categories = itemCategory.split(/\\s+/);
       if (categories.includes(currentPortfolioFilter.toLowerCase())) {
         item.style.display = 'block';
       } else {
@@ -982,10 +1281,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Dual-Layer Initial Render & Async JSON Sync
+  function renderAllSiteSections(siteData) {
+    if (!siteData) return;
+    if (siteData.whatIDo) renderWhatIDo(siteData.whatIDo);
+    if (siteData.funFacts) renderFunFacts(siteData.funFacts);
+    if (siteData.testimonials) renderTestimonials(siteData.testimonials);
+    if (siteData.collaboratedWith) renderCollaboratedWith(siteData.collaboratedWith);
+  }
+
+  renderAllSiteSections(DEFAULT_SITE);
   renderPortfolioCards(DEFAULT_PORTFOLIO);
   renderResumeRoles(DEFAULT_RESUME);
 
   async function loadJsonData() {
+    try {
+      const sRes = await fetch('./data/site.json');
+      if (sRes.ok) {
+        const sData = await sRes.json();
+        renderAllSiteSections(sData);
+      }
+    } catch (e) {}
+
     try {
       const pRes = await fetch('./data/portfolio.json');
       if (pRes.ok) {
@@ -1006,6 +1322,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch (e) {}
   }
+
 
   // 8. Lightbox Modal
   const modal = document.getElementById('lightbox-modal');

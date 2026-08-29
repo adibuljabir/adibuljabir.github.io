@@ -1,0 +1,81 @@
+﻿{
+  "whatIDo": [
+    {
+      "icon": "fas fa-layer-group",
+      "title": "UI/UX Design",
+      "description": "Crafting intuitive user interfaces, interactive wireframes, responsive web/mobile designs, and modern component design systems."
+    },
+    {
+      "icon": "fas fa-code",
+      "title": "Developer",
+      "description": "Building clean, responsive, high-performance web applications and software solutions with modern JavaScript, Python, and CSE foundations."
+    },
+    {
+      "icon": "fas fa-cube",
+      "title": "3D Artist",
+      "description": "Precision 3D product modeling, cinematic motion graphics, photorealistic PBR rendering, and video visual effects in Blender and After Effects."
+    },
+    {
+      "icon": "fas fa-vector-square",
+      "title": "Brand Design",
+      "description": "Creating distinct brand marks, scalable vector identity systems, cohesive color theory palettes, and visual style guidelines."
+    }
+  ],
+  "funFacts": [
+    {
+      "icon": "far fa-heart",
+      "title": "Happy Clients",
+      "count": "50+"
+    },
+    {
+      "icon": "far fa-clock",
+      "title": "Working Hours",
+      "count": "4,500"
+    },
+    {
+      "icon": "far fa-star",
+      "title": "3D Assets Created",
+      "count": "120"
+    },
+    {
+      "icon": "fas fa-coffee",
+      "title": "Coffee Consumed",
+      "count": "1,286"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Val Ciptak Viera",
+      "role": "President at Sprigs • New York, USA",
+      "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
+      "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
+      "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
+    }
+  ],
+  "collaboratedWith": [
+    {
+      "name": "Sprigs",
+      "url": "https://sprigs.com/",
+      "logo": "images/sprigs.png",
+      "alt": "Sprigs"
+    },
+    {
+      "name": "KKBAU",
+      "url": "https://www.kkbau.ac.bd/",
+      "logo": "images/kkbau.png",
+      "alt": "KKBAU"
+    },
+    {
+      "name": "PRISM Club",
+      "url": "https://www.facebook.com/prism.kkbau.ac.bd",
+      "logo": "images/prism-club.png",
+      "alt": "PRISM Club"
+    },
+    {
+      "name": "Chisas",
+      "url": "https://www.facebook.com/Chinnomul.Samajik.Songstha",
+      "logo": "images/chisas.png",
+      "alt": "Chisas"
+    }
+  ]
+}

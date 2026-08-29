@@ -793,79 +793,116 @@ a:hover {
 /* ===================================================================
  * Clients Grid
  * =================================================================== */
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 45px;
-  padding: 10px 0;
+/* ===================================================================
+ * Collaborated With (Infinite Smooth Horizontal Marquee)
+ * =================================================================== */
+.clients-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
   width: 100%;
-  max-width: 100%;
+  padding: 12px 0 45px;
   box-sizing: border-box;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
-@media (max-width: 850px) {
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.clients-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeContinuous 20s linear infinite;
+  will-change: transform;
+}
+
+.clients-marquee-wrapper:hover .clients-marquee-track {
+  animation-play-state: paused;
+}
+
+.clients-track-group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-right: 50px;
+  flex-shrink: 0;
+}
+
+@keyframes marqueeContinuous {
+  0% {
+    transform: translateX(0);
   }
-}
-
-@media (max-width: 480px) {
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  100% {
+    transform: translateX(-33.333333%);
   }
 }
 
 .client-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 68px;
-  padding: 8px 12px;
+  padding: 8px 18px;
   cursor: pointer;
   text-decoration: none;
-  width: 100%;
-  max-width: 100%;
+  border-radius: 8px;
+  flex-shrink: 0;
   box-sizing: border-box;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
 }
 
 .client-item img {
   max-width: 100%;
-  max-height: 38px;
+  max-height: 40px;
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.65);
-  transition: all 0.3s ease;
+  filter: grayscale(100%) opacity(0.6);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Optical visual weight balance across different logo aspect ratios */
 .client-item img[alt="Sprigs"] {
-  max-height: 30px;
-}
-
-.client-item img[alt="Chisas"] {
-  max-height: 34px;
-}
-
-.client-item img[alt="KKBAU"] {
   max-height: 32px;
 }
 
+.client-item img[alt="Chisas"] {
+  max-height: 36px;
+}
+
+.client-item img[alt="KKBAU"] {
+  max-height: 34px;
+}
+
 .client-item img[alt="PRISM Club"] {
-  max-height: 28px;
+  max-height: 30px;
 }
 
 [data-theme="dark"] .client-item img {
-  filter: grayscale(100%) brightness(2) opacity(0.75);
+  filter: grayscale(100%) brightness(2.2) opacity(0.7);
+}
+
+.client-item:hover {
+  transform: translateY(-2px);
 }
 
 .client-item:hover img {
   filter: grayscale(0%) brightness(1) opacity(1);
-  transform: scale(1.05);
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .clients-track-group {
+    gap: 32px;
+    padding-right: 32px;
+  }
+  .client-item {
+    height: 56px;
+    padding: 6px 12px;
+  }
+  .client-item img {
+    max-height: 32px;
+  }
+  .clients-marquee-track {
+    animation-duration: 16s;
+  }
 }
 
 /* ===================================================================
@@ -1170,6 +1207,61 @@ a:hover {
 
 .resume-role-pane.active {
   display: block;
+}
+
+.resume-header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.resume-header-controls .resume-role-filters {
+  margin-bottom: 0;
+}
+
+.resume-download-box {
+  display: flex;
+  align-items: center;
+}
+
+.resume-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px var(--primary-shadow);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.resume-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-shadow);
+}
+
+.resume-download-btn i {
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .resume-header-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .resume-download-box {
+    width: 100%;
+  }
+  .resume-download-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ===================================================================
