@@ -325,42 +325,19 @@ document.addEventListener('DOMContentLoaded', () => {
     track.innerHTML = makeGroup(false) + makeGroup(true) + makeGroup(true);
   }
 
-  // --- Achievements Renderer (Fill Left Column First, Then Right Column) ---
+  // --- Achievements Renderer (Universal Timeline from main.json) ---
   function renderAchievements(achievements) {
-    const container = document.getElementById('achievements-container');
+    const container = document.getElementById('achievements-timeline');
     if (!container || !achievements || !Array.isArray(achievements) || !achievements.length) return;
 
-    const total = achievements.length;
-    const mid = Math.ceil(total / 2);
-    const leftItems = achievements.slice(0, mid);
-    const rightItems = achievements.slice(mid);
-
-    const makeItemHtml = (item) => `
+    container.innerHTML = achievements.map(item => `
       <div class="timeline-item">
         <span class="timeline-period">${item.period || ''}</span>
         <span class="timeline-company">${item.company || ''}</span>
         <h4 class="timeline-title">${item.title || ''}</h4>
         <p class="timeline-desc">${item.description || ''}</p>
       </div>
-    `;
-
-    const leftCol = `
-      <div>
-        <div class="timeline">
-          ${leftItems.map(makeItemHtml).join('')}
-        </div>
-      </div>
-    `;
-
-    const rightCol = `
-      <div>
-        <div class="timeline">
-          ${rightItems.map(makeItemHtml).join('')}
-        </div>
-      </div>
-    `;
-
-    container.innerHTML = leftCol + rightCol;
+    `).join('');
   }
 
   // --- Experience & Education Renderer (Universal Timeline from main.json) ---
@@ -398,17 +375,12 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = languages.map(l => `<span class="badge-item">${l}</span>`).join('');
   }
 
-  // --- Certifications & Training Renderer ---
+  // --- Certifications & Training Renderer (Universal Timeline from main.json) ---
   function renderCertifications(certifications) {
-    const container = document.getElementById('certifications-container');
+    const container = document.getElementById('certifications-timeline');
     if (!container || !certifications || !Array.isArray(certifications) || !certifications.length) return;
 
-    const total = certifications.length;
-    const mid = Math.ceil(total / 2);
-    const leftItems = certifications.slice(0, mid);
-    const rightItems = certifications.slice(mid);
-
-    const makeItemHtml = (item) => {
+    container.innerHTML = certifications.map(item => {
       const instructorText = item.instructor ? ` • Instructor: ${item.instructor}` : '';
       return `
         <div class="timeline-item">
@@ -418,25 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="timeline-desc">${item.description || item.desc || ''}</p>
         </div>
       `;
-    };
-
-    const leftCol = `
-      <div>
-        <div class="timeline">
-          ${leftItems.map(makeItemHtml).join('')}
-        </div>
-      </div>
-    `;
-
-    const rightCol = `
-      <div>
-        <div class="timeline">
-          ${rightItems.map(makeItemHtml).join('')}
-        </div>
-      </div>
-    `;
-
-    container.innerHTML = leftCol + rightCol;
+    }).join('');
   }
 
   // --- Portfolio Single Card HTML Generator ---

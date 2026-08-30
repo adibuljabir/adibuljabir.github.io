@@ -166,19 +166,27 @@
           <!-- Role Panes Container (Dynamically populated from data/roles/*.json) -->
           <div id="resume-panes-container"></div>
 
-          <!-- Achievements Section -->
-          <div class="block-title">
-            <h2>Achievements</h2>
+          <!-- Dual Columns: Left (Achievements) | Right (Certifications & Training + Languages) -->
+          <div class="resume-columns" style="margin-bottom: 50px;">
+            <div>
+              <div class="block-title">
+                <h2>Achievements</h2>
+              </div>
+              <div class="timeline" id="achievements-timeline"></div>
+            </div>
+
+            <div>
+              <div class="block-title">
+                <h2>Certifications & Training</h2>
+              </div>
+              <div class="timeline" id="certifications-timeline" style="margin-bottom: 35px;"></div>
+
+              <div class="block-title">
+                <h2>Languages</h2>
+              </div>
+              <div class="badges-cloud" id="languages-container"></div>
+            </div>
           </div>
-
-          <div class="resume-columns" id="achievements-container"></div>
-
-          <!-- Languages Section (Universal Badges from main.json) -->
-          <div class="block-title">
-            <h2>Languages</h2>
-          </div>
-
-          <div class="badges-cloud" id="languages-container" style="margin-bottom: 50px;"></div>
 
           <!-- Experience & Education (Universal Timeline from main.json) -->
           <div class="resume-columns" id="experience-education-container">
@@ -196,13 +204,6 @@
               <div class="timeline" id="education-timeline"></div>
             </div>
           </div>
-
-          <!-- Certifications & Training (Universal from main.json) -->
-          <div class="block-title">
-            <h2>Certifications & Training</h2>
-          </div>
-
-          <div class="resume-columns" id="certifications-container"></div>
 
           <!-- Testimonials (Horizontal Animated Marquee) -->
           <div class="block-title">
