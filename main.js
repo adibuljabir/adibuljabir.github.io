@@ -1223,10 +1223,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     currentResumeData = rolesData;
 
+    const currentActiveRole = document.querySelector('.resume-filter-btn.active')?.getAttribute('data-role') || 'uiux';
     const roleKeys = Object.keys(rolesData);
-    container.innerHTML = roleKeys.map((key, index) => {
+    container.innerHTML = roleKeys.map((key) => {
       const role = rolesData[key];
-      const activeClass = index === 0 ? 'active' : '';
+      const activeClass = key === currentActiveRole ? 'active' : '';
 
       const eduItems = (role.education || []).map(e => `
         <div class="timeline-item">
@@ -1313,7 +1314,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initLightboxEvents();
     initVideoHoverPlayback();
     initScrollAnimations();
-    updateResumeDownloadButton('uiux');
+    updateResumeDownloadButton(currentActiveRole);
   }
 
   // 6. Skill Bars Animation
@@ -1335,12 +1336,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const resumeRoleBtns = document.querySelectorAll('.resume-filter-btn');
 
     resumeRoleBtns.forEach(btn => {
-      btn.onclick = () => {
+      btn.onclick = (e) => {
+        e.preventDefault();
         resumeRoleBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
         const role = btn.getAttribute('data-role');
-        const targetPane = document.getElementById(`role-${role}`) || document.getElementById('role-uiux');
+        const targetPane = document.getElementById(`role-${role}`);
         const resumePanes = document.querySelectorAll('.resume-role-pane');
 
         resumePanes.forEach(pane => pane.classList.remove('active'));
@@ -1390,15 +1392,13 @@ document.addEventListener('DOMContentLoaded', () => {
         renderAllSiteSections(mainRes);
       }
 
-      const rolesData = {};
+      const rolesData = { ...INITIAL_ROLES_DATA };
       if (uiuxRes) rolesData['uiux'] = uiuxRes;
       if (devRes) rolesData['developer'] = devRes;
       if (brandRes) rolesData['brand'] = brandRes;
       if (d3Res) rolesData['3d'] = d3Res;
 
-      if (Object.keys(rolesData).length > 0) {
-        renderResumeRoles(rolesData);
-      }
+      renderResumeRoles(rolesData);
     } catch (e) {
       console.warn('Could not load role datasets:', e);
     }
