@@ -6,54 +6,40 @@
   "resumeFileName": "Adibul Jabir_Brand Designer_Resume_30-08-2026.pdf",
   "portfolio": [
     {
-      "id": "ventrixon-logo-anim",
-      "category": "branding 3d",
-      "title": "Ventrixon Logo Animation",
-      "subtitle": "Brand Motion Graphics",
-      "description": "Smooth brand-driven motion graphics and cinematic reveal timing in After Effects.",
-      "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif",
-      "badge": "Branding Motion",
-      "youtubeUrl": "https://www.youtube.com/@Ventrixon",
-      "behanceUrl": "https://www.behance.net/gallery/246479509/Ventrixon-Logo-Animation"
-    },
-    {
-      "id": "motion-logo-intro",
-      "category": "branding 3d",
-      "title": "4K Motion Logo Intro",
-      "subtitle": "Brand Motion Graphics",
-      "description": "Cinematic 4K brand-driven motion graphics and fluid reveal animations.",
-      "thumbnail": "https://i.ytimg.com/vi/hBbHoIONYf0/hqdefault.jpg",
-      "badge": "4K Motion",
-      "ytId": "hBbHoIONYf0",
-      "youtubeUrl": "https://www.youtube.com/watch?v=hBbHoIONYf0",
-      "lightboxType": "video",
-      "lightboxSrc": "https://www.youtube-nocookie.com/embed/hBbHoIONYf0?autoplay=1&rel=0"
-    },
-    {
-      "id": "hoodie-3d-cloth",
-      "category": "branding 3d",
-      "title": "Hoodie Apparel Animation",
-      "subtitle": "3D Branding Simulation",
-      "description": "Dynamic cloth simulation and stylized commercial showcase for apparel brands.",
-      "thumbnail": "https://i.ytimg.com/vi/-oDgaHYAk5M/hqdefault.jpg",
-      "badge": "3D Cloth Sim",
-      "ytId": "-oDgaHYAk5M",
-      "youtubeUrl": "https://www.youtube.com/shorts/-oDgaHYAk5M",
-      "lightboxType": "video",
-      "lightboxSrc": "https://www.youtube-nocookie.com/embed/-oDgaHYAk5M?autoplay=1&rel=0"
-    },
-    {
-      "id": "dpxi-fc-intro",
+      "id": "prism-club-branding",
       "category": "branding",
-      "title": "DP Xi FC Video Intro",
-      "subtitle": "Branding & Video",
-      "description": "High-energy cinematic sports promo with synchronized beat cuts and titles.",
-      "thumbnail": "https://i.ytimg.com/vi/khtonJIabQ0/hqdefault.jpg",
-      "badge": "Branding Video",
-      "ytId": "khtonJIabQ0",
-      "youtubeUrl": "https://www.youtube.com/watch?v=khtonJIabQ0",
-      "lightboxType": "video",
-      "lightboxSrc": "https://www.youtube-nocookie.com/embed/khtonJIabQ0?autoplay=1&rel=0"
+      "title": "PRISM Club",
+      "subtitle": "Brand Identity & Media",
+      "description": "Designed complete visual identity: official logo, social media appearance, event banners, and brand assets.",
+      "thumbnail": "images/prism-brand.jpg",
+      "lightboxType": "image",
+      "lightboxSrc": "images/prism-brand.jpg",
+      "badge": "Brand Identity",
+      "facebookUrl": "https://www.facebook.com/prism.kkbau.ac.bd/"
+    },
+    {
+      "id": "chisas-brand-redesign",
+      "category": "branding",
+      "title": "CHISAS",
+      "subtitle": "Brand Identity & Social Impact",
+      "description": "Redesigned official logo, social media appearance, event banners, visual assets, and video content.",
+      "thumbnail": "images/chisas-brand.jpg",
+      "lightboxType": "image",
+      "lightboxSrc": "images/chisas-brand.jpg",
+      "badge": "Logo & Branding",
+      "facebookUrl": "https://www.facebook.com/Chinnomul.Samajik.Songstha/"
+    },
+    {
+      "id": "rxt-gaming-stream",
+      "category": "branding motion",
+      "title": "RXT Gaming",
+      "subtitle": "Stream Branding & Motion Assets",
+      "description": "Designed dynamic animated stream identity: Starting Scene, End Scene, in-game overlays, popups, and synced motion branding.",
+      "thumbnail": "images/rxt-gaming.jpg",
+      "lightboxType": "image",
+      "lightboxSrc": "images/rxt-gaming.jpg",
+      "badge": "Stream Motion Package",
+      "facebookUrl": "https://www.facebook.com/rxtgaming7025"
     }
   ],
   "skills": [
