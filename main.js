@@ -201,11 +201,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const typingEl = document.querySelector('.role-typing');
   if (typingEl) {
     const roles = [
-      '3D & Motion Designer',
-      'UI/UX Designer',
       'CSE Student @ KKBAU',
-      'Brand Identity Designer',
-      'Founder @ Ventrixon'
+      'UI/UX Designer',
+      'Developer',
+      'Brand Designer',
+      '3D & Motion Designer',
     ];
     let roleIdx = 0;
     let charIdx = 0;

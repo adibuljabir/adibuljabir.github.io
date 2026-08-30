@@ -421,15 +421,15 @@ a:hover {
 .home-hero {
   display: flex;
   align-items: center;
-  gap: clamp(35px, 5vw, 65px);
+  gap: clamp(40px, 5vw, 80px);
   flex-grow: 1;
-  padding: 10px 0 20px;
+  padding: 15px 0 25px;
 }
 
 .home-photo {
   flex-shrink: 0;
-  width: clamp(240px, 24vw, 340px);
-  height: clamp(240px, 24vw, 340px);
+  width: clamp(300px, 28vw, 420px);
+  height: clamp(300px, 28vw, 420px);
   aspect-ratio: 1 / 1;
   perspective: 1000px;
   cursor: pointer;
@@ -443,7 +443,7 @@ a:hover {
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
   transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
               box-shadow 0.45s ease;
   will-change: transform, box-shadow;
@@ -463,19 +463,20 @@ a:hover {
 
 .home-photo:hover .hp-inner {
   transform: scale(1.04);
-  box-shadow: 0 20px 45px rgba(0, 124, 237, 0.28);
+  box-shadow: 0 24px 50px rgba(0, 124, 237, 0.3);
 }
 
 [data-theme="dark"] .hp-inner {
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
 }
 
 [data-theme="dark"] .home-photo:hover .hp-inner {
-  box-shadow: 0 22px 50px rgba(0, 124, 237, 0.42);
+  box-shadow: 0 24px 55px rgba(0, 124, 237, 0.45);
 }
 
 .home-text {
   flex-grow: 1;
+  max-width: 680px;
 }
 
 .home-role {
@@ -502,11 +503,11 @@ a:hover {
 }
 
 .home-desc {
-  font-size: clamp(13.5px, 1.05vw, 14.5px);
+  font-size: clamp(14px, 1.05vw, 15px);
   color: var(--text-color);
-  line-height: 1.8;
-  margin-bottom: clamp(20px, 2.8vh, 30px);
-  max-width: 580px;
+  line-height: 1.75;
+  margin-bottom: clamp(20px, 2.5vh, 28px);
+  max-width: 680px;
 }
 
 /* Minimalist Pill Buttons */
@@ -525,8 +526,8 @@ a:hover {
     padding: 5px 0;
   }
   .home-photo {
-    width: clamp(200px, 20vw, 250px);
-    height: clamp(200px, 20vw, 250px);
+    width: clamp(250px, 24vw, 320px);
+    height: clamp(250px, 24vw, 320px);
   }
   .home-title {
     font-size: 38px;
@@ -558,15 +559,18 @@ a:hover {
     text-align: center;
     justify-content: flex-start;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     padding: 0 0 10px;
     flex-grow: 0;
     margin: 0;
   }
   .home-photo {
-    width: clamp(150px, 40vw, 190px);
-    height: clamp(150px, 40vw, 190px);
-    margin: 0 auto 4px;
+    width: clamp(190px, 45vw, 250px);
+    height: clamp(190px, 45vw, 250px);
+    margin: 0 auto 6px;
+  }
+  .home-text {
+    max-width: 100%;
   }
   .home-role {
     font-size: 13px;
@@ -574,24 +578,24 @@ a:hover {
     margin-bottom: 2px;
   }
   .home-title {
-    font-size: clamp(28px, 7vw, 34px);
-    margin-bottom: 6px;
+    font-size: clamp(28px, 7vw, 36px);
+    margin-bottom: 8px;
     line-height: 1.15;
   }
   .home-desc {
-    margin: 0 auto 16px;
-    font-size: 13px;
-    line-height: 1.6;
-    max-width: 100%;
+    margin: 0 auto 20px;
+    font-size: 13.5px;
+    line-height: 1.65;
+    max-width: 600px;
   }
   .home-buttons {
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 12px;
+    gap: 12px;
+    margin-bottom: 14px;
   }
   .home-buttons .btn {
-    padding: 9px 22px;
-    font-size: 12.5px;
+    padding: 10px 24px;
+    font-size: 13px;
   }
   .clients-marquee-wrapper {
     padding: 8px 0 16px;
