@@ -5,6 +5,735 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  
+  // Initial Embedded Fallback Data (Ensures instant zero-latency render and offline/file:// support)
+  const INITIAL_MAIN_DATA = {
+  "collaboratedWith": [
+    {
+      "name": "Sprigs",
+      "url": "https://sprigs.com/",
+      "logo": "images/sprigs.png",
+      "alt": "Sprigs"
+    },
+    {
+      "name": "KKBAU",
+      "url": "https://www.kkbau.ac.bd/",
+      "logo": "images/kkbau.png",
+      "alt": "KKBAU"
+    },
+    {
+      "name": "PRISM Club",
+      "url": "https://www.facebook.com/prism.kkbau.ac.bd",
+      "logo": "images/prism-club.png",
+      "alt": "PRISM Club"
+    },
+    {
+      "name": "Chisas",
+      "url": "https://www.facebook.com/Chinnomul.Samajik.Songstha",
+      "logo": "images/chisas.png",
+      "alt": "Chisas"
+    }
+  ],
+  "whatIDo": [
+    {
+      "icon": "fas fa-layer-group",
+      "title": "UI/UX Design",
+      "description": "Crafting intuitive user interfaces, interactive wireframes, responsive web/mobile designs, and modern component design systems."
+    },
+    {
+      "icon": "fas fa-code",
+      "title": "Developer",
+      "description": "Building clean, responsive, high-performance web applications and software solutions with modern JavaScript, Python, and CSE foundations."
+    },
+    {
+      "icon": "fas fa-cube",
+      "title": "3D & Motion Designer",
+      "description": "Precision 3D product modeling, cinematic motion graphics, photorealistic PBR rendering, and video visual effects in Blender and After Effects."
+    },
+    {
+      "icon": "fas fa-vector-square",
+      "title": "Brand Design",
+      "description": "Creating distinct brand marks, scalable vector identity systems, cohesive color theory palettes, and visual style guidelines."
+    }
+  ],
+  "funFacts": [
+    {
+      "icon": "far fa-heart",
+      "title": "Happy Clients",
+      "count": "50+"
+    },
+    {
+      "icon": "far fa-clock",
+      "title": "Working Hours",
+      "count": "4,500"
+    },
+    {
+      "icon": "far fa-star",
+      "title": "3D Assets Created",
+      "count": "120"
+    },
+    {
+      "icon": "fas fa-coffee",
+      "title": "Coffee Consumed",
+      "count": "1,286"
+    }
+  ],
+  "achievements": [
+    {
+      "period": "5.0 Star Rating",
+      "company": "Upwork\u00ae Global Inc",
+      "title": "5-Star Rated Freelance 3D Specialist",
+      "description": "Maintained a 100% five-star rating with stellar client reviews across precision 3D product visualizations, hard-surface assets, and motion graphics."
+    },
+    {
+      "period": "Grant & Innovation",
+      "company": "Shasthocare Healthtech",
+      "title": "UIHP Seed Stage Innovation",
+      "description": "Selected and recognized in the University Innovation Hub Program (UIHP) Seed stage for human-centric digital healthcare interface design."
+    },
+    {
+      "period": "Competitive Programming",
+      "company": "KKBAU Computer Science",
+      "title": "University Programming Contest",
+      "description": "Active participant in university programming competitions, solving algorithmic challenges in C/C++ and Python with clean logic."
+    }
+  ],
+  "experience": [
+    {
+      "period": "April 2025 - Present",
+      "company": "PRISM Club",
+      "companyUrl": "https://www.facebook.com/prism.kkbau.ac.bd",
+      "title": "Print & Media Secretary",
+      "description": "Managing branding, event media, website UI/UX, banners, cards & social media posts. Coordinated decoration team for branding consistency & provided technical support such as live sessions with international guests."
+    },
+    {
+      "period": "May 2025 - July 2025",
+      "company": "KU IC-5, University Innovation Hub Program",
+      "title": "Student Startup Venture (SasthoCare)",
+      "description": "A digital doctor consultation platform called SasthoCare. Responsible for UI/UX, Data to visuals, Designing & Presenting the pitch. Awarded Pre-Seed Fund of 20,000 BDT. Learned how a startup works, teamwork, Slack, and pitching."
+    },
+    {
+      "period": "Aug 2018 - Aug 2025",
+      "company": "CHISAS",
+      "companyUrl": "https://www.facebook.com/Chinnomul.Samajik.Songstha",
+      "title": "IT Affairs Secretary",
+      "description": "Designed banners, edited videos and rebranded logo/brand colors. Implemented member registration. Captured & edited videos. Coordinated Ramadan Iftar food distribution & children's games. Participated in fundraising for Sylhet flood crisis."
+    },
+    {
+      "period": "June 2023 - July 2023",
+      "company": "Upwork.com",
+      "companyUrl": "https://www.upwork.com/freelancers/~01693e221fbc54449b",
+      "title": "Freelance Illustrator",
+      "description": "Designed pattern illustrations for Sprigs, a New York based garment company. Crafted garment designs and delivered on time. Kept a 5-star rating throughout and earned 181.25 USD. Learned how to communicate with clients and handle feedback."
+    }
+  ],
+  "education": [
+    {
+      "period": "Expected 2027 \u2022 CGPA: 3.08",
+      "company": "Khulna Khan Bahadur Ahsanullah University",
+      "title": "Bachelor of Science (B.Sc.) in Computer Science and Engineering",
+      "description": "Undergraduate studies covering core computing foundations: Data Structures, Algorithms, Software Engineering, Database Management Systems, and Human-Computer Interaction (HCI)."
+    },
+    {
+      "period": "2023 \u2022 GPA: 3.75 / 5.00",
+      "company": "Bangladesh Navy School & College, Khulna",
+      "title": "Higher Secondary Certificate (HSC) in Science",
+      "description": "Completed higher secondary education in the Science discipline with emphasis on Higher Mathematics, Physics, Chemistry, and Information & Communication Technology."
+    },
+    {
+      "period": "2020 \u2022 GPA: 4.06 / 5.00",
+      "company": "Bangladesh Navy School & College, Khulna",
+      "title": "Secondary School Certificate (SSC) in Science",
+      "description": "Completed secondary education under Science group with focus on General Science, Higher Mathematics, and Physics, building strong analytical and problem-solving foundations."
+    }
+  ],
+  "languages": [
+    "Bengali (Native)",
+    "English (Fluent)",
+    "Arabic (Conversational)"
+  ],
+  "certifications": [
+    {
+      "period": "UI/UX Certification",
+      "company": "Betterskills.io",
+      "instructor": "Saidul Islam",
+      "title": "Figma UI/UX Design",
+      "description": "Professional training covering modern UI/UX workflows, responsive screen design, interactive prototyping, Figma design systems, and developer handoff practices."
+    },
+    {
+      "period": "English & Communication Training",
+      "company": "Fondi (Japan)",
+      "instructor": "Tatsuto Nohara",
+      "title": "Boost Career Path Program",
+      "description": "Interactive English conversation, spoken communication, and career development program utilizing Fondi's virtual interactive application for real-time global speaking practice and workplace communication skills."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Val Ciptak Viera",
+      "role": "President at Sprigs \u2022 New York, USA",
+      "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
+      "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
+      "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
+    },
+    {
+      "name": "Val Ciptak Viera",
+      "role": "President at Sprigs \u2022 New York, USA",
+      "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
+      "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
+      "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
+    },
+    {
+      "name": "Val Ciptak Viera",
+      "role": "President at Sprigs \u2022 New York, USA",
+      "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
+      "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
+      "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
+    }
+  ]
+};
+
+  const INITIAL_ROLES_DATA = {
+  "uiux": {
+    "roleId": "uiux",
+    "roleName": "UI/UX Designer",
+    "downloadLabel": "Download UI/UX Resume",
+    "downloadUrl": "https://ventrixon-my.sharepoint.com/:b:/g/personal/adibuljabir_ventrixon_onmicrosoft_com/IQAq6JaX4ty1TJESMaSdDavPAc9eykyzS5kuyKg3bpI3dYA?e=CsBjEm",
+    "resumeFileName": "Adibul Jabir_UIUX Designer_V7_30-08-2026.pdf",
+    "portfolio": [
+      {
+        "id": "cellfin-app",
+        "category": "uiux",
+        "title": "Cellfin Banking App",
+        "subtitle": "UI/UX Case Study",
+        "description": "Complete mobile banking redesign simplifying transaction flows and user confidence.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/403a00248330667.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/248330667/Cellfin-Banking-App-%28Case-Study%29"
+      },
+      {
+        "id": "saas-landing",
+        "category": "uiux",
+        "title": "SaaS Landing Page",
+        "subtitle": "Web & UI/UX",
+        "description": "Conversion-focused, scalable design system created for high-growth SaaS web platforms.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/e3b8d7247425937.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/247425937/SaaS-Landing-Page"
+      },
+      {
+        "id": "nsaas-dashboard",
+        "category": "uiux",
+        "title": "NSaaS Analytics Dashboard",
+        "subtitle": "Dashboard UI",
+        "description": "Modern SaaS analytics dashboard engineered for complex metrics and clean readability.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/3e8d3a246613705.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/246613705/NSaaS-Analytics-Dashboard-Modern-SaaS-UI-Design"
+      },
+      {
+        "id": "gaming-controller",
+        "category": "uiux",
+        "title": "Gaming Controller Landing Page",
+        "subtitle": "Product Landing Page",
+        "description": "Bold and immersive product landing page design showcasing gaming hardware.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/bafc7f246580577.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/246580577/Gaming-Controller-Landing-Page"
+      },
+      {
+        "id": "tech-community",
+        "category": "uiux",
+        "title": "Tech Community Platform",
+        "subtitle": "Web Platform UI",
+        "description": "Structured community hub UI designed to promote collaboration and event engagement.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/80ca76246457181.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/246457181/Tech-Community-Platform-UI-Innovation-Club"
+      },
+      {
+        "id": "fast-food-ui",
+        "category": "uiux",
+        "title": "Fast Food Restaurant UI",
+        "subtitle": "UI / Web Design",
+        "description": "Modern ordering interface designed for swift digital menu browsing and checkout.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/dcec4c246406463.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/246406463/Fast-Food-Restaurant-Website-UI"
+      },
+      {
+        "id": "ngo-charity-ui",
+        "category": "uiux",
+        "title": "NGO Charity Platform",
+        "subtitle": "UI / Social Impact",
+        "description": "Accessible charity portal with structured donation flows and expense tracking dashboard.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/56a9ee246404011.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/246404011/NGO-Charity-Platform-UI-Donation-Volunteer"
+      }
+    ],
+    "skills": [
+      {
+        "category": "UI/UX Design (Primary)",
+        "items": [
+          "User Interface Design (Web, Mobile & SaaS)",
+          "User Research & Competitive Analysis",
+          "Wireframing & Prototyping (Figma)",
+          "Design Systems & Component based UI",
+          "Responsive Design & Accessibility"
+        ]
+      },
+      {
+        "category": "Supporting Skills",
+        "items": [
+          "Brand Identity & Visual Design",
+          "Basic Motion",
+          "Presentation Design & Presenting",
+          "HTML, CSS, JS, XML, XAML"
+        ]
+      },
+      {
+        "category": "Technical Awareness",
+        "items": [
+          "Basic knowledge of Java, Kotlin, Python, C#"
+        ]
+      },
+      {
+        "category": "AI-Assisted Design Workflow",
+        "items": [
+          "Ideation & concept by Stitch & Figma Make",
+          "Rapid iteration using AI-supported tools"
+        ]
+      },
+      {
+        "category": "Design Tools",
+        "items": [
+          "Figma, Adobe Illustrator",
+          "After Effects & Blender"
+        ]
+      },
+      {
+        "category": "Collaboration",
+        "items": [
+          "Agile team collaboration",
+          "Stakeholder & Dev communication"
+        ]
+      }
+    ]
+  },
+  "developer": {
+    "roleId": "developer",
+    "roleName": "Developer",
+    "downloadLabel": "Download Developer Resume",
+    "downloadUrl": "https://ventrixon-my.sharepoint.com/:b:/g/personal/adibuljabir_ventrixon_onmicrosoft_com/IQCovd7ZTccKRJQHHjli2ITEAbCi5NuyEgeY1HZigXmnFsc?e=OdaAJ5",
+    "resumeFileName": "Adibul Jabir Developer V2_30-08-2026.pdf",
+    "portfolio": [
+      {
+        "id": "tada-tour-bill",
+        "category": "dev",
+        "type": "code",
+        "title": "TA-DA Bill Generator",
+        "subtitle": "C \u2022 CLI \u2022 File I/O",
+        "description": "CLI logistics & allowance calculator with robust file stream persistence in C.",
+        "langTag": "C / Systems",
+        "roleTag": "Author & Maintainer",
+        "codeSnippet": [
+          "FILE *Tour_Diary = fopen(\"Tour_Diary.txt\", \"a\");",
+          "int distance, expense1, expense2;",
+          "fprintf(Transport_Bill, \"| %02d-%02d-%04d |...\");"
+        ],
+        "repoName": "adibuljabir/TA-DA-Tour...",
+        "stars": "1",
+        "githubUrl": "https://github.com/adibuljabir/TA-DA-Tour-Transport-Bill-Generator",
+        "sourceUrl": "https://github.com/adibuljabir/TA-DA-Tour-Transport-Bill-Generator/blob/master/TourBill.c"
+      },
+      {
+        "id": "findit-app",
+        "category": "dev",
+        "type": "code",
+        "title": "FindIT Mobile App",
+        "subtitle": "Android \u2022 Kotlin \u2022 Mobile",
+        "description": "Native Android utility built for intuitive item tracking and index discovery.",
+        "langTag": "Kotlin / Android",
+        "langColor": "#a78bfa",
+        "roleTag": "Android App",
+        "codeSnippet": [
+          "class FindItemActivity : AppCompatActivity() {",
+          "  val tracker = rememberTracker()",
+          "  initLocationIndex(savedInstanceState)",
+          "}"
+        ],
+        "repoName": "adibuljabir/FindIT",
+        "footerMeta": "Gradle \u2022 Kotlin",
+        "githubUrl": "https://github.com/adibuljabir/FindIT"
+      },
+      {
+        "id": "khaon-management",
+        "category": "dev",
+        "type": "code",
+        "title": "Khaon Food Management",
+        "subtitle": "Java \u2022 Software Architecture",
+        "description": "Modular food ordering and inventory system built with clean OOP architecture.",
+        "langTag": "Java / OOP",
+        "langColor": "#fb923c",
+        "roleTag": "Software System",
+        "codeSnippet": [
+          "public class KhaonManager {",
+          "  private List<OrderItem> orders;",
+          "  public double calculateInventory() { ... }",
+          "}"
+        ],
+        "repoName": "adibuljabir/Khaon",
+        "footerMeta": "Java \u2022 OOP Design",
+        "githubUrl": "https://github.com/adibuljabir/Khaon"
+      },
+      {
+        "id": "collab-repos",
+        "category": "dev",
+        "type": "code",
+        "title": "Collaborative Repos & PRs",
+        "subtitle": "Git \u2022 Open Source \u2022 Team Repos",
+        "description": "Active collaborator in university competitions, team projects, and open repositories.",
+        "langTag": "Open Source",
+        "langColor": "#4ade80",
+        "roleTag": "Contributor",
+        "codeSnippet": [
+          "git checkout -b feature/ui-improvement",
+          "git commit -m \"feat: optimize pipeline\"",
+          "git push origin pull-request"
+        ],
+        "repoName": "github.com/adibuljabir",
+        "footerMeta": "PRs \u2022 Code Review",
+        "githubUrl": "https://github.com/adibuljabir"
+      }
+    ],
+    "skills": [
+      {
+        "category": "Languages",
+        "items": [
+          "C#",
+          "C/C++",
+          "Java",
+          "Kotlin",
+          "Python",
+          "JavaScript (ES6+)",
+          "SQL",
+          "HTML5/CSS3"
+        ]
+      },
+      {
+        "category": "Frameworks & Runtimes",
+        "items": [
+          ".NET 8 (WPF)",
+          "Android SDK",
+          "Entity Framework Core",
+          "Node.js"
+        ]
+      },
+      {
+        "category": "Architecture & Practices",
+        "items": [
+          "MVVM",
+          "OOP",
+          "Async / Multi-threaded Systems",
+          "Responsive"
+        ]
+      },
+      {
+        "category": "Databases & Cloud",
+        "items": [
+          "PostgreSQL",
+          "Neon.tech (Serverless)",
+          "RESTful APIs",
+          "Git / GitHub Actions"
+        ]
+      },
+      {
+        "category": "Tools & Libraries",
+        "items": [
+          "QuestPDF",
+          "LiveCharts2",
+          "Figma",
+          "VS Code"
+        ]
+      },
+      {
+        "category": "Design Crossover",
+        "items": [
+          "UI/UX Design",
+          "Figma-to-Code Workflow",
+          "Design Systems"
+        ]
+      }
+    ]
+  },
+  "brand": {
+    "roleId": "brand",
+    "roleName": "Brand Designer",
+    "downloadLabel": "Download Brand Designer Resume",
+    "downloadUrl": "https://ventrixon-my.sharepoint.com/:b:/g/personal/adibuljabir_ventrixon_onmicrosoft_com/IQC-DuPUmmN7RbaGlFJsBFEDAZPRSmrtVbYkz0wlJR9si3o?e=BJUUTv",
+    "resumeFileName": "Adibul Jabir_Brand Designer_Resume_30-08-2026.pdf",
+    "portfolio": [
+      {
+        "id": "ventrixon-logo-anim",
+        "category": "branding 3d",
+        "title": "Ventrixon Logo Animation",
+        "subtitle": "Brand Motion Graphics",
+        "description": "Smooth brand-driven motion graphics and cinematic reveal timing in After Effects.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif",
+        "badge": "Branding Motion",
+        "youtubeUrl": "https://www.youtube.com/@Ventrixon",
+        "behanceUrl": "https://www.behance.net/gallery/246479509/Ventrixon-Logo-Animation"
+      },
+      {
+        "id": "motion-logo-intro",
+        "category": "branding 3d",
+        "title": "4K Motion Logo Intro",
+        "subtitle": "Brand Motion Graphics",
+        "description": "Cinematic 4K brand-driven motion graphics and fluid reveal animations.",
+        "thumbnail": "https://i.ytimg.com/vi/hBbHoIONYf0/hqdefault.jpg",
+        "badge": "4K Motion",
+        "ytId": "hBbHoIONYf0",
+        "youtubeUrl": "https://www.youtube.com/watch?v=hBbHoIONYf0",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/hBbHoIONYf0?autoplay=1&rel=0"
+      },
+      {
+        "id": "hoodie-3d-cloth",
+        "category": "branding 3d",
+        "title": "Hoodie Apparel Animation",
+        "subtitle": "3D Branding Simulation",
+        "description": "Dynamic cloth simulation and stylized commercial showcase for apparel brands.",
+        "thumbnail": "https://i.ytimg.com/vi/-oDgaHYAk5M/hqdefault.jpg",
+        "badge": "3D Cloth Sim",
+        "ytId": "-oDgaHYAk5M",
+        "youtubeUrl": "https://www.youtube.com/shorts/-oDgaHYAk5M",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/-oDgaHYAk5M?autoplay=1&rel=0"
+      },
+      {
+        "id": "dpxi-fc-intro",
+        "category": "branding",
+        "title": "DP Xi FC Video Intro",
+        "subtitle": "Branding & Video",
+        "description": "High-energy cinematic sports promo with synchronized beat cuts and titles.",
+        "thumbnail": "https://i.ytimg.com/vi/khtonJIabQ0/hqdefault.jpg",
+        "badge": "Branding Video",
+        "ytId": "khtonJIabQ0",
+        "youtubeUrl": "https://www.youtube.com/watch?v=khtonJIabQ0",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/khtonJIabQ0?autoplay=1&rel=0"
+      }
+    ],
+    "skills": [
+      {
+        "category": "Brand Design",
+        "items": [
+          "Consistency",
+          "Design System",
+          "Synced Motion"
+        ]
+      },
+      {
+        "category": "Design Tools",
+        "items": [
+          "Blender",
+          "Adobe Illustrator",
+          "Figma",
+          "Adobe After Effects"
+        ]
+      },
+      {
+        "category": "Additional Skills",
+        "items": [
+          "UI/UX Design & Dev",
+          "Presentation Design & Presenting"
+        ]
+      },
+      {
+        "category": "Data Visualization",
+        "items": [
+          "Charts",
+          "Bars etc"
+        ]
+      }
+    ]
+  },
+  "3d": {
+    "roleId": "3d",
+    "roleName": "3D & Motion Designer",
+    "downloadLabel": "Download 3D & Motion Designer Resume",
+    "downloadUrl": "https://ventrixon-my.sharepoint.com/:b:/g/personal/adibuljabir_ventrixon_onmicrosoft_com/IQAyp5OQM6Y3S65EkHIzoBYxAVHXcwN8zIAbHn78KtKRkSU?e=etSREg",
+    "resumeFileName": "Adibul Jabir 3D & Motion Designer V3_30-08-2026.pdf",
+    "portfolio": [
+      {
+        "id": "ventrixon-logo-anim",
+        "category": "branding 3d",
+        "title": "Ventrixon Logo Animation",
+        "subtitle": "Brand Motion Graphics",
+        "description": "Smooth brand-driven motion graphics and cinematic reveal timing in After Effects.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/40fb3f246479509.Y3JvcCwxNTM0LDEyMDAsMzQsMA.gif",
+        "badge": "Branding Motion",
+        "youtubeUrl": "https://www.youtube.com/@Ventrixon",
+        "behanceUrl": "https://www.behance.net/gallery/246479509/Ventrixon-Logo-Animation"
+      },
+      {
+        "id": "motion-logo-intro",
+        "category": "branding 3d",
+        "title": "4K Motion Logo Intro",
+        "subtitle": "Brand Motion Graphics",
+        "description": "Cinematic 4K brand-driven motion graphics and fluid reveal animations.",
+        "thumbnail": "https://i.ytimg.com/vi/hBbHoIONYf0/hqdefault.jpg",
+        "badge": "4K Motion",
+        "ytId": "hBbHoIONYf0",
+        "youtubeUrl": "https://www.youtube.com/watch?v=hBbHoIONYf0",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/hBbHoIONYf0?autoplay=1&rel=0"
+      },
+      {
+        "id": "hoodie-3d-cloth",
+        "category": "branding 3d",
+        "title": "Hoodie Apparel Animation",
+        "subtitle": "3D Branding Simulation",
+        "description": "Dynamic cloth simulation and stylized commercial showcase for apparel brands.",
+        "thumbnail": "https://i.ytimg.com/vi/-oDgaHYAk5M/hqdefault.jpg",
+        "badge": "3D Cloth Sim",
+        "ytId": "-oDgaHYAk5M",
+        "youtubeUrl": "https://www.youtube.com/shorts/-oDgaHYAk5M",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/-oDgaHYAk5M?autoplay=1&rel=0"
+      },
+      {
+        "id": "motherboard-3d",
+        "category": "3d",
+        "title": "Motherboard 3D Animation",
+        "subtitle": "3D Animation",
+        "description": "Detailed hardware component visualization and cinematic motion graphics.",
+        "thumbnail": "https://i.ytimg.com/vi/0Eb3AAcaTEc/hqdefault.jpg",
+        "badge": "3D Hardware",
+        "ytId": "0Eb3AAcaTEc",
+        "youtubeUrl": "https://www.youtube.com/watch?v=0Eb3AAcaTEc",
+        "behanceUrl": "https://www.behance.net/gallery/212128653/Full-Youtube-Video-of-Motherboard-Animation",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/0Eb3AAcaTEc?autoplay=1&rel=0"
+      },
+      {
+        "id": "refrigerator-ad",
+        "category": "3d",
+        "title": "Refrigerator Commercial Ad",
+        "subtitle": "Commercial 3D Video",
+        "description": "Commercial product video featuring photorealistic lighting, shaders, and appliance animation.",
+        "thumbnail": "https://i.ytimg.com/vi/FkkAfB6_9SU/hqdefault.jpg",
+        "badge": "Commercial 3D",
+        "ytId": "FkkAfB6_9SU",
+        "youtubeUrl": "https://www.youtube.com/watch?v=FkkAfB6_9SU",
+        "behanceUrl": "https://www.behance.net/gallery/215395279/Animation-of-Refrigerator-Advertisement",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/FkkAfB6_9SU?autoplay=1&rel=0"
+      },
+      {
+        "id": "low-poly-gun",
+        "category": "3d",
+        "title": "Low Poly Anti-Aircraft Gun",
+        "subtitle": "3D Modeling",
+        "description": "Stylized game-ready 3D prop modeled with clean topology and color-based materials.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/246476437/Low-Poly-Anti-Aircraft-Gun",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/3c7be7246476437.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png"
+      },
+      {
+        "id": "low-poly-train",
+        "category": "3d",
+        "title": "Low Poly Train Model",
+        "subtitle": "3D Modeling",
+        "description": "Stylized 3D model of the EMD GT42ACL locomotive with passenger coach in Blender.",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png",
+        "behanceUrl": "https://www.behance.net/gallery/246476151/Low-Poly-Train-Model",
+        "lightboxType": "image",
+        "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/projects/404/59f610246476151.Y3JvcCwxNTM0LDEyMDAsMzQsMA.png"
+      },
+      {
+        "id": "locomotive-anim",
+        "category": "3d",
+        "title": "Locomotive 3D Animation",
+        "subtitle": "3D Vehicle Animation",
+        "description": "Stylized 3D low poly train animation featuring realistic mechanical motion.",
+        "thumbnail": "https://i.ytimg.com/vi/9dpz015aejE/hqdefault.jpg",
+        "badge": "3D Animation",
+        "ytId": "9dpz015aejE",
+        "youtubeUrl": "https://www.youtube.com/watch?v=9dpz015aejE",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/9dpz015aejE?autoplay=1&rel=0"
+      },
+      {
+        "id": "donut-recreation",
+        "category": "3d",
+        "title": "Realistic 3D Donut",
+        "subtitle": "3D Modeling & Shading",
+        "description": "Photorealistic procedural texturing, particle sprinkles, and lighting in Blender.",
+        "thumbnail": "https://i.ytimg.com/vi/dYq1ATkLAj8/hqdefault.jpg",
+        "badge": "3D Shading",
+        "ytId": "dYq1ATkLAj8",
+        "youtubeUrl": "https://www.youtube.com/watch?v=dYq1ATkLAj8",
+        "lightboxType": "video",
+        "lightboxSrc": "https://www.youtube-nocookie.com/embed/dYq1ATkLAj8?autoplay=1&rel=0"
+      }
+    ],
+    "skills": [
+      {
+        "category": "3D Design & Visualization (Primary)",
+        "items": [
+          "Blender",
+          "Hard-Surface Modeling",
+          "Product Visualization",
+          "Basic Texturing",
+          "Lighting",
+          "Rendering",
+          "Animation",
+          "Motion Graphics"
+        ]
+      },
+      {
+        "category": "Design Tools",
+        "items": [
+          "Blender",
+          "Adobe Illustrator",
+          "Figma",
+          "Adobe After Effects"
+        ]
+      },
+      {
+        "category": "Technical Awareness",
+        "items": [
+          "Basic knowledge of Java, Kotlin, Python"
+        ]
+      },
+      {
+        "category": "Additional Skills",
+        "items": [
+          "UI/UX Design",
+          "Brand Identity & Visual Design",
+          "Presentation Design & Presenting"
+        ]
+      },
+      {
+        "category": "Collaboration",
+        "items": [
+          "Stakeholder & Dev communication"
+        ]
+      }
+    ]
+  }
+};
+
   // 1. Theme Management (System Detection & Saved Persistence)
   const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -1037,7 +1766,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Pure JSON Loading Initiation
+    // Initial Immediate Render (guarantees UI renders instantly in any environment)
+  renderAllSiteSections(INITIAL_MAIN_DATA);
+  renderResumeRoles(INITIAL_ROLES_DATA);
+
+  // Pure JSON Loading Initiation (fetches latest updates if on HTTP/HTTPS)
   loadJsonData();
   initScrollAnimations();
   initVideoHoverPlayback();
