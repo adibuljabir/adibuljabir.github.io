@@ -363,13 +363,6 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = leftCol + rightCol;
   }
 
-  // --- Languages Renderer (Universal from main.json) ---
-  function renderLanguages(languages) {
-    const container = document.getElementById('languages-container');
-    if (!container || !languages || !Array.isArray(languages)) return;
-    container.innerHTML = languages.map(l => `<span class="badge-item">${l}</span>`).join('');
-  }
-
   // --- Experience & Education Renderer (Universal Timeline from main.json) ---
   function renderExperienceAndEducation(experience, education) {
     const expContainer = document.getElementById('experience-timeline');
@@ -390,6 +383,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (eduContainer && education && Array.isArray(education)) {
       eduContainer.innerHTML = education.map(makeItemHtml).join('');
     }
+  }
+
+  // --- Languages Renderer (Universal from main.json) ---
+  function renderLanguages(languages) {
+    const container = document.getElementById('languages-container');
+    if (!container || !languages || !Array.isArray(languages)) return;
+    container.innerHTML = languages.map(l => `<span class="badge-item">${l}</span>`).join('');
   }
 
   // --- Portfolio Single Card HTML Generator ---
@@ -525,7 +525,6 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('');
 
       const compBadges = (role.competencies || []).map(c => `<span class="badge-item">${c}</span>`).join('');
-      const langBadges = (role.languages || ['Bengali (Native)', 'English (Fluent)', 'Arabic (Conversational)']).map(l => `<span class="badge-item">${l}</span>`).join('');
 
       // Merged portfolio directly from the role's JSON definition with continuous horizontal marquee animation
       const roleProjects = role.portfolio || [];
