@@ -1037,7 +1037,7 @@ a:hover {
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.6);
+  filter: brightness(0) opacity(0.45);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1058,16 +1058,21 @@ a:hover {
   max-height: 30px;
 }
 
-[data-theme="dark"] .client-item img {
-  filter: grayscale(100%) brightness(2.2) opacity(0.7);
-}
-
 .client-item:hover {
   transform: translateY(-2px);
 }
 
 .client-item:hover img {
-  filter: grayscale(0%) brightness(1) opacity(1);
+  filter: brightness(0) opacity(0.9);
+  transform: scale(1.08);
+}
+
+[data-theme="dark"] .client-item img {
+  filter: brightness(1) opacity(0.65);
+}
+
+[data-theme="dark"] .client-item:hover img {
+  filter: brightness(1) opacity(1);
   transform: scale(1.08);
 }
 
