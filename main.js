@@ -639,15 +639,22 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
   }
 
-  // Live Concurrent Async JSON Fetcher (Parallel HTTP/2 Stream)
+  // Live Concurrent Async JSON Fetcher (Parallel HTTP/2 Stream with Cache-Busting)
   async function loadJsonData() {
     try {
+      const fetchJson = async (url) => {
+        const bustUrl = `${url}?v=${Date.now()}`;
+        const res = await fetch(encodeURI(bustUrl), { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+        return await res.json();
+      };
+
       const [mainRes, uiuxRes, devRes, brandRes, d3Res] = await Promise.all([
-        fetch('./data/main.json').then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch(encodeURI('./data/roles/UI-UX Designer.json')).then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch(encodeURI('./data/roles/Developer.json')).then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch(encodeURI('./data/roles/Brand Designer.json')).then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch(encodeURI('./data/roles/3D & Motion Designer.json')).then(r => r.ok ? r.json() : null).catch(() => null)
+        fetchJson('./data/main.json').catch(e => { console.warn(e); return null; }),
+        fetchJson('./data/roles/UI-UX Designer.json').catch(e => { console.warn(e); return null; }),
+        fetchJson('./data/roles/Developer.json').catch(e => { console.warn(e); return null; }),
+        fetchJson('./data/roles/Brand Designer.json').catch(e => { console.warn(e); return null; }),
+        fetchJson('./data/roles/3D & Motion Designer.json').catch(e => { console.warn(e); return null; })
       ]);
 
       if (mainRes) {

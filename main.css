@@ -1388,34 +1388,22 @@ a:hover {
 }
 
 /* ===================================================================
- * Skills Section (Modern Category Grid & Badges)
+ * Skills Section (Modern Borderless Category Grid & Badges)
  * =================================================================== */
 .skills-category-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+  gap: 28px 36px;
   margin-bottom: 50px;
 }
 
 .skill-group-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 18px;
-  padding: 20px 22px;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  background: none;
+  border: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-}
-
-.skill-group-card:hover {
-  border-color: var(--primary);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-}
-
-[data-theme="dark"] .skill-group-card:hover {
-  box-shadow: 0 12px 30px rgba(0, 124, 237, 0.15);
+  gap: 12px;
 }
 
 .skill-group-title {
@@ -1436,8 +1424,8 @@ a:hover {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
-  height: 15px;
+  width: 3.5px;
+  height: 14px;
   border-radius: 2px;
   background-color: var(--primary);
 }
@@ -1466,17 +1454,16 @@ a:hover {
 .skill-badge:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background-color: rgba(0, 124, 237, 0.05);
 }
 
 @media (max-width: 768px) {
   .skills-category-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 20px;
     margin-bottom: 35px;
   }
   .skill-group-card {
-    padding: 16px 18px;
+    padding: 0;
     gap: 10px;
   }
   .skill-group-title {
