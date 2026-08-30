@@ -91,42 +91,73 @@
   ],
   "experience": [
     {
-      "period": "2023 - Present",
-      "company": "Ventrixon Studio",
-      "title": "Founder, Lead 3D & Creative Director",
-      "description": "Directing 3D animations, product visualizations, motion graphics, brand identity systems, and UI/UX solutions."
+      "period": "April 2025 - Present",
+      "company": "PRISM Club",
+      "companyUrl": "https://www.facebook.com/prism.kkbau.ac.bd",
+      "title": "Print & Media Secretary",
+      "description": "Managing branding, event media, website UI/UX, banners, cards & social media posts. Coordinated decoration team for branding consistency & provided technical support such as live sessions with international guests."
     },
     {
-      "period": "2023 - Present",
-      "company": "Upwork® Global Inc",
-      "title": "Freelance 3D & Motion Specialist (5-Star Track)",
-      "description": "Delivering custom 3D animations, cinematic product visualizers, vector brand marks, and digital assets for international clients."
+      "period": "May 2025 - July 2025",
+      "company": "KU IC-5, University Innovation Hub Program",
+      "title": "Student Startup Venture (SasthoCare)",
+      "description": "A digital doctor consultation platform called SasthoCare. Responsible for UI/UX, Data to visuals, Designing & Presenting the pitch. Awarded Pre-Seed Fund of 20,000 BDT. Learned how a startup works, teamwork, Slack, and pitching."
     },
     {
-      "period": "2023 - Present",
-      "company": "Independent & Open Source",
-      "title": "Frontend Developer & UI/UX Designer",
-      "description": "Building high-performance web applications, scalable design systems, and responsive user interfaces with modern JavaScript, Python, and CSE foundations."
+      "period": "Aug 2018 - Aug 2025",
+      "company": "CHISAS",
+      "companyUrl": "https://www.facebook.com/Chinnomul.Samajik.Songstha",
+      "title": "IT Affairs Secretary",
+      "description": "Designed banners, edited videos and rebranded logo/brand colors. Implemented member registration. Captured & edited videos. Coordinated Ramadan Iftar food distribution & children's games. Participated in fundraising for Sylhet flood crisis."
+    },
+    {
+      "period": "June 2023 - July 2023",
+      "company": "Upwork.com",
+      "companyUrl": "https://www.upwork.com/freelancers/~01693e221fbc54449b",
+      "title": "Freelance Illustrator",
+      "description": "Designed pattern illustrations for Sprigs, a New York based garment company. Crafted garment designs and delivered on time. Kept a 5-star rating throughout and earned 181.25 USD. Learned how to communicate with clients and handle feedback."
     }
   ],
   "education": [
     {
-      "period": "2024 - 2028 (Ongoing)",
-      "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
-      "title": "BSc in Computer Science & Engineering",
-      "description": "Core computer science foundations: Algorithms, Data Structures, Database Systems, Software Engineering, and Human-Computer Interaction (HCI)."
+      "period": "Expected 2027 • CGPA: 3.08",
+      "company": "Khulna Khan Bahadur Ahsanullah University",
+      "title": "Bachelor of Science (B.Sc.) in Computer Science and Engineering",
+      "description": "Undergraduate studies covering core computing foundations: Data Structures, Algorithms, Software Engineering, Database Management Systems, and Human-Computer Interaction (HCI)."
     },
     {
-      "period": "2022 - Present",
-      "company": "Applied Professional Practice",
-      "title": "3D Animation, Motion Graphics & Visual Design Systems",
-      "description": "Hard-surface topology, PBR node shading, procedural textures, particle simulations in Blender, After Effects motion design, and Figma design frameworks."
+      "period": "2023 • GPA: 3.75 / 5.00",
+      "company": "Bangladesh Navy School & College, Khulna",
+      "title": "Higher Secondary Certificate (HSC) in Science",
+      "description": "Completed higher secondary education in the Science discipline with emphasis on Higher Mathematics, Physics, Chemistry, and Information & Communication Technology."
+    },
+    {
+      "period": "2020 • GPA: 4.06 / 5.00",
+      "company": "Bangladesh Navy School & College, Khulna",
+      "title": "Secondary School Certificate (SSC) in Science",
+      "description": "Completed secondary education under Science group with focus on General Science, Higher Mathematics, and Physics, building strong analytical and problem-solving foundations."
     }
   ],
   "languages": [
     "Bengali (Native)",
     "English (Fluent)",
     "Arabic (Conversational)"
+  ],
+  "certifications": [
+    {
+      "period": "UI/UX Certification",
+      "company": "Betterskills.io",
+      "instructor": "Saidul Islam",
+      "title": "Figma UI/UX Design",
+      "description": "Professional training covering modern UI/UX workflows, responsive screen design, interactive prototyping, Figma design systems, and developer handoff practices."
+    },
+    {
+      "period": "English & Communication Training",
+      "company": "Fondi (Japan)",
+      "instructor": "Tatsuto Nohara",
+      "title": "Boost Career Path Program",
+      "description": "Interactive English conversation, spoken communication, and career development program utilizing Fondi's virtual interactive application for real-time global speaking practice and workplace communication skills."
+    }
   ],
   "testimonials": [
     {

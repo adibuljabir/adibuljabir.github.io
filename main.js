@@ -368,14 +368,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const expContainer = document.getElementById('experience-timeline');
     const eduContainer = document.getElementById('education-timeline');
 
-    const makeItemHtml = (item) => `
-      <div class="timeline-item">
-        <span class="timeline-period">${item.period || ''}</span>
-        <span class="timeline-company">${item.company || ''}</span>
-        <h4 class="timeline-title">${item.title || ''}</h4>
-        <p class="timeline-desc">${item.description || item.desc || ''}</p>
-      </div>
-    `;
+    const makeItemHtml = (item) => {
+      const companyHtml = item.companyUrl
+        ? `<a href="${item.companyUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">${item.company}</a>`
+        : (item.company || '');
+
+      return `
+        <div class="timeline-item">
+          <span class="timeline-period">${item.period || ''}</span>
+          <span class="timeline-company">${companyHtml}</span>
+          <h4 class="timeline-title">${item.title || ''}</h4>
+          <p class="timeline-desc">${item.description || item.desc || ''}</p>
+        </div>
+      `;
+    };
 
     if (expContainer && experience && Array.isArray(experience)) {
       expContainer.innerHTML = experience.map(makeItemHtml).join('');
@@ -390,6 +396,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('languages-container');
     if (!container || !languages || !Array.isArray(languages)) return;
     container.innerHTML = languages.map(l => `<span class="badge-item">${l}</span>`).join('');
+  }
+
+  // --- Certifications & Training Renderer ---
+  function renderCertifications(certifications) {
+    const container = document.getElementById('certifications-container');
+    if (!container || !certifications || !Array.isArray(certifications) || !certifications.length) return;
+
+    const total = certifications.length;
+    const mid = Math.ceil(total / 2);
+    const leftItems = certifications.slice(0, mid);
+    const rightItems = certifications.slice(mid);
+
+    const makeItemHtml = (item) => {
+      const instructorText = item.instructor ? ` • Instructor: ${item.instructor}` : '';
+      return `
+        <div class="timeline-item">
+          <span class="timeline-period">${item.period || 'Certification'}</span>
+          <span class="timeline-company">${item.company || ''}${instructorText}</span>
+          <h4 class="timeline-title">${item.title || ''}</h4>
+          <p class="timeline-desc">${item.description || item.desc || ''}</p>
+        </div>
+      `;
+    };
+
+    const leftCol = `
+      <div>
+        <div class="timeline">
+          ${leftItems.map(makeItemHtml).join('')}
+        </div>
+      </div>
+    `;
+
+    const rightCol = `
+      <div>
+        <div class="timeline">
+          ${rightItems.map(makeItemHtml).join('')}
+        </div>
+      </div>
+    `;
+
+    container.innerHTML = leftCol + rightCol;
   }
 
   // --- Portfolio Single Card HTML Generator ---
@@ -624,6 +671,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (siteData.achievements) renderAchievements(siteData.achievements);
     if (siteData.languages) renderLanguages(siteData.languages);
     if (siteData.experience || siteData.education) renderExperienceAndEducation(siteData.experience, siteData.education);
+    if (siteData.certifications) renderCertifications(siteData.certifications);
     if (siteData.testimonials) renderTestimonials(siteData.testimonials);
     if (siteData.collaboratedWith) renderCollaboratedWith(siteData.collaboratedWith);
     initScrollAnimations();

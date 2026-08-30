@@ -42,7 +42,9 @@ The site is built with pure, high-performance web standards (**Semantic HTML5**,
 | **Fun Facts** | `Dynamic JSON` | `data/main.json` → `"funFacts"` | Animated numerical metric counters. |
 | **Resume & Portfolio (Tabs)** | `Dynamic JSON` | `data/roles/*.json` | 4 modular role files (`UI-UX Designer.json`, `Developer.json`, `Brand Designer.json`, `3D & Motion Designer.json`) containing selected works, working skills, specialized competencies, and PDF download buttons. |
 | **Achievements** | `Dynamic JSON` | `data/main.json` → `"achievements"` | Awards and milestones (auto-distributed: left column first, then right column). |
+| **Languages** | `Dynamic JSON` | `data/main.json` → `"languages"` | Spoken and professional communication languages badges. |
 | **Experience & Education** | `Dynamic JSON` | `data/main.json` → `"experience"`, `"education"` | Universal career timeline and academic background. |
+| **Certifications & Training** | `Dynamic JSON` | `data/main.json` → `"certifications"` | Professional certifications, instructor courses, and career accelerators. |
 | **Testimonials** | `Dynamic JSON` | `data/main.json` → `"testimonials"` | Client feedback, avatars, company roles, and LinkedIn links. |
 | **Collaboration Packages** | `Static` | `index.html` | Pricing cards with deliverables and features list. |
 | **Contact Form & Info** | `Static` | `index.html` | Location, direct email, WhatsApp chat, and Web3Forms AJAX form. |
@@ -102,8 +104,8 @@ The keys in `data/main.json` follow the top-to-bottom page hierarchy:
   ],
   "education": [
     {
-      "period": "2024 - 2028 (Ongoing)",
-      "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+      "period": "Expected 2027 • CGPA: 3.08",
+      "company": "Khulna Khan Bahadur Ahsanullah University",
       "title": "BSc in Computer Science & Engineering",
       "description": "Core computer science foundations, algorithms, and human-computer interaction."
     }
@@ -112,6 +114,22 @@ The keys in `data/main.json` follow the top-to-bottom page hierarchy:
     "Bengali (Native)",
     "English (Fluent)",
     "Arabic (Conversational)"
+  ],
+  "certifications": [
+    {
+      "period": "UI/UX Certification",
+      "company": "Betterskills.io",
+      "instructor": "Saidul Islam",
+      "title": "Figma UI/UX Design",
+      "description": "Professional training covering modern UI/UX workflows, interactive prototyping, and design systems."
+    },
+    {
+      "period": "English & Communication Training",
+      "company": "Fondi (Japan)",
+      "instructor": "Tatsuto Nohara",
+      "title": "Boost Career Path Program",
+      "description": "Interactive English conversation, spoken communication, and career development program utilizing Fondi's virtual interactive application."
+    }
   ],
   "testimonials": [
     {
