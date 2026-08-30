@@ -199,14 +199,14 @@ a:hover {
 
 .logo-text {
   font-size: 19px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--heading-color);
   letter-spacing: -0.02em;
 }
 
 .logo-text span {
   color: var(--heading-color);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 /* Header Right Group (Navbar + Tools on Right Side) */
@@ -495,11 +495,16 @@ a:hover {
 
 .home-title {
   font-size: clamp(38px, 4.2vw, 52px);
-  font-weight: 800;
+  font-weight: 400;
   color: var(--heading-color);
   margin-bottom: clamp(12px, 1.8vh, 18px);
   letter-spacing: -0.03em;
   line-height: 1.15;
+}
+
+.home-title span {
+  font-weight: 800;
+  color: var(--heading-color);
 }
 
 .home-desc {
@@ -849,7 +854,7 @@ a:hover {
 .testimonials-marquee-track {
   display: flex;
   width: max-content;
-  animation: testimonialsContinuous 28s linear infinite;
+  animation: testimonialsContinuous 30s linear infinite;
   will-change: transform;
 }
 
@@ -1133,27 +1138,11 @@ a:hover {
   padding: 26px 16px;
   text-align: center;
   background-color: var(--card-bg);
-  transition: border-color 0.25s ease;
-}
-
-@media (max-width: 768px) {
-  .fact-box {
-    padding: 14px 10px;
-    border-radius: 8px;
-  }
-  .fact-icon {
-    font-size: 18px;
-    margin-bottom: 4px;
-  }
-  .fact-title {
-    font-size: 11.5px;
-  }
-  .fact-number {
-    font-size: 22px;
-  }
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .fact-box:hover {
+  transform: translateY(-2px);
   border-color: var(--primary);
 }
 
@@ -1711,7 +1700,7 @@ a:hover {
 .portfolio-marquee-track {
   display: flex;
   width: max-content;
-  animation: portfolioContinuous 32s linear infinite;
+  animation: portfolioContinuous 30s linear infinite;
   will-change: transform;
 }
 
@@ -2200,6 +2189,31 @@ a:hover {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(0, 124, 237, 0.15);
   background-color: var(--card-bg);
+}
+
+.form-label-optional {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--muted-color);
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+
+.form-label-optional i {
+  color: var(--primary);
+  margin-right: 4px;
+}
+
+input[type="date"].form-control,
+input[type="time"].form-control {
+  color-scheme: light;
+  cursor: pointer;
+}
+
+[data-theme="dark"] input[type="date"].form-control,
+[data-theme="dark"] input[type="time"].form-control {
+  color-scheme: dark;
 }
 
 textarea.form-control {

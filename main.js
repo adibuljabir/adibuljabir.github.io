@@ -490,7 +490,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "thumbnail": "images/prism-brand.jpg",
         "lightboxType": "image",
         "lightboxSrc": "images/prism-brand.jpg",
-        "badge": "Brand Identity",
         "facebookUrl": "https://www.facebook.com/prism.kkbau.ac.bd/"
       },
       {
@@ -502,7 +501,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "thumbnail": "images/chisas-brand.jpg",
         "lightboxType": "image",
         "lightboxSrc": "images/chisas-brand.jpg",
-        "badge": "Logo & Branding",
         "facebookUrl": "https://www.facebook.com/Chinnomul.Samajik.Songstha/"
       },
       {
@@ -514,7 +512,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "thumbnail": "images/rxt-gaming.jpg",
         "lightboxType": "image",
         "lightboxSrc": "images/rxt-gaming.jpg",
-        "badge": "Stream Motion Package",
         "facebookUrl": "https://www.facebook.com/rxtgaming7025"
       }
     ],
@@ -1147,8 +1144,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Image / Video Card
+    const isVideoCard = Boolean(item.ytId || item.video || item.lightboxType === 'video');
     const ytAttr = item.ytId ? `data-yt-id="${item.ytId}"` : '';
-    const badgeHtml = item.badge ? `<div class="video-play-badge"><i class="fas fa-play"></i> ${item.badge}</div>` : '';
+    const badgeHtml = isVideoCard ? `<div class="video-play-badge"><i class="fas fa-play"></i> Autoplay</div>` : '';
     
     let overlayActions = '';
     if (item.youtubeUrl) {
@@ -1522,8 +1520,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '.service-item',
       '.fact-box',
       '.timeline-item',
-      '.skill-item',
-      '.pricing-card',
+      '.skill-group-card',
       '.contact-info-col',
       '.contact-form-col'
     ];
@@ -1537,7 +1534,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (el.parentElement && (
         el.parentElement.classList.contains('fun-facts-grid') ||
         el.parentElement.classList.contains('services-list') ||
-        el.parentElement.classList.contains('pricing-grid') ||
+        el.parentElement.classList.contains('skills-category-grid') ||
         el.parentElement.classList.contains('timeline')
       )) {
         el.classList.add('reveal-stagger');
@@ -1578,7 +1575,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetVal = (numEl.getAttribute('data-count') || numEl.textContent || '').trim();
     if (!targetVal) return;
 
-    const isSlashFive = targetVal.includes('/5');
+    if (targetVal.includes('/')) {
+      const parts = targetVal.split('/');
+      const targetNumerator = parseFloat(parts[0]) || 0;
+      const denominator = parts[1] || '5';
+      const duration = 1200;
+      const startTime = performance.now();
+
+      function updateFraction(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(easeProgress * targetNumerator);
+        numEl.textContent = `${current}/${denominator}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateFraction);
+        } else {
+          numEl.textContent = `${targetNumerator}/${denominator}`;
+        }
+      }
+
+      requestAnimationFrame(updateFraction);
+      return;
+    }
+
     const isStar = targetVal.toLowerCase().includes('star') || targetVal.includes('★');
     const isPlus = targetVal.includes('+');
     const cleanNum = parseFloat(targetVal.replace(/[^0-9.]/g, ''));
@@ -1587,7 +1608,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const isDecimal = !isSlashFive && targetVal.includes('.');
+    const isDecimal = targetVal.includes('.');
     const duration = 1200;
     const startTime = performance.now();
 
@@ -1598,8 +1619,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const current = isDecimal ? (easeProgress * cleanNum).toFixed(1) : Math.floor(easeProgress * cleanNum);
 
       let suffix = '';
-      if (isSlashFive) suffix = '/5';
-      else if (isPlus) suffix = '+';
+      if (isPlus) suffix = '+';
       else if (isStar) suffix = ' Star';
 
       numEl.textContent = current + suffix;
@@ -1607,8 +1627,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (progress < 1) {
         requestAnimationFrame(updateCount);
       } else {
-        const finalNum = isSlashFive ? Math.floor(cleanNum) : (isDecimal ? cleanNum.toFixed(1) : cleanNum.toLocaleString());
-        numEl.textContent = finalNum + suffix;
+        numEl.textContent = (isDecimal ? cleanNum.toFixed(1) : cleanNum.toLocaleString()) + suffix;
       }
     }
 
