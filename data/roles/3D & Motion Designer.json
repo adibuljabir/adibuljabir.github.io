@@ -121,35 +121,45 @@
   ],
   "skills": [
     {
-      "category": "3D Modeling & Topology",
+      "category": "3D Design & Visualization (Primary)",
       "items": [
-        "Blender 3D Modeling & Topology",
-        "Hard-Surface Asset Optimization",
-        "Low-Poly & Stylized 3D Props"
+        "Blender",
+        "Hard-Surface Modeling",
+        "Product Visualization",
+        "Basic Texturing",
+        "Lighting",
+        "Rendering",
+        "Animation",
+        "Motion Graphics"
       ]
     },
     {
-      "category": "Shading, Lighting & Rendering",
+      "category": "Design Tools",
       "items": [
-        "PBR Material Shading & Texturing",
-        "Cinematic Lighting & Cameras",
-        "Cycles & Eevee Rendering"
+        "Blender",
+        "Adobe Illustrator",
+        "Figma",
+        "Adobe After Effects"
       ]
     },
     {
-      "category": "Motion & Animation",
+      "category": "Technical Awareness",
       "items": [
-        "Commercial Product Animation",
-        "Keyframe Animation & Curves",
-        "Cloth Physics Simulation"
+        "Basic knowledge of Java, Kotlin, Python"
       ]
     },
     {
-      "category": "Post-Production & Motion Graphics",
+      "category": "Additional Skills",
       "items": [
-        "Adobe After Effects (Motion Post)",
-        "DaVinci Resolve Video Editing",
-        "Logo & Reveal Animations"
+        "UI/UX Design",
+        "Brand Identity & Visual Design",
+        "Presentation Design & Presenting"
+      ]
+    },
+    {
+      "category": "Collaboration",
+      "items": [
+        "Stakeholder & Dev communication"
       ]
     }
   ]

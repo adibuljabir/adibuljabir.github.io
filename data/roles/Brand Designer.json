@@ -58,35 +58,34 @@
   ],
   "skills": [
     {
-      "category": "Brand Identity & Strategy",
+      "category": "Brand Design",
       "items": [
-        "Brand Identity Systems & Guidelines",
-        "Logo Design & Vector Marks",
-        "Visual Hierarchy & Consistency"
+        "Consistency",
+        "Design System",
+        "Synced Motion"
       ]
     },
     {
-      "category": "Visual Design & Aesthetics",
+      "category": "Design Tools",
       "items": [
-        "Color Theory & Palette Harmony",
-        "Typography Pairing & Hierarchy",
-        "Custom Iconography & Vector Art"
+        "Blender",
+        "Adobe Illustrator",
+        "Figma",
+        "Adobe After Effects"
       ]
     },
     {
-      "category": "Design Tools & Software",
+      "category": "Additional Skills",
       "items": [
-        "Adobe Illustrator (Vector Master)",
-        "Adobe Photoshop (Mockups & Visuals)",
-        "After Effects (Brand Motion)"
+        "UI/UX Design & Dev",
+        "Presentation Design & Presenting"
       ]
     },
     {
-      "category": "Production & Deliverables",
+      "category": "Data Visualization",
       "items": [
-        "Print & Vector Asset Packaging",
-        "Digital Brand Assets & Social Kits",
-        "Merchandise & Apparel Graphics"
+        "Charts",
+        "Bars etc"
       ]
     }
   ]

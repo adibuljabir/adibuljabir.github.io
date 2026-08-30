@@ -86,36 +86,60 @@
   ],
   "skills": [
     {
-      "category": "Core Development & Languages",
+      "category": "Languages",
       "items": [
-        "C / C++ (Algorithms & Systems)",
-        "Web Development (HTML5, CSS3, Modern JS)",
-        "Python & Scripting",
-        "Java & OOP Principles"
+        "C#",
+        "C/C++",
+        "Java",
+        "Kotlin",
+        "Python",
+        "JavaScript (ES6+)",
+        "SQL",
+        "HTML5/CSS3"
       ]
     },
     {
-      "category": "Frameworks & Platforms",
+      "category": "Frameworks & Runtimes",
       "items": [
-        "Android (Kotlin & Java)",
-        "REST APIs & JSON Integration",
-        "DOM Manipulation & Responsive UI"
+        ".NET 8 (WPF)",
+        "Android SDK",
+        "Entity Framework Core",
+        "Node.js"
       ]
     },
     {
-      "category": "CS Fundamentals",
+      "category": "Architecture & Practices",
       "items": [
-        "Data Structures & Algorithms",
-        "Clean Code & Modular Architecture",
-        "Software Testing & Optimization"
+        "MVVM",
+        "OOP",
+        "Async / Multi-threaded Systems",
+        "Responsive"
       ]
     },
     {
-      "category": "Tools & Workflow",
+      "category": "Databases & Cloud",
       "items": [
-        "Git, GitHub & Version Control",
-        "Linux, Bash & CLI Utilities",
-        "Collaborative PRs & Code Review"
+        "PostgreSQL",
+        "Neon.tech (Serverless)",
+        "RESTful APIs",
+        "Git / GitHub Actions"
+      ]
+    },
+    {
+      "category": "Tools & Libraries",
+      "items": [
+        "QuestPDF",
+        "LiveCharts2",
+        "Figma",
+        "VS Code"
+      ]
+    },
+    {
+      "category": "Design Crossover",
+      "items": [
+        "UI/UX Design",
+        "Figma-to-Code Workflow",
+        "Design Systems"
       ]
     }
   ]
