@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       "icon": "fas fa-star",
       "title": "Client Review",
-      "count": "5.0 Star"
+      "count": "5/5"
     },
     {
       "icon": "fas fa-check-circle",
@@ -1586,6 +1586,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetVal = (numEl.getAttribute('data-count') || numEl.textContent || '').trim();
     if (!targetVal) return;
 
+    const isSlashFive = targetVal.includes('/5');
     const isStar = targetVal.toLowerCase().includes('star') || targetVal.includes('★');
     const isPlus = targetVal.includes('+');
     const cleanNum = parseFloat(targetVal.replace(/[^0-9.]/g, ''));
@@ -1594,7 +1595,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const isDecimal = targetVal.includes('.');
+    const isDecimal = !isSlashFive && targetVal.includes('.');
     const duration = 1200;
     const startTime = performance.now();
 
@@ -1605,15 +1606,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const current = isDecimal ? (easeProgress * cleanNum).toFixed(1) : Math.floor(easeProgress * cleanNum);
 
       let suffix = '';
-      if (isPlus) suffix = '+';
-      if (isStar) suffix = ' Star';
+      if (isSlashFive) suffix = '/5';
+      else if (isPlus) suffix = '+';
+      else if (isStar) suffix = ' Star';
 
       numEl.textContent = current + suffix;
 
       if (progress < 1) {
         requestAnimationFrame(updateCount);
       } else {
-        numEl.textContent = (isDecimal ? cleanNum.toFixed(1) : cleanNum.toLocaleString()) + suffix;
+        const finalNum = isSlashFive ? Math.floor(cleanNum) : (isDecimal ? cleanNum.toFixed(1) : cleanNum.toLocaleString());
+        numEl.textContent = finalNum + suffix;
       }
     }
 

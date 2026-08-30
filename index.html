@@ -177,6 +177,23 @@
           <!-- Role Panes Container (Dynamically populated from data/roles/*.json) -->
           <div id="resume-panes-container"></div>
 
+          <!-- Experience & Education (Universal Timeline from main.json) -->
+          <div class="resume-columns" id="experience-education-container" style="margin-bottom: 50px;">
+            <div>
+              <div class="block-title">
+                <h2>Experience</h2>
+              </div>
+              <div class="timeline" id="experience-timeline"></div>
+            </div>
+
+            <div>
+              <div class="block-title">
+                <h2>Education</h2>
+              </div>
+              <div class="timeline" id="education-timeline"></div>
+            </div>
+          </div>
+
           <!-- Dual Columns: Left (Achievements) | Right (Certifications & Training + Languages) -->
           <div class="resume-columns" style="margin-bottom: 50px;">
             <div>
@@ -199,23 +216,6 @@
             </div>
           </div>
 
-          <!-- Experience & Education (Universal Timeline from main.json) -->
-          <div class="resume-columns" id="experience-education-container">
-            <div>
-              <div class="block-title">
-                <h2>Experience</h2>
-              </div>
-              <div class="timeline" id="experience-timeline"></div>
-            </div>
-
-            <div>
-              <div class="block-title">
-                <h2>Education</h2>
-              </div>
-              <div class="timeline" id="education-timeline"></div>
-            </div>
-          </div>
-
           <!-- Testimonials (Horizontal Animated Marquee) -->
           <div class="block-title">
             <h2>Testimonials</h2>
@@ -223,70 +223,6 @@
 
           <div class="testimonials-marquee-wrapper" id="testimonials-marquee-wrapper">
             <div class="testimonials-marquee-track" id="testimonials-marquee-track"></div>
-          </div>
-
-          <!-- Services & Collaboration Packages -->
-          <div class="block-title">
-            <h2>Collaboration Packages</h2>
-          </div>
-
-          <div class="pricing-grid">
-            <!-- UI/UX Package -->
-            <div class="pricing-card">
-              <div class="pricing-header">
-                <h4 class="pricing-plan-title">UI/UX & Product Design</h4>
-                <div class="pricing-price">$450</div>
-                <div class="pricing-period">per project scope</div>
-              </div>
-              <div class="pricing-btn-box">
-                <a href="#contact" class="btn btn-secondary pricing-btn">Get Started</a>
-              </div>
-              <ul class="pricing-features">
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> User Flows & Wireframing</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> High-Fidelity Figma UI Screens</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Interactive Prototypes</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Design System & Style Guide</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Developer Handoff Specs</li>
-              </ul>
-            </div>
-
-            <!-- 3D Animation Package -->
-            <div class="pricing-card popular">
-              <div class="pricing-header">
-                <h4 class="pricing-plan-title">3D Animation & Modeling</h4>
-                <div class="pricing-price">$650</div>
-                <div class="pricing-period">per animation project</div>
-              </div>
-              <div class="pricing-btn-box">
-                <a href="#contact" class="btn btn-primary pricing-btn">Get Started</a>
-              </div>
-              <ul class="pricing-features">
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Hard-Surface / Organic 3D Modeling</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> PBR Shading & Photoreal Lighting</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> 4K Product Showcase Animation</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Camera Directing & Motion Design</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Commercial Video Post-Production</li>
-              </ul>
-            </div>
-
-            <!-- Full-Stack / Branding Package -->
-            <div class="pricing-card">
-              <div class="pricing-header">
-                <h4 class="pricing-plan-title">Brand Identity & Dev</h4>
-                <div class="pricing-price">$550</div>
-                <div class="pricing-period">per brand release</div>
-              </div>
-              <div class="pricing-btn-box">
-                <a href="#contact" class="btn btn-secondary pricing-btn">Get Started</a>
-              </div>
-              <ul class="pricing-features">
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Vector Logo & Identity System</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Typography & Color Harmony</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Web App / Landing Development</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> SEO, Core Web Vitals & Speed</li>
-                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 6px;"></i> Source Vector & Code Repo Assets</li>
-              </ul>
-            </div>
           </div>
 
         </section>
