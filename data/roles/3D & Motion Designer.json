@@ -119,28 +119,6 @@
       "lightboxSrc": "https://www.youtube-nocookie.com/embed/dYq1ATkLAj8?autoplay=1&rel=0"
     }
   ],
-  "experience": [
-    {
-      "period": "2023 - Present",
-      "company": "Ventrixon Studio",
-      "title": "Founder & Lead 3D & Motion Designer",
-      "description": "Directing 3D animations, product visualizations, motion graphics, and educational 3D modeling content on YouTube."
-    },
-    {
-      "period": "2023 - Present",
-      "company": "Upwork® Global Inc",
-      "title": "Freelance 3D & Motion Specialist (5-Star Track)",
-      "description": "Delivering custom 3D animations, photorealistic product visualizations, and cinematic renders for international clients."
-    }
-  ],
-  "education": [
-    {
-      "period": "2023 - Present",
-      "company": "Specialized Applied Practice",
-      "title": "Hard-Surface 3D Modeling & Animation Pipelines",
-      "description": "Mastering topology, PBR node shading, procedural textures, cinematic camera animation, and particle simulations in Blender."
-    }
-  ],
   "skills": [
     {
       "name": "Blender 3D Modeling & Topology",

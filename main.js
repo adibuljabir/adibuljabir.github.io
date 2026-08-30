@@ -363,6 +363,28 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = leftCol + rightCol;
   }
 
+  // --- Experience & Education Renderer (Universal Timeline from main.json) ---
+  function renderExperienceAndEducation(experience, education) {
+    const expContainer = document.getElementById('experience-timeline');
+    const eduContainer = document.getElementById('education-timeline');
+
+    const makeItemHtml = (item) => `
+      <div class="timeline-item">
+        <span class="timeline-period">${item.period || ''}</span>
+        <span class="timeline-company">${item.company || ''}</span>
+        <h4 class="timeline-title">${item.title || ''}</h4>
+        <p class="timeline-desc">${item.description || item.desc || ''}</p>
+      </div>
+    `;
+
+    if (expContainer && experience && Array.isArray(experience)) {
+      expContainer.innerHTML = experience.map(makeItemHtml).join('');
+    }
+    if (eduContainer && education && Array.isArray(education)) {
+      eduContainer.innerHTML = education.map(makeItemHtml).join('');
+    }
+  }
+
   // --- Portfolio Single Card HTML Generator ---
   function generatePortfolioCardHtml(item) {
     if (item.type === 'code') {
@@ -521,28 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- 1. Featured Portfolio Projects (Horizontal Animated Showcase) -->
           ${portfolioMarqueeHtml}
 
-          <!-- 2. Work Experience & Education -->
-          <div class="resume-columns">
-            <div>
-              <div class="block-title">
-                <h2>Experience</h2>
-              </div>
-              <div class="timeline">
-                ${expItems}
-              </div>
-            </div>
-
-            <div>
-              <div class="block-title">
-                <h2>Education</h2>
-              </div>
-              <div class="timeline">
-                ${eduItems}
-              </div>
-            </div>
-          </div>
-
-          <!-- 3. Working Skills, Competencies & Languages -->
+          <!-- 2. Working Skills, Competencies & Languages -->
           <div class="resume-columns">
             <div>
               <div class="block-title">
@@ -622,6 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (siteData.whatIDo) renderWhatIDo(siteData.whatIDo);
     if (siteData.funFacts) renderFunFacts(siteData.funFacts);
     if (siteData.achievements) renderAchievements(siteData.achievements);
+    if (siteData.experience || siteData.education) renderExperienceAndEducation(siteData.experience, siteData.education);
     if (siteData.testimonials) renderTestimonials(siteData.testimonials);
     if (siteData.collaboratedWith) renderCollaboratedWith(siteData.collaboratedWith);
     initScrollAnimations();
@@ -630,16 +632,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Live Concurrent Async JSON Fetcher (Parallel HTTP/2 Stream)
   async function loadJsonData() {
     try {
-      const [siteRes, uiuxRes, devRes, brandRes, d3Res] = await Promise.all([
-        fetch('./data/site.json').then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch('./data/roles/uiux.json').then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch('./data/roles/developer.json').then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch('./data/roles/brand.json').then(r => r.ok ? r.json() : null).catch(() => null),
-        fetch('./data/roles/3d.json').then(r => r.ok ? r.json() : null).catch(() => null)
+      const [mainRes, uiuxRes, devRes, brandRes, d3Res] = await Promise.all([
+        fetch('./data/main.json').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch(encodeURI('./data/roles/UI-UX Designer.json')).then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch(encodeURI('./data/roles/Developer.json')).then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch(encodeURI('./data/roles/Brand Designer.json')).then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch(encodeURI('./data/roles/3D & Motion Designer.json')).then(r => r.ok ? r.json() : null).catch(() => null)
       ]);
 
-      if (siteRes) {
-        renderAllSiteSections(siteRes);
+      if (mainRes) {
+        renderAllSiteSections(mainRes);
       }
 
       const rolesData = {};

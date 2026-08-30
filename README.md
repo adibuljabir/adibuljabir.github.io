@@ -10,7 +10,7 @@ This document outlines the **site information hierarchy**, details **which secti
 1. [Architecture Overview](#-architecture-overview)
 2. [Section Breakdown: Static vs. JSON](#-section-breakdown-static-vs-json)
 3. [Site Information Hierarchy & Standardized JSON Schemas](#-site-information-hierarchy--standardized-json-schemas)
-   - [A. General Site Data (`data/site.json`)](#a-general-site-data-datasitejson)
+   - [A. General Site Data (`data/main.json`)](#a-general-site-data-datamainjson)
    - [B. Roles, Resume & Portfolio (`data/roles/*.json`)](#b-roles-resume--portfolio-datarolesjson)
 4. [How to Update Static Sections (`index.html`)](#-how-to-update-static-sections-indexhtml)
 5. [Managing Assets (PDFs, Images, Videos)](#-managing-assets-pdfs-images-videos)
@@ -22,7 +22,7 @@ This document outlines the **site information hierarchy**, details **which secti
 
 The site is built with pure, high-performance web standards (**Semantic HTML5**, **Modern CSS3**, and **Vanilla JavaScript ES6+**):
 - **⚡ Pure Modular JSON-Driven Rendering**:
-  - `main.js` dynamically loads data directly from `data/site.json` and parallel-fetches modular role files from `data/roles/*.json` using non-blocking asynchronous `fetch()`.
+  - `main.js` dynamically loads data directly from `data/main.json` and parallel-fetches modular role files from `data/roles/*.json` using non-blocking asynchronous `fetch()`.
   - Edits to JSON files immediately update the site on refresh without rebuilding JavaScript.
 - **📱 100% Responsive & Dark/Light Mode**:
   - Automatically respects user OS system preference with local storage persistence and manual toggle.
@@ -37,12 +37,13 @@ The site is built with pure, high-performance web standards (**Semantic HTML5**,
 |---|---|---|---|
 | **Header & Navbar** | `Static` | `index.html` | Logo, navigation links, theme toggle, and mobile menu button. |
 | **Hero (About Top)** | `Static` | `index.html` | Profile avatar, typing animated role, bio description, CTA buttons. |
-| **Collaborated With** | `Dynamic JSON` | `data/site.json` → `"collaboratedWith"` | Infinite partner marquee with logos and links. |
-| **What I Do** | `Dynamic JSON` | `data/site.json` → `"whatIDo"` | Core capabilities and service cards with icons and descriptions. |
-| **Fun Facts** | `Dynamic JSON` | `data/site.json` → `"funFacts"` | Animated numerical metric counters. |
-| **Resume & Portfolio (Tabs)** | `Dynamic JSON` | `data/roles/*.json` | 4 modular role files (`uiux.json`, `developer.json`, `brand.json`, `3d.json`) containing selected works, experience, education, skills, competencies, and PDF download buttons. |
-| **Achievements** | `Dynamic JSON` | `data/site.json` → `"achievements"` | Awards and milestones (auto-distributed: left column first, then right column). |
-| **Testimonials** | `Dynamic JSON` | `data/site.json` → `"testimonials"` | Client feedback, avatars, company roles, and LinkedIn links. |
+| **Collaborated With** | `Dynamic JSON` | `data/main.json` → `"collaboratedWith"` | Infinite partner marquee with logos and links. |
+| **What I Do** | `Dynamic JSON` | `data/main.json` → `"whatIDo"` | Core capabilities and service cards with icons and descriptions. |
+| **Fun Facts** | `Dynamic JSON` | `data/main.json` → `"funFacts"` | Animated numerical metric counters. |
+| **Resume & Portfolio (Tabs)** | `Dynamic JSON` | `data/roles/*.json` | 4 modular role files (`UI-UX Designer.json`, `Developer.json`, `Brand Designer.json`, `3D & Motion Designer.json`) containing selected works, working skills, specialized competencies, and PDF download buttons. |
+| **Achievements** | `Dynamic JSON` | `data/main.json` → `"achievements"` | Awards and milestones (auto-distributed: left column first, then right column). |
+| **Experience & Education** | `Dynamic JSON` | `data/main.json` → `"experience"`, `"education"` | Universal career timeline and academic background. |
+| **Testimonials** | `Dynamic JSON` | `data/main.json` → `"testimonials"` | Client feedback, avatars, company roles, and LinkedIn links. |
 | **Collaboration Packages** | `Static` | `index.html` | Pricing cards with deliverables and features list. |
 | **Contact Form & Info** | `Static` | `index.html` | Location, direct email, WhatsApp chat, and Web3Forms AJAX form. |
 | **Footer & Social Links** | `Static` | `index.html` | Copyright and social media profile icons. |
@@ -53,11 +54,11 @@ The site is built with pure, high-performance web standards (**Semantic HTML5**,
 
 All JSON files strictly mirror the visual information hierarchy of the website and use standardized field names (`period`, `company`, `title`, `description`).
 
-### A. General Site Data (`data/site.json`)
+### A. General Site Data (`data/main.json`)
 
-Location: [`data/site.json`](data/site.json)
+Location: [`data/main.json`](data/main.json)
 
-The keys in `data/site.json` follow the top-to-bottom page hierarchy:
+The keys in `data/main.json` follow the top-to-bottom page hierarchy:
 
 ```json
 {
@@ -91,6 +92,22 @@ The keys in `data/site.json` follow the top-to-bottom page hierarchy:
       "description": "Maintained a 100% five-star rating with stellar client reviews."
     }
   ],
+  "experience": [
+    {
+      "period": "2023 - Present",
+      "company": "Ventrixon Studio",
+      "title": "Founder, Lead 3D & Creative Director",
+      "description": "Directing 3D animations, product visualizations, motion graphics, and UI/UX solutions."
+    }
+  ],
+  "education": [
+    {
+      "period": "2024 - 2028 (Ongoing)",
+      "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
+      "title": "BSc in Computer Science & Engineering",
+      "description": "Core computer science foundations, algorithms, and human-computer interaction."
+    }
+  ],
   "testimonials": [
     {
       "name": "Val Ciptak Viera",
@@ -108,18 +125,16 @@ The keys in `data/site.json` follow the top-to-bottom page hierarchy:
 ### B. Roles, Resume & Portfolio (`data/roles/*.json`)
 
 Location: [`data/roles/`](data/roles/):
-- `data/roles/uiux.json`
-- `data/roles/developer.json`
-- `data/roles/brand.json`
-- `data/roles/3d.json`
+- `data/roles/UI-UX Designer.json`
+- `data/roles/Developer.json`
+- `data/roles/Brand Designer.json`
+- `data/roles/3D & Motion Designer.json`
 
 Each role file strictly follows the visual structure of a role tab:
 1. **Identity & Resume Download**: `roleId`, `roleName`, `downloadLabel`, `downloadUrl`, `resumeFileName`
 2. **Top Showcase**: `portfolio: [...]`
-3. **Experience (Left Column)**: `experience: [...]`
-4. **Education (Right Column)**: `education: [...]`
-5. **Working Skills (Left Column)**: `skills: [...]`
-6. **Competencies & Languages (Right Column)**: `competencies: [...]`, `languages: [...]`
+3. **Working Skills (Left Column)**: `skills: [...]`
+4. **Competencies & Languages (Right Column)**: `competencies: [...]`, `languages: [...]`
 
 #### Standardized Role Schema:
 ```json
@@ -141,24 +156,6 @@ Each role file strictly follows the visual structure of a role tab:
       "lightboxType": "image",
       "lightboxSrc": "https://mir-s3-cdn-cf.behance.net/...",
       "behanceUrl": "https://www.behance.net/gallery/..."
-    }
-  ],
-
-  "experience": [
-    {
-      "period": "2023 - Present",
-      "company": "Ventrixon Studio",
-      "title": "UI/UX Designer & Prototyper",
-      "description": "Designing user interfaces, wireframes, and responsive web/mobile prototypes in Figma."
-    }
-  ],
-
-  "education": [
-    {
-      "period": "2024 - 2028 (Ongoing)",
-      "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
-      "title": "BSc in Computer Science & Engineering (HCI Focus)",
-      "description": "Human-Computer Interaction (HCI), design systems, web ergonomics."
     }
   ],
 

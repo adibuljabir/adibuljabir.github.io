@@ -84,34 +84,6 @@
       "githubUrl": "https://github.com/adibuljabir"
     }
   ],
-  "experience": [
-    {
-      "period": "2023 - Present",
-      "company": "Independent & Open Source",
-      "title": "Frontend & Software Developer",
-      "description": "Building high-performance web applications and software utilities with modern JavaScript (ES6+), Python, HTML5, and CSS3."
-    },
-    {
-      "period": "2023 - Present",
-      "company": "Ventrixon Digital Platforms",
-      "title": "Web Solutions Architect",
-      "description": "Architecting clean, responsive web platforms, portfolio systems, and API-driven interactive user interfaces."
-    }
-  ],
-  "education": [
-    {
-      "period": "2024 - 2028 (Ongoing)",
-      "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
-      "title": "BSc in Computer Science and Engineering",
-      "description": "Algorithms, Data Structures, Database Management Systems, Computer Networks, and Object-Oriented Software Design."
-    },
-    {
-      "period": "Continuous",
-      "company": "Competitive Programming & Problem Solving",
-      "title": "Algorithmic Logic & C/C++ / Python",
-      "description": "Active participation in university contests, implementing algorithmic solutions with clean time/space efficiency."
-    }
-  ],
   "skills": [
     {
       "name": "Web Development (HTML5 / CSS3 / Modern JS)",

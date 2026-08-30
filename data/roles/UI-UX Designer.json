@@ -83,34 +83,6 @@
       "behanceUrl": "https://www.behance.net/gallery/246404011/NGO-Charity-Platform-UI-Donation-Volunteer"
     }
   ],
-  "experience": [
-    {
-      "period": "2023 - Present",
-      "company": "Ventrixon Studio",
-      "title": "UI/UX Designer & Prototyper",
-      "description": "Designing user interfaces, wireframes, and responsive web/mobile prototypes in Figma for software and digital platforms."
-    },
-    {
-      "period": "2023 - Present",
-      "company": "Freelance & Client Projects",
-      "title": "Product Designer",
-      "description": "Delivering high-converting landing pages, SaaS dashboards, and digital product redesigns."
-    }
-  ],
-  "education": [
-    {
-      "period": "2024 - 2028 (Ongoing)",
-      "company": "Khulna Khan Bahadur Ahsanullah University (KKBAU)",
-      "title": "BSc in Computer Science & Engineering (HCI Focus)",
-      "description": "Human-Computer Interaction (HCI), design systems, web ergonomics, and user-centric software design."
-    },
-    {
-      "period": "Continuous Specialization",
-      "company": "Self-Directed & Applied Practice",
-      "title": "Design Systems & Interactive Prototyping",
-      "description": "Advanced Figma components, auto-layout, interactive variants, and scalable web/mobile design frameworks."
-    }
-  ],
   "skills": [
     {
       "name": "Figma (UI/UX Design & Prototyping)",
