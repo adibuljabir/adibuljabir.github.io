@@ -46,8 +46,7 @@ The site is built with pure, high-performance web standards (**Semantic HTML5**,
 | **Experience & Education** | `Dynamic JSON` | `data/main.json` → `"experience"`, `"education"` | Universal career timeline and academic background. |
 | **Certifications & Training** | `Dynamic JSON` | `data/main.json` → `"certifications"` | Professional certifications, instructor courses, and career accelerators. |
 | **Testimonials** | `Dynamic JSON` | `data/main.json` → `"testimonials"` | Client feedback, avatars, company roles, and LinkedIn links. |
-| **Collaboration Packages** | `Static` | `index.html` | Pricing cards with deliverables and features list. |
-| **Contact Form & Info** | `Static` | `index.html` | Location, direct email, WhatsApp chat, and Web3Forms AJAX form. |
+| **Contact Form & Info** | `Static` | `index.html` | Location (Google Maps), direct email, WhatsApp chat, and Web3Forms meeting/contact form. |
 | **Footer & Live Counters** | `Static + Serverless API` | `index.html` + `main.js` | Copyright, live visitor views counter, interactive like button, and social profile links. |
 
 ---
