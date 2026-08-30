@@ -156,8 +156,7 @@ Location: [`data/roles/`](data/roles/):
 Each role file strictly follows the visual structure of a role tab:
 1. **Identity & Resume Download**: `roleId`, `roleName`, `downloadLabel`, `downloadUrl`, `resumeFileName`
 2. **Top Showcase**: `portfolio: [...]`
-3. **Working Skills (Left Column)**: `skills: [...]`
-4. **Specialized Competencies (Right Column)**: `competencies: [...]`
+3. **Categorized Skills**: `skills: [{ category, items: [...] }]`
 
 #### Standardized Role Schema:
 ```json
@@ -184,15 +183,15 @@ Each role file strictly follows the visual structure of a role tab:
 
   "skills": [
     {
-      "name": "Figma (UI/UX Design & Prototyping)",
-      "percent": "95%"
+      "category": "UI/UX Design (Primary)",
+      "items": [
+        "User Interface Design (Web, Mobile & SaaS)",
+        "User Research & Competitive Analysis",
+        "Wireframing & Prototyping (Figma)",
+        "Design Systems & Component based UI",
+        "Responsive Design & Accessibility"
+      ]
     }
-  ],
-
-  "competencies": [
-    "User Flow Mapping",
-    "Interactive Wireframes",
-    "Design Systems"
   ]
 }
 ```

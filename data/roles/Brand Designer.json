@@ -58,39 +58,36 @@
   ],
   "skills": [
     {
-      "name": "Adobe Illustrator (Vector Marks)",
-      "percent": "95%"
+      "category": "Brand Identity & Strategy",
+      "items": [
+        "Brand Identity Systems & Guidelines",
+        "Logo Design & Vector Marks",
+        "Visual Hierarchy & Consistency"
+      ]
     },
     {
-      "name": "Brand Identity Systems",
-      "percent": "92%"
+      "category": "Visual Design & Aesthetics",
+      "items": [
+        "Color Theory & Palette Harmony",
+        "Typography Pairing & Hierarchy",
+        "Custom Iconography & Vector Art"
+      ]
     },
     {
-      "name": "Color Theory & Palette Harmony",
-      "percent": "90%"
+      "category": "Design Tools & Software",
+      "items": [
+        "Adobe Illustrator (Vector Master)",
+        "Adobe Photoshop (Mockups & Visuals)",
+        "After Effects (Brand Motion)"
+      ]
     },
     {
-      "name": "Typography Pairing & Hierarchy",
-      "percent": "88%"
-    },
-    {
-      "name": "Adobe Photoshop (Mockups & Visuals)",
-      "percent": "85%"
-    },
-    {
-      "name": "Print & Vector Asset Packaging",
-      "percent": "90%"
+      "category": "Production & Deliverables",
+      "items": [
+        "Print & Vector Asset Packaging",
+        "Digital Brand Assets & Social Kits",
+        "Merchandise & Apparel Graphics"
+      ]
     }
-  ],
-  "competencies": [
-    "Logo Design",
-    "Vector Graphics",
-    "Color Palette Systems",
-    "Typography Styling",
-    "Brand Guidelines",
-    "Iconography",
-    "Vector Merchandise",
-    "Print Ready Art",
-    "Visual Assets"
   ]
 }

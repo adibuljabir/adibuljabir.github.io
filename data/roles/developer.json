@@ -86,40 +86,37 @@
   ],
   "skills": [
     {
-      "name": "Web Development (HTML5 / CSS3 / Modern JS)",
-      "percent": "90%"
+      "category": "Core Development & Languages",
+      "items": [
+        "C / C++ (Algorithms & Systems)",
+        "Web Development (HTML5, CSS3, Modern JS)",
+        "Python & Scripting",
+        "Java & OOP Principles"
+      ]
     },
     {
-      "name": "C / C++ (Algorithms & Systems)",
-      "percent": "85%"
+      "category": "Frameworks & Platforms",
+      "items": [
+        "Android (Kotlin & Java)",
+        "REST APIs & JSON Integration",
+        "DOM Manipulation & Responsive UI"
+      ]
     },
     {
-      "name": "Python & Scripting",
-      "percent": "82%"
+      "category": "CS Fundamentals",
+      "items": [
+        "Data Structures & Algorithms",
+        "Clean Code & Modular Architecture",
+        "Software Testing & Optimization"
+      ]
     },
     {
-      "name": "Java & OOP Principles",
-      "percent": "80%"
-    },
-    {
-      "name": "Git, GitHub & Version Control",
-      "percent": "88%"
-    },
-    {
-      "name": "REST APIs & Data Structures",
-      "percent": "82%"
+      "category": "Tools & Workflow",
+      "items": [
+        "Git, GitHub & Version Control",
+        "Linux, Bash & CLI Utilities",
+        "Collaborative PRs & Code Review"
+      ]
     }
-  ],
-  "competencies": [
-    "Data Structures",
-    "Algorithms",
-    "DOM Manipulation",
-    "Clean Code Architecture",
-    "Git Version Control",
-    "REST APIs",
-    "Object-Oriented Design",
-    "Linux & CLI",
-    "Software Testing",
-    "Optimization"
   ]
 }

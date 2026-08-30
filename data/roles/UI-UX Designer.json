@@ -85,40 +85,50 @@
   ],
   "skills": [
     {
-      "name": "Figma (UI/UX Design & Prototyping)",
-      "percent": "95%"
+      "category": "UI/UX Design (Primary)",
+      "items": [
+        "User Interface Design (Web, Mobile & SaaS)",
+        "User Research & Competitive Analysis",
+        "Wireframing & Prototyping (Figma)",
+        "Design Systems & Component based UI",
+        "Responsive Design & Accessibility"
+      ]
     },
     {
-      "name": "User Interface & Wireframing",
-      "percent": "92%"
+      "category": "Supporting Skills",
+      "items": [
+        "Brand Identity & Visual Design",
+        "Basic Motion",
+        "Presentation Design & Presenting",
+        "HTML, CSS, JS, XML, XAML"
+      ]
     },
     {
-      "name": "Design Systems & Component Libraries",
-      "percent": "90%"
+      "category": "Technical Awareness",
+      "items": [
+        "Basic knowledge of Java, Kotlin, Python, C#"
+      ]
     },
     {
-      "name": "Adobe Photoshop & Illustrator",
-      "percent": "88%"
+      "category": "AI-Assisted Design Workflow",
+      "items": [
+        "Ideation & concept by Stitch & Figma Make",
+        "Rapid iteration using AI-supported tools"
+      ]
     },
     {
-      "name": "Responsive Mobile & Web UI",
-      "percent": "92%"
+      "category": "Design Tools",
+      "items": [
+        "Figma, Adobe Illustrator",
+        "After Effects & Blender"
+      ]
     },
     {
-      "name": "Human-Computer Interaction (HCI)",
-      "percent": "85%"
+      "category": "Collaboration",
+      "items": [
+        "Agile team collaboration",
+        "Stakeholder & Dev communication"
+      ]
     }
-  ],
-  "competencies": [
-    "User Flow Mapping",
-    "Interactive Wireframes",
-    "Design Systems",
-    "Mobile UI",
-    "Web Prototyping",
-    "Usability Principles",
-    "Figma Variables",
-    "Auto Layout Master",
-    "Visual Hierarchy",
-    "Micro-interactions"
   ]
 }

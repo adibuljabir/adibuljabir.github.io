@@ -517,17 +517,39 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `).join('');
 
-      const skillItems = (role.skills || []).map(s => `
-        <div class="skill-item">
-          <div class="skill-info">
-            <span>${s.name}</span>
-            <span>${s.percent}</span>
-          </div>
-          <div class="skill-bar"><div class="skill-fill" data-width="${s.percent}" style="width: ${s.percent};"></div></div>
-        </div>
-      `).join('');
+      // Skills renderer supporting structured category groups
+      const renderSkillGroup = (group) => {
+        if (!group) return '';
+        const title = group.category || group.name || 'Skills';
+        const items = Array.isArray(group.items)
+          ? group.items
+          : (Array.isArray(group.skills) ? group.skills : (group.name ? [group.name] : []));
 
-      const compBadges = (role.competencies || []).map(c => `<span class="badge-item">${c}</span>`).join('');
+        const badgesHtml = items.map(item => {
+          const itemName = typeof item === 'string' ? item : (item.name || '');
+          return `<li class="skill-badge">${itemName}</li>`;
+        }).join('');
+
+        return `
+          <div class="skill-group-card">
+            <h4 class="skill-group-title">${title}</h4>
+            <ul class="skill-group-items">
+              ${badgesHtml}
+            </ul>
+          </div>
+        `;
+      };
+
+      const skillsGridHtml = Array.isArray(role.skills) && role.skills.length > 0
+        ? `
+          <div class="block-title" style="margin-top: 10px;">
+            <h2>Skills</h2>
+          </div>
+          <div class="skills-category-grid">
+            ${role.skills.map(renderSkillGroup).join('')}
+          </div>
+        `
+        : '';
 
       // Merged portfolio directly from the role's JSON definition with continuous horizontal marquee animation
       const roleProjects = role.portfolio || [];
@@ -552,24 +574,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- 1. Featured Portfolio Projects (Horizontal Animated Showcase) -->
           ${portfolioMarqueeHtml}
 
-          <!-- 2. Working Skills & Specialized Competencies -->
-          <div class="resume-columns">
-            <div>
-              <div class="block-title">
-                <h2>Working Skills</h2>
-              </div>
-              ${skillItems}
-            </div>
-
-            <div>
-              <div class="block-title">
-                <h2>Specialized Competencies</h2>
-              </div>
-              <div class="badges-cloud">
-                ${compBadges}
-              </div>
-            </div>
-          </div>
+          <!-- 2. Unified Skills Section -->
+          ${skillsGridHtml}
         </div>
       `;
     }).join('');

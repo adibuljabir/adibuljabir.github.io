@@ -121,40 +121,36 @@
   ],
   "skills": [
     {
-      "name": "Blender 3D Modeling & Topology",
-      "percent": "95%"
+      "category": "3D Modeling & Topology",
+      "items": [
+        "Blender 3D Modeling & Topology",
+        "Hard-Surface Asset Optimization",
+        "Low-Poly & Stylized 3D Props"
+      ]
     },
     {
-      "name": "PBR Material Shading & Texturing",
-      "percent": "92%"
+      "category": "Shading, Lighting & Rendering",
+      "items": [
+        "PBR Material Shading & Texturing",
+        "Cinematic Lighting & Cameras",
+        "Cycles & Eevee Rendering"
+      ]
     },
     {
-      "name": "Cinematic Lighting & Cameras",
-      "percent": "92%"
+      "category": "Motion & Animation",
+      "items": [
+        "Commercial Product Animation",
+        "Keyframe Animation & Curves",
+        "Cloth Physics Simulation"
+      ]
     },
     {
-      "name": "Commercial Product Animation",
-      "percent": "90%"
-    },
-    {
-      "name": "Adobe After Effects (Motion Post)",
-      "percent": "88%"
-    },
-    {
-      "name": "Hard-Surface Asset Optimization",
-      "percent": "90%"
+      "category": "Post-Production & Motion Graphics",
+      "items": [
+        "Adobe After Effects (Motion Post)",
+        "DaVinci Resolve Video Editing",
+        "Logo & Reveal Animations"
+      ]
     }
-  ],
-  "competencies": [
-    "Hard Surface Modeling",
-    "PBR Shaders",
-    "Cycles & Eevee",
-    "Motion Graphics",
-    "Cloth Physics Simulation",
-    "Low-Poly Assets",
-    "Cinematic Lighting",
-    "Video Post-Production",
-    "DaVinci Resolve",
-    "Animation Curves"
   ]
 }
