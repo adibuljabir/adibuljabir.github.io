@@ -363,6 +363,13 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = leftCol + rightCol;
   }
 
+  // --- Languages Renderer (Universal from main.json) ---
+  function renderLanguages(languages) {
+    const container = document.getElementById('languages-container');
+    if (!container || !languages || !Array.isArray(languages)) return;
+    container.innerHTML = languages.map(l => `<span class="badge-item">${l}</span>`).join('');
+  }
+
   // --- Experience & Education Renderer (Universal Timeline from main.json) ---
   function renderExperienceAndEducation(experience, education) {
     const expContainer = document.getElementById('experience-timeline');
@@ -543,7 +550,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <!-- 1. Featured Portfolio Projects (Horizontal Animated Showcase) -->
           ${portfolioMarqueeHtml}
 
-          <!-- 2. Working Skills, Competencies & Languages -->
+          <!-- 2. Working Skills & Specialized Competencies -->
           <div class="resume-columns">
             <div>
               <div class="block-title">
@@ -558,13 +565,6 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
               <div class="badges-cloud">
                 ${compBadges}
-              </div>
-
-              <div class="block-title" style="margin-top: 30px;">
-                <h2>Languages</h2>
-              </div>
-              <div class="badges-cloud">
-                ${langBadges}
               </div>
             </div>
           </div>
@@ -623,6 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (siteData.whatIDo) renderWhatIDo(siteData.whatIDo);
     if (siteData.funFacts) renderFunFacts(siteData.funFacts);
     if (siteData.achievements) renderAchievements(siteData.achievements);
+    if (siteData.languages) renderLanguages(siteData.languages);
     if (siteData.experience || siteData.education) renderExperienceAndEducation(siteData.experience, siteData.education);
     if (siteData.testimonials) renderTestimonials(siteData.testimonials);
     if (siteData.collaboratedWith) renderCollaboratedWith(siteData.collaboratedWith);

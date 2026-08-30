@@ -42,6 +42,7 @@ The site is built with pure, high-performance web standards (**Semantic HTML5**,
 | **Fun Facts** | `Dynamic JSON` | `data/main.json` → `"funFacts"` | Animated numerical metric counters. |
 | **Resume & Portfolio (Tabs)** | `Dynamic JSON` | `data/roles/*.json` | 4 modular role files (`UI-UX Designer.json`, `Developer.json`, `Brand Designer.json`, `3D & Motion Designer.json`) containing selected works, working skills, specialized competencies, and PDF download buttons. |
 | **Achievements** | `Dynamic JSON` | `data/main.json` → `"achievements"` | Awards and milestones (auto-distributed: left column first, then right column). |
+| **Languages** | `Dynamic JSON` | `data/main.json` → `"languages"` | Spoken language proficiencies (universal badges). |
 | **Experience & Education** | `Dynamic JSON` | `data/main.json` → `"experience"`, `"education"` | Universal career timeline and academic background. |
 | **Testimonials** | `Dynamic JSON` | `data/main.json` → `"testimonials"` | Client feedback, avatars, company roles, and LinkedIn links. |
 | **Collaboration Packages** | `Static` | `index.html` | Pricing cards with deliverables and features list. |
@@ -92,6 +93,11 @@ The keys in `data/main.json` follow the top-to-bottom page hierarchy:
       "description": "Maintained a 100% five-star rating with stellar client reviews."
     }
   ],
+  "languages": [
+    "Bengali (Native)",
+    "English (Fluent)",
+    "Arabic (Conversational)"
+  ],
   "experience": [
     {
       "period": "2023 - Present",
@@ -134,7 +140,7 @@ Each role file strictly follows the visual structure of a role tab:
 1. **Identity & Resume Download**: `roleId`, `roleName`, `downloadLabel`, `downloadUrl`, `resumeFileName`
 2. **Top Showcase**: `portfolio: [...]`
 3. **Working Skills (Left Column)**: `skills: [...]`
-4. **Competencies & Languages (Right Column)**: `competencies: [...]`, `languages: [...]`
+4. **Specialized Competencies (Right Column)**: `competencies: [...]`
 
 #### Standardized Role Schema:
 ```json
@@ -170,12 +176,6 @@ Each role file strictly follows the visual structure of a role tab:
     "User Flow Mapping",
     "Interactive Wireframes",
     "Design Systems"
-  ],
-
-  "languages": [
-    "Bengali (Native)",
-    "English (Fluent)",
-    "Arabic (Conversational)"
   ]
 }
 ```
