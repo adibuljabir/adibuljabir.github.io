@@ -5,21 +5,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Preloader Fast Reveal (Optimized for Core Web Vitals LCP/FCP)
-  const preloader = document.getElementById('preloader');
-  if (preloader) {
-    const hidePreloader = () => {
-      preloader.classList.add('fade-out');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 400);
-    };
-
-    requestAnimationFrame(() => {
-      setTimeout(hidePreloader, 150);
-    });
-  }
-
   // 1. Theme Management (System Detection & Saved Persistence)
   const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -216,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const typingEl = document.querySelector('.role-typing');
   if (typingEl) {
     const roles = [
-      '3D Artist & Animator',
+      '3D & Motion Designer',
       'UI/UX Designer',
       'CSE Student @ KKBAU',
       'Brand Identity Designer',
@@ -302,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ${testimonials.map(t => `
           <div class="testimonial-card">
             <div class="testimonial-avatar">
-              <img src="${t.avatar}" alt="${t.name}" width="48" height="48" loading="lazy" referrerpolicy="no-referrer">
+              <img src="${t.avatar}" alt="${t.name}" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer">
             </div>
             <div class="testimonial-text">
               "${t.quote}"
@@ -331,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="clients-track-group" ${isAriaHidden ? 'aria-hidden="true"' : ''}>
         ${clients.map(c => `
           <a href="${c.url}" target="_blank" rel="noopener noreferrer" class="client-item" title="${c.name}">
-            <img src="${c.logo}" alt="${c.alt || c.name}" width="120" height="40" loading="lazy">
+            <img src="${c.logo}" alt="${c.alt || c.name}" width="120" height="40" loading="lazy" decoding="async">
           </a>
         `).join('')}
       </div>
@@ -434,7 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return `
       <div class="portfolio-card" data-category="${item.category}" ${ytAttr}>
         <div class="portfolio-thumb-box">
-          <img src="${item.thumbnail}" alt="${item.title}" width="400" height="250" referrerpolicy="no-referrer" loading="lazy">
+          <img src="${item.thumbnail}" alt="${item.title}" width="400" height="250" referrerpolicy="no-referrer" loading="lazy" decoding="async">
           ${badgeHtml}
           <div class="portfolio-overlay">
             ${overlayActions}
@@ -642,40 +627,26 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
   }
 
-  // Live Async JSON Fetcher (Loads from data/site.json and data/roles/*.json)
+  // Live Concurrent Async JSON Fetcher (Parallel HTTP/2 Stream)
   async function loadJsonData() {
     try {
-      const sRes = await fetch('./data/site.json');
-      if (sRes.ok) {
-        const siteData = await sRes.json();
-        renderAllSiteSections(siteData);
+      const [siteRes, uiuxRes, devRes, brandRes, d3Res] = await Promise.all([
+        fetch('./data/site.json').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('./data/roles/uiux.json').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('./data/roles/developer.json').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('./data/roles/brand.json').then(r => r.ok ? r.json() : null).catch(() => null),
+        fetch('./data/roles/3d.json').then(r => r.ok ? r.json() : null).catch(() => null)
+      ]);
+
+      if (siteRes) {
+        renderAllSiteSections(siteRes);
       }
-    } catch (e) {
-      console.warn('Could not fetch data/site.json:', e);
-    }
 
-    try {
-      const roleKeys = ['uiux', 'developer', 'brand', '3d'];
-      const roleFetches = roleKeys.map(async (key) => {
-        try {
-          const res = await fetch(`./data/roles/${key}.json`);
-          if (res.ok) {
-            const data = await res.json();
-            return { key, data };
-          }
-        } catch (err) {
-          console.warn(`Could not fetch data/roles/${key}.json:`, err);
-        }
-        return null;
-      });
-
-      const results = await Promise.all(roleFetches);
       const rolesData = {};
-      results.forEach(item => {
-        if (item && item.key && item.data) {
-          rolesData[item.key] = item.data;
-        }
-      });
+      if (uiuxRes) rolesData['uiux'] = uiuxRes;
+      if (devRes) rolesData['developer'] = devRes;
+      if (brandRes) rolesData['brand'] = brandRes;
+      if (d3Res) rolesData['3d'] = d3Res;
 
       if (Object.keys(rolesData).length > 0) {
         renderResumeRoles(rolesData);

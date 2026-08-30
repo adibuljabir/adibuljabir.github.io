@@ -72,7 +72,7 @@ The keys in `data/site.json` follow the top-to-bottom page hierarchy:
   "whatIDo": [
     {
       "icon": "fas fa-cube",
-      "title": "3D Artist",
+      "title": "3D & Motion Designer",
       "description": "Precision 3D product modeling, cinematic motion graphics, and photorealistic PBR rendering."
     }
   ],

@@ -1,9 +1,9 @@
 {
   "roleId": "3d",
-  "roleName": "3D Artist",
-  "downloadLabel": "Download 3D Artist Resume",
-  "downloadUrl": "assets/Adibul_Jabir_3D_Artist_Resume.pdf",
-  "resumeFileName": "Adibul_Jabir_3D_Artist_Resume.pdf",
+  "roleName": "3D & Motion Designer",
+  "downloadLabel": "Download 3D & Motion Designer Resume",
+  "downloadUrl": "https://ventrixon-my.sharepoint.com/:b:/g/personal/adibuljabir_ventrixon_onmicrosoft_com/IQAyp5OQM6Y3S65EkHIzoBYxAVHXcwN8zIAbHn78KtKRkSU?e=etSREg",
+  "resumeFileName": "Adibul Jabir 3D & Motion Designer V3_30-08-2026.pdf",
   "portfolio": [
     {
       "id": "ventrixon-logo-anim",
@@ -123,13 +123,13 @@
     {
       "period": "2023 - Present",
       "company": "Ventrixon Studio",
-      "title": "Founder & Lead 3D Artist",
+      "title": "Founder & Lead 3D & Motion Designer",
       "description": "Directing 3D animations, product visualizations, motion graphics, and educational 3D modeling content on YouTube."
     },
     {
       "period": "2023 - Present",
-      "company": "UpworkÂ® Global Inc",
-      "title": "Freelance 3D Specialist (5-Star Track)",
+      "company": "Upwork® Global Inc",
+      "title": "Freelance 3D & Motion Specialist (5-Star Track)",
       "description": "Delivering custom 3D animations, photorealistic product visualizations, and cinematic renders for international clients."
     }
   ],

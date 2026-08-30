@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adibul Jabir — 3D Artist, Developer & Designer</title>
-  <meta name="description" content="Official portfolio and resume of Adibul Jabir - 3D Artist, Developer, UI/UX Designer, Brand Designer, and CSE Student. Founder of Ventrixon.">
-  <meta name="keywords" content="Adibul Jabir, 3D Artist, 3D Modeling, Blender, After Effects, Illustrator, Ventrixon, Resume, Portfolio">
+  <title>Adibul Jabir — 3D & Motion Designer, Developer & Designer</title>
+  <meta name="description" content="Official portfolio and resume of Adibul Jabir - 3D & Motion Designer, Developer, UI/UX Designer, Brand Designer, and CSE Student. Founder of Ventrixon.">
+  <meta name="keywords" content="Adibul Jabir, 3D & Motion Designer, 3D Modeling, Motion Graphics, Blender, After Effects, Illustrator, Ventrixon, Resume, Portfolio">
   <meta name="author" content="Adibul Jabir">
   
   <!-- Circular Favicon -->
@@ -14,18 +14,13 @@
   <link rel="apple-touch-icon" href="images/favicon.png">
 
   <!-- Preconnect & DNS-Prefetch for Critical CDNs -->
-  <link rel="preconnect" href="https://media.licdn.com" crossorigin>
-  <link rel="dns-prefetch" href="https://media.licdn.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://mir-s3-cdn-cf.behance.net" crossorigin>
   <link rel="dns-prefetch" href="https://mir-s3-cdn-cf.behance.net">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preload Critical LCP Hero Avatar -->
-  <link rel="preload" as="image" href="https://media.licdn.com/dms/image/v2/D5603AQFFW1fZ3rqwqQ/profile-displayphoto-scale_400_400/B56aBLf8DiIAAg-/0/1787973061989?e=1789603200&v=beta&t=5gRf6u82dZeYKjy3c9TpjlE5Dy4__sRHvCPGptw9Rfk" fetchpriority="high">
-
-  <!-- Minimalist Sans Fonts (Plus Jakarta Sans & Geist) with font-display: swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Preload Critical LCP Hero Avatar (Local High-Performance Asset) -->
+  <link rel="preload" as="image" href="images/avatar.jpg" fetchpriority="high">
 
   <!-- Non-Blocking Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
@@ -33,6 +28,9 @@
   
   <!-- Minimalist Full-Width Stylesheet -->
   <link rel="stylesheet" href="main.css">
+
+  <!-- Defer Core JS for Immediate Parsing & Parallel Execution -->
+  <script src="main.js" defer></script>
 
   <!-- Early Theme Detection to prevent theme flash -->
   <script>
@@ -50,20 +48,6 @@
   </script>
 </head>
 <body>
-
-  <!-- Preloader Screen -->
-  <div id="preloader" class="preloader">
-    <div class="preloader-content">
-      <div class="preloader-avatar-box">
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQFFW1fZ3rqwqQ/profile-displayphoto-scale_400_400/B56aBLf8DiIAAg-/0/1787973061989?e=1789603200&v=beta&t=5gRf6u82dZeYKjy3c9TpjlE5Dy4__sRHvCPGptw9Rfk" alt="Adibul Jabir" class="preloader-avatar" width="170" height="170" fetchpriority="high" referrerpolicy="no-referrer">
-        <div class="preloader-ring"></div>
-      </div>
-      <div class="preloader-name">Adibul <span>Jabir</span></div>
-      <div class="preloader-line">
-        <div class="preloader-progress"></div>
-      </div>
-    </div>
-  </div>
 
   <div class="page-wrapper">
 
@@ -115,19 +99,21 @@
           <div class="hero-screen-wrap">
             <div class="home-hero">
               <div class="home-photo">
-                <div class="hp-inner" style="background-image: url('https://media.licdn.com/dms/image/v2/D5603AQFFW1fZ3rqwqQ/profile-displayphoto-scale_400_400/B56aBLf8DiIAAg-/0/1787973061989?e=1789603200&v=beta&t=5gRf6u82dZeYKjy3c9TpjlE5Dy4__sRHvCPGptw9Rfk');"></div>
+                <div class="hp-inner">
+                  <img src="images/avatar.jpg" alt="Adibul Jabir" class="hp-avatar-img" width="340" height="340" fetchpriority="high" decoding="async">
+                </div>
               </div>
 
               <div class="home-text">
                 <div class="home-role">
-                  <span class="role-typing">3D Artist</span>
+                  <span class="role-typing">3D & Motion Designer</span>
                 </div>
                 <h1 class="home-title">Adibul Jabir</h1>
                 <p class="home-desc">
-                  Welcome to my portfolio! I'm a Computer Science & Engineering student at KKBAU and passionate 3D Artist specializing in 3D modeling, animation, and digital visuals. Fast, reliable, and available up to 17 hours a day to transform visionary concepts into reality.
+                  Welcome to my portfolio! I'm a Computer Science & Engineering student at KKBAU and passionate 3D & Motion Designer specializing in 3D modeling, animation, and digital visuals. Fast, reliable, and available up to 17 hours a day to transform visionary concepts into reality.
                 </p>
                 <div class="home-buttons">
-                  <a href="https://www.upwork.com/freelancers/~01693e221fbc54449b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download Resume</a>
+                  <a href="#resume" class="btn btn-primary">Download Resume</a>
                   <a href="#contact" class="btn btn-secondary">Contact</a>
                 </div>
               </div>
@@ -167,11 +153,11 @@
               <li><button class="filter-btn active resume-filter-btn" data-role="uiux">UI/UX Designer</button></li>
               <li><button class="filter-btn resume-filter-btn" data-role="developer">Developer</button></li>
               <li><button class="filter-btn resume-filter-btn" data-role="brand">Brand Designer</button></li>
-              <li><button class="filter-btn resume-filter-btn" data-role="3d">3D Artist</button></li>
+              <li><button class="filter-btn resume-filter-btn" data-role="3d">3D & Motion Designer</button></li>
             </ul>
 
             <div class="resume-download-box">
-              <a id="resume-download-btn" href="assets/Adibul_Jabir_UIUX_Resume.pdf" download="Adibul_Jabir_UIUX_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary resume-download-btn">
+              <a id="resume-download-btn" href="https://ventrixon-my.sharepoint.com/:b:/g/personal/adibuljabir_ventrixon_onmicrosoft_com/IQAq6JaX4ty1TJESMaSdDavPAc9eykyzS5kuyKg3bpI3dYA?e=CsBjEm" download="Adibul Jabir_UIUX Designer_V7_30-08-2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary resume-download-btn">
                 <i class="fas fa-file-download"></i> <span id="resume-download-text">Download UI/UX Resume</span>
               </a>
             </div>
@@ -375,7 +361,5 @@
       </div>
     </div>
   </div>
-
-  <script src="main.js"></script>
 </body>
 </html>
