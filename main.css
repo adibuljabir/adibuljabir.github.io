@@ -517,6 +517,111 @@ a:hover {
   flex-wrap: wrap;
 }
 
+/* ===================================================================
+ * Minimalist Hero Live Counter
+ * =================================================================== */
+.home-counter-minimal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  padding: 10px 8px;
+  border-radius: 26px;
+  margin-left: auto;
+  flex-shrink: 0;
+  min-width: 52px;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.home-counter-minimal:hover {
+  border-color: var(--btn-sec-border);
+  background-color: var(--card-bg);
+}
+
+.h-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--muted-color);
+  line-height: 1;
+}
+
+.h-stat i {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.h-stat-divider {
+  width: 14px;
+  height: 1px;
+  background-color: var(--border-color);
+  opacity: 0.6;
+}
+
+.h-like-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--muted-color);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.h-like-btn i {
+  font-size: 12px;
+  opacity: 0.7;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease, opacity 0.2s ease;
+}
+
+.h-like-btn:hover i {
+  color: #ef4444;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.h-like-btn.liked {
+  color: #ef4444;
+}
+
+.h-like-btn.liked i {
+  color: #ef4444;
+  opacity: 1;
+  font-weight: 900;
+}
+
+.h-like-btn.animating i {
+  animation: heartPop 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.h-label {
+  font-size: 9.5px;
+  font-weight: 500;
+  color: var(--muted-color);
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.45); }
+  100% { transform: scale(1); }
+}
+
 @media (max-height: 760px) and (min-width: 901px) {
   .hero-screen-wrap {
     padding: 5px 0 10px;
@@ -596,6 +701,25 @@ a:hover {
   .home-buttons .btn {
     padding: 10px 24px;
     font-size: 13px;
+  }
+  .home-counter-minimal {
+    flex-direction: row;
+    gap: 14px;
+    margin: 4px auto 14px;
+    padding: 6px 16px;
+    min-width: auto;
+  }
+  .h-stat {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .h-like-btn {
+    flex-direction: row;
+    gap: 6px;
+  }
+  .h-stat-divider {
+    width: 1px;
+    height: 14px;
   }
   .clients-marquee-wrapper {
     padding: 8px 0 16px;
@@ -1378,7 +1502,48 @@ a:hover {
 }
 
 .resume-role-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  align-items: center;
   margin-bottom: 0;
+}
+
+.resume-role-filters .resume-filter-btn {
+  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 600;
+  color: var(--muted-color);
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+.resume-role-filters .resume-filter-btn:hover {
+  color: var(--heading-color);
+}
+
+.resume-role-filters .resume-filter-btn.active {
+  color: var(--heading-color);
+  font-weight: 700;
+}
+
+.resume-role-filters .resume-filter-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.resume-role-filters .resume-filter-btn:hover::after {
+  width: 50%;
+}
+
+.resume-role-filters .resume-filter-btn.active::after {
+  width: 100%;
 }
 
 .resume-role-pane {
@@ -1396,6 +1561,7 @@ a:hover {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 5px;
   margin-bottom: 30px;
 }
 
@@ -1408,52 +1574,59 @@ a:hover {
   align-items: center;
 }
 
-.resume-download-btn {
+.resume-download-btn-icon {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 22px;
-  font-size: 13px;
-  font-weight: 600;
-  border-radius: 30px;
-  box-shadow: 0 4px 15px var(--primary-shadow);
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  font-size: 14px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
-.resume-download-btn:hover {
+.resume-download-btn-icon:hover {
+  background-color: var(--primary);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--primary-shadow);
-}
-
-.resume-download-btn i {
-  font-size: 13px;
+  box-shadow: 0 6px 16px -2px var(--primary-shadow);
 }
 
 @media (max-width: 768px) {
   .resume-header-controls {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-top: 4px;
+    margin-bottom: 18px;
   }
-  .portfolio-filters {
-    gap: 8px 12px;
-    justify-content: center;
-    margin-bottom: 4px;
+  .resume-role-filters {
+    gap: 6px 14px;
+    justify-content: flex-start;
+    margin-bottom: 0;
   }
-  .filter-btn {
-    font-size: 12px;
-    padding: 2px 0;
+  .resume-role-filters .resume-filter-btn {
+    font-size: 13.5px;
+    padding: 3px 0;
   }
   .resume-download-box {
-    width: 100%;
-  }
-  .resume-download-btn {
-    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 8px 16px;
-    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .resume-download-btn-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
   }
 }
 
@@ -2087,11 +2260,103 @@ textarea.form-control {
   justify-content: space-between;
 }
 
+.footer-left-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.site-counter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--muted-color);
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.site-counter-pill:hover {
+  border-color: var(--btn-sec-border);
+}
+
+.counter-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.counter-stat i {
+  font-size: 11px;
+  color: var(--muted-color);
+}
+
+.counter-divider {
+  opacity: 0.35;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--muted-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 4px;
+  border-radius: 12px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.like-btn i {
+  font-size: 12px;
+  color: var(--muted-color);
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.2s ease;
+}
+
+.like-btn:hover i {
+  color: #ef4444;
+  transform: scale(1.25);
+}
+
+.like-btn.liked {
+  color: #ef4444;
+}
+
+.like-btn.liked i {
+  color: #ef4444;
+}
+
+.like-btn.animating i {
+  animation: heartPop 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.55); }
+  100% { transform: scale(1); }
+}
+
 @media (max-width: 768px) {
   .site-footer .container-inner {
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+  .footer-left-wrap {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
   }
 }
 

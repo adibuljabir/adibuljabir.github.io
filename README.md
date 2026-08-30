@@ -48,7 +48,7 @@ The site is built with pure, high-performance web standards (**Semantic HTML5**,
 | **Testimonials** | `Dynamic JSON` | `data/main.json` → `"testimonials"` | Client feedback, avatars, company roles, and LinkedIn links. |
 | **Collaboration Packages** | `Static` | `index.html` | Pricing cards with deliverables and features list. |
 | **Contact Form & Info** | `Static` | `index.html` | Location, direct email, WhatsApp chat, and Web3Forms AJAX form. |
-| **Footer & Social Links** | `Static` | `index.html` | Copyright and social media profile icons. |
+| **Footer & Live Counters** | `Static + Serverless API` | `index.html` + `main.js` | Copyright, live visitor views counter, interactive like button, and social profile links. |
 
 ---
 

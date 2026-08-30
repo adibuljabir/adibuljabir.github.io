@@ -480,6 +480,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dlBtn.href = url;
     dlBtn.setAttribute('download', filename);
+    dlBtn.title = label;
+    dlBtn.setAttribute('aria-label', label);
     if (dlText) {
       dlText.textContent = label;
     }
@@ -931,9 +933,101 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  // 13. Live Serverless Visitor & Reaction Like Counter
+  function initVisitorAndReactionCounters() {
+    const visitorEl = document.getElementById('visitor-count');
+    const likeBtn = document.getElementById('like-btn');
+    const likeCountEl = document.getElementById('like-count');
+
+    if (!visitorEl || !likeBtn || !likeCountEl) return;
+
+    const VIEWS_KEY = 'adibuljabir_github_io_views';
+    const LIKES_KEY = 'adibuljabir_github_io_likes';
+    const API_BASE = 'https://countapi.mileshilliard.com/api/v1';
+
+    const formatNumber = (num) => {
+      const n = Number(num);
+      if (isNaN(n)) return '1';
+      if (n >= 1000000) return (n / 1000000).toFixed(1).replace('.0', '') + 'M';
+      if (n >= 1000) return (n / 1000).toFixed(1).replace('.0', '') + 'k';
+      return n.toString();
+    };
+
+    // 1. Fetch or Increment Page Views (1 view count per browser session)
+    const hasVisitedSession = sessionStorage.getItem('portfolio_session_visited');
+    const viewEndpoint = hasVisitedSession
+      ? `${API_BASE}/get/${VIEWS_KEY}`
+      : `${API_BASE}/hit/${VIEWS_KEY}`;
+
+    fetch(viewEndpoint)
+      .then(res => res.ok ? res.json() : Promise.reject())
+      .then(data => {
+        if (data && typeof data.value !== 'undefined') {
+          visitorEl.textContent = formatNumber(data.value);
+          sessionStorage.setItem('portfolio_session_visited', 'true');
+        }
+      })
+      .catch(() => {
+        visitorEl.textContent = '1';
+      });
+
+    // 2. Fetch Initial Like Count & User Liked State
+    let currentLikes = 0;
+    const isLikedLocally = localStorage.getItem('portfolio_user_liked') === 'true';
+
+    if (isLikedLocally) {
+      likeBtn.classList.add('liked');
+      likeBtn.title = 'Thank you for liking!';
+    }
+
+    fetch(`${API_BASE}/get/${LIKES_KEY}`)
+      .then(res => res.ok ? res.json() : Promise.reject())
+      .then(data => {
+        if (data && typeof data.value !== 'undefined') {
+          currentLikes = data.value;
+          likeCountEl.textContent = formatNumber(currentLikes);
+        }
+      })
+      .catch(() => {
+        fetch(`${API_BASE}/hit/${LIKES_KEY}`)
+          .then(res => res.ok ? res.json() : null)
+          .then(data => {
+            if (data && typeof data.value !== 'undefined') {
+              currentLikes = data.value;
+              likeCountEl.textContent = formatNumber(currentLikes);
+            } else {
+              likeCountEl.textContent = '1';
+            }
+          })
+          .catch(() => {
+            likeCountEl.textContent = '1';
+          });
+      });
+
+    // 3. Handle Interactive Like Button Click
+    likeBtn.addEventListener('click', () => {
+      const alreadyLiked = localStorage.getItem('portfolio_user_liked') === 'true';
+
+      likeBtn.classList.remove('animating');
+      void likeBtn.offsetWidth;
+      likeBtn.classList.add('animating');
+
+      if (!alreadyLiked) {
+        currentLikes += 1;
+        likeCountEl.textContent = formatNumber(currentLikes);
+        likeBtn.classList.add('liked');
+        likeBtn.title = 'Thank you for liking!';
+        localStorage.setItem('portfolio_user_liked', 'true');
+
+        fetch(`${API_BASE}/hit/${LIKES_KEY}`).catch(() => {});
+      }
+    });
+  }
+
   // Pure JSON Loading Initiation
   loadJsonData();
   initScrollAnimations();
   initVideoHoverPlayback();
   initScrollProgressBar();
+  initVisitorAndReactionCounters();
 });
