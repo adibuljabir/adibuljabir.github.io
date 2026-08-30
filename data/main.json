@@ -49,24 +49,24 @@
   ],
   "funFacts": [
     {
-      "icon": "far fa-heart",
-      "title": "Happy Clients",
-      "count": "50+"
+      "icon": "fas fa-calendar-alt",
+      "title": "Years of Journey",
+      "count": "8+"
     },
     {
-      "icon": "far fa-clock",
-      "title": "Working Hours",
-      "count": "4,500"
+      "icon": "fas fa-handshake",
+      "title": "Collaborated With",
+      "count": "23+"
     },
     {
-      "icon": "far fa-star",
-      "title": "3D Assets Created",
-      "count": "120"
+      "icon": "fas fa-star",
+      "title": "Client Review",
+      "count": "5.0 Star"
     },
     {
-      "icon": "fas fa-coffee",
-      "title": "Coffee Consumed",
-      "count": "1,286"
+      "icon": "fas fa-check-circle",
+      "title": "Projects Done",
+      "count": "30+"
     }
   ],
   "achievements": [

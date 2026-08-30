@@ -58,24 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
   ],
   "funFacts": [
     {
-      "icon": "far fa-heart",
-      "title": "Happy Clients",
-      "count": "50+"
+      "icon": "fas fa-calendar-alt",
+      "title": "Years of Journey",
+      "count": "8+"
     },
     {
-      "icon": "far fa-clock",
-      "title": "Working Hours",
-      "count": "4,500"
+      "icon": "fas fa-handshake",
+      "title": "Collaborated With",
+      "count": "23+"
     },
     {
-      "icon": "far fa-star",
-      "title": "3D Assets Created",
-      "count": "120"
+      "icon": "fas fa-star",
+      "title": "Client Review",
+      "count": "5.0 Star"
     },
     {
-      "icon": "fas fa-coffee",
-      "title": "Coffee Consumed",
-      "count": "1,286"
+      "icon": "fas fa-check-circle",
+      "title": "Projects Done",
+      "count": "30+"
     }
   ],
   "achievements": [
@@ -1583,11 +1583,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!numEl || numEl.dataset.animated) return;
     numEl.dataset.animated = 'true';
 
-    const targetVal = numEl.getAttribute('data-count') || numEl.textContent;
-    const isPlus = targetVal.includes('+');
-    const cleanNum = parseInt(targetVal.replace(/[^0-9]/g, ''), 10);
-    if (isNaN(cleanNum)) return;
+    const targetVal = (numEl.getAttribute('data-count') || numEl.textContent || '').trim();
+    if (!targetVal) return;
 
+    const isStar = targetVal.toLowerCase().includes('star') || targetVal.includes('★');
+    const isPlus = targetVal.includes('+');
+    const cleanNum = parseFloat(targetVal.replace(/[^0-9.]/g, ''));
+    if (isNaN(cleanNum)) {
+      numEl.textContent = targetVal;
+      return;
+    }
+
+    const isDecimal = targetVal.includes('.');
     const duration = 1200;
     const startTime = performance.now();
 
@@ -1595,14 +1602,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const easeProgress = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(easeProgress * cleanNum);
+      const current = isDecimal ? (easeProgress * cleanNum).toFixed(1) : Math.floor(easeProgress * cleanNum);
 
-      numEl.textContent = current.toLocaleString() + (isPlus ? '+' : '');
+      let suffix = '';
+      if (isPlus) suffix = '+';
+      if (isStar) suffix = ' Star';
+
+      numEl.textContent = current + suffix;
 
       if (progress < 1) {
         requestAnimationFrame(updateCount);
       } else {
-        numEl.textContent = cleanNum.toLocaleString() + (isPlus ? '+' : '');
+        numEl.textContent = (isDecimal ? cleanNum.toFixed(1) : cleanNum.toLocaleString()) + suffix;
       }
     }
 
