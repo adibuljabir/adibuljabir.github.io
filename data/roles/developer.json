@@ -6,6 +6,18 @@
   "resumeFileName": "Adibul Jabir Developer V2_30-08-2026.pdf",
   "portfolio": [
     {
+      "id": "prism-club-portal-dev",
+      "category": "dev web",
+      "title": "PRISM Club Web Portal",
+      "subtitle": "Web Platform & Architecture",
+      "description": "Official student club web portal for the Department of CSE at KKBAU, engineered with responsive layout, custom theme & PWA features.",
+      "thumbnail": "images/prism-web.jpg",
+      "lightboxType": "image",
+      "lightboxSrc": "images/prism-web.png",
+      "externalUrl": "https://prism.kkbau.ac.bd/",
+      "facebookUrl": "https://www.facebook.com/prism.kkbau.ac.bd/"
+    },
+    {
       "id": "tada-tour-bill",
       "category": "dev",
       "type": "code",

@@ -916,6 +916,37 @@ a:hover {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: 2px solid var(--body-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-letter-avatar {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--body-bg);
+}
+
+.testimonial-letter-avatar span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+}
+
+[data-theme="dark"] .testimonial-letter-avatar {
+  background-color: var(--primary);
+  border-color: var(--body-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .testimonial-avatar img {
@@ -976,6 +1007,9 @@ a:hover {
     height: 36px;
     top: -18px;
     left: 16px;
+  }
+  .testimonial-letter-avatar {
+    font-size: 15px;
   }
   .testimonial-text {
     font-size: 12.5px;
@@ -1545,11 +1579,67 @@ a:hover {
 }
 
 /* ===================================================================
- * Role Portfolio Horizontal Infinite Marquee
+ * Role Portfolio Horizontal Infinite Marquee & Slider Navigation
  * =================================================================== */
 .role-portfolio-wrapper {
+  position: relative;
   margin-bottom: 45px;
   width: 100%;
+}
+
+/* Portfolio Navigation Arrow Buttons */
+.portfolio-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 25;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--btn-sec-border);
+  background-color: var(--card-bg);
+  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  user-select: none;
+  opacity: 0.92;
+}
+
+[data-theme="dark"] .portfolio-nav-arrow {
+  background-color: var(--card-bg);
+  border-color: var(--btn-sec-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-nav-prev {
+  left: -16px;
+}
+
+.portfolio-nav-next {
+  right: -16px;
+}
+
+.portfolio-nav-arrow:hover {
+  opacity: 1;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .portfolio-nav-arrow:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+.portfolio-nav-arrow:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .portfolio-marquee-wrapper {
@@ -1558,8 +1648,14 @@ a:hover {
   width: 100%;
   padding: 6px 0 20px;
   box-sizing: border-box;
+  touch-action: pan-y;
+  cursor: grab;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+
+.portfolio-marquee-wrapper:active {
+  cursor: grabbing;
 }
 
 .portfolio-marquee-track {
@@ -1615,9 +1711,30 @@ a:hover {
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
 }
 
+@media (max-width: 900px) {
+  .portfolio-nav-prev {
+    left: 4px;
+  }
+  .portfolio-nav-next {
+    right: 4px;
+  }
+}
+
 @media (max-width: 768px) {
   .role-portfolio-wrapper {
     margin-bottom: 30px;
+  }
+  .portfolio-nav-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+    opacity: 0.95;
+  }
+  .portfolio-nav-prev {
+    left: 2px;
+  }
+  .portfolio-nav-next {
+    right: 2px;
   }
   .portfolio-marquee-wrapper {
     padding: 4px 0 14px;
@@ -1694,7 +1811,7 @@ a:hover {
 }
 
 .portfolio-card:hover .code-thumb-preview {
-  transform: scale(1.03);
+  transform: none;
 }
 
 .code-thumb-header {
@@ -1756,7 +1873,7 @@ a:hover {
 }
 
 .portfolio-card:hover .portfolio-thumb-box img {
-  transform: scale(1.05);
+  transform: none;
 }
 
 .portfolio-thumb-box video {
@@ -1842,6 +1959,35 @@ a:hover {
 
 .portfolio-card:hover .portfolio-overlay {
   opacity: 1;
+}
+
+.portfolio-overlay a.portfolio-btn-live {
+  width: auto;
+  min-width: 76px;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 18px;
+  background-color: #ffffff;
+  color: #111827;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.portfolio-overlay a.portfolio-btn-live i {
+  font-size: 11px;
+}
+
+.portfolio-overlay a.portfolio-btn-live:hover {
+  background-color: var(--primary);
+  color: #ffffff;
 }
 
 .portfolio-overlay a,

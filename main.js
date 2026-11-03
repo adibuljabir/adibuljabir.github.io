@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       "name": "PRISM Club",
-      "url": "https://www.facebook.com/prism.kkbau.ac.bd",
+      "url": "https://prism.kkbau.ac.bd/",
       "logo": "images/prism-club.png",
       "alt": "PRISM Club"
     },
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   "achievements": [
     {
       "period": "5.0 Star Rating",
-      "company": "Upwork\u00ae Global Inc",
+      "company": "Upwork® Global Inc",
       "title": "5-Star Rated Freelance 3D Specialist",
       "description": "Maintained a 100% five-star rating with stellar client reviews across precision 3D product visualizations, hard-surface assets, and motion graphics."
     },
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       "period": "April 2025 - Present",
       "company": "PRISM Club",
-      "companyUrl": "https://www.facebook.com/prism.kkbau.ac.bd",
+      "companyUrl": "https://prism.kkbau.ac.bd/",
       "title": "Print & Media Secretary",
       "description": "Managing branding, event media, website UI/UX, banners, cards & social media posts. Coordinated decoration team for branding consistency & provided technical support such as live sessions with international guests."
     },
@@ -129,19 +129,19 @@ document.addEventListener('DOMContentLoaded', () => {
   ],
   "education": [
     {
-      "period": "Expected 2027 \u2022 CGPA: 3.08",
+      "period": "Expected 2027 • CGPA: 3.08",
       "company": "Khulna Khan Bahadur Ahsanullah University",
       "title": "Bachelor of Science (B.Sc.) in Computer Science and Engineering",
       "description": "Undergraduate studies covering core computing foundations: Data Structures, Algorithms, Software Engineering, Database Management Systems, and Human-Computer Interaction (HCI)."
     },
     {
-      "period": "2023 \u2022 GPA: 3.75 / 5.00",
+      "period": "2023 • GPA: 3.75 / 5.00",
       "company": "Bangladesh Navy School & College, Khulna",
       "title": "Higher Secondary Certificate (HSC) in Science",
       "description": "Completed higher secondary education in the Science discipline with emphasis on Higher Mathematics, Physics, Chemistry, and Information & Communication Technology."
     },
     {
-      "period": "2020 \u2022 GPA: 4.06 / 5.00",
+      "period": "2020 • GPA: 4.06 / 5.00",
       "company": "Bangladesh Navy School & College, Khulna",
       "title": "Secondary School Certificate (SSC) in Science",
       "description": "Completed secondary education under Science group with focus on General Science, Higher Mathematics, and Physics, building strong analytical and problem-solving foundations."
@@ -171,21 +171,21 @@ document.addEventListener('DOMContentLoaded', () => {
   "testimonials": [
     {
       "name": "Val Ciptak Viera",
-      "role": "President at Sprigs \u2022 New York, USA",
+      "role": "President at Sprigs • New York, USA",
       "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
       "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
       "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
     },
     {
       "name": "Val Ciptak Viera",
-      "role": "President at Sprigs \u2022 New York, USA",
+      "role": "President at Sprigs • New York, USA",
       "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
       "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
       "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
     },
     {
       "name": "Val Ciptak Viera",
-      "role": "President at Sprigs \u2022 New York, USA",
+      "role": "President at Sprigs • New York, USA",
       "linkedinUrl": "https://www.linkedin.com/in/val-ciptak-viera-35a4737/",
       "avatar": "https://media.licdn.com/dms/image/v2/C4E03AQE0W1zda-wEQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1632862845898?e=1789603200&v=beta&t=sF25WVieGS97Iwn1oVNF6Wd0-GzNrp8Rx7gGvrvLFR8",
       "quote": "Adibul was great. We worked in real time together to edit a jpg into a vector and make changes to it. He was fast and understood what was needed. Good job!!!"
@@ -201,6 +201,18 @@ document.addEventListener('DOMContentLoaded', () => {
     "downloadUrl": "https://ventrixon-my.sharepoint.com/:b:/g/personal/adibuljabir_ventrixon_onmicrosoft_com/IQAq6JaX4ty1TJESMaSdDavPAc9eykyzS5kuyKg3bpI3dYA?e=CsBjEm",
     "resumeFileName": "Adibul Jabir_UIUX Designer_V7_30-08-2026.pdf",
     "portfolio": [
+      {
+        "id": "prism-club-portal",
+        "category": "uiux",
+        "title": "PRISM Club Website UI",
+        "subtitle": "Web Platform UI/UX",
+        "description": "Official student club portal and community platform UI designed for the Department of CSE at KKBAU.",
+        "thumbnail": "images/prism-web.jpg",
+        "lightboxType": "image",
+        "lightboxSrc": "images/prism-web.png",
+        "externalUrl": "https://prism.kkbau.ac.bd/",
+        "facebookUrl": "https://www.facebook.com/prism.kkbau.ac.bd/"
+      },
       {
         "id": "cellfin-app",
         "category": "uiux",
@@ -336,11 +348,23 @@ document.addEventListener('DOMContentLoaded', () => {
     "resumeFileName": "Adibul Jabir Developer V2_30-08-2026.pdf",
     "portfolio": [
       {
+        "id": "prism-club-portal-dev",
+        "category": "dev web",
+        "title": "PRISM Club Web Portal",
+        "subtitle": "Web Platform & Architecture",
+        "description": "Official student club web portal for the Department of CSE at KKBAU, engineered with responsive layout, custom theme & PWA features.",
+        "thumbnail": "images/prism-web.jpg",
+        "lightboxType": "image",
+        "lightboxSrc": "images/prism-web.png",
+        "externalUrl": "https://prism.kkbau.ac.bd/",
+        "facebookUrl": "https://www.facebook.com/prism.kkbau.ac.bd/"
+      },
+      {
         "id": "tada-tour-bill",
         "category": "dev",
         "type": "code",
         "title": "TA-DA Bill Generator",
-        "subtitle": "C \u2022 CLI \u2022 File I/O",
+        "subtitle": "C • CLI • File I/O",
         "description": "CLI logistics & allowance calculator with robust file stream persistence in C.",
         "langTag": "C / Systems",
         "roleTag": "Author & Maintainer",
@@ -359,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "dev",
         "type": "code",
         "title": "FindIT Mobile App",
-        "subtitle": "Android \u2022 Kotlin \u2022 Mobile",
+        "subtitle": "Android • Kotlin • Mobile",
         "description": "Native Android utility built for intuitive item tracking and index discovery.",
         "langTag": "Kotlin / Android",
         "langColor": "#a78bfa",
@@ -371,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "}"
         ],
         "repoName": "adibuljabir/FindIT",
-        "footerMeta": "Gradle \u2022 Kotlin",
+        "footerMeta": "Gradle • Kotlin",
         "githubUrl": "https://github.com/adibuljabir/FindIT"
       },
       {
@@ -379,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "dev",
         "type": "code",
         "title": "Khaon Food Management",
-        "subtitle": "Java \u2022 Software Architecture",
+        "subtitle": "Java • Software Architecture",
         "description": "Modular food ordering and inventory system built with clean OOP architecture.",
         "langTag": "Java / OOP",
         "langColor": "#fb923c",
@@ -391,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "}"
         ],
         "repoName": "adibuljabir/Khaon",
-        "footerMeta": "Java \u2022 OOP Design",
+        "footerMeta": "Java • OOP Design",
         "githubUrl": "https://github.com/adibuljabir/Khaon"
       },
       {
@@ -399,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "category": "dev",
         "type": "code",
         "title": "Collaborative Repos & PRs",
-        "subtitle": "Git \u2022 Open Source \u2022 Team Repos",
+        "subtitle": "Git • Open Source • Team Repos",
         "description": "Active collaborator in university competitions, team projects, and open repositories.",
         "langTag": "Open Source",
         "langColor": "#4ade80",
@@ -410,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "git push origin pull-request"
         ],
         "repoName": "github.com/adibuljabir",
-        "footerMeta": "PRs \u2022 Code Review",
+        "footerMeta": "PRs • Code Review",
         "githubUrl": "https://github.com/adibuljabir"
       }
     ],
@@ -490,7 +514,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "thumbnail": "images/prism-brand.jpg",
         "lightboxType": "image",
         "lightboxSrc": "images/prism-brand.jpg",
-        "facebookUrl": "https://www.facebook.com/prism.kkbau.ac.bd/"
+        "facebookUrl": "https://www.facebook.com/prism.kkbau.ac.bd/",
+        "externalUrl": "https://prism.kkbau.ac.bd/"
       },
       {
         "id": "chisas-brand-redesign",
@@ -767,12 +792,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.site-nav');
 
-  function scrollToSection(targetId) {
+  function scrollToSection(targetId, smooth = true) {
     const targetSection = document.getElementById(targetId);
     if (!targetSection) return;
 
     targetSection.scrollIntoView({
-      behavior: 'smooth',
+      behavior: smooth ? 'smooth' : 'auto',
       block: 'start'
     });
 
@@ -881,14 +906,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (window.location.hash) {
     const rawHash = window.location.hash.substring(1);
-    setTimeout(() => {
-      if (['uiux', 'developer', 'brand', '3d'].includes(rawHash)) {
-        switchToRole(rawHash);
-        scrollToSection('resume');
-      } else if (document.getElementById(rawHash)) {
-        scrollToSection(rawHash);
-      }
-    }, 150);
+    if (['uiux', 'developer', 'brand', '3d'].includes(rawHash)) {
+      switchToRole(rawHash);
+      scrollToSection('resume', false);
+    } else if (document.getElementById(rawHash)) {
+      scrollToSection(rawHash, false);
+    }
   }
 
   // 3. 3D Tilt Effect on Hero Photo
@@ -996,10 +1019,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const makeGroup = (isAriaHidden = false) => `
       <div class="testimonials-track-group" ${isAriaHidden ? 'aria-hidden="true"' : ''}>
-        ${testimonials.map(t => `
+        ${testimonials.map(t => {
+          const initial = (t.name || '?').trim().charAt(0).toUpperCase();
+          return `
           <div class="testimonial-card">
-            <div class="testimonial-avatar">
-              <img src="${t.avatar}" alt="${t.name}" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+            <div class="testimonial-avatar testimonial-letter-avatar" title="${t.name}">
+              <span>${initial}</span>
             </div>
             <div class="testimonial-text">
               "${t.quote}"
@@ -1012,7 +1037,8 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="testimonial-quote-icon"><i class="fas fa-quote-right"></i></div>
             </div>
           </div>
-        `).join('')}
+        `;
+        }).join('')}
       </div>
     `;
 
@@ -1130,6 +1156,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
             <div class="portfolio-overlay">
+              ${(item.externalUrl || item.linkUrl) ? `<a href="${item.externalUrl || item.linkUrl}" target="_blank" rel="noopener noreferrer" class="portfolio-btn-live" title="Visit Live Website"><i class="fas fa-external-link-alt"></i> Live</a>` : ''}
               <a href="${item.githubUrl}" target="_blank" rel="noopener noreferrer" title="View Repository on GitHub"><i class="fab fa-github"></i></a>
               ${sourceBtn}
             </div>
@@ -1149,20 +1176,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const badgeHtml = isVideoCard ? `<div class="video-play-badge"><i class="fas fa-play"></i> Autoplay</div>` : '';
     
     let overlayActions = '';
+    if (item.githubUrl) {
+      overlayActions += `<a href="${item.githubUrl}" target="_blank" rel="noopener noreferrer" title="View on GitHub"><i class="fab fa-github"></i></a>`;
+    }
     if (item.youtubeUrl) {
       overlayActions += `<a href="${item.youtubeUrl}" target="_blank" rel="noopener noreferrer" title="Watch on YouTube"><i class="fab fa-youtube"></i></a>`;
     }
-    if (item.lightboxType) {
-      overlayActions += `<button class="open-lightbox" data-type="${item.lightboxType}" data-src="${item.lightboxSrc}" data-title="${item.title}" data-desc="${item.description || ''}"><i class="${item.lightboxType === 'video' ? 'fas fa-play' : 'fas fa-search-plus'}"></i></button>`;
+    if (item.lightboxType === 'video') {
+      overlayActions += `<button class="open-lightbox" data-type="video" data-src="${item.lightboxSrc}" data-title="${item.title}" data-desc="${item.description || ''}" title="Play Video"><i class="fas fa-play"></i></button>`;
+    }
+    if (item.externalUrl || item.linkUrl) {
+      overlayActions += `<a href="${item.externalUrl || item.linkUrl}" target="_blank" rel="noopener noreferrer" class="portfolio-btn-live" title="Visit Live Website"><i class="fas fa-external-link-alt"></i> Live</a>`;
     }
     if (item.behanceUrl) {
       overlayActions += `<a href="${item.behanceUrl}" target="_blank" rel="noopener noreferrer" title="View on Behance"><i class="fab fa-behance"></i></a>`;
     }
     if (item.facebookUrl) {
       overlayActions += `<a href="${item.facebookUrl}" target="_blank" rel="noopener noreferrer" title="View on Facebook"><i class="fab fa-facebook-f"></i></a>`;
-    }
-    if (item.externalUrl || item.linkUrl) {
-      overlayActions += `<a href="${item.externalUrl || item.linkUrl}" target="_blank" rel="noopener noreferrer" title="Visit Link"><i class="fas fa-external-link-alt"></i></a>`;
     }
 
     return `
@@ -1281,11 +1311,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const portfolioMarqueeHtml = roleProjects.length > 0 ? `
         <div class="role-portfolio-wrapper" style="margin-bottom: 45px;">
+          <button class="portfolio-nav-arrow portfolio-nav-prev" type="button" aria-label="Previous Projects" title="Previous Projects">
+            <i class="fas fa-chevron-left"></i>
+          </button>
           <div class="portfolio-marquee-wrapper">
             <div class="portfolio-marquee-track">
               ${makePortfolioGroup(false) + makePortfolioGroup(true) + makePortfolioGroup(true)}
             </div>
           </div>
+          <button class="portfolio-nav-arrow portfolio-nav-next" type="button" aria-label="Next Projects" title="Next Projects">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
       ` : '';
 
@@ -1301,10 +1337,169 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
 
     initResumeRoleTabs();
+    initPortfolioCarousels();
     initLightboxEvents();
     initVideoHoverPlayback();
     initScrollAnimations();
     updateResumeDownloadButton(currentActiveRole);
+  }
+
+  // --- Portfolio Horizontal Carousel with Arrow Navigation & Seamless Infinite Marquee ---
+  function initPortfolioCarousels() {
+    const wrappers = document.querySelectorAll('.role-portfolio-wrapper');
+
+    wrappers.forEach(wrapper => {
+      if (wrapper.dataset.carouselInit === 'true') return;
+      wrapper.dataset.carouselInit = 'true';
+
+      const track = wrapper.querySelector('.portfolio-marquee-track');
+      const marqueeWrapper = wrapper.querySelector('.portfolio-marquee-wrapper');
+      const prevBtn = wrapper.querySelector('.portfolio-nav-prev');
+      const nextBtn = wrapper.querySelector('.portfolio-nav-next');
+      if (!track || !marqueeWrapper) return;
+
+      const groups = track.querySelectorAll('.portfolio-track-group');
+      if (groups.length === 0) return;
+
+      // Stop default CSS keyframe animation so JS controls smooth motion and manual navigation seamlessly
+      track.style.animation = 'none';
+
+      let currentX = 0;
+      let targetX = 0;
+      let isHovered = false;
+      let isInteracting = false;
+      let resumeTimer = null;
+      let animId = null;
+      let lastTime = performance.now();
+      const speed = 36; // px per second
+
+      function getGroupWidth() {
+        return groups[0].getBoundingClientRect().width || groups[0].offsetWidth || 0;
+      }
+
+      function getStep() {
+        return window.innerWidth <= 768 ? 274 : 364; // card width + gap
+      }
+
+      function scheduleAutoResume() {
+        if (resumeTimer) clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(() => {
+          isInteracting = false;
+          lastTime = performance.now();
+        }, 2500);
+      }
+
+      function update(time) {
+        const dt = Math.min((time - lastTime) / 1000, 0.1);
+        lastTime = time;
+
+        const gw = getGroupWidth();
+
+        // If role pane is hidden (display: none), wait until pane becomes active
+        if (gw <= 0) {
+          animId = requestAnimationFrame(update);
+          return;
+        }
+
+        if (!isHovered && !isInteracting) {
+          // Continuous marquee scrolling to the left
+          currentX -= speed * dt;
+          targetX = currentX;
+        } else if (isInteracting) {
+          // Smooth spring-like lerp to target position on arrow click
+          currentX += (targetX - currentX) * 0.16;
+          if (Math.abs(targetX - currentX) < 0.4) {
+            currentX = targetX;
+          }
+        }
+
+        // Seamless infinite loop wrap-around
+        while (currentX <= -gw) {
+          currentX += gw;
+          targetX += gw;
+        }
+        while (currentX > 0) {
+          currentX -= gw;
+          targetX -= gw;
+        }
+
+        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+        animId = requestAnimationFrame(update);
+      }
+
+      animId = requestAnimationFrame(update);
+
+      // Hover pauses auto-scroll
+      wrapper.addEventListener('mouseenter', () => { isHovered = true; });
+      wrapper.addEventListener('mouseleave', () => {
+        isHovered = false;
+        lastTime = performance.now();
+      });
+
+      // Next Arrow Button (scrolls right / advances forward)
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          isInteracting = true;
+          const step = getStep();
+          targetX -= step;
+          scheduleAutoResume();
+        });
+      }
+
+      // Prev Arrow Button (scrolls left / goes backward)
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          isInteracting = true;
+          const step = getStep();
+          targetX += step;
+          scheduleAutoResume();
+        });
+      }
+
+      // Touch & Drag Support
+      let isDragging = false;
+      let startX = 0;
+      let startCurrentX = 0;
+      let dragMoved = 0;
+
+      marqueeWrapper.addEventListener('pointerdown', (e) => {
+        if (e.target.closest('a, button, .portfolio-overlay')) return;
+        isDragging = true;
+        startX = e.clientX;
+        startCurrentX = currentX;
+        dragMoved = 0;
+        isInteracting = true;
+      });
+
+      window.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        const delta = e.clientX - startX;
+        dragMoved = Math.abs(delta);
+        targetX = startCurrentX + delta;
+        currentX = targetX;
+      });
+
+      const handlePointerUp = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        scheduleAutoResume();
+      };
+
+      window.addEventListener('pointerup', handlePointerUp);
+      window.addEventListener('pointercancel', handlePointerUp);
+
+      // Prevent accidental card click when dragging
+      marqueeWrapper.addEventListener('click', (e) => {
+        if (dragMoved > 6) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+    });
   }
 
   // 6. Skill Bars Animation
@@ -1339,6 +1534,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (targetPane) {
           targetPane.classList.add('active');
           animateActiveSkillBars();
+          if (typeof window.refreshActiveCarousel === 'function') {
+            window.refreshActiveCarousel();
+          }
         }
 
         updateResumeDownloadButton(role);
@@ -1373,7 +1571,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const [mainRes, uiuxRes, devRes, brandRes, d3Res] = await Promise.all([
         fetchJson('./data/main.json').catch(e => { console.warn(e); return null; }),
         fetchJson('./data/roles/UI-UX Designer.json').catch(e => { console.warn(e); return null; }),
-        fetchJson('./data/roles/Developer.json').catch(e => { console.warn(e); return null; }),
+        fetchJson('./data/roles/developer.json').catch(e => { console.warn(e); return null; }),
         fetchJson('./data/roles/Brand Designer.json').catch(e => { console.warn(e); return null; }),
         fetchJson('./data/roles/3D & Motion Designer.json').catch(e => { console.warn(e); return null; })
       ]);

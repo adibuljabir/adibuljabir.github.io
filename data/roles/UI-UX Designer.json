@@ -6,6 +6,18 @@
   "resumeFileName": "Adibul Jabir_UIUX Designer_V7_30-08-2026.pdf",
   "portfolio": [
     {
+      "id": "prism-club-portal",
+      "category": "uiux",
+      "title": "PRISM Club Website UI",
+      "subtitle": "Web Platform UI/UX",
+      "description": "Official student club portal and community platform UI designed for the Department of CSE at KKBAU.",
+      "thumbnail": "images/prism-web.jpg",
+      "lightboxType": "image",
+      "lightboxSrc": "images/prism-web.png",
+      "externalUrl": "https://prism.kkbau.ac.bd/",
+      "facebookUrl": "https://www.facebook.com/prism.kkbau.ac.bd/"
+    },
+    {
       "id": "cellfin-app",
       "category": "uiux",
       "title": "Cellfin Banking App",
